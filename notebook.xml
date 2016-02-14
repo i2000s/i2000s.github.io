@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-02-14T00:56:25-07:00</updated>
+ <updated>2016-02-14T13:57:25+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Dispersion relations for linear systems of PDEs</title>
    <link href="/2014/05/28/dispersion_relations.html"/>
-   <updated>2014-05-28T00:00:00-06:00</updated>
+   <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/dispersion_relations</id>
    <content type="html">&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of
 solutions to linear equations.  Often, this analysis is introduced to students in the
@@ -194,7 +194,7 @@ Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
  <entry>
    <title>Notes 2014.03.03</title>
    <link href="/2014/03/03/notes.html"/>
-   <updated>2014-03-03T00:00:00-07:00</updated>
+   <updated>2014-03-03T00:00:00+00:00</updated>
    <id>h/2014/03/03/notes</id>
    <content type="html">&lt;p&gt;Finally figured out what was wrong with the stability regions for the deferred correction methods in Nodepy when $\theta \ne 0$.
 See &lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c5450e7ad09f5774052ff575/code/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb?at=master&quot;&gt;these&lt;/a&gt;
@@ -207,7 +207,7 @@ See &lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf
  <entry>
    <title>Notes 2014.02.27</title>
    <link href="/2014/02/27/notes.html"/>
-   <updated>2014-02-27T00:00:00-07:00</updated>
+   <updated>2014-02-27T00:00:00+00:00</updated>
    <id>h/2014/02/27/notes</id>
    <content type="html">&lt;p&gt;Investigated stability regions for high order deferred correction schemes; see &lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/a78b4aa2d336491cac35c1df81e703ce103d6937/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb&quot;&gt;this notebook&lt;/a&gt;.&lt;/p&gt;
 
@@ -225,7 +225,7 @@ It will be in the Github repo soon.&lt;/p&gt;
  <entry>
    <title>The Schrodinger equation is not a reaction-diffusion equation</title>
    <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
-   <updated>2014-02-22T00:00:00-07:00</updated>
+   <updated>2014-02-22T00:00:00+00:00</updated>
    <id>h/2014/02/22/schrodinger-is-not-diffusion</id>
    <content type="html">&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;.  I&amp;#39;ll set aside semantic arguments about the meaning of &amp;quot;effectively&amp;quot;, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
 
@@ -257,7 +257,7 @@ reaction-diffusion problems in order to solve a wave equation.&lt;br&gt;
  <entry>
    <title>Notes 2014.02.22</title>
    <link href="/2014/02/22/notes.html"/>
-   <updated>2014-02-22T00:00:00-07:00</updated>
+   <updated>2014-02-22T00:00:00+00:00</updated>
    <id>h/2014/02/22/notes</id>
    <content type="html">&lt;p&gt;Discussed time stepping for aeroacoustics with Antony Jameson at Stanford.  Also reviewed a couple of his group&amp;#39;s papers on high order flux reconstruction schemes.&lt;/p&gt;
 
@@ -300,7 +300,7 @@ reaction-diffusion problems in order to solve a wave equation.&lt;br&gt;
  <entry>
    <title>The parallel EPPEER code</title>
    <link href="/2012/10/17/eppeer.html"/>
-   <updated>2012-10-17T00:00:00-06:00</updated>
+   <updated>2012-10-17T00:00:00+00:00</updated>
    <id>h/2012/10/17/eppeer</id>
    <content type="html">&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and
 OpenMP, because I’m thinking of writing a shared-memory parallel ODE
@@ -368,7 +368,7 @@ Section 4.&lt;/p&gt;
  <entry>
    <title>Blogging an iPython notebook with Jekyll</title>
    <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Update as of December 2014: Don&amp;#39;t bother using what&amp;#39;s below; go to 
@@ -447,7 +447,7 @@ This was a nice educational exercise in constructing shell scripts, in which I l
  <entry>
    <title>Internal stability of Runge-Kutta methods</title>
    <link href="/2012/10/11/Internal_stability.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/Internal_stability</id>
    <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook.  You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the
 notebook from github&lt;/a&gt; and execute all the code yourself.&lt;/p&gt;
@@ -809,7 +809,7 @@ ______|________________________
  <entry>
    <title>A curious upwind implicit scheme for advection</title>
    <link href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
    <content type="html">&lt;h2&gt;The CFL condition&lt;/h2&gt;
 
