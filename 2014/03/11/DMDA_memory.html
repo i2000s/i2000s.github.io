@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>The PETSc DMDA is not lightweight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="(unless Yokozuna is lightweight)">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">The PETSc DMDA is not lightweight</h1>
+    <h3>(unless Yokozuna is lightweight)</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>In <a href="http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html">this PETSc-users thread</a>, my good friend Matt Knepley claims that the
+DMDA object is lightweight, and suggests that it is okay to make them willy-
+nilly.  Unfortunately, my experience indicates otherwise.  But words are cheap;
+let&#39;s investigate.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">%load_ext memory_profiler
+</code></pre></div>
+<h3>Memory profiling with <code>memory_profiler</code></h3>
+
+<p>I&#39;ve written a little script that just creates a DA and 3 vecs.  In order to
+make use of <code>memory_profiler</code>, I&#39;ll call it with system commands.  But I&#39;ve
+pasted the contents here for completeness.  If you&#39;re running the notebook, you
+don&#39;t need to run the next cell.</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># contents of da.py</span>
+<span class="kn">from</span> <span class="nn">petsc4py</span> <span class="kn">import</span> <span class="n">PETSc</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nd">@profile</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span><span class="n">ndim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">dof</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">PETSc</span><span class="o">.</span><span class="n">DA</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">sizes</span><span class="o">=</span><span class="p">[</span><span class="n">size</span><span class="p">]</span><span class="o">*</span><span class="n">ndim</span><span class="p">,</span><span class="n">dof</span><span class="o">=</span><span class="n">dof</span><span class="p">)</span>
+    <span class="n">q1</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
+    <span class="n">q2</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
+    <span class="n">q3</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">foo</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<p>Notice that the command line arguments are</p>
+
+<ol>
+<li>The size of the grid</li>
+<li>The number of dimensions</li>
+<li>The number of DOFs</li>
+</ol>
+
+<p>Now let&#39;s run some tests.</p>
+
+<h3>The cost of a DA</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 1
+
+Filename: da.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     4   23.473 MiB    0.000 MiB   @profile
+     5                             def foo(size=128,ndim=3,dof=1):
+     6   72.395 MiB   48.922 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     7   72.480 MiB    0.086 MiB       q1 = da.createGlobalVec()
+     8   88.484 MiB   16.004 MiB       q2 = da.createGlobalVec()
+     9  104.488 MiB   16.004 MiB       q3 = da.createGlobalVec()
+</code></pre></div>
+<p>The third column (&quot;increment&quot;) is the key here -- it shows the increase in total
+memory usage after executing each line.</p>
+
+<p>The first thing you notice is that the DA is NOT lightweight.  It takes as much
+memory as 3 Vecs!  But that will look cheap in a moment.</p>
+
+<p>Notice also that the first vec seems to use no memory.  I think this is because
+memory_profiler just tracks peak usage, and the DA creation creates and destroys
+a vec.</p>
+
+<p>In what follows, I&#39;ve used sed to extract just the essential lines of the
+output.</p>
+
+<p>Let&#39;s try that again, with 2 DOFs.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 2 / | sed -n -e 7p -e 10p
+
+     6  296.215 MiB  272.945 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  328.309 MiB   32.004 MiB       q3 = da.createGlobalVec()
+</code></pre></div>
+<p>Whoa!  Now the DA is 8.5 times as large as a Vec!</p>
+
+<p>As expected, the Vec is just twice as large.  What if we keep increasing the
+number of DOFs?</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 3 / | sed -n -e 7p -e 10p
+!python -m memory_profiler da.py 128 3 4 / | sed -n -e 7p -e 10p
+
+     6  408.219 MiB  384.949 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  504.316 MiB   48.004 MiB       q3 = da.createGlobalVec()
+     6  520.219 MiB  496.949 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  648.316 MiB   64.004 MiB       q3 = da.createGlobalVec()
+</code></pre></div>
+<p>It&#39;s clear that each additional DOF increases the size of the DA by 112 MB.
+That&#39;s more than double the size of the whole DA we had with dof=1.  And the
+size of the Vec only increases (appropriately) by 16 MB.  So for large numbers
+of DOFs, the DA will be as large as 7 Vecs.</p>
+
+<h3>2D and 1D results</h3>
+
+<p>The same phenomenon is evident in two dimensions:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 1024 2 1 / | sed -n -e 7p -e 10p
+!python -m memory_profiler da.py 1024 2 2 / | sed -n -e 7p -e 10p
+!python -m memory_profiler da.py 1024 2 3 / | sed -n -e 7p -e 10p
+
+     6   48.371 MiB   24.895 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9   64.469 MiB    8.004 MiB       q3 = da.createGlobalVec()
+     6  160.398 MiB  136.922 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  176.492 MiB   16.004 MiB       q3 = da.createGlobalVec()
+     6  216.402 MiB  192.926 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  264.500 MiB   24.004 MiB       q3 = da.createGlobalVec()
+</code></pre></div>
+<p>Again we see that:</p>
+
+<ul>
+<li>The 1-DOF DA costs 3 Vecs</li>
+<li>The 2-DOF DA costs about 8.5 Vecs</li>
+<li>Asymptotically, a DA with many DOFs costs 7 Vecs</li>
+</ul>
+
+<p>What about 1D?</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 1000000 1 1 / | sed -n -e 7p -e 10p
+!python -m memory_profiler da.py 1000000 1 2 / | sed -n -e 7p -e 10p
+!python -m memory_profiler da.py 1000000 1 3 / | sed -n -e 7p -e 10p
+
+     6   47.164 MiB   23.688 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9   70.168 MiB    7.648 MiB       q3 = da.createGlobalVec()
+     6   77.684 MiB   54.207 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  123.582 MiB   15.285 MiB       q3 = da.createGlobalVec()
+     6  100.570 MiB   77.094 MiB       da = PETSc.DA().create([size]*ndim,dof)
+     9  169.355 MiB   22.914 MiB       q3 = da.createGlobalVec()
+</code></pre></div>
+<p>These results are relatively sane: regardless of the number of DOFs, the ratio
+is 3-3.5.</p>
+
+<h3>Conclusion</h3>
+
+<p>So DAs are not lightweight.  They cost as much as 3-8.5 Vecs, and their cost
+increases with the number of DOFs.  It is not clear to me <em>a priori</em> why their
+cost should even depend on the number of DOFs.</p>
+
+<p>In PyClaw, this means that the DAs always occupy much more memory than the Vecs
+themselves!  This is becoming a serious bottleneck for our current 3D
+simulations on Shaheen.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2014-03-11T00:00:00-06:00"
+      itemprop="datePublished">11 Mar 2014</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2014/03/03/notes.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2014/05/28/dispersion_relations.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#blog-post">#blog-post</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#petsc">#petsc</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#pyclaw">#pyclaw</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#memory">#memory</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#profiling">#profiling</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>11 Mar 2014</span> &raquo; <a href="/2014/03/11/DMDA_memory.html">The PETSc DMDA is not lightweight</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+      <li><span>13 Jan 2015</span> &raquo; <a href="/2015/01/13/using_matplotlib_image_comparison.html">Testing whether your code produces the correct plots -- in Python and on Travis</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

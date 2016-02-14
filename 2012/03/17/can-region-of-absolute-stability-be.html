@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Can a region of absolute stability be rectangular?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Can a region of absolute stability be rectangular?</h1>
+    <h3></h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <script type="text/x-mathjax-config">// <![CDATA[    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); // ]]&gt; // ]]&gt; // ]]&gt; // ]]&gt;</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><p>When a one-step integrator is applied to the solution of the linear scalar ODE</p><p>$$u'(t) = \lambda u(t)$$</p><p>the resulting iteration takes the simple form</p><p>$$U^{n} = R(h\lambda) U^{n-1}$$</p><p>where $U^n$ is a numerical approximation to the solution $u(t_n)$ and $R(h\lambda)$ is called the <em>stability function</em>.  The details of the stability function depend on the choice of numerical method, but for any explicit Runge-Kutta method, $R(z)$ is a polynomial whose degree is at most the number of stages of the method.</p><p>The stability function completely characterizes the accuracy and stability of the method when applied to linear problems.  Consider the first order linear, autonomous ODE</p><p>$$u'(t) = L u(t)$$</p><p>where now $u$ is a vector and $L$ is a square matrix.  The numerical solution will be</p><p>$$U^{n} = R(hL) U^{n-1}.$$</p><p>The global error satisfies a similar recurrence; in particular, it gets multiplied by a factor $R(hL)$ at each step.  Let $\lambda$ denote any eigenvalue of $L$; then If $L$ is a normal matrix, the solution will be absolutely stable in the Euclidean norm if all values $h\lambda$ lie within the stability region $S$, defined as</p><p>$$S = \{ z\in\mathbb{C} : |R(z)|\le 1\}.$$</p><p>Thus the region of absolute stability defines the portion of the complex plane in which a given numerical integration method may appropriately be applied.</p><p>In our <a href="http://arxiv.org/abs/1201.3035">preprint on Runge-Kutta stability regions</a>, Aron Ahmadia and I claim that we have an algorithm to generate a stability region appropriate for <strong>any</strong> spectrum.  By considering high-degree polynomials, we find that the resulting stability regions are tightly adapted to the shape of the imposed spectrum.</p><p>While this promises to be very useful for some problems, it also has an aspect that's just fun: we can generate stability regions with unusual shapes.  I haven't explored this much yet, but a first question that we ask in the preprint is how to generate a stability region for a spectrum of eigenvalues forming a rectangle in the left half of the complex plane.</p><p>Here is an example of a resulting stability region:</p><p><img style="display: block; margin-left: auto; margin-right: auto;" title="rectangle.png" src="http://lh5.ggpht.com/-hFUCwYmztZc/T2Tih_6hjqI/AAAAAAAAAqE/-bCijXPC9fU/rectangle.png?imgmax=800" border="0" alt="Rectangle" width="300" height="170" /></p><p>The gray region is the set $S$ for a certain degree-20 stability polynomial corresponding to a consistent twenty-stage Runge-Kutta method.  As one colleague told me when I showed it to him, "this seems too good to be true; is that rectangle really the stability region?"</p><p>Indeed it is.  Zooming in on the top edge we see the detailed structure of the boundary:</p><p><img style="display: block; margin-left: auto; margin-right: auto;" title="topzoom.png" src="http://lh5.ggpht.com/-Kw9OH_BbvFo/T2Tkf-wpSwI/AAAAAAAAAqU/nh-AvaTLjME/topzoom.png?imgmax=800" border="0" alt="Topzoom" width="400" height="227" /></p><p>Zooming in even closer:</p><p><img style="display: block; margin-left: auto; margin-right: auto;" title="topzoomzoom.png" src="http://lh6.ggpht.com/-Yl76vF8t5tE/T2TkhS5suMI/AAAAAAAAAqc/aAk3EZPO6Po/topzoomzoom.png?imgmax=800" border="0" alt="Topzoomzoom" width="500" height="283" /></p><p>As is typical with optimal stability polynomials, we se that the boundary is tangent or nearly tangent to the desired region at a large number of points (about 20 in this case).</p><p>What other shapes can be approximated?  More on that later...</p><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2593423780459904784?l=scienceinthesands.blogspot.com' alt='' /></div>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2012-03-17T00:00:00-06:00"
+      itemprop="datePublished">17 Mar 2012</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2012/03/13/should-your-advisor-be-author-on-your.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2012/04/26/harvard-suggests-that-its-faculty.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#numerical-analysis">#numerical-analysis</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#Runge-Kutta-methods">#Runge-Kutta-methods</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>17 Mar 2012</span> &raquo; <a href="/2012/03/17/can-region-of-absolute-stability-be.html">Can a region of absolute stability be rectangular?</a></li>
+    
+      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
+    
+      <li><span>14 Oct 2013</span> &raquo; <a href="/2013/10/14/CFL-disk.html">A Tale of Two Theorems</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

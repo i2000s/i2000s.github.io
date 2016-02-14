@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Step 5 - write tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Step 5 - write tests</h1>
+    <h3></h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>This is step 5 in your journey toward <a href="/2015/05/10/rock_solid_code.html">rock-solid scientific Python code</a>: <strong>write tests</strong>.</p>
+
+<p>Tests?  Ugh.</p>
+
+<p>I hear you.  Writing tests is not an inherently fun process.  However, the alternative is debugging, staring at code and thinking real hard about what could be wrong, and more debugging.  I&#39;ll take writing tests any day of the week.</p>
+
+<p>You may still not be convinced.  Fortunately, I don&#39;t have to convince you, because I&#39;m not going to ask you to write tests in this step.  As a matter of fact, I tricked you into writing tests in step 4.  Remember those examples you put in your docstring?</p>
+
+<p>Yeah, I&#39;m sneaky like that.</p>
+
+<p>What is a test?  It&#39;s a bit of code that uses your project code, together with assertions regarding the output.  Here&#39;s how you can use the docstring you wrote as a test:</p>
+
+<ol>
+<li>Go to your project directory and identify the file to which you added one or more docstrings in step 4.  We&#39;ll refer to that as <code>my_file.py</code>.</li>
+<li>At the command line (i.e., in a terminal), type <code>python -m doctest -v my_file.py</code> (but substitute the name of your file).</li>
+<li>Look at the printed output to see if your test(s) passed.</li>
+</ol>
+
+<p>What just happened?  Doctest is a python module that takes all the examples in your docstrings, runs them, and checks whether the output in the docstring matches the actual output.  If any of your doctests failed, you should compare the actual output with your docstring and correct things.</p>
+
+<p>I always forget how to invoke doctest, so I put the following code at the bottom of all my <code>.py</code> files:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div>
+<p>After adding that, I can just do</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">python my_file.py -v
+</code></pre></div>
+<p>and it will automatically run the doctests.  One warning: if you don&#39;t add the
+<code>-v</code> flag (for verbose) on the command line, then there will be no printed
+output at all unless some test fails.  And if you put <code>-v</code> before your filename,
+you&#39;ll get something totally different.</p>
+
+<p>Doctests are certainly not all there is to testing in Python, but for me they are a minimal-effort approach that makes my code much more reliable.  If you add a docstring with a doctest to each function and module in your code, you&#39;ll spend a lot less time debugging later on.  I bet you&#39;ll also find some bugs as you add the doctests.</p>
+
+<p>From now on, just make it a habit to add a docstring and a doctest whenever you write a new function.  Your future self will thank you.</p>
+
+<p><a href="https://github.com/ketch/rock-solid-code-demo/blob/13ab3f8af4e6be813eaee512897948e4c5a178a7/factor.py">Here&#39;s what my demo repository looks like at this stage</a>.</p>
+
+<p><a href="/2015/05/16/track_issues.html">Continue to step six</a>.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2015-05-15T00:00:00-06:00"
+      itemprop="datePublished">15 May 2015</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2015/05/14/write_docstrings.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2015/05/16/track_issues.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#python">#python</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#testing">#testing</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>15 May 2015</span> &raquo; <a href="/2015/05/15/write_tests.html">Step 5 - write tests</a></li>
+    
+      <li><span>29 May 2015</span> &raquo; <a href="/2015/05/29/automate_tests.html">Step 7 - Automate the tests</a></li>
+    
+      <li><span>14 May 2015</span> &raquo; <a href="/2015/05/14/write_docstrings.html">Step 4 - write docstrings</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

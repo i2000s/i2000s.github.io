@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>The parallel EPPEER code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reproducing some basic parallel results">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">The parallel EPPEER code</h1>
+    <h3>Reproducing some basic parallel results</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and
+OpenMP, because I’m thinking of writing a shared-memory parallel ODE
+solver code myself.</p>
+
+<p>I downloaded the code from</p>
+
+<p><a href="http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/eppeer.zip" title="Go to wiki page">http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip</a></p>
+
+<p>unzipped, and ran</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gfortran -c mbod4h.f90 
+gfortran -c ivprkp.f90 
+gfortran -c -fopenmp ivpepp.f90 
+gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
+./a.out
+</code></pre></div>
+<p>I had to fix one line that was trying to open a logfile and failed. I
+also set</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">export OMP_NUM_THREADS=4
+</code></pre></div>
+<p>This runs the code with increasingly tight tolerances on a 400-body
+problem. The output was (I killed it before it finished the really tight
+tolerance run(s)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"> tol, err, otime, cpu  0.10E-01 0.10702      2.9556      10.534    
+ steps,rej,nfcn:  337   88     1399
+ tol, err, otime, cpu  0.10E-02 0.93692E-01  4.9853      18.585    
+ steps,rej,nfcn:  605  159     2465
+ tol, err, otime, cpu  0.10E-03 0.66604E-01  7.9798      30.365    
+ steps,rej,nfcn:  994  244     4015
+ tol, err, otime, cpu  0.10E-04 0.47637E-01  12.026      46.477    
+ steps,rej,nfcn: 1534  324     6175
+ tol, err, otime, cpu  0.10E-05 0.24241E-01  18.239      70.756    
+ steps,rej,nfcn: 2338  415     9391
+</code></pre></div>
+<p>If I understand correctly, the last column is total CPU time; the next
+to last is wall time. For comparison, I ran it without parallelism:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">export OMP_NUM_THREADS=1
+</code></pre></div>
+<p>Then I got the following:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"> tol, err, otime, cpu  0.10E-01 0.10702      10.382      10.382    
+ steps,rej,nfcn:  337   88     1399
+ tol, err, otime, cpu  0.10E-02 0.93692E-01  18.297      18.297    
+ steps,rej,nfcn:  605  159     2465
+ tol, err, otime, cpu  0.10E-03 0.66604E-01  29.814      29.815    
+ steps,rej,nfcn:  994  244     4015
+ tol, err, otime, cpu  0.10E-04 0.47637E-01  45.854      45.855    
+ steps,rej,nfcn: 1534  324     6175
+ tol, err, otime, cpu  0.10E-05 0.24241E-01  69.725      69.726    
+ steps,rej,nfcn: 2338  415     9391
+ tol, err, otime, cpu  0.10E-06 0.53727E-02  105.47      105.48    
+ steps,rej,nfcn: 3539  484    14195
+</code></pre></div>
+<p>The numbers of function evaluations were identical, confirming that the
+computations being performed were the same. The speedup (about 3x) is
+very nice. We should be able to achieve something similar with
+extrapolation.</p>
+
+<p>These results are actually plotted in <a href="http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/man_epp.pdf">the user guide</a>, at the end of
+Section 4.</p>
+
+<p>This was originally posted on <a href="https://mathwiki.kaust.edu.sa/david/eppeer">mathwiki</a>.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2012-10-17T00:00:00-06:00"
+      itemprop="datePublished">17 Oct 2012</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2012/10/16/low_quality_journal.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2012/10/25/switching-from-blogger-to-jekyll.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>17 Oct 2012</span> &raquo; <a href="/2012/10/17/eppeer.html">The parallel EPPEER code</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+      <li><span>01 Dec 2014</span> &raquo; <a href="/2014/12/01/clawpack-20.html">Clawpack turns 20</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

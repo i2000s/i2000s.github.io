@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Clawpack turns 20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Happy Birthday!">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Clawpack turns 20</h1>
+    <h3>Happy Birthday!</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>Twenty years ago, version 1.0 of the Conservation LAWs PACKage (CLAWPACK, now
+<a href="http://clawpack.org">Clawpack</a> was first released by
+<a href="http://faculty.washington.edu/rjl/">Randy LeVeque</a>.  It seems fitting to take
+the occasion to look back on the intervening years.  What follows are my
+thoughts on some of the great things that have resulted.</p>
+
+<p><img src="/assets/img/clawpack_bday.jpg" alt=""></p>
+
+<p>As far as I can tell, 
+<a href="http://www.netlib.org/na-digest-html/94/v94n44.html#5">this item in the NA-Digest</a>
+is the first public announcement of its existence.
+It was also announced more verbosely the same year in
+<a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=70F5140D445F7B89AF162827E10443A7?doi=10.1.1.48.3424&amp;rep=rep1&amp;type=pdf">this conference paper</a>, 
+from the proceedings of the 5th HYP conference.
+Reading that conference paper now, I am struck by how it incorporated many of
+the ideals of scientific software development that we now discuss as if they
+were new ideas.  For instance,</p>
+
+<ul>
+<li>Code that is <strong>easy to read and use</strong>, with plentiful <strong>documentation and examples</strong>.</li>
+<li><strong>Modular  design</strong>, that allows low-level functions to be reused
+and disparate parts of the code to be modified independently.  In the case of 
+Clawpack, this is epitomized by the fact that it allows the solution of <em>any</em>
+system of hyperbolic PDEs by changing just a single routine (the Riemann solver).</li>
+<li>An interface that allows methods and parameters to be changed easily, so that <strong>different
+methods can be conveniently compared</strong>.</li>
+<li>Clawpack was proposed as a <strong>benchmark</strong> against which to easily <strong>test new algorithms</strong>.</li>
+<li>Clawpack was released <strong>open source</strong> and for <strong>free</strong> on a public FTP server (netlib).<br></li>
+</ul>
+
+<p>In this day of so much ado about credit for software, it&#39;s also interesting to 
+view this paper as an early example of a mathematical publication that is all about software.</p>
+
+<p>Looking through the code snippets in the paper, I was astonished to recognize how much
+of the original Fortran 77 code remains virtually unaltered -- including many variable names,
+function interfaces, and overall design.  This is a testament to the quality of the
+original code design.</p>
+
+<p>The central algorithms in Clawpack have also stood the test of time.  The 80&#39;s saw the
+heyday of research into second-order TVD methods for conservation laws, and Clawpack
+was released just as that era came to a close.  Since then, research has gone in
+other directions -- high-order methods, well-balancing, and positivity preservation,
+to name a few.  While these new directions have provided additions to Clawpack,
+the &quot;classic&quot; algorithms have not changed and are still hard to beat as a 
+robust general-purpose tool.</p>
+
+<p>Of course, much has happened in the intervening twenty years.  The original library
+handled 1- and 2-dimensional problems on regular cartesian grids.  In the next few years,
+subsequent versions added algorithms for
+<a href="http://faculty.washington.edu/rjl/pubs/wp3d/index.html">3D</a>, mapped grids, and
+<a href="http://faculty.washington.edu/rjl/pubs/amrclaw/index.html">adaptively refined meshes</a>.</p>
+
+<p>Additional algorithmic innovations are too numerous to try to list, but one
+that has had a lot of impact is <a href="http://epubs.siam.org/doi/abs/10.1137/S106482750139738X">the f-wave technique</a>.</p>
+
+<p>The problems to which Clawpack has been applied are certainly <strong>much</strong> too numerous to list.
+But you can start to get an idea by looking at citations of major Clawpack papers like
+<a href="http://scholar.google.com/scholar?cites=17725852758276924945&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">this</a>,
+<a href="http://scholar.google.com/scholar?cites=7413565796955546825&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">this</a>,
+<a href="http://scholar.google.com/scholar?cites=13042879341964900053&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">this</a>,
+<a href="http://scholar.google.com/scholar?cites=13610946858631858859&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">this</a>,
+and <a href="http://scholar.google.com/scholar?cites=7380133178147045066&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">this</a>.
+Perhaps the heaviest use in recent years has involved geophysical flows such as tsunamis and
+storm surges, in GeoClaw.</p>
+
+<h2>The Clawpack family of codes</h2>
+
+<p>Clawpack has spawned numerous offshoots and extensions, including (but not limited to)
+<a href="http://www.clawpack.org/amrclaw.html">AMRClaw</a>, 
+<a href="http://mitran-lab.amath.unc.edu:8084/redmine/projects/bearclaw/wiki">BearClaw</a>, 
+<a href="http://cedb.asce.org/cgi/WWWdisplay.cgi?121287">ZPLClaw</a>, 
+<a href="http://www.clawpack.org/doc/pyclaw/solvers.html?highlight=sharpclaw#pyclaw.sharpclaw.solver.SharpClawSolver">SharpClaw</a>, 
+<a href="https://scholarworks.aub.edu.lb/handle/10938/9322">CUDAClaw</a>,
+<a href="http://math.boisestate.edu/%7Ecalhoun/ForestClaw/">ForestClaw</a>, 
+<a href="https://github.com/manyclaw/manyclaw">ManyClaw</a>,
+<a href="http://www.clawpack.org/pyclaw/index.html">PyClaw</a>,
+and <a href="http://www.clawpack.org/geoclaw.html">GeoClaw</a>.
+Some of these have become part of the Clawpack-5 suite while others
+have forked and gone in other directions.</p>
+
+<p>Nowadays, the term Clawpack refers to a collection of interrelated packages 
+that are maintained and developed at <a href="http://github.com/clawpack">github.com/clawpack</a>.
+They include:</p>
+
+<ul>
+<li>The original (&quot;Classic&quot;) Clawpack;</li>
+<li>AMRClaw (with adaptive mesh refinement)</li>
+<li>GeoClaw (with special tools for geophysical flows)</li>
+<li>PyClaw (a Python interface to both the classic code and the high-order &quot;SharpClaw&quot; algorithms)</li>
+<li>Riemann (a library of approximate Riemann solvers, which can be used with all of the above codes)</li>
+<li>VisClaw (an in-house visualization tool)</li>
+</ul>
+
+<p>The Github organization also includes repositories for the docs and for contributed
+applications.</p>
+
+<h2>The Clawpack community</h2>
+
+<p>As far as I know, the original release was a one-person effort.  But like
+most open-source projects, Clawpack quickly became a broader collaboration.
+I won&#39;t attempt to credit everyone here; you can see some of the major contributors
+<a href="http://www.clawpack.org/about.html#authors">here</a>, and many more by looking
+at the contributors pages on Github.</p>
+
+<p><img src="/assets/img/HPC3-2012-group-photo.jpg" alt=""></p>
+
+<p>I was surprised to realize that I&#39;ve now been involved with Clawpack for
+half of its existence -- ten years!  During those years I&#39;ve gotten to work
+with an group of exceptional researchers who are also just outstanding people.
+They say that the culture of an open-source software community is shaped strongly
+by its founder, and I think Clawpack is no exception.<br>
+It seems to me that its creator is not only a great applied mathematician, but
+also somene who consistently leads the way in terms of improving the way we do
+science.  Clawpack exemplifies his commitment to reproducibility and sustainable
+scientific software development, long before those words came into scientific
+vogue.  He was an advocate for publishing in journals with low subscription
+prices, long before open access became a movement.<br>
+Most significantly, he has always been interested first in finding and solving
+interesting problems, and only secondarily in publishing papers.
+Both through his personal influence and as chair of the SIAM Journals Committee,
+he has been influential in making progress in these directions, including the
+establishment of a Software section in SISC, the acceptance by SIAM journals
+of supplementary materials (including code), and a new policy allowing authors
+to post published articles on their own or institutional websites.</p>
+
+<p><img src="/assets/img/hpc3_attendees.jpg" alt=""></p>
+
+<p>As a result, the culture surrounding Clawpack has always encouraged openness
+and a willingness to accept new contributions.  Furthermore, I think that the
+Clawpack developers have maintained a healthy skepticism toward our own
+algorithms and code.  Although we try to make our code useful to as many people
+as possible, there has never been any attempt to evangelize the community in
+order to increase use of a particular set of algorithms or to increase
+metrics like citation counts.  Because of this attitude, the code is
+continually improved through incorporation of new algorithmic innovations.</p>
+
+<h2>Lessons learned</h2>
+
+<p>Of course, it would be wrong to say that Clawpack has been a perfect model
+for scientific code development.  There are plenty of things we&#39;ve done
+wrong or could learn to improve.  </p>
+
+<p>The original announcement says that
+&quot;contributions from other users will be gratefully accepted,&quot;
+and that has always been true.  Nevertheless, the widely accepted development
+model for a long time was that most users would take the code, fork it,
+and make their own enhancements that would never get back to the main codebase.
+While this prevented feature bloat, it also meant that a great wealth of
+knowledge -- largely in the form of sophisticated approximate Riemann solvers
+-- will perish on some dusty hard drive
+rather than benefitting the larger community.  We&#39;re trying to change
+that now by encouraging users to submit pull requests for Riemann
+solvers and for entire applications.</p>
+
+<p>Another example of where I see room for improvement is in output and visualization,
+where we have, to some degree, reinvented the wheel.  Clawpack has long used
+custom ASCII and binary file formats, that can only be read in by Clawpack
+(or by reverse-engineering code for the relatively simple formats).
+We are now pushing to move to a more standard default format (probably HDF5),
+which would allow easier integration with standard visualization and post-processing
+libraries.  </p>
+
+<p>On the visualization side, the Clawpack developers have created
+some extremely useful tools for plotting time-dependent data on structured grids
+(including block-structured AMR).  These tools sit on top of MATLAB and matplotlib.
+A large amount of work has gone into these &quot;in-house&quot; tools rather than into
+leveraging and contributing to dedicated visualization tools.  Meanwhile, individual
+users have occasionally connected Clawpack to powerful visualization tools, but
+their custom code never got back to the main codebase.  The limited capabilities
+of matplotlib in 3D seem to finally be providing sufficient impetus to force us
+to integrate with a sophisticated visualization library.  I have been working lately
+on integration with <a href="http://yt-project.org">yt</a>.</p>
+
+<h2>The next 20 years?</h2>
+
+<p>It may come as a surprise for a code that&#39;s so long in the tooth, but I think
+Clawpack development at present is more vibrant than
+ever.  Since 2011, we&#39;ve held annual developer workshops, the latest
+of which took place last week here at KAUST.  The pictures on this page
+are from those workshops (the cake in the first photo, which shows the Clawpack
+logo, was made by my wife, and is a fondant version of a fluid-dynamical
+shockwave hitting a low-density bubble).</p>
+
+<p>As for the future, I won&#39;t claim enough clairvoyance to see 20 years ahead.
+But here are some things I hope we can accomplish in the next few years:</p>
+
+<ul>
+<li><strong>Massively parallel adaptive mesh refinement</strong> (at present, it exists only in
+the unreleased ForestClaw code; a concurrent effort is bring this to PyClaw
+through BoxLib);</li>
+<li>An ever-growing <strong>library of Riemann solvers</strong> for increasingly complex systems;</li>
+<li><strong>Code-generation</strong> for solving problems where a custom Riemann solver is not yet available;</li>
+<li>Incorporation of code that runs on <strong>accelerators</strong> (like CUDAClaw and ManyClaw)
+into the main library in a way that allows users to change hardware seamlessly;</li>
+<li>More <strong>teaching tools</strong> based on Clawpack and IPython notebooks, including a
+book showcasing Riemann solutions of important physical systems;</li>
+<li><strong>Additional algorithms</strong> (such as Discontinuous Galerkin methods and new time
+stepping techniques) that can be accessed through the same problem setup and use the
+same Riemann solvers;</li>
+<li>Better <strong>interoperability</strong> between Clawpack and other codes (such as 
+<a href="http://proteus.usace.army.mil/">Proteus</a>), by making Clawpack more of a true
+library.</li>
+</ul>
+
+<p>Are you excited yet?  I certainly am.  Come join the fun!</p>
+
+<p><img src="/assets/img/clawlogo.jpg" alt=""></p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2014-12-01T00:00:00-07:00"
+      itemprop="datePublished">01 Dec 2014</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2014/07/18/teaching_in_the_open.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2014/12/09/teaching_kids_to_program.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#clawpack">#clawpack</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#scientific-computing">#scientific-computing</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#hyperbolic-PDEs">#hyperbolic-PDEs</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#software-distribution">#software-distribution</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>01 Dec 2014</span> &raquo; <a href="/2014/12/01/clawpack-20.html">Clawpack turns 20</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+      <li><span>10 Nov 2011</span> &raquo; <a href="/2011/11/10/book-review-reinventing-discovery.html">Book Review: Reinventing Discovery</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

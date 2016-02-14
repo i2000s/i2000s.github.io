@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Step 6 - Keep track of issues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Step 6 - Keep track of issues</h1>
+    <h3></h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>Welcome to step 6 in <a href="/2015/05/10/rock_solid_code.html">your training as a scientific Python code ninja</a>: <strong>issue tracking</strong>.</p>
+
+<p>Look at you!  You&#39;ve got your nice code with some docstrings and tests, and you&#39;re
+humming along analyzing data, simulating widgets, and whatnot.  In the middle of it
+all, you realize that your regression analysis function breaks if you feed it more than
+57 data points.  And wouldn&#39;t it be nice if it made a plot in addition to
+just printing out the correlation coefficient?  And it would all be easier to use
+if your functions had default values for some of their arguments.</p>
+
+<p>But you can&#39;t stop to (fix that bug)/(add that feature)/(refactor that function)
+right now -- you&#39;re deep in all that beautiful data!
+Besides, maybe nobody will ever try to use this script with more than 57 data values.
+What should you do?</p>
+
+<h2>Raise an issue.</h2>
+
+<p>An issue may be:</p>
+
+<ul>
+<li>A bug</li>
+<li>A bit of code that works but needs to be improved</li>
+<li>A potential feature enhancement</li>
+</ul>
+
+<p>Github -- like other code repository services -- has a built-in feature for
+tracking issues.  When you raise an issue on your code&#39;s Github repository,
+awesome things become possible:</p>
+
+<ul>
+<li>You have a reminder to yourself of that thing that needs to be fixed</li>
+<li>Everyone else who uses your code can be aware of it too</li>
+<li>You and they can have a public discussion of what&#39;s wrong and how to fix it (or what could be improved)</li>
+<li>After it&#39;s fixed/improved, you have a permanent record of the discussion and the improvements, that can be seen by anyone</li>
+</ul>
+
+<p>With Github&#39;s issue tracker, there&#39;s all kinds of additional goodness: issues are searchable,
+can reference one another, can reference people, can be tagged/labeled, and more.
+Check out <a href="https://guides.github.com/features/issues/">Github&#39;s 10-minute explanation</a> 
+to learn all about it.</p>
+
+<h1>What to do:</h1>
+
+<p>As usual, this should only take two minutes.</p>
+
+<ol>
+<li>Think of at least one or two bugs, potential features, or improvements related to your project code.
+If you can&#39;t think of any, either you haven&#39;t been using the code much or you&#39;re not thinking
+very hard.</li>
+<li>Go to your project&#39;s page in Github and click the issues button on the right side:
+<img src="/assets/img/github-issues-button.png" alt=""></li>
+<li>Click that big green &quot;New Issue&quot; button.  Give the issue a title and an explanation.
+If it&#39;s a bug, write down the exact sequence of commands that triggers it.</li>
+<li>Click &quot;Submit new issue&quot;.</li>
+<li>(for the future) When you eventually get around to solving the issue, you can
+mark it as &quot;Closed&quot;.  This doesn&#39;t delete it, but it removes it from the list
+of &quot;Open&quot; issues.</li>
+</ol>
+
+<p>You&#39;re now at a page that lists all the issues for your project (presumably there&#39;s just
+one so far).  If you click on an issue, you find a page where you can write further
+comments and even have a conversation with other developers.  If you&#39;ve never seen
+such a conversation, take a look at some issues for bigger projects like 
+<a href="https://github.com/ipython/ipython/issues">IPython</a>.</p>
+
+<h2>The benefits of openness</h2>
+
+<p>It&#39;s nice that you can keep your reminder list there in the issue tracker, but
+you may be worried about exposing all the shortcomings of your code in public.
+Don&#39;t be!  It&#39;s much better to have them out in the open than to get surprised
+by them.  In fact, the real magic happens when other people start reporting issues.  If other people
+start using your code, you&#39;ll find that somehow they run into a lot more problems
+than you do.  Why?  Because there are all kinds of unstated assumptions in your head
+that silently went into your code -- but your users know nothing about them.  So they
+will stress your code in completely different ways and help you find all sorts of wonderful
+bugs.  They may even fix some of them for you -- but that&#39;s another subject.
+Just remember to be grateful -- it&#39;s easy to get your feathers ruffled when
+someone points out a flaw in your code, but in fact they are doing you a service.</p>
+
+<p>This goes both ways.  Your code almost certainly relies on a host of other projects,
+many of which are on Github or other servers with an issue tracker.  Do you use Pandas,
+numpy, scipy, or scikit-learn?  The next time you run into what might be a bug in those
+packages, be proactive.  Of course you should first check Stack Overflow, but if it seems
+like a bug to you, you can go raise an issue on the project&#39;s issue tracker.  That&#39;s right,
+anybody in the world can raise an issue -- you don&#39;t need to be one of the project developers.
+Just remember to be polite, and 
+<a href="http://coenjacobs.me/effective-bug-reports-on-github/">follow a few best practices</a> 
+when you report an issue.</p>
+
+<p><a href="https://github.com/ketch/rock-solid-code-demo/issues">Here&#39;s what the issues page for my demo project looks like</a>
+after raising a couple of issues.  And <a href="https://github.com/clawpack/pyclaw/issues">here&#39;s the issue tracker for a larger collaborative
+project</a>.  In academic research, I find that I
+open a lot more issues than I close.  That&#39;s okay -- the issue tracker is not a to-do list
+that has to be fully completed at some point.  It&#39;s just a way of keeping track
+of useful improvements that could be made.</p>
+
+<p><a href="/2015/05/29/automate_tests.html">Continue to step seven</a>.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2015-05-16T00:00:00-06:00"
+      itemprop="datePublished">16 May 2015</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2015/05/15/write_tests.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2015/05/29/automate_tests.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#python">#python</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#reproducibility">#reproducibility</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#documentation">#documentation</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>16 May 2015</span> &raquo; <a href="/2015/05/16/track_issues.html">Step 6 - Keep track of issues</a></li>
+    
+      <li><span>13 May 2015</span> &raquo; <a href="/2015/05/13/add_a_readme.html">Step 3 - Add a README and a License</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

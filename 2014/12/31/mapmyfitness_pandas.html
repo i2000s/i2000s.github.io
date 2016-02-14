@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Reviewing my marathon training using MapMyFitness and Pandas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Some fun with data">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Reviewing my marathon training using MapMyFitness and Pandas</h1>
+    <h3>Some fun with data</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>I&#39;m training for a marathon and I use
+<a href="http://www.mapmyfitness.com/">MapMyFitness</a> (MMF) on my iPhone to track my
+mileage and pace for each workout.  MMF has a <a href="https://developer.underarmour.com/">public
+API</a> and Jason Sanford has written a <a href="https://github.com/JasonSanford/mapmyfitness-python">Python
+front end for it</a>.  Which
+means that I can easily get hold of all my data in Python and explore it with
+Pandas!  To run this notebook, you&#39;ll need:</p>
+
+<ul>
+<li>A scientific Python stack (I recommend Anaconda)</li>
+<li>A MapMyFitness account and some recorded workout data</li>
+<li>A MapMyFitness API key and access token (go to https://www.mapmyapi.com/io-
+docs)</li>
+</ul>
+
+<p>You should also</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">pip install mapmyfitness
+</code></pre></div>
+<p>Here we go...</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">mapmyfitness</span> <span class="kn">import</span> <span class="n">MapMyFitness</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">mpl_style</span> <span class="o">=</span> <span class="s">&#39;default&#39;</span></code></pre></div>
+
+
+The next cell logs into MMF, grabs all my workout data, filters for a specified
+activity type (running, in my case), and extracts the date, distance and pace
+for each workout.  You'll need to enter your API key and access token to use it.
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_workouts</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">workout_type</span><span class="o">=</span><span class="s">&#39;run&#39;</span><span class="p">):</span>
+    <span class="c"># Log in</span>
+    <span class="n">mmf</span> <span class="o">=</span> <span class="n">MapMyFitness</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s">&#39;your-key&#39;</span><span class="p">,</span> \
+            <span class="n">access_token</span><span class="o">=</span><span class="s">&#39;your-token&#39;</span><span class="p">)</span>
+
+    <span class="c"># get all workouts</span>
+    <span class="n">workout_pages</span> <span class="o">=</span> <span class="n">mmf</span><span class="o">.</span><span class="n">workout</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="mi">48155002</span><span class="p">,</span><span class="n">per_page</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">cache_finds</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c"># doesn&#39;t work if per_page&gt;40</span>
+
+    <span class="n">paces</span>     <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dates</span>     <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">workouts</span>  <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">pagenum</span> <span class="ow">in</span> <span class="n">workout_pages</span><span class="o">.</span><span class="n">page_range</span><span class="p">:</span>
+        <span class="n">workout_list</span> <span class="o">=</span> <span class="n">workout_pages</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">pagenum</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">workout</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">workout_list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+                <span class="k">print</span> <span class="s">&quot;processing workout &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; of &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">workout_list</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">workout_type</span> <span class="ow">in</span> <span class="n">workout</span><span class="o">.</span><span class="n">activity_type</span><span class="o">.</span><span class="n">root_activity_type</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="n">workouts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">workout</span><span class="p">)</span>
+                <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">workout</span><span class="o">.</span><span class="n">distance_total</span><span class="o">/</span><span class="mf">1609.344</span><span class="p">)</span> <span class="c"># convert meters to miles</span>
+                <span class="n">paces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">26.8224</span><span class="o">/</span><span class="n">workout</span><span class="o">.</span><span class="n">speed_avg</span><span class="p">)</span> <span class="c"># convert m/s to minutes per mile</span>
+                <span class="n">dates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">workout</span><span class="o">.</span><span class="n">start_datetime</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distances</span><span class="p">,</span> <span class="n">paces</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">workouts</span></code></pre></div>
+
+
+Be warned that this function takes a while.  You can set `verbose=1` to have it
+update you regularly.
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">distances</span><span class="p">,</span> <span class="n">paces</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">workout_list</span> <span class="o">=</span> <span class="n">get_workouts</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></div>
+
+
+
+# Creating a Pandas Dataframe
+The basic Pandas object we'll use is a dataframe.  We can create it as follows:
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">dist_ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+<span class="n">pace_ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">paces</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">&#39;Distance&#39;</span><span class="p">:</span> <span class="n">dist_ts</span><span class="p">,</span> <span class="s">&#39;Pace&#39;</span><span class="p">:</span> <span class="n">pace_ts</span><span class="p">})</span></code></pre></div>
+
+
+Let's see what's in it.  Rather than printing the whole (long) table, I'll use
+`head` to print the first few rows.
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></div>
+
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Distance</th>
+      <th>Pace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2014-09-02 03:24:23+00:00</th>
+      <td> 1.69787</td>
+      <td> 9.307203</td>
+    </tr>
+    <tr>
+      <th>2014-09-04 16:49:09+00:00</th>
+      <td> 2.05400</td>
+      <td> 9.356798</td>
+    </tr>
+    <tr>
+      <th>2014-09-06 18:10:46+00:00</th>
+      <td> 2.90366</td>
+      <td> 9.370637</td>
+    </tr>
+    <tr>
+      <th>2014-09-08 03:00:49+00:00</th>
+      <td> 3.36122</td>
+      <td> 9.943686</td>
+    </tr>
+    <tr>
+      <th>2014-09-10 03:02:17+00:00</th>
+      <td> 3.09783</td>
+      <td> 9.788455</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>As you can see, the workouts are sorted chronologically.  I started training
+(and using MapMyFitness) at the beginning of September, about 4 months ago.  At
+the time I could only comfortably run 2-3 miles, and my pace was slower than 9
+minutes per mile.</p>
+
+<h1>Basic plotting</h1>
+
+<p>Now we can easily plot workout distance and pace versus date:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fs</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">plotargs</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;figsize&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="s">&#39;fontsize&#39;</span> <span class="p">:</span> <span class="n">fs</span><span class="p">}</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Distance</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Workout distance (miles)&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">);</span></code></pre></div>
+
+
+
+![](/notebooks/mmf_pandas_files/mmf_pandas_14_0.png)
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">Pace</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Average pace (minutes per mile)&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">);</span></code></pre></div>
+
+
+
+![](/notebooks/mmf_pandas_files/mmf_pandas_15_0.png)
+
+
+Clearly, I'm running farther and faster as my training program progresses!  My
+pace is down to around 8 minutes per mile, and my typical runs are 5 miles or
+more.  Here's a histogram of the distances for all my workouts since I started:
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">Distance</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;hist&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Workout distance (miles)&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;Miles&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;Number of runs&#39;</span><span class="p">);</span></code></pre></div>
+
+
+
+![](/notebooks/mmf_pandas_files/mmf_pandas_17_0.png)
+
+
+How far have I run in total?  Here's a cumulative distance plot, showing that
+I've run more than 200 miles.
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">Distance</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Total workout distance (miles)&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">);</span></code></pre></div>
+
+
+
+![](/notebooks/mmf_pandas_files/mmf_pandas_19_0.png)
+
+
+# Stacked histogram separated by dates
+
+Let's see how my paces in the last two months compare to those in the first two
+months.  I suspect Pandas has a better way to do this than what I've implemented
+below, but this works...
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pace1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pace2</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">date</span><span class="p">,</span><span class="n">pace</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Pace&#39;</span><span class="p">]):</span>
+    <span class="k">if</span> <span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="o">&lt;</span><span class="mi">11</span><span class="p">:</span>
+        <span class="n">pace1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pace</span><span class="p">)</span>
+        <span class="n">pace2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pace1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">pace2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pace</span><span class="p">)</span>
+        
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">&#39;First two months pace&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pace1</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">),</span> 
+                    <span class="s">&#39;Last two months pace&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pace2</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)})</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;hist&#39;</span><span class="p">,</span><span class="n">stacked</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;# of runs&#39;</span><span class="p">);</span></code></pre></div>
+
+
+
+![](/notebooks/mmf_pandas_files/mmf_pandas_22_0.png)
+
+
+Again, it's clear that my pace has improved.
+
+# Longest runs
+
+Here are my five longest runs:
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;Distance&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">5</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></div>
+
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Distance</th>
+      <th>Pace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2014-12-27 04:39:34+00:00</th>
+      <td> 10.28480</td>
+      <td> 8.698211</td>
+    </tr>
+    <tr>
+      <th>2014-12-06 04:36:18+00:00</th>
+      <td>  9.00748</td>
+      <td> 8.506801</td>
+    </tr>
+    <tr>
+      <th>2014-12-13 04:39:00+00:00</th>
+      <td>  8.97491</td>
+      <td> 8.635715</td>
+    </tr>
+    <tr>
+      <th>2014-11-22 03:09:55+00:00</th>
+      <td>  8.47542</td>
+      <td> 8.469062</td>
+    </tr>
+    <tr>
+      <th>2014-11-15 03:09:18+00:00</th>
+      <td>  7.65717</td>
+      <td> 8.535385</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1>Weekly and monthly data</h1>
+
+<p>Next we aggregate data for each week and each month:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">weekly</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s">&#39;W&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mean&#39;</span><span class="p">,</span><span class="s">&#39;sum&#39;</span><span class="p">],</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;period&#39;</span><span class="p">)</span>
+<span class="n">monthly</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s">&#39;M&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mean&#39;</span><span class="p">,</span><span class="s">&#39;sum&#39;</span><span class="p">],</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;period&#39;</span><span class="p">)</span></code></pre></div>
+
+<p>Now we can plot the average pace for each week:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fig</span> <span class="o">=</span> <span class="n">weekly</span><span class="o">.</span><span class="n">Pace</span><span class="p">[</span><span class="s">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Average pace&#39;</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&#39;minutes per mile&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span></code></pre></div>
+
+<p><img src="/notebooks/mmf_pandas_files/mmf_pandas_31_0.png" alt=""></p>
+
+<p>The total milage per week:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fig</span> <span class="o">=</span> <span class="n">weekly</span><span class="o">.</span><span class="n">Distance</span><span class="p">[</span><span class="s">&#39;sum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;bar&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Total miles per week&#39;</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&#39;Miles&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span></code></pre></div>
+
+<p><img src="/notebooks/mmf_pandas_files/mmf_pandas_33_0.png" alt=""></p>
+
+<p>The plot above shows that I have not been terribly consistent, and have missed a
+number of workouts due to travel or sickness.  For instance, the second week of
+October I was on vacation in Jordan, and the last week of November I was in
+Mexico on business.</p>
+
+<p>Or the average mileage per run, by month:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fig</span> <span class="o">=</span> <span class="n">monthly</span><span class="o">.</span><span class="n">Distance</span><span class="p">[</span><span class="s">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;bar&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Average miles per run&#39;</span><span class="p">,</span><span class="o">**</span><span class="n">plotargs</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&#39;Miles&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span></code></pre></div>
+
+<p><img src="/notebooks/mmf_pandas_files/mmf_pandas_36_0.png" alt=""></p>
+
+<h1>Plotting the routes</h1>
+
+<p>MapMyFitness records the actual routes, so we can also plot them.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">mpld3</span>
+<span class="n">mpld3</span><span class="o">.</span><span class="n">enable_notebook</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">workout_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">route</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="p">[(</span><span class="n">p</span><span class="p">[</span><span class="s">&#39;lat&#39;</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="s">&#39;lng&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">w</span><span class="o">.</span><span class="n">route</span><span class="o">.</span><span class="n">points</span><span class="p">()];</span>
+        <span class="n">lat</span><span class="p">,</span> <span class="nb">long</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">points</span><span class="p">);</span>
+        <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="nb">long</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">39</span><span class="p">:</span>  <span class="c"># Omit workouts in other countries</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">long</span><span class="p">,</span><span class="n">lat</span><span class="p">)</span></code></pre></div>
+
+<p>The resulting map was a bit too much for Jekyll to handle, since it
+gets embedded as a huge amount of text.  Go check it out in 
+<a href="http://nbviewer.ipython.org/url/www.davidketcheson.info/notebooks/mmf_pandas.ipynb">the actual notebook</a>.
+The map is zoomable, thanks to mpld3.  You can see
+a lot of the roads at KAUST, as well as the running paths around the Gardens and
+through Thuwal park on the Island (see the squiggly line on the top left).  The
+path to the beacon is also obvious.  The line at the far right goes to the KAUST
+stadium, with a partial lap around the track.  You can even see where the road
+to the south Beach has moved due to construction.</p>
+
+<p>If you&#39;re not familiar with KAUST, just compare the plot above with a <a href="https://www.google.com.sa/maps/@22.3154039,39.1157315,5583m/data=!3m1!1e3?h%0Al=en">satellite
+map</a>.</p>
+
+<h1>Post-marathon update (May 2015)</h1>
+
+<p>Last Sunday I ran my first marathon!  After reading the above, you may be wondering
+how the rest of my training went.  Well, the short story is told by this graph:</p>
+
+<p><img src="/notebooks/mmf_pandas_files/total_miles.png" alt="Total mileage"></p>
+
+<p>Just after my original post, I broke my toe (not from running) and had to stop
+running for 3-4 weeks.  In the meantime, I started biking in order to stay in
+shape.  Later I started getting pain in my calf (still not sure why) when running,
+so I kept replacing some of my run workouts with biking.</p>
+
+<p>In total, I ran about 550 miles and biked about 370 miles.
+That sounds like a lot, but my total time spent on training workouts
+was just over 100 hours.  It seems pretty amazing to me that you can condition
+your body to run a marathon with only that much effort.</p>
+
+<p>My goal was to finish in 4 hours and my finish time was 3:56:44.  :-).</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2014-12-31T00:00:00-07:00"
+      itemprop="datePublished">31 Dec 2014</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2014/12/09/teaching_kids_to_program.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2015/01/13/using_matplotlib_image_comparison.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#python">#python</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#notebook">#notebook</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#exercise">#exercise</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>31 Dec 2014</span> &raquo; <a href="/2014/12/31/mapmyfitness_pandas.html">Reviewing my marathon training using MapMyFitness and Pandas</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+      <li><span>01 Dec 2014</span> &raquo; <a href="/2014/12/01/clawpack-20.html">Clawpack turns 20</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

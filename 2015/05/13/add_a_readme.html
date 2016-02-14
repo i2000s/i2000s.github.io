@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Step 3 - Add a README and a License</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Step 3 - Add a README and a License</h1>
+    <h3></h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>This is step 3 in your journey toward <a href="/2015/05/10/rock_solid_code.html">rock-solid scientific Python code</a>.</p>
+
+<p>So your code is <a href="/2015/05/11/use_version_control.html">under version control</a> and it&#39;s 
+<a href="/2015/05/12/code_in_the_open.html">floating up there in the cloud</a>.
+In principle, someone else could use it.  But how will they know it&#39;s there?
+How will they know what it does, and how to install and use it?</p>
+
+<h1>You need a README file.</h1>
+
+<p>A README is minimalist documentation -- just what is absolutely necessary for someone to start using your code.  Most often, that someone is your future self, who has forgotten things.  Here&#39;s what to do:</p>
+
+<ol>
+<li>Go to your project directory and open a new file.  Call it README.md.  The .md extension stands for Markdown, which is just an embellished format for text files that lets you add text formatting in simple ways that will automatically show up on Github.  You can learn more about Markdown <a href="https://help.github.com/articles/markdown-basics/">here</a>, but for the moment just think of it as a text file.</li>
+<li><p>Write the contents of the README file.  You should probably include:</p>
+
+<ul>
+<li>a brief description of what your code does;</li>
+<li>instructions for installing your code;</li>
+<li>what other code needs to be installed for it to work;</li>
+<li>one or two examples of how to invoke your code;</li>
+<li>optionally: who wrote the code, how to cite it, and who to contact for help.
+One good example of a README file is <a href="https://github.com/github/markup/blob/master/README.md">here</a>.</li>
+</ul></li>
+<li><p>Save and close the file.  </p></li>
+<li><p>Add it to your repository with <code>git add</code> and <code>git commit</code>.</p></li>
+<li><p>Push the file to github with <code>git push</code>.</p></li>
+<li><p>Go to the page for your project on Github.  You should see the contents of your README file displayed automatically right below the directory listing.  It should look <a href="https://github.com/ketch/rock-solid-code-demo">something like this</a>.</p></li>
+</ol>
+
+<p>Note: it&#39;s also possible (and even easier) to add a README directly on Github, by clicking that nice green button:</p>
+
+<p><img src="/assets/img/github-readme-button.png" alt=""></p>
+
+<p>Nice work!  Now others (or your future self) stand a decent chance of being
+able to use your code.  But they may not want to use it in exactly the same way
+you do.  In fact, there&#39;s a good chance they may want to modify it, or
+incorporate it into some other code they have.  By default, copyright laws
+don&#39;t allow them to do that.  If you want others to be able to use your code
+for their purposes...</p>
+
+<h1>You need a License file.</h1>
+
+<p>This part is fairly painless because, unlike a README, the license you use
+should NOT generally be customized for your project.  It&#39;s much better to
+choose a standard license, so that other people don&#39;t need to agonize over all
+the fine print.  The most common licenses for open source scientific software
+are </p>
+
+<ul>
+<li><a href="http://choosealicense.com/licenses/bsd-2-clause/">BSD</a>,</li>
+<li><a href="http://choosealicense.com/licenses/mit/">MIT</a>, and</li>
+<li><a href="http://choosealicense.com/licenses/gpl-2.0/">GPL</a>.<br></li>
+</ul>
+
+<p>All of these allow others to use, redistribute, and
+modify your code.  The GPL license imposes one restriction that is absent from
+the others: other code that uses yours must also be GPL.  Some view this as a
+great way to encourage more free, open-source code.  Others view it as an
+impediment to your code being used.  My suggestion is to use a BSD license, but
+if you want to investigate in more detail, try <a href="http://choosealicense.com/">Choose A
+License</a> or go read <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3406002/">this
+paper</a>.</p>
+
+<p>Here&#39;s what to do:</p>
+
+<ol>
+<li> Create a file called LICENSE.txt in your project directory.</li>
+<li> Paste the license text (from one of the links above) into the file, save, and close.</li>
+<li> Commit and push the file to Github.</li>
+</ol>
+
+<p>That&#39;s it!  Other folks can now legally adapt your code for their own purposes.</p>
+
+<p>Congratulations on making it this far.  Now go to 
+<a href="/2015/05/14/write_docstrings.html">step four</a>.</p>
+
+<h1>Extra credit: Contributing.md and Thanks.md</h1>
+
+<p>It&#39;s great that other people can now make improvements to your code.  It would be even better if they sent those improvements back to you!  To encourage that, you should add a Contributing.md file to tell them what your standards for acceptable code are and what the process is for adding code to your repository.  Github provides a <a href="https://raw.githubusercontent.com/contribute-md/contribute-md-template/master/contribute.md">standard template for such a file</a>, though for small projects you can provide something much simpler.  Some good examples of contributing files are:</p>
+
+<ul>
+<li><a href="https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md">Puppet</a></li>
+<li><a href="https://github.com/thoughtbot/factory_girl_rails/blob/master/CONTRIBUTING.md">Factory_girl_rails</a></li>
+</ul>
+
+<p>If people have contributed to your project, it&#39;s standard to have a file called Thanks.md that lists their names and contributions.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2015-05-13T00:00:00-06:00"
+      itemprop="datePublished">13 May 2015</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2015/05/12/code_in_the_open.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2015/05/14/write_docstrings.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#open-science">#open-science</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>13 May 2015</span> &raquo; <a href="/2015/05/13/add_a_readme.html">Step 3 - Add a README and a License</a></li>
+    
+      <li><span>16 May 2015</span> &raquo; <a href="/2015/05/16/track_issues.html">Step 6 - Keep track of issues</a></li>
+    
+      <li><span>10 May 2015</span> &raquo; <a href="/2015/05/10/rock_solid_code.html">12 steps toward rock-solid scientific Python code</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

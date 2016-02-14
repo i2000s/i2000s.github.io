@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>A Tale of Two Theorems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What the CFL theorem can tell us about polynomials (and vice-versa)">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">A Tale of Two Theorems</h1>
+    <h3>What the CFL theorem can tell us about polynomials (and vice-versa)</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>In their <a href="http://dx.doi.org/10.1147/rd.112.0215">celebrated 1928 paper</a>,
+Courant, Friedrichs, and Lewy proved a geometric condition that must be
+satisfied by a convergent <strong>partial</strong> differential equation discretization --
+the famous CFL condition.  Briefly, the CFL theorem says that the numerical
+method must transport information at least as quickly as information travels in
+the true PDE solution.  The proof is geometric and is conveyed through numerous
+diagrams.</p>
+
+<p>Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna
+<a href="http://dx.doi.org/10.1007/BF01932030">published a theorem</a> [JN] that deals with
+bounding the modulus of a polynomial $\psi(z)$ over a disk of the form 
+$$D<em>r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
+$\psi(z) = 1 + z + a</em>2 z^2 + \cdots + a<em>s z^s$ and $|\psi(z)|\le 1$ for all $z$
+in such a disk $D</em>r$, then the disk radius $r$ is at most $s$.  The proof of
+this result is, of course, purely algebraic.</p>
+
+<p>These results apparently have nothing to do with one another.  And yet it turns
+out that <strong>they are equivalent statements!</strong>  That is, the CFL theorem can be
+proved using the JN disk theorem.  And the JN disk theorem can be proved using
+the CFL condition (and no algebraic techniques).  This was explained in <a href="http://dx.doi.org/10.1007/BF01389633">a
+beautiful paper of Sanz-Serna and
+Spijker</a> [SS] in 1986, and the result
+deserves to be much more well known.</p>
+
+<h3>First order upwinding</h3>
+
+<p>Consider the problem of approximating the value $u(x<em>i,t</em>n)$ for the advection equation
+$$u<em>t + u</em>x = 0.$$
+The exact solution can be obtained by characteristics from the previous time level:
+$$u(x<em>i,t</em>n) = u(x<em>i-k,t</em>{n-1}),$$
+where $k$ is the time step size.
+The CFL theorem says that the stencil used for approximating $u(x<em>i,t</em>n)$ must
+enclose the point $x_i-k$.</p>
+
+<p>Let&#39;s discretize the advection equation in space using upwind differences:
+$$U<em>i&#39;(t) = -\left(U</em>i-U<em>{i-1}\right).$$
+Here for simplicity we&#39;ve assumed a spatial mesh width of 1.
+Taking periodic boundary conditions, this semi-discretization is a system of
+ODEs of the form $U&#39;=LU$ where $L$ is the circulant matrix 
+$$
+\begin{pmatrix}
+-1 &amp; &amp; &amp; 1 \
+1  &amp; -1 &amp; &amp; \
+&amp; \ddots &amp; \ddots \
+&amp; &amp; 1 &amp; -1 \
+\end{pmatrix}$$
+(as usual, all the omitted entries are zero).
+The eigenvalues of this matrix all lie on the boundary of the disk of radius
+one centered at $z=-1$, which we denote by $D</em>1$.  Here are the eigenvalues of
+a 50-point discretization:</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png" alt=""></p>
+
+<p>If we discretize in time with Euler&#39;s method, we get the scheme
+$$U^n<em>i = U^{n-1}</em>i - k\left(U<em>i-U</em>{i-1}\right).$$
+This scheme computes the solution at $(x<em>i,t</em>n)$ using values at
+$(x<em>{i-1},t</em>{n-1})$ and $(x<em>i,t</em>{n-1})$, so the CFL theorem says it can be
+convergent only if $x<em>i-k$ lies in the interval $(x</em>{i-1},x<em>i)$.  Since
+$x</em>{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  </p>
+
+<p>This result -- that the first-order upwind method is stable and convergent only
+for CFL number at most one -- is well known, and can also be derived using
+basic method of lines stability theory.  The stability function for Euler&#39;s
+method is $\psi(z) = 1 + z$, so it is stable only if $z=k\lambda$ lies in the
+disk ${z : |1+z|\le 1} = D_1$ for each eigenvalue $\lambda$ of $L$.  What we
+have seen in the foregoing is that this stability condition can be derived
+directly from the CFL condition, without considering the eigenvalues of $L$ or
+the stability region of Euler&#39;s method.</p>
+
+<h3>Proving the JN disk theorem via the CFL theorem</h3>
+
+<p>For higher order discretizations, the CFL condition is necessary but not
+generally sufficient for stability.  Nevertheless, we can use it to derive the
+JN disk theorem.  I&#39;ll restrict the explanation here to Runge-Kutta methods,
+but the extension to multistep methods is very simple.  Suppose that we
+discretize in time using a Runge-Kutta method with $s$ stages.  In each stage,
+one point further to the left is used, so typically the stencil for computing
+$u(x<em>i,t</em>n)$ includes the values from the previous step at $x<em>{i-s}, x</em>{i-s+1},
+\dots, x<em>i$.  Thus the CFL theorem says the method cannot be convergent unless
+$x</em>i-k$ lies in the interval $(x<em>{i-s},x</em>i)$; i.e., unless $k\le s$.
+Meanwhile, the stability function $\psi(z)$ of the Runge-Kutta method is a
+polynomial of degree at most $s$.  Method of lines analysis tells us that the
+full discretization is stable if $kD<em>1$ lies inside the region ${z :
+|\psi(z)|\le 1}.$  Since we know it is unstable for $k&gt;s$, this implies that
+if $|\psi(z)|\le 1$ over the disk $D</em>k$, then $k \le s$. </p>
+
+<h3>Recap</h3>
+
+<ol>
+<li>An $s$-stage upwind discretization has stencil width $s$.</li>
+<li>The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than $s$.</li>
+<li>The spectrum of the semi-discretization is the boundary of the disk $D_1$.</li>
+<li>Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD<em>1 = D</em>k$ lies inside the stability region of the time discretization.</li>
+<li>Thus no $s$-stage time discretization can have a stability region including the disk larger than $D_s$ (this is the content of the JN disk theorem).</li>
+</ol>
+
+<h3>Ellipses</h3>
+
+<p>Of course, we didn&#39;t have to choose first-order upwinding in space; we could
+have taken any spatial discretization.  For instance, if we use centered
+differences:
+$$U<em>i&#39;(t) = -\left(U</em>{i+1}-U_{i-1}\right)$$
+then the spectrum of the semi-discretization lies on the imaginary axis in the
+interval $[-i,i]$.  Then the same line of reasoning then tells us that the
+largest imaginary-axis interval of stability for an $s$-stage method is
+$[-is,is]$.  By considering convex combinations of upwind and centered
+differences, we get similar results for a family of ellipses; this is the
+content of Theorem 5 of [SS].</p>
+
+<h3>Parabolic problems</h3>
+
+<p>It&#39;s well known that the largest interval of stability of a consistent
+$s$-stage method on the negative real axis has length $s^2$; the corresponding
+polynomials are (shifted) Chebyshev polynomials.  You might hope that this
+could also be deduced by considering a centered difference semi-discretization
+of the heat equation and applying the CFL theorem.  That would be very neat,
+since it would provide a connection between PDE stability theory and the
+optimality of Chebyshev polynomials.</p>
+
+<p>Indeed, explicit time discretizations generally lead to step size restrictions
+depending on the square of the spatial mesh width when paired with the usual
+centered spatial discretization.  But the CFL theorem is not sharp for these
+discretizations; it only tells us that $k$ must vanish vanish more quickly than
+the spatial mesh width.  So no deduction along these lines seems possible.</p>
+
+<p>#spnetwork #recommend doi:/10.1007/BF01389633</p>
+
+<p>#discusses doi:10.1147/rd.112.0215
+#discusses doi:10.1007/BF01932030</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2013-10-14T00:00:00-06:00"
+      itemprop="datePublished">14 Oct 2013</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2013/10/12/MATLAB-docs-testing.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2013/12/13/open_access_means_open_access.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#CFL-condition">#CFL-condition</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#hyperbolic-PDEs">#hyperbolic-PDEs</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#paper-review">#paper-review</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#numerical-analysis">#numerical-analysis</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#advection">#advection</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#Runge-Kutta-methods">#Runge-Kutta-methods</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#stability">#stability</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#mathematical-exposition">#mathematical-exposition</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#PDE">#PDE</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>14 Oct 2013</span> &raquo; <a href="/2013/10/14/CFL-disk.html">A Tale of Two Theorems</a></li>
+    
+      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
+    
+      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html">A curious upwind implicit scheme for advection</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

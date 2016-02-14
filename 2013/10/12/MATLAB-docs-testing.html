@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Documentation, testing, and default arguments for your MATLAB packages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helping MATLAB be a little more like Python">
+    <meta name="author" content="Xiaodong Qi">
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+    <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46730871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body> 
+
+  
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+          <a href="/index.html">Home</a></li>
+
+          <li>
+          <a href="/research.html">Research</a></li>
+
+          <li>
+          <a href="/pubs/index.html">Publications</a></li>
+
+          <li>
+          <a href="/noteblog.html">Blog</a></li>
+
+          <!-- <li>
+          <a href="/notebooks.html">Notebooks</a></li> -->
+
+          <li>
+          <a href="/code.html">Repos</a></li>
+
+          <!-- <li>
+          <a href="/teaching.html">Learning</a></li> -->
+
+          <li>
+          <a href="/tools.html">Tools</a></li>
+
+          <li>
+          <a href="/philosophy.html">Philosophy</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:">
+         <input type="text" class="search-query" name="q">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) --> 
+ 
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Documentation, testing, and default arguments for your MATLAB packages</h1>
+    <h3>Helping MATLAB be a little more like Python</h3>
+</header>
+
+
+
+
+      <div class="row">
+        <div class="span7 offset1 post">
+          <p>I primarily develop code in Python and Fortran, but I also use MATLAB for
+certain things.  For instance, I haven&#39;t found a Python-friendly nonlinear
+optimization package that measures up to the capabilities of MATLAB&#39;s
+optimization toolbox (fmincon).  So my RK-opt package for optimising
+Runge-Kutta methods is written all in MATLAB.</p>
+
+<p>The trouble is that working in Python has spoiled me for other languages.
+Python has the excellent <a href="http://sphinx-doc.org/">Sphinx</a> package for writing
+<strong>beautiful documentation</strong>.  Python has the
+<a href="http://nose.readthedocs.org/">nosetests</a> harness for easily writing and
+running <strong>tests</strong>.  And Python has <a href="http://www.diveintopython.net/power_of_introspection/optional_arguments.html">a simple syntax for including <strong>optional function
+arguments</strong> with default
+values</a>.</p>
+
+<p>MATLAB doesn&#39;t support any of these things so elegantly*.</p>
+
+<p>*<em>This was true one year ago, when I started writing this.  But it seems things
+have improved -- see below</em>.</p>
+
+<p>In any case, all is not lost -- I have found reasonable approximations in the
+MATLAB ecosystem, and in some cases I&#39;ve adapted the Python tools to work with
+MATLAB. </p>
+
+<h3>Documenting MATLAB projects using Sphinx</h3>
+
+<p>In principle, Sphinx can be used to write documentation for packages written in
+any language.  However, its <a href="http://sphinx-doc.org/ext/autodoc.html">autodoc</a>
+functionality, which automatically extracts Python docstrings, doesn&#39;t work
+with MATLAB.  For RK-Opt, I hacked together a simple workaround in <a href="https://github.com/ketch/RK-opt/blob/master/doc/m2rst.py">this
+74-line Python file</a>.
+It goes through a given directory, extracts the MATLAB docstring for each
+function, and compiles them into an .rst file for Sphinx processing.  You can
+see an <a href="http://numerics.kaust.edu.sa/RK-opt/RK-coeff-opt.html">example of the results
+here</a>.</p>
+
+<p><strong>Update</strong>: <em>as I&#39;m writing this, I&#39;ve discovered a new <a href="https://bitbucket.org/bwanamarko/sphinx-contrib/src/tip/matlabdomain/README.rst">MATLAB extension for
+Sphinx&#39;s
+autodoc</a>.
+I will have to try it out sometime; please let me know in the comments if
+you&#39;ve used it.</em></p>
+
+<h3>Automated testing in MATLAB</h3>
+
+<p>I&#39;ve become convinced that writing at least one or two tests is worthwhile for
+even small, experimental packages.  In Python, it&#39;s simple to include test in
+the docs and run them with doctest, or write test suites and run them with
+nosetest.  For MATLAB, I would have recommended the third-party <a href="http://www.mathworks.com/matlabcentral/fileexchange/22846-matlab-xunit-test-framework">xunit
+framework</a>.
+But it seems that this year <a href="http://www.mathworks.com/help/matlab/matlab-unit-test-framework.html">Mathworks finally added this functionality to
+MATLAB</a>.
+Even so, you might want to use xunit because <a href="https://github.com/tgs/matlab-xunit-doctest">it&#39;s possible to run doctests
+with it</a> but not with MATLAB&#39;s new
+built-in framework.  Also, you can get XML output from xunit, which a number of
+other tools can analyze (for instance, to tell you about code coverage).  For
+an example of how to use xunit, <a href="https://github.com/ketch/RK-opt/blob/master/RK-coeff-opt/test_rkopt.m">see
+RK-Opt</a>.</p>
+
+<p>Again, I&#39;d be interested to hear from you in the comments if you&#39;ve used
+MATLAB&#39;s new built-in test harness.</p>
+
+<h3>Optional arguments with default values</h3>
+
+<p>MATLAB does allow the user to specify only some subset of the input arguments
+to a function -- as long as the omitted ones all come after the included ones.
+I used to take advantage of this, with this kind of code inside the function:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if nargin&lt;5 rmax=50; end
+if nargin&lt;4 eps=1.e-10; end
+</code></pre></div>
+<p>This is a reasonable solution in very small functions, but it breaks if you
+want to add new arguments that don&#39;t come at the end, and if you want to
+specify the very last value then you have to specify them all.  A better
+general solution is the <a href="http://www.mathworks.com/help/matlab/ref/inputparserclass.html">inputParser
+object</a>.
+It&#39;s much less natural than Python&#39;s syntax, but the result for the user is the
+same: arbitrary subsets of the optional arguments can be specified; default
+values will be used for the rest.  As a bonus, you can check the types of the
+inputs.  <a href="https://github.com/ketch/RK-opt/blob/master/polyopt/opt_poly_bisect.m#L258">Here&#39;s an example of
+usage</a>.</p>
+
+<p>If you know of better ways to do any of these things, please let me know in the comments!</p>
+
+<p>Of course, it&#39;s entirely possible to develop large, well-documented,
+well-tested, user-friendly packages in MATLAB --
+<a href="http://www.chebfun.org/">Chebfun</a> is one example.  It&#39;s just that
+this is the exception and not the rule in the MATLAB community.  Hopefully
+better integration with testing and documentation tools will improve this
+situation.</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span3">
+          <div class="sidebar">
+            Posted on
+<time pubdate datetime="2013-10-12T00:00:00-06:00"
+      itemprop="datePublished">12 Oct 2013</time>.
+<br />
+          
+            <p><a class="btn btn-mini" href='/2013/09/21/ipython_notebook_slides_talks.html'>previous</a>
+          
+          
+            <a class="btn btn-mini" href='/2013/10/14/CFL-disk.html'>next</a></p>
+          
+
+
+<br />
+<p> <a class="btn btn-mini" href="https://github.com/i2000s/i2000s.github.io/commits/master/_posts">history</a></p>
+<br />
+<br />
+<span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#python">#python</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#MATLAB">#MATLAB</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#testing">#testing</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#documentation">#documentation</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#software">#software</a>
+              , 
+            
+              <a rel="tag" class="tag" href="/tags.html#RK-Opt">#RK-Opt</a>
+              
+            
+</span>
+
+
+
+         </div>
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>12 Oct 2013</span> &raquo; <a href="/2013/10/12/MATLAB-docs-testing.html">Documentation, testing, and default arguments for your MATLAB packages</a></li>
+    
+      <li><span>01 Dec 2014</span> &raquo; <a href="/2014/12/01/clawpack-20.html">Clawpack turns 20</a></li>
+    
+      <li><span>09 Dec 2014</span> &raquo; <a href="/2014/12/09/teaching_kids_to_program.html">How and why I'm teaching my kids to code</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'qxd'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer">
+         <div class="row">
+            <div class="span6">
+
+              <a href="mailto:i2000s@hotmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" alt="email"> </a>
+              <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" alt="github"> </a>
+              <a href="https://plus.google.com/+XiaodongQi"><img src="/assets/img/icon-gplus.png" alt="G+"></a>
+              <a href="http://scholar.google.com/citations?user=6FdqHlIAAAAJ&hl=en"><img src="/assets/img/icon-scholar.png" alt="G+"></a>
+              <!-- (<a href="http://figshare.com/authors/Xiaodong_Qi/98644"><img src="/assets/img/icon-figshare.png" alt="Figshare"></a> -->
+              <a href="https://twitter.com/i2000s"><img src="/assets/img/icon-twitter.png" alt="Twitter"></a>
+              <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+              <a href="http://physics.stackexchange.com/users/37682/xiaodong-qi"><img src="/assets/img/icon-stackoverflow.png" alt="Physics Stackexchange"></a>
+
+              <p><a href="/CV-XiaodongQi.pdf">CV of Xiaodong Qi</a></p>
+              
+
+            <div class="span4">
+              <div class="team-member">
+              <img class="img-responsive img-thumbnail img-circle" width="200px" alt="" src="/assets/img/qi2016.jpg" align="middle"></img>
+
+              </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" align="right" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+                  <br /><p>Copyright &copy; 2016 Xiaodong Qi.</p>
+                  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This site</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+  </body>
+</html>
+

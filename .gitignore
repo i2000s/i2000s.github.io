@@ -1,9 +1,0 @@
-_plugins/_cache
-_site
-_config
-_TEMP
-
-*~
-_twitter.yml
-_garb.yml
-Gemfile.lock
