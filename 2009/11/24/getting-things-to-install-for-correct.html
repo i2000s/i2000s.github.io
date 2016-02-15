@@ -97,14 +97,16 @@
 </header>
 
       <div class="row">
-        <div class="span7 offset1 post">
+        <div class="span10 offset1 post">
           In addition to blogging about KAUST here, I'm also going to post little useful tidbits related to scientific computing in OS X.  Today I was setting up my new Mac Pro.  After installing the <a href="www.enthought.com">Enthought Python Distribution</a>, I found that ipython was not in my path (and the python in my path was not the enthought-installed version).<br /><br />The culprit was the following:  I had changed shells in Terminal's preferences to tcsh, but somehow the EPD installer didn't detect this and thought I was still using bash.  Thus the modifications to my path were placed in ~/.bash_profile rather than in ~/.cshrc.  That was easy enough to fix, but to avoid similar problems in the future, I opened a Terminal and typed<br /><br />chsh -s /bin/tcsh<br /><br />so that next time the installer would know my default shell.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-8862569247568223495?l=scienceinthesands.blogspot.com' alt='' /></div>
 
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox">ShareIt...</div>
         </div>
 
 
-        <!-- Custom sidebar -->      
-        <div class="span3">
+        <!-- Custom sidebar -->
+        <div class="span2">
           <div class="sidebar">
             Posted on
 <time pubdate datetime="2009-11-24T00:00:00+00:00"
@@ -136,6 +138,12 @@
 </span>
 
 
+
+<div style="font-weight:bold; text-align:center;font-size:0.9em;">
+ <i class="icon-chevron-left"></i> <a href="/archives.html">All posts by date, </a>
+ <i class="icon-list"></i> <a href="/categories.html">by category, </a>
+ <i class="icon-tag"></i> <a href="/tags.html">by tag.</a>
+</div>
 
          </div>
        </div>
