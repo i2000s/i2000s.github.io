@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           <p>Finally figured out what was wrong with the stability regions for the deferred correction methods in Nodepy when $\theta \ne 0$.
 See <a href="https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c5450e7ad09f5774052ff575/code/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb?at=master">these</a>
 <a href="https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c5450e7ad09f5774052ff575/code/Reproduce_DC_stability_region.ipynb?at=master">notebooks</a>.</p>
@@ -137,7 +136,7 @@ See <a href="https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c54
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2014-03-03T00:00:00+00:00"

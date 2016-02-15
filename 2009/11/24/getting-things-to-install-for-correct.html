@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           In addition to blogging about KAUST here, I'm also going to post little useful tidbits related to scientific computing in OS X.  Today I was setting up my new Mac Pro.  After installing the <a href="www.enthought.com">Enthought Python Distribution</a>, I found that ipython was not in my path (and the python in my path was not the enthought-installed version).<br /><br />The culprit was the following:  I had changed shells in Terminal's preferences to tcsh, but somehow the EPD installer didn't detect this and thought I was still using bash.  Thus the modifications to my path were placed in ~/.bash_profile rather than in ~/.cshrc.  That was easy enough to fix, but to avoid similar problems in the future, I opened a Terminal and typed<br /><br />chsh -s /bin/tcsh<br /><br />so that next time the installer would know my default shell.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-8862569247568223495?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2009-11-24T00:00:00+00:00"

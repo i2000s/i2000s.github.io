@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2011-06-27T00:00:00+00:00"

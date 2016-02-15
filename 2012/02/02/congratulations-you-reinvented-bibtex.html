@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           <p>From the <a href="http://www.mendeley.com/blog/academic-features/citing-research-is-about-to-get-a-whole-lot-easier/">Mendeley official blog</a>:</p><p> </p><blockquote><p><em>The most laborious part of any research paper for me, and probably for many of you, is making sure that the references are formatted in the proper style. Is the title supposed to be in italics? Do I need a period or a comma here? It has always seemed like exactly the kind of thing that a computer should be able to do for me, and now with Mendeley it can.</em></p></blockquote><p>Nice to see that they're catching up with <a href="http://en.wikipedia.org/wiki/BibTeX">1985 technology</a>.  Yet mystifying why they choose to write their own rather than adopt what is already widely used.</p><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2354961041950158991?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2012-02-02T00:00:00+00:00"

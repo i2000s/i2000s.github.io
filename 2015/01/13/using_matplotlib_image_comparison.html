@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           <p>A few years ago I was introduced to the idea of testing the scientific code I write,
 and now I am a huge fan of this approach.  It saves huge amounts of time and vastly
 improves the quality of my research by helping me catch bugs early and often.
@@ -246,7 +245,7 @@ working setup <a href="https://github.com/ketch/griddle">here</a>.</p>
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2015-01-13T00:00:00+00:00"

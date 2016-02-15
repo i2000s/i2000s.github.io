@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           <p>Welcome to step 1 in <a href="/2015/05/10/rock_solid_code.html">your training as a scientific Python code ninja</a>: version control.  This is not going to be an in-depth course, so if you&#39;re already using distributed version control (like Git or Mercurial), feel free to skip ahead to <a href="/2015/05/12/code_in_the_open.html">step 2</a>.</p>
 
 <h2><a href="http://phdcomics.com/comics.php?f=1531">Life before version control</a></h2>
@@ -196,7 +195,7 @@ git add project_file2
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2015-05-11T00:00:00+00:00"

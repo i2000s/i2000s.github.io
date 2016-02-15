@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           Looks like the folks at Mendeley have been quietly making some big improvements.<br /><br />When I first started using Mendeley, I decided to drag a folder of one hundred or so PDFs into it, since it could extract the bibliographic metadata from PDFs.  The consequences were disastrous, with a dozen documents named "Society" and all published in "Science".  Overall, less than half were correctly imported, and many entries were unrecognizable.<br /><br />Since then, I don't drag PDFs into Mendeley.  This means that bringing in a new document requires a few steps: get the metadata from a journal webpage (automatically using a bookmarklet), download the PDF, and finally associate the PDF to the document.<br /><br />Today, by accident, I happened to drag a PDF into Mendeley.  To my surprise, it was imported perfectly, with all bibliographic data correct.  I decided to try another.  And a few more.  All came in perfectly.  I also found that dragging a PDF of a paper already in my library DID NOT create a duplicate.<br /><br />Thanks, Mendeley developers.  Please keep it up.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-3391930448683882207?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2011-06-04T00:00:00+00:00"

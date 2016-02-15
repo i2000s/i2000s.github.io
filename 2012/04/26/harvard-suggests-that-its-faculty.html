@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           In <a href="http://isites.harvard.edu/icb/icb.do?keyword=k77982&amp;tabgroupid=icb.tabgroup143448">this succinct memo</a>, an advisory council at Harvard says that<br /><blockquote><em><span style="background-color: white;">major periodical subscriptions, especially to electronic journals</span>&nbsp;published by historically key providers, cannot be sustained: continuing these subscriptions on their current footing is financially untenable.</em></blockquote>
 It recommends the following course of action to the faculty:<br /><blockquote><em>&nbsp;If on the editorial board of a journal involved, determine if it can be published as open access material, or independently from publishers that practice pricing described above. If not, consider resigning.</em></blockquote>
 It also specifies that <br /><blockquote><em>"it is untenable for contracts with at least two major providers to continue on the basis identical with past agreements."</em></blockquote> but doesn't mention which two. &nbsp;Presumably they are a subset of {Springer, Elsevier, Wiley}.
@@ -135,7 +134,7 @@ It also specifies that <br /><blockquote><em>"it is untenable for contracts with
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2012-04-26T00:00:00+00:00"

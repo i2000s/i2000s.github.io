@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           I just got notification that my first book, co-authored with Sigal Gottlieb and Chi-Wang Shu, is finally available for pre-order and will ship by the end of the month.&nbsp; The book is on strong stability preserving methods (the only existing book on the subject) and is, I think, a nice introduction to the subject.&nbsp; You can read more about it <a href="http://www.worldscibooks.com/mathematics/7498.html">here</a>.&nbsp; Apparently it has already sold almost 100 copies.&nbsp; If you do order a copy, you can get a 20% discount until March with the code "DCL032011".<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-5285715899667341222?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2011-01-25T00:00:00+00:00"

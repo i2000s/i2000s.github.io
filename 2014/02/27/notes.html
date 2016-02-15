@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           <p>Investigated stability regions for high order deferred correction schemes; see <a href="https://bitbucket.org/ketch/rkextrapolation/src/a78b4aa2d336491cac35c1df81e703ce103d6937/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb">this notebook</a>.</p>
 
 <p>Finally, after about a year of searching, found a way to redirect all output from distutils
@@ -142,7 +141,7 @@ It will be in the Github repo soon.</p>
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2014-02-27T00:00:00+00:00"

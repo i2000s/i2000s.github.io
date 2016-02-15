@@ -98,9 +98,9 @@
 
 <style>
 div #sticker {
-  width:150px;
+  width:200px;
   padding:20px;
-  margin-right:30px;
+  margin-right:10px;
   float:right;
 }
 .stick {
@@ -113,7 +113,6 @@ $(document).ready(function() {
     var pos = s.position();
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
         if (windowpos >= pos.top) {
             s.addClass("stick");
         } else {
@@ -124,7 +123,7 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:74%;">
+        <div class="span8 post" style="float:left;width:73%;">
           Here is the source code for the example in my last post.  I haven't had time to clean it up, and some parts are not very elegant.  But if you want to try it out with your own inbox, all you need to do is change the e-mail address and run it.<br /><br />Three caveats:<br />1. If you need to download a large number of e-mail headers, it will take some time (maybe several minutes).<br />2. It sometimes gets the dates wrong.  However, this seems to occur only in a statistically insignificant fraction of cases.<br />3. Running this will mark all the messages it accesses as read.  I'm sure there's a way to avoid this, but haven't had time to track it down.<br /><br /><script src="https://gist.github.com/815049.js">  </script><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-3453492770659191864?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;">
+        <div class="span2" style="float:right;width:22%;margin-left:0;">
           <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2011-02-07T00:00:00+00:00"
