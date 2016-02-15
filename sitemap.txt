@@ -5,6 +5,7 @@ http://i2000s.github.io/archives.html
 http://i2000s.github.io/atom.xml  
 http://i2000s.github.io/categories.html  
 http://i2000s.github.io/code.html  
+http://i2000s.github.io/community.html  
 http://i2000s.github.io/exploringquantumworld.xml  
 http://i2000s.github.io/index.html  
 http://i2000s.github.io/noteblog.html  
