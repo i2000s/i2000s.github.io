@@ -96,8 +96,35 @@
     <h3>A quick and simple solution</h3>
 </header>
 
+<style>
+div #sticker {
+  width:150px;
+  padding:20px;
+  margin-right:30px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:40px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:78%;">
+        <div class="span8 post" style="float:left;width:74%;">
           <h1>Converting a SAGE worksheet to an IPython notebook</h1>
 
 <p>Download link: <a href="">http://github.com/ketch/sage2ipython/</a></p>
@@ -156,8 +183,8 @@ certainly not all of them.  Please let me know.</p>
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:21%;">
-          <div class="sidebar">
+        <div class="span2" style="float:right;width:22%;">
+          <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2013-01-16T00:00:00+00:00"
       itemprop="datePublished">16 Jan 2013</time>.

@@ -96,8 +96,35 @@
     <h3></h3>
 </header>
 
+<style>
+div #sticker {
+  width:150px;
+  padding:20px;
+  margin-right:30px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:40px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:78%;">
+        <div class="span8 post" style="float:left;width:74%;">
           <p>This is step 3 in your journey toward <a href="/2015/05/10/rock_solid_code.html">rock-solid scientific Python code</a>.</p>
 
 <p>So your code is <a href="/2015/05/11/use_version_control.html">under version control</a> and it&#39;s
@@ -195,8 +222,8 @@ paper</a>.</p>
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:21%;">
-          <div class="sidebar">
+        <div class="span2" style="float:right;width:22%;">
+          <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2015-05-13T00:00:00+00:00"
       itemprop="datePublished">13 May 2015</time>.

@@ -96,8 +96,35 @@
     <h3></h3>
 </header>
 
+<style>
+div #sticker {
+  width:150px;
+  padding:20px;
+  margin-right:30px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:40px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:78%;">
+        <div class="span8 post" style="float:left;width:74%;">
           I haven't updated this blog since my initial post months ago.  I'm not yet at KAUST (I move in 10 days), but I am actively involved in several aspects of KAUST already, like helping students select fall courses and preparing materials for KAUST's big <a href="http://www.prweb.com/releases/KAUST-science-tech/62009/prweb2576384.htm">inauguration</a> event.  More and more concrete information about mundane matters keeps trickling in as well: housing assignments, grade schools, stores on campus (the first restaurant is a Pizza Hut...ugh).<br /><br />I intend to start blogging here in earnest once I've relocated.  Then things should get interesting.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-3310234982472339484?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -106,8 +133,8 @@
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:21%;">
-          <div class="sidebar">
+        <div class="span2" style="float:right;width:22%;">
+          <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2009-07-31T00:00:00+00:00"
       itemprop="datePublished">31 Jul 2009</time>.

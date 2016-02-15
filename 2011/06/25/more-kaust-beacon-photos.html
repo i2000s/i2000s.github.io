@@ -96,8 +96,35 @@
     <h3></h3>
 </header>
 
+<style>
+div #sticker {
+  width:150px;
+  padding:20px;
+  margin-right:30px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:40px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:78%;">
+        <div class="span8 post" style="float:left;width:74%;">
           The shot of the Beacon in my last post was taken with my iPhone, so last night I went back and got some "real" shots with a tripod and DSLR.  Click to see them large, they're better that way.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-Xd0Vefnl8mg/TgYpz_MKc4I/AAAAAAAAAms/67AnmY8z9wc/s1600/IMGP8306.JPG" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="267" width="400" src="http://2.bp.blogspot.com/-Xd0Vefnl8mg/TgYpz_MKc4I/AAAAAAAAAms/67AnmY8z9wc/s400/IMGP8306.JPG" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-5i0sUWUWDpU/TgYqLVom6qI/AAAAAAAAAm0/eHvQPfmxqS8/s1600/IMGP8292.JPG" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="267" src="http://4.bp.blogspot.com/-5i0sUWUWDpU/TgYqLVom6qI/AAAAAAAAAm0/eHvQPfmxqS8/s400/IMGP8292.JPG" /></a></div><br />It's quite a striking structure, up close, especially now that it's fully lit.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-4728153179630051930?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -106,8 +133,8 @@
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:21%;">
-          <div class="sidebar">
+        <div class="span2" style="float:right;width:22%;">
+          <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2011-06-25T00:00:00+00:00"
       itemprop="datePublished">25 Jun 2011</time>.

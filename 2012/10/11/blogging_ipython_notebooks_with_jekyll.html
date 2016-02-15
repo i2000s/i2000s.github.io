@@ -96,8 +96,35 @@
     <h3>easy-peasy</h3>
 </header>
 
+<style>
+div #sticker {
+  width:150px;
+  padding:20px;
+  margin-right:30px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:40px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:78%;">
+        <div class="span8 post" style="float:left;width:74%;">
           <blockquote>
 <p><strong>Update as of December 2014: Don&#39;t bother using what&#39;s below; go to 
 <a href="http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/">Christop Corley&#39;s blog</a>
@@ -176,8 +203,8 @@ This was a nice educational exercise in constructing shell scripts, in which I l
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:21%;">
-          <div class="sidebar">
+        <div class="span2" style="float:right;width:22%;">
+          <div id="sticker"> <!--class="sidebar">-->
             Posted on
 <time pubdate datetime="2012-10-11T00:00:00+00:00"
       itemprop="datePublished">11 Oct 2012</time>.
