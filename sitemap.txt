@@ -18,8 +18,19 @@ http://i2000s.github.io/sitemap.txt
 http://i2000s.github.io/tags.html  
 http://i2000s.github.io/tools.html  
 http://i2000s.github.io/pubs/Qi2016Dispersive.html  
+http://i2000s.github.io/pubs/Qi2015Dispersiveb.html  
+http://i2000s.github.io/pubs/Qi2015Dispersivea.html  
+http://i2000s.github.io/pubs/Qi2015Dispersive.html  
 http://i2000s.github.io/pubs/Qi2012effects.html  
-http://i2000s.github.io/pubs/Qi2011Modeling.html 
+http://i2000s.github.io/pubs/Qi2011Modeling.html  
+http://i2000s.github.io/pubs/Liu2011Study.html  
+http://i2000s.github.io/pubs/Qi2010Surface.html  
+http://i2000s.github.io/pubs/Ye2010Emission.html  
+http://i2000s.github.io/pubs/Ye2010Emissiona.html  
+http://i2000s.github.io/pubs/QI2010Surfacea.html  
+http://i2000s.github.io/pubs/Li2009Optical.html  
+http://i2000s.github.io/pubs/Li2008theoretical.html  
+http://i2000s.github.io/pubs/Li2008Optical.html 
 
  
 http://i2000s.github.io/2016/02/17/SQuInT-workshop-2016.html  
