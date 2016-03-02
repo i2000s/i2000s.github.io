@@ -8,7 +8,7 @@ http://i2000s.github.io/community.html
 http://i2000s.github.io/exploringquantumworld.xml  
 http://i2000s.github.io/index.html  
 http://i2000s.github.io/noteblog.html  
-http://i2000s.github.io/notebook.xml  
+http://i2000s.github.io/noteblog.xml  
 http://i2000s.github.io/notebooks.html  
 http://i2000s.github.io/philosophy.html  
 http://i2000s.github.io/pubs/  
