@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-02-23T02:39:20+00:00</updated>
+ <updated>2016-03-02T04:37:23+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -192,37 +192,6 @@ Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
  </entry>
  
  <entry>
-   <title>Notes 2014.03.03</title>
-   <link href="/2014/03/03/notes.html"/>
-   <updated>2014-03-03T00:00:00+00:00</updated>
-   <id>h/2014/03/03/notes</id>
-   <content type="html">&lt;p&gt;Finally figured out what was wrong with the stability regions for the deferred correction methods in Nodepy when $\theta \ne 0$.
-See &lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c5450e7ad09f5774052ff575/code/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb?at=master&quot;&gt;these&lt;/a&gt;
-&lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/cce934e20cf514c8c5450e7ad09f5774052ff575/code/Reproduce_DC_stability_region.ipynb?at=master&quot;&gt;notebooks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also sat with Roland and got the latest version of PeanoClaw running on my workstation.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Notes 2014.02.27</title>
-   <link href="/2014/02/27/notes.html"/>
-   <updated>2014-02-27T00:00:00+00:00</updated>
-   <id>h/2014/02/27/notes</id>
-   <content type="html">&lt;p&gt;Investigated stability regions for high order deferred correction schemes; see &lt;a href=&quot;https://bitbucket.org/ketch/rkextrapolation/src/a78b4aa2d336491cac35c1df81e703ce103d6937/SDC%20Stability%20regions%20when%20theta%20is%20nonzero.ipynb&quot;&gt;this notebook&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, after about a year of searching, found a way to redirect all output from distutils
-to a file.  This will avoid the massive amount of warnings that are currently printed to the
-screen when installing PyClaw.  See the patch &lt;a href=&quot;https://github.com/clawpack/clawpack/pull/35&quot;&gt;here&lt;/a&gt;,
-based on &lt;a href=&quot;http://stackoverflow.com/a/11632982/786902&quot;&gt;this StackOverflow answer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also put together an &lt;a href=&quot;http://nbviewer.ipython.org/urls/dl.dropboxusercontent.com/u/656693/shallow_water_diffraction.ipynb&quot;&gt;IPython notebook on shallow water solitary waves over periodic
-bathymetry&lt;/a&gt;.
-It will be in the Github repo soon.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>The Schrodinger equation is not a reaction-diffusion equation</title>
    <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
    <updated>2014-02-22T00:00:00+00:00</updated>
@@ -251,49 +220,6 @@ $$&lt;/p&gt;
 &lt;p&gt;Of course, in both cases you can use numerical methods that are appropriate for
 reaction-diffusion problems in order to solve a wave equation.&lt;br&gt;
 &lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/exposition/blob/master/Wave%20equation%20as%20reaction-diffusion.ipynb&quot;&gt;Here is a quick ipython notebook implementation of the obvious method for the system above&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Notes 2014.02.22</title>
-   <link href="/2014/02/22/notes.html"/>
-   <updated>2014-02-22T00:00:00+00:00</updated>
-   <id>h/2014/02/22/notes</id>
-   <content type="html">&lt;p&gt;Discussed time stepping for aeroacoustics with Antony Jameson at Stanford.  Also reviewed a couple of his group&amp;#39;s papers on high order flux reconstruction schemes.&lt;/p&gt;
-
-&lt;h3&gt;Insights from von Neumann analysis of high-order flux reconstruction schemes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Vincent, Castonguay, Jameson&lt;/li&gt;
-&lt;li&gt;JCP 2011&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Investigate a 1-parameter family of stable flux reconstruction methods suggested by earlier work.  For certain parameter values you get DG or SD schemes.  Some values admit spurious modes.  The size of the largest stable step size and the order of accuracy are determined as a function of the parameter (c).  Nonlinear 2D experimental results are predicted relatively well by the 1D von Neumann analysis.&lt;/p&gt;
-
-&lt;p&gt;Section 4 is a nice description of how to do von Neumann analysis for FE methods.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3&gt;On the Non-linear Stability of Flux Reconstruction Schemes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Jameson, Vincent, Castonguay&lt;/li&gt;
-&lt;li&gt;J. Sci. Comput. 2011&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;They look at energy stability in a very general way.  Nonlinear stability depends on solution point locations, and on the accuracy of the determination of the transformed flux.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Time integration ideas that could be useful for aeronautics simulations:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Optimization of stability regions&lt;/li&gt;
-&lt;li&gt;Multirate time stepping.  Some work has been done in &lt;a href=&quot;http://dx.doi.org/10.1016/j.jcp.2010.05.028&quot;&gt;Nonuniform time-step Runge–Kutta discontinuous Galerkin method for Computational Aeroacoustics&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Large time step methods.  See &lt;a href=&quot;http://dx.doi.org/10.1016/j.jcp.2011.06.008&quot;&gt;A class of large time step Godunov schemes for hyperbolic conservation laws and applications&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Large time step methods might work very well as the coarse propagator for parareal-type algorithms.&lt;/p&gt;
 </content>
  </entry>
  
