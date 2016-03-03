@@ -184,16 +184,18 @@ $(document).ready(function() {
 </script>
 
       <div class="row" margin-left="-50px">
-        <div class="span8 post" style="float:left;width:73%;">
+        <div class="col-md-7 col-md-offset-1" style="float:left;">
+          <article>
           It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
 
+          </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
           <div class="addthis_sharing_toolbox">Share on</div>
         </div>
 
 
         <!-- Custom sidebar -->
-        <div class="span2" style="float:right;width:22%;margin-left:0;">
+        <div class="col-md-4" style="float:right;">
           <div id="sticker" style="width:250px"> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
@@ -236,7 +238,7 @@ $(document).ready(function() {
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/55e3cbe54a31dfa96a96d9b643d23882c21d9953/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 55e3cbe54a31dfa96a96d9b643d23882c21d9953</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/13dc8965f6c977d7ec63c8c300f4b397b6ff0d7e/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 13dc8965f6c977d7ec63c8c300f4b397b6ff0d7e</a></tiny></p> -->
 </aside>
 
 <br /><br />
