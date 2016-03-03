@@ -188,13 +188,13 @@ $(document).ready(function() {
           Here is the source code for the example in my last post.  I haven't had time to clean it up, and some parts are not very elegant.  But if you want to try it out with your own inbox, all you need to do is change the e-mail address and run it.<br /><br />Three caveats:<br />1. If you need to download a large number of e-mail headers, it will take some time (maybe several minutes).<br />2. It sometimes gets the dates wrong.  However, this seems to occur only in a statistically insignificant fraction of cases.<br />3. Running this will mark all the messages it accesses as read.  I'm sure there's a way to avoid this, but haven't had time to track it down.<br /><br /><script src="https://gist.github.com/815049.js">  </script><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-3453492770659191864?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
-          <div class="addthis_sharing_toolbox">ShareIt...</div>
+          <div class="addthis_sharing_toolbox">Share on</div>
         </div>
 
 
         <!-- Custom sidebar -->
         <div class="span2" style="float:right;width:22%;margin-left:0;">
-          <div id="sticker"> <!--class="sidebar">-->
+          <div id="sticker" style="width:250px"> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-02-07 00:00:00 +0000" 
@@ -204,7 +204,7 @@ $(document).ready(function() {
  <br />
           
           
-            <a class="btn btn-mini" href='/2011/05/19/what-is-science.html'>next</a></p>
+            <a class="btn btn-default" href='/2011/05/19/what-is-science.html'>next <i class="glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -229,12 +229,12 @@ $(document).ready(function() {
        href="/tags.html#python">#python</a>
     </p>
 
-  <br/>
+  <!-- <br/>
 
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
-  <br/>
-  <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/4b18e594cab7fec55e519543083c0beab69235ef/_posts/2011-02-07-python-code-for-making-histogram-of.html"> 4b18e594cab7fec55e519543083c0beab69235ef</a></tiny></p>
+  <br/> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/3de09352a71ae5f7b1aee0bbec30982c5894e471/_posts/2011-02-07-python-code-for-making-histogram-of.html"> 3de09352a71ae5f7b1aee0bbec30982c5894e471</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -357,7 +357,11 @@ $(document).ready(function() {
     <script src="http://i2000s.github.io/assets/js/bootstrap-typeahead.js"></script>
     <script src="http://i2000s.github.io/assets/js/application.js"></script>
     -->
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+      
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "js/bootstrap.min.js"></script>
   </body>
 </html>
 

@@ -188,13 +188,13 @@ $(document).ready(function() {
           It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
-          <div class="addthis_sharing_toolbox">ShareIt...</div>
+          <div class="addthis_sharing_toolbox">Share on</div>
         </div>
 
 
         <!-- Custom sidebar -->
         <div class="span2" style="float:right;width:22%;margin-left:0;">
-          <div id="sticker"> <!--class="sidebar">-->
+          <div id="sticker" style="width:250px"> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-06-27 00:00:00 +0000" 
@@ -203,10 +203,10 @@ $(document).ready(function() {
 
  <br />
           
-            <p><a class="btn btn-mini" href='/2011/06/23/kaust-beacon-is-fully-lit.html'>previous</a>
+            <p><a class="btn btn-default" href='/2011/06/23/kaust-beacon-is-fully-lit.html'><i class="glyphicon-chevron-left"></i> prev</a>
           
           
-            <a class="btn btn-mini" href='/2011/10/27/searching-scientific-literature.html'>next</a></p>
+            <a class="btn btn-default" href='/2011/10/27/searching-scientific-literature.html'>next <i class="glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -231,12 +231,12 @@ $(document).ready(function() {
        href="/tags.html#programming">#programming</a>
     </p>
 
-  <br/>
+  <!-- <br/>
 
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
-  <br/>
-  <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/4b18e594cab7fec55e519543083c0beab69235ef/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 4b18e594cab7fec55e519543083c0beab69235ef</a></tiny></p>
+  <br/> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/3de09352a71ae5f7b1aee0bbec30982c5894e471/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 3de09352a71ae5f7b1aee0bbec30982c5894e471</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -359,7 +359,11 @@ $(document).ready(function() {
     <script src="http://i2000s.github.io/assets/js/bootstrap-typeahead.js"></script>
     <script src="http://i2000s.github.io/assets/js/application.js"></script>
     -->
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+      
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "js/bootstrap.min.js"></script>
   </body>
 </html>
 

@@ -188,13 +188,13 @@ $(document).ready(function() {
           <p>NodePy is a Python package for analyzing numerical integrators for initial value ODEs.  It's essentially a collection of all the kinds of analysis I've used in my time integrator research, collected in a single object-oriented package.  </p><p>If you have a new Runge-Kutta method and want to know all about it, NodePy can tell you most anything.  If you want to design new time integration methods, NodePy can help you.</p><p>Although I'm rather proud of it, it fills a very small niche in the world and I'm not aware of anyone using it outside of my group and close collaborators.  If you've used it, please let me know in the comments.</p><p>One of the thorniest issues in NodePy previously was that floating-point representations of method coefficients were sometimes insufficient, especially when studying very high order methods.  I've now updated NodePy to use Sympy Rationals (and radicals, etc.) wherever possible, allowing exact analysis of many properties.</p><p>That and <a href="http://numerics.kaust.edu.sa/nodepy/changes.html#changes">much more</a> awaits in <a href="http://numerics.kaust.edu.sa/nodepy/">NodePy version 0.4</a>, now available via pip.</p><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-4578943333440602491?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
-          <div class="addthis_sharing_toolbox">ShareIt...</div>
+          <div class="addthis_sharing_toolbox">Share on</div>
         </div>
 
 
         <!-- Custom sidebar -->
         <div class="span2" style="float:right;width:22%;margin-left:0;">
-          <div id="sticker"> <!--class="sidebar">-->
+          <div id="sticker" style="width:250px"> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-08-28 00:00:00 +0000" 
@@ -203,10 +203,10 @@ $(document).ready(function() {
 
  <br />
           
-            <p><a class="btn btn-mini" href='/2012/08/22/habits-of-open-scientist-3-pre.html'>previous</a>
+            <p><a class="btn btn-default" href='/2012/08/22/habits-of-open-scientist-3-pre.html'><i class="glyphicon-chevron-left"></i> prev</a>
           
           
-            <a class="btn btn-mini" href='/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html'>next</a></p>
+            <a class="btn btn-default" href='/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html'>next <i class="glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -243,12 +243,12 @@ $(document).ready(function() {
        href="/tags.html#software-distribution">#software-distribution</a>
     </p>
 
-  <br/>
+  <!-- <br/>
 
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
-  <br/>
-  <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/4b18e594cab7fec55e519543083c0beab69235ef/_posts/2012-08-28-released.html"> 4b18e594cab7fec55e519543083c0beab69235ef</a></tiny></p>
+  <br/> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/3de09352a71ae5f7b1aee0bbec30982c5894e471/_posts/2012-08-28-released.html"> 3de09352a71ae5f7b1aee0bbec30982c5894e471</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -371,7 +371,11 @@ $(document).ready(function() {
     <script src="http://i2000s.github.io/assets/js/bootstrap-typeahead.js"></script>
     <script src="http://i2000s.github.io/assets/js/application.js"></script>
     -->
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+      
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "js/bootstrap.min.js"></script>
   </body>
 </html>
 
