@@ -98,17 +98,21 @@
 
   
 <!-- Navbar  ================================================== -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
-      <div class="nav-collapse">
-        <ul class="nav">
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
           <li>
           <a href="/index.html">Home</a></li>
 
@@ -137,16 +141,18 @@
           <a href="/philosophy.html">Philosophy</a></li> -->
 
         </ul>
-      </div><!--/.nav-collapse -->
-       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
-         <input type="hidden" name="q" value="site:http://i2000s.github.io ">
-         <input type="text" class="search-query" name="q">
-         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:i2000s.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-xs" type="submit"><i class="glyphicon-search"></i></button> 
        </form>
-     </div> <!-- /container -->
-   </div> <!-- /navbar-inner -->
- </div> <!-- /navbar -->
 
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
 
   <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
 
@@ -184,7 +190,7 @@ $(document).ready(function() {
 </script> -->
 
       <div class="row" margin-left="-50px">
-        <div class="col-md-7"> <!-- col-md-offset-1 -->
+        <div class="col-md-7 col-md-offset-1"> 
           <article>
           <p>Up until <a href="http://decafbad.com/blog/2011/11/01/readerpocalypse">Google's recent (catastrophic) changes to Reader</a>, I used it to share and discuss interesting journal articles.  It was a near-perfect platform for this, and I'm hopeful that <a href="https://groups.google.com/group/google-reader-diaspora">we'll have a replacement soon</a>.</p><p>The great utility of it was that my colleagues are very good at discerning which articles may be of interest to others in our circle.  This is no surprise, since we have similar research interests.  The fraction of articles that are actually interesting to me, for most journal RSS feeds that I check, is 1%-5%, which means I spend a lot of time scanning article titles.  In contrast, the fraction of papers shared by my colleagues that I find interesting is probably closer to 50%!</p><p>I've found a nice way to display a public RSS feed of papers that I read*, via <a href="http://www.mendeley.com">Mendeley</a> (it's shown here on the right).  Now, ideally, Mendeley would allow me to publish a feed that includes all papers in my Mendeley library as I add them.  They don't, but they do something almost as good: they provide a public RSS feed showing all papers for any public Mendeley group, as they are added.  So here's what I did:</p><p>1. Create a <a href="http://www.mendeley.com/groups/1194891/david-ketcheson-s-library/">public Mendeley group for my own library</a>.</p><p>2. Whenever I import a new reference to Mendeley, I also add it to the group (note that you can do this via the dropdown menu in the popup that appears whenever you use the <a href="http://www.mendeley.com/import/">'Import to Mendeley' bookmarklet</a>.</p><p>3. I got the address for the feed from Mendeley (log in, click the 'Groups' tab, click 'Papers' on the left, and look for the RSS feed icon on the top right) and added a widget here on my blog, as well as on <a href="http://web.kaust.edu.sa/faculty/davidketcheson/index.html">my professional webpage</a>.</p><p>That's it.  If you want to subscribe to this RSS feed, here it is:</p><p><a href="feed://www.mendeley.com/groups/1194891/david-ketcheson-s-library/feed/rss/">feed://www.mendeley.com/groups/1194891/david-ketcheson-s-library/feed/rss/<br /></a></p><p> </p><p>[*] Note that 'read' here means 'read at least the abstract.'</p><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-6919753392620452756?l=scienceinthesands.blogspot.com' alt='' /></div>
 
@@ -250,7 +256,7 @@ $(document).ready(function() {
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/ce4b3c1427c814d7d071cd5082c969b1f2f33c39/_posts/2011-11-15-up-until-googles-recent-catastrophic.html"> ce4b3c1427c814d7d071cd5082c969b1f2f33c39</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/ae3ed9bfc58e75362d1627ded1a8766b4ad28ee3/_posts/2011-11-15-up-until-googles-recent-catastrophic.html"> ae3ed9bfc58e75362d1627ded1a8766b4ad28ee3</a></tiny></p> -->
 </aside>
 
 <br /><br />

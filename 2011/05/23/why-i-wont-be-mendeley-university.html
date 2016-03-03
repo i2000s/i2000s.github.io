@@ -98,17 +98,21 @@
 
   
 <!-- Navbar  ================================================== -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
-      <div class="nav-collapse">
-        <ul class="nav">
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
           <li>
           <a href="/index.html">Home</a></li>
 
@@ -137,16 +141,18 @@
           <a href="/philosophy.html">Philosophy</a></li> -->
 
         </ul>
-      </div><!--/.nav-collapse -->
-       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
-         <input type="hidden" name="q" value="site:http://i2000s.github.io ">
-         <input type="text" class="search-query" name="q">
-         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:i2000s.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-xs" type="submit"><i class="glyphicon-search"></i></button> 
        </form>
-     </div> <!-- /container -->
-   </div> <!-- /navbar-inner -->
- </div> <!-- /navbar -->
 
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
 
   <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
 
@@ -184,7 +190,7 @@ $(document).ready(function() {
 </script> -->
 
       <div class="row" margin-left="-50px">
-        <div class="col-md-7"> <!-- col-md-offset-1 -->
+        <div class="col-md-7 col-md-offset-1"> 
           <article>
           <a href="http://mendeley.com">Mendeley</a>, my tool of choice for bibliographic reference management and sharing, just announced their <a href="http://www.mendeley.com/advisors/">"University Advisor" program.</a>  Basically, they're asking academics to advocate for them on campus in exchange for free premium accounts.<br /><br />I already advocate for Mendeley unofficially, because I think it is useful and its usefulness will grow in proportion to the number of people who adopt it.  But I'd rather not be officially associated with Mendeley, mostly because it's not yet a sufficiently polished product.<br /><br />Mendeley is a useful product with a lot of potential, but it still has a lot of serious problems.  Some of these seem like telltale signs that the basic software and data infrastructure on which Mendeley is built has fundamental and dangerous flaws.<br /><br />For instance, my Mendeley collection has 516 documents according to both the Desktop app and the web app.  But the "my library stats" page says I have only 328 articles.  This doesn't cause any real problems, but the idea that somehow a count of these items is being maintained in a way that it can get permanently out of sync is disturbing.  Furthermore, I had an e-mail exchange with Mendeley support about this a couple of months ago, and they admitted it was a problem but they've been unable to solve it.<br /><br /><b>Duplicates</b>.  This is a huge problem with Mendeley.  If I import a document twice, even from the same source, I get duplicates.  If I drag a document from my library to a "group" twice, I get duplicates.  The latter behavior is really inexcusable, since this operation occurs entirely within Mendeley.  It also makes it very painful to use groups (so painful that I've stopped using them).  I have a group called "Runge-Kutta stability regions", and I'd like to keep all papers in my library with the tag of the same name in that group.  This would be easy if I could just periodically select the tag and drag all papers to the group, but that's a recipe for disaster since I'll end up with duplicates.  CiteULike sync is also a disaster, as it generates many duplicates.<br /><br /><b>Bibtex</b>.  Mendeley just doesn't seem to pay enough attention to bibtex-centric user needs.  In the desktop app, citation keys are not shown by default.  When one right-clicks on a document and selects "copy citation" (with citation style set to bibtex), the citation generated is different than what one gets from "export citation" (the cite keys don't agree).  Mendeley mangles bibtex fields on import.  When articles are removed from Mendeley, they may persist in the auto-synced bibtex file.  Combined with the duplicates problem, this can be a nightmare.<br /><br /><b>Sharing</b>.  Mendeley is supposed to facilitate sharing, but unfortunately it also restricts sharing in one very important way: my library is not publicly accessible, and I cannot make it so.  Why not?  Do people have something to hide in their library of scholarly references?<br /><br />I could go on, but you get the idea.  Mendeley has a lot of things going for it, not the least of which is a very active development team, and I hope it succeeds in achieving what its developers intend.  It's my tool of choice, but as its name indicates, it's still beta.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-7736698180124211677?l=scienceinthesands.blogspot.com' alt='' /></div>
 
@@ -238,7 +244,7 @@ $(document).ready(function() {
    <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/ce4b3c1427c814d7d071cd5082c969b1f2f33c39/_posts/2011-05-23-why-i-wont-be-mendeley-university.html"> ce4b3c1427c814d7d071cd5082c969b1f2f33c39</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/ae3ed9bfc58e75362d1627ded1a8766b4ad28ee3/_posts/2011-05-23-why-i-wont-be-mendeley-university.html"> ae3ed9bfc58e75362d1627ded1a8766b4ad28ee3</a></tiny></p> -->
 </aside>
 
 <br /><br />

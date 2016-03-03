@@ -97,17 +97,21 @@
 
   
 <!-- Navbar  ================================================== -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="/README.html">  <img style="float:right;" src="/assets/img/icon-info-circle-inverted.png" alt="info"></a>
-      <div class="nav-collapse">
-        <ul class="nav">
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
           <li>
           <a href="/index.html">Home</a></li>
 
@@ -136,16 +140,18 @@
           <a href="/philosophy.html">Philosophy</a></li> -->
 
         </ul>
-      </div><!--/.nav-collapse -->
-       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
-         <input type="hidden" name="q" value="site:http://i2000s.github.io ">
-         <input type="text" class="search-query" name="q">
-         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:i2000s.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-xs" type="submit"><i class="glyphicon-search"></i></button> 
        </form>
-     </div> <!-- /container -->
-   </div> <!-- /navbar-inner -->
- </div> <!-- /navbar -->
 
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
 
   <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
 
@@ -276,7 +282,7 @@ I hear you.  Writing tests is not an inherently fun process.  However, the alter
             <hr>
             <h4> <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" >
               <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> What I'm Coding </a></h4>
-            <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Use relative address to url.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/2bd1f79882...609fe0a510">01:45 2016/03/03</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 2bd1f7988226d7c99e367b2dc143ea9326b25f4c.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/365e77c796...c61c0a9ebb">01:08 2016/03/03</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Adjust post template.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/060c0a550d...2bd1f79882">12:54 2016/03/03</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 060c0a550de5e63df028d8d94d592cc24d26db3f.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/c4df40e6cc...365e77c796">12:47 2016/03/03</a></li></ul>
+            <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Update navbar.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/5e81c06736...f6d04321c2">02:45 2016/03/03</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Update navbar.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/609fe0a510...5e81c06736">02:26 2016/03/03</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 609fe0a51024467b126c50bfdfeab7a1d9c99050.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/c61c0a9ebb...4faddc1246">02:01 2016/03/03</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Use relative address to url.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/2bd1f79882...609fe0a510">01:45 2016/03/03</a></li></ul>
           </div>
 
          </div>
