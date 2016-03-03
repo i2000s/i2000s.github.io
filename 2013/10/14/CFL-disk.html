@@ -203,9 +203,9 @@ diagrams.</p>
 <p>Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna
 <a href="http://dx.doi.org/10.1007/BF01932030">published a theorem</a> [JN] that deals with
 bounding the modulus of a polynomial $\psi(z)$ over a disk of the form 
-$$D<em>r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
-$\psi(z) = 1 + z + a</em>2 z^2 + \cdots + a<em>s z^s$ and $|\psi(z)|\le 1$ for all $z$
-in such a disk $D</em>r$, then the disk radius $r$ is at most $s$.  The proof of
+$$D_r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
+$\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s$ and $|\psi(z)|\le 1$ for all $z$
+in such a disk $D_r$, then the disk radius $r$ is at most $s$.  The proof of
 this result is, of course, purely algebraic.</p>
 
 <p>These results apparently have nothing to do with one another.  And yet it turns
@@ -216,18 +216,18 @@ beautiful paper of Sanz-Serna and
 Spijker</a> [SS] in 1986, and the result
 deserves to be much more well known.</p>
 
-<h3>First order upwinding</h3>
+<h3 id="first-order-upwinding">First order upwinding</h3>
 
-<p>Consider the problem of approximating the value $u(x<em>i,t</em>n)$ for the advection equation
-$$u<em>t + u</em>x = 0.$$
+<p>Consider the problem of approximating the value $u(x_i,t_n)$ for the advection equation
+$$u_t + u_x = 0.$$
 The exact solution can be obtained by characteristics from the previous time level:
-$$u(x<em>i,t</em>n) = u(x<em>i-k,t</em>{n-1}),$$
+$$u(x_i,t_n) = u(x_i-k,t_{n-1}),$$
 where $k$ is the time step size.
-The CFL theorem says that the stencil used for approximating $u(x<em>i,t</em>n)$ must
+The CFL theorem says that the stencil used for approximating $u(x_i,t_n)$ must
 enclose the point $x_i-k$.</p>
 
 <p>Let&#39;s discretize the advection equation in space using upwind differences:
-$$U<em>i&#39;(t) = -\left(U</em>i-U<em>{i-1}\right).$$
+$$U_i&#39;(t) = -\left(U_i-U_{i-1}\right).$$
 Here for simplicity we&#39;ve assumed a spatial mesh width of 1.
 Taking periodic boundary conditions, this semi-discretization is a system of
 ODEs of the form $U&#39;=LU$ where $L$ is the circulant matrix 
@@ -240,17 +240,17 @@ $$
 \end{pmatrix}$$
 (as usual, all the omitted entries are zero).
 The eigenvalues of this matrix all lie on the boundary of the disk of radius
-one centered at $z=-1$, which we denote by $D</em>1$.  Here are the eigenvalues of
+one centered at $z=-1$, which we denote by $D_1$.  Here are the eigenvalues of
 a 50-point discretization:</p>
 
 <p><img src="https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png" alt=""></p>
 
 <p>If we discretize in time with Euler&#39;s method, we get the scheme
-$$U^n<em>i = U^{n-1}</em>i - k\left(U<em>i-U</em>{i-1}\right).$$
-This scheme computes the solution at $(x<em>i,t</em>n)$ using values at
-$(x<em>{i-1},t</em>{n-1})$ and $(x<em>i,t</em>{n-1})$, so the CFL theorem says it can be
-convergent only if $x<em>i-k$ lies in the interval $(x</em>{i-1},x<em>i)$.  Since
-$x</em>{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  </p>
+$$U^n_i = U^{n-1}<em>i - k\left(U_i-U</em>{i-1}\right).$$
+This scheme computes the solution at $(x_i,t_n)$ using values at
+$(x_{i-1},t_{n-1})$ and $(x_i,t_{n-1})$, so the CFL theorem says it can be
+convergent only if $x_i-k$ lies in the interval $(x_{i-1},x_i)$.  Since
+$x_{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  </p>
 
 <p>This result -- that the first-order upwind method is stable and convergent only
 for CFL number at most one -- is well known, and can also be derived using
@@ -261,7 +261,7 @@ have seen in the foregoing is that this stability condition can be derived
 directly from the CFL condition, without considering the eigenvalues of $L$ or
 the stability region of Euler&#39;s method.</p>
 
-<h3>Proving the JN disk theorem via the CFL theorem</h3>
+<h3 id="proving-the-jn-disk-theorem-via-the-cfl-theorem">Proving the JN disk theorem via the CFL theorem</h3>
 
 <p>For higher order discretizations, the CFL condition is necessary but not
 generally sufficient for stability.  Nevertheless, we can use it to derive the
@@ -269,31 +269,31 @@ JN disk theorem.  I&#39;ll restrict the explanation here to Runge-Kutta methods,
 but the extension to multistep methods is very simple.  Suppose that we
 discretize in time using a Runge-Kutta method with $s$ stages.  In each stage,
 one point further to the left is used, so typically the stencil for computing
-$u(x<em>i,t</em>n)$ includes the values from the previous step at $x<em>{i-s}, x</em>{i-s+1},
-\dots, x<em>i$.  Thus the CFL theorem says the method cannot be convergent unless
-$x</em>i-k$ lies in the interval $(x<em>{i-s},x</em>i)$; i.e., unless $k\le s$.
+$u(x_i,t_n)$ includes the values from the previous step at $x_{i-s}, x_{i-s+1},
+\dots, x_i$.  Thus the CFL theorem says the method cannot be convergent unless
+$x_i-k$ lies in the interval $(x_{i-s},x_i)$; i.e., unless $k\le s$.
 Meanwhile, the stability function $\psi(z)$ of the Runge-Kutta method is a
 polynomial of degree at most $s$.  Method of lines analysis tells us that the
-full discretization is stable if $kD<em>1$ lies inside the region ${z :
+full discretization is stable if $kD_1$ lies inside the region ${z :
 |\psi(z)|\le 1}.$  Since we know it is unstable for $k&gt;s$, this implies that
-if $|\psi(z)|\le 1$ over the disk $D</em>k$, then $k \le s$. </p>
+if $|\psi(z)|\le 1$ over the disk $D_k$, then $k \le s$. </p>
 
-<h3>Recap</h3>
+<h3 id="recap">Recap</h3>
 
 <ol>
 <li>An $s$-stage upwind discretization has stencil width $s$.</li>
 <li>The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than $s$.</li>
 <li>The spectrum of the semi-discretization is the boundary of the disk $D_1$.</li>
-<li>Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD<em>1 = D</em>k$ lies inside the stability region of the time discretization.</li>
+<li>Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD_1 = D_k$ lies inside the stability region of the time discretization.</li>
 <li>Thus no $s$-stage time discretization can have a stability region including the disk larger than $D_s$ (this is the content of the JN disk theorem).</li>
 </ol>
 
-<h3>Ellipses</h3>
+<h3 id="ellipses">Ellipses</h3>
 
 <p>Of course, we didn&#39;t have to choose first-order upwinding in space; we could
 have taken any spatial discretization.  For instance, if we use centered
 differences:
-$$U<em>i&#39;(t) = -\left(U</em>{i+1}-U_{i-1}\right)$$
+$$U_i&#39;(t) = -\left(U_{i+1}-U_{i-1}\right)$$
 then the spectrum of the semi-discretization lies on the imaginary axis in the
 interval $[-i,i]$.  Then the same line of reasoning then tells us that the
 largest imaginary-axis interval of stability for an $s$-stage method is
@@ -301,7 +301,7 @@ $[-is,is]$.  By considering convex combinations of upwind and centered
 differences, we get similar results for a family of ellipses; this is the
 content of Theorem 5 of [SS].</p>
 
-<h3>Parabolic problems</h3>
+<h3 id="parabolic-problems">Parabolic problems</h3>
 
 <p>It&#39;s well known that the largest interval of stability of a consistent
 $s$-stage method on the negative real axis has length $s^2$; the corresponding
@@ -404,7 +404,7 @@ the spatial mesh width.  So no deduction along these lines seems possible.</p>
    <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c8b04af8c68c7a82a26e426af2f728ec54aeea8b/_posts/2013-10-14-CFL-disk.md"> c8b04af8c68c7a82a26e426af2f728ec54aeea8b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2013-10-14-CFL-disk.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
 </aside>
 
 <br /><br />

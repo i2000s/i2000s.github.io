@@ -192,12 +192,12 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <h2>The CFL condition</h2>
+          <h2 id="the-cfl-condition">The CFL condition</h2>
 
 <p>The CFL condition is one of the most basic and intuitive principles
 in the numerical solution of hyperbolic PDEs. First formulated by
 Courant, Friedrichs and Lewy in their seminal paper (in English for
-free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical
+free here](<a href="http://www.stat.uchicago.edu/%7Elekheng/courses/302/classics/courant-friedrichs-lewy.pdf)">http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)</a>), it states that the domain of dependence of a numerical
 method for solving a PDE must contain the true domain of dependence.
 Otherwise, the numerical method cannot be convergent.</p>
 
@@ -207,16 +207,16 @@ nothing interesting about implicit schemes, since they include all
 points in their domain of dependence. But sometimes understanding the
 CFL condition for a particular scheme can be subtle.</p>
 
-<h3>An implicit scheme</h3>
+<h3 id="an-implicit-scheme">An implicit scheme</h3>
 
 <p>Consider the advection equation</p>
 
-<p>$$u<em>t + a u</em>x = 0.$$</p>
+<p>$$u_t + a u_x = 0.$$</p>
 
 <p>Discretization using a backward difference in space and in time gives
 the scheme</p>
 
-<p>$$U^{n+1}<em>j = U^n</em>j - \nu(U^{n+1}<em>j - U^{n+1}</em>{j-1}).$$</p>
+<p>$$U^{n+1}<em>j = U^n_j - \nu(U^{n+1}</em>j - U^{n+1}_{j-1}).$$</p>
 
 <p>Where $\nu = ka/h$ is the CFL number and $k,h$ are the step sizes in
 time and space, respectively. This very simple scheme illustrates the
@@ -224,19 +224,19 @@ concepts of the CFL condition and stability in a remarkable way.</p>
 
 <p>For simplicity, suppose that the problem is posed on the domain
 $0\le x \le 1$, with an appropriate boundary condition. Since this
-scheme computes $U^{n+1}<em>j$ in terms of $U^n</em>j$ and $U^{n+1}<em>{j-1}$, it
-seems that the numerical domain of dependence for $U^n</em>j$ is
-$(x,t)\in (0,x<em>j)\times[0,t</em>n]$. Based on this, we may conclude that the
+scheme computes $U^{n+1}<em>j$ in terms of $U^n_j$ and $U^{n+1}</em>{j-1}$, it
+seems that the numerical domain of dependence for $U^n_j$ is
+$(x,t)\in (0,x_j)\times[0,t_n]$. Based on this, we may conclude that the
 scheme is not convergent for $\nu&lt;0$. Simple enough.</p>
 
-<p>But what if $\nu=-1$? Then the scheme reads $$U^{n+1}<em>{j-1} = U^n</em>j,$$
+<p>But what if $\nu=-1$? Then the scheme reads $$U^{n+1}_{j-1} = U^n_j,$$
 which gives <strong>the exact solution</strong>! This is a sort of “anti-unit CFL
 condition”.</p>
 
 <p>How can this scheme be convergent (in fact, exact!) for a negative CFL
 number when it doesn’t use any values to the right?</p>
 
-<h3>Understanding the CFL condition</h3>
+<h3 id="understanding-the-cfl-condition">Understanding the CFL condition</h3>
 
 <p>Look at the exact formula above. In this case the scheme is not a method
 for computing $U^{n+1}<em>j$ but for computing $U^{n+1}</em>{j-1}$, and it
@@ -260,15 +260,15 @@ further, we must consider two cases:</p>
 <li><p>$\nu&gt;0$: in this case, boundary values must be supplied along the
 left boundary at $x=0$. Then, starting from the known value at the
 boundary, we work to the right by substitution:
-$$U^{n+1}<em>j = \frac{U^n</em>j+\nu U^{n+1}<em>{j-1}}{1+\nu}.$$ Hence the
-scheme is truly a way of computing $U^{n+1}</em>j$ based on
-$U^n<em>j, U^{n+1}</em>{j-1}$ and the resulting CFL condition is $\nu\ge0$.</p></li>
+$$U^{n+1}<em>j = \frac{U^n_j+\nu U^{n+1}</em>{j-1}}{1+\nu}.$$ Hence the
+scheme is truly a way of computing $U^{n+1}<em>j$ based on
+$U^n_j, U^{n+1}</em>{j-1}$ and the resulting CFL condition is $\nu\ge0$.</p></li>
 <li><p>$\nu&lt;0$: in this case, boundary values must be supplied along the
 right boundary at $x=1$. Then, starting from the known value at the
 boundary, we work to the left by substitution:
-$$U^{n+1}<em>{j-1} = \frac{(1+\nu)U^{n+1}</em>j - U^n<em>j}{\nu}.$$ Hence the
+$$U^{n+1}<em>{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.$$ Hence the
 scheme is truly a way of computing $U^{n+1}</em>{j-1}$ based on
-$U^n<em>j, U^{n+1}</em>{j}$ and the resulting CFL condition is $\nu\le-1$.</p></li>
+$U^n_j, U^{n+1}_{j}$ and the resulting CFL condition is $\nu\le-1$.</p></li>
 </ol>
 
 <p>This post was originally published on the KAUST Mathwiki <a href="https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection">here</a> (login required).</p>
@@ -335,7 +335,7 @@ $U^n<em>j, U^{n+1}</em>{j}$ and the resulting CFL condition is $\nu\le-1$.</p></
    <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c8b04af8c68c7a82a26e426af2f728ec54aeea8b/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> c8b04af8c68c7a82a26e426af2f728ec54aeea8b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
 </aside>
 
 <br /><br />

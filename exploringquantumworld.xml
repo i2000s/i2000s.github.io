@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-03T15:50:00+00:00</updated>
+ <updated>2016-03-03T16:38:01+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -54,7 +54,7 @@ any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;
 had them use Clawpack -- and they didn&amp;#39;t need to install it.  Why?  Because they
 all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
 
-&lt;h2&gt;A little history&lt;/h2&gt;
+&lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
 
 &lt;p&gt;For the past several years, I have been increasingly integrating into the
 course &lt;a href=&quot;https://github.com/ketch/AMCS252&quot;&gt;a set of electronic notebooks&lt;/a&gt; in
@@ -71,7 +71,7 @@ each year thanks to packages like &lt;a href=&quot;https://store.continuum.io/cs
 that they all ended up working in slightly different environments, which occasionally
 caused problems.&lt;/p&gt;
 
-&lt;h2&gt;IPython notebooks in the cloud&lt;/h2&gt;
+&lt;h2 id=&quot;ipython-notebooks-in-the-cloud&quot;&gt;IPython notebooks in the cloud&lt;/h2&gt;
 
 &lt;p&gt;In the last year, two new cloud services emerged, both offering free accounts
 with the ability to run IPython notebooks:&lt;/p&gt;
@@ -86,7 +86,7 @@ issues and ensure that everyone worked in an identical environment.  Though I
 have found both Wakari and SMC to be useful, I ended up going with SMC for the course
 because it has, in my opinion, a more intuitive user interface.&lt;/p&gt;
 
-&lt;h2&gt;Getting started&lt;/h2&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
 
 &lt;p&gt;On the first day of class, students had only to create a free SMC account,
 create a new project, and type the URL of the course github repo into the &amp;quot;new file&amp;quot;
@@ -104,7 +104,7 @@ the computer attached to the projector in the room by just logging into their ow
 SMC account.  That meant we avoided losing 5 or 10 minutes of class time in
 order to switch cables or transfer files.&lt;/p&gt;
 
-&lt;h2&gt;Feedback&lt;/h2&gt;
+&lt;h2 id=&quot;feedback&quot;&gt;Feedback&lt;/h2&gt;
 
 &lt;p&gt;Overall, the students&amp;#39; feedback was very positive.  Most notably, although some
 of them did eventually install Python and the related packages locally on their
@@ -252,9 +252,9 @@ diagrams.&lt;/p&gt;
 &lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna
 &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with
 bounding the modulus of a polynomial $\psi(z)$ over a disk of the form 
-$$D&lt;em&gt;r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
-$\psi(z) = 1 + z + a&lt;/em&gt;2 z^2 + \cdots + a&lt;em&gt;s z^s$ and $|\psi(z)|\le 1$ for all $z$
-in such a disk $D&lt;/em&gt;r$, then the disk radius $r$ is at most $s$.  The proof of
+$$D_r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
+$\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s$ and $|\psi(z)|\le 1$ for all $z$
+in such a disk $D_r$, then the disk radius $r$ is at most $s$.  The proof of
 this result is, of course, purely algebraic.&lt;/p&gt;
 
 &lt;p&gt;These results apparently have nothing to do with one another.  And yet it turns
@@ -265,18 +265,18 @@ beautiful paper of Sanz-Serna and
 Spijker&lt;/a&gt; [SS] in 1986, and the result
 deserves to be much more well known.&lt;/p&gt;
 
-&lt;h3&gt;First order upwinding&lt;/h3&gt;
+&lt;h3 id=&quot;first-order-upwinding&quot;&gt;First order upwinding&lt;/h3&gt;
 
-&lt;p&gt;Consider the problem of approximating the value $u(x&lt;em&gt;i,t&lt;/em&gt;n)$ for the advection equation
-$$u&lt;em&gt;t + u&lt;/em&gt;x = 0.$$
+&lt;p&gt;Consider the problem of approximating the value $u(x_i,t_n)$ for the advection equation
+$$u_t + u_x = 0.$$
 The exact solution can be obtained by characteristics from the previous time level:
-$$u(x&lt;em&gt;i,t&lt;/em&gt;n) = u(x&lt;em&gt;i-k,t&lt;/em&gt;{n-1}),$$
+$$u(x_i,t_n) = u(x_i-k,t_{n-1}),$$
 where $k$ is the time step size.
-The CFL theorem says that the stencil used for approximating $u(x&lt;em&gt;i,t&lt;/em&gt;n)$ must
+The CFL theorem says that the stencil used for approximating $u(x_i,t_n)$ must
 enclose the point $x_i-k$.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s discretize the advection equation in space using upwind differences:
-$$U&lt;em&gt;i&amp;#39;(t) = -\left(U&lt;/em&gt;i-U&lt;em&gt;{i-1}\right).$$
+$$U_i&amp;#39;(t) = -\left(U_i-U_{i-1}\right).$$
 Here for simplicity we&amp;#39;ve assumed a spatial mesh width of 1.
 Taking periodic boundary conditions, this semi-discretization is a system of
 ODEs of the form $U&amp;#39;=LU$ where $L$ is the circulant matrix 
@@ -289,17 +289,17 @@ $$
 \end{pmatrix}$$
 (as usual, all the omitted entries are zero).
 The eigenvalues of this matrix all lie on the boundary of the disk of radius
-one centered at $z=-1$, which we denote by $D&lt;/em&gt;1$.  Here are the eigenvalues of
+one centered at $z=-1$, which we denote by $D_1$.  Here are the eigenvalues of
 a 50-point discretization:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;If we discretize in time with Euler&amp;#39;s method, we get the scheme
-$$U^n&lt;em&gt;i = U^{n-1}&lt;/em&gt;i - k\left(U&lt;em&gt;i-U&lt;/em&gt;{i-1}\right).$$
-This scheme computes the solution at $(x&lt;em&gt;i,t&lt;/em&gt;n)$ using values at
-$(x&lt;em&gt;{i-1},t&lt;/em&gt;{n-1})$ and $(x&lt;em&gt;i,t&lt;/em&gt;{n-1})$, so the CFL theorem says it can be
-convergent only if $x&lt;em&gt;i-k$ lies in the interval $(x&lt;/em&gt;{i-1},x&lt;em&gt;i)$.  Since
-$x&lt;/em&gt;{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  &lt;/p&gt;
+$$U^n_i = U^{n-1}&lt;em&gt;i - k\left(U_i-U&lt;/em&gt;{i-1}\right).$$
+This scheme computes the solution at $(x_i,t_n)$ using values at
+$(x_{i-1},t_{n-1})$ and $(x_i,t_{n-1})$, so the CFL theorem says it can be
+convergent only if $x_i-k$ lies in the interval $(x_{i-1},x_i)$.  Since
+$x_{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  &lt;/p&gt;
 
 &lt;p&gt;This result -- that the first-order upwind method is stable and convergent only
 for CFL number at most one -- is well known, and can also be derived using
@@ -310,7 +310,7 @@ have seen in the foregoing is that this stability condition can be derived
 directly from the CFL condition, without considering the eigenvalues of $L$ or
 the stability region of Euler&amp;#39;s method.&lt;/p&gt;
 
-&lt;h3&gt;Proving the JN disk theorem via the CFL theorem&lt;/h3&gt;
+&lt;h3 id=&quot;proving-the-jn-disk-theorem-via-the-cfl-theorem&quot;&gt;Proving the JN disk theorem via the CFL theorem&lt;/h3&gt;
 
 &lt;p&gt;For higher order discretizations, the CFL condition is necessary but not
 generally sufficient for stability.  Nevertheless, we can use it to derive the
@@ -318,31 +318,31 @@ JN disk theorem.  I&amp;#39;ll restrict the explanation here to Runge-Kutta meth
 but the extension to multistep methods is very simple.  Suppose that we
 discretize in time using a Runge-Kutta method with $s$ stages.  In each stage,
 one point further to the left is used, so typically the stencil for computing
-$u(x&lt;em&gt;i,t&lt;/em&gt;n)$ includes the values from the previous step at $x&lt;em&gt;{i-s}, x&lt;/em&gt;{i-s+1},
-\dots, x&lt;em&gt;i$.  Thus the CFL theorem says the method cannot be convergent unless
-$x&lt;/em&gt;i-k$ lies in the interval $(x&lt;em&gt;{i-s},x&lt;/em&gt;i)$; i.e., unless $k\le s$.
+$u(x_i,t_n)$ includes the values from the previous step at $x_{i-s}, x_{i-s+1},
+\dots, x_i$.  Thus the CFL theorem says the method cannot be convergent unless
+$x_i-k$ lies in the interval $(x_{i-s},x_i)$; i.e., unless $k\le s$.
 Meanwhile, the stability function $\psi(z)$ of the Runge-Kutta method is a
 polynomial of degree at most $s$.  Method of lines analysis tells us that the
-full discretization is stable if $kD&lt;em&gt;1$ lies inside the region ${z :
+full discretization is stable if $kD_1$ lies inside the region ${z :
 |\psi(z)|\le 1}.$  Since we know it is unstable for $k&amp;gt;s$, this implies that
-if $|\psi(z)|\le 1$ over the disk $D&lt;/em&gt;k$, then $k \le s$. &lt;/p&gt;
+if $|\psi(z)|\le 1$ over the disk $D_k$, then $k \le s$. &lt;/p&gt;
 
-&lt;h3&gt;Recap&lt;/h3&gt;
+&lt;h3 id=&quot;recap&quot;&gt;Recap&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;An $s$-stage upwind discretization has stencil width $s$.&lt;/li&gt;
 &lt;li&gt;The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than $s$.&lt;/li&gt;
 &lt;li&gt;The spectrum of the semi-discretization is the boundary of the disk $D_1$.&lt;/li&gt;
-&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD&lt;em&gt;1 = D&lt;/em&gt;k$ lies inside the stability region of the time discretization.&lt;/li&gt;
+&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD_1 = D_k$ lies inside the stability region of the time discretization.&lt;/li&gt;
 &lt;li&gt;Thus no $s$-stage time discretization can have a stability region including the disk larger than $D_s$ (this is the content of the JN disk theorem).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Ellipses&lt;/h3&gt;
+&lt;h3 id=&quot;ellipses&quot;&gt;Ellipses&lt;/h3&gt;
 
 &lt;p&gt;Of course, we didn&amp;#39;t have to choose first-order upwinding in space; we could
 have taken any spatial discretization.  For instance, if we use centered
 differences:
-$$U&lt;em&gt;i&amp;#39;(t) = -\left(U&lt;/em&gt;{i+1}-U_{i-1}\right)$$
+$$U_i&amp;#39;(t) = -\left(U_{i+1}-U_{i-1}\right)$$
 then the spectrum of the semi-discretization lies on the imaginary axis in the
 interval $[-i,i]$.  Then the same line of reasoning then tells us that the
 largest imaginary-axis interval of stability for an $s$-stage method is
@@ -350,7 +350,7 @@ $[-is,is]$.  By considering convex combinations of upwind and centered
 differences, we get similar results for a family of ellipses; this is the
 content of Theorem 5 of [SS].&lt;/p&gt;
 
-&lt;h3&gt;Parabolic problems&lt;/h3&gt;
+&lt;h3 id=&quot;parabolic-problems&quot;&gt;Parabolic problems&lt;/h3&gt;
 
 &lt;p&gt;It&amp;#39;s well known that the largest interval of stability of a consistent
 $s$-stage method on the negative real axis has length $s^2$; the corresponding
@@ -401,7 +401,7 @@ have improved -- see below&lt;/em&gt;.&lt;/p&gt;
 MATLAB ecosystem, and in some cases I&amp;#39;ve adapted the Python tools to work with
 MATLAB. &lt;/p&gt;
 
-&lt;h3&gt;Documenting MATLAB projects using Sphinx&lt;/h3&gt;
+&lt;h3 id=&quot;documenting-matlab-projects-using-sphinx&quot;&gt;Documenting MATLAB projects using Sphinx&lt;/h3&gt;
 
 &lt;p&gt;In principle, Sphinx can be used to write documentation for packages written in
 any language.  However, its &lt;a href=&quot;http://sphinx-doc.org/ext/autodoc.html&quot;&gt;autodoc&lt;/a&gt;
@@ -419,7 +419,7 @@ autodoc&lt;/a&gt;.
 I will have to try it out sometime; please let me know in the comments if
 you&amp;#39;ve used it.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3&gt;Automated testing in MATLAB&lt;/h3&gt;
+&lt;h3 id=&quot;automated-testing-in-matlab&quot;&gt;Automated testing in MATLAB&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#39;ve become convinced that writing at least one or two tests is worthwhile for
 even small, experimental packages.  In Python, it&amp;#39;s simple to include test in
@@ -438,7 +438,7 @@ RK-Opt&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Again, I&amp;#39;d be interested to hear from you in the comments if you&amp;#39;ve used
 MATLAB&amp;#39;s new built-in test harness.&lt;/p&gt;
 
-&lt;h3&gt;Optional arguments with default values&lt;/h3&gt;
+&lt;h3 id=&quot;optional-arguments-with-default-values&quot;&gt;Optional arguments with default values&lt;/h3&gt;
 
 &lt;p&gt;MATLAB does allow the user to specify only some subset of the input arguments
 to a function -- as long as the omitted ones all come after the included ones.
@@ -473,7 +473,7 @@ situation.&lt;/p&gt;
    <link href="/2013/09/21/ipython_notebook_slides_talks.html"/>
    <updated>2013-09-21T00:00:00+00:00</updated>
    <id>h/2013/09/21/ipython_notebook_slides_talks</id>
-   <content type="html">&lt;h1&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;giving-a-math-talk-using-ipython-notebook-slides-and-wakari&quot;&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
 
 &lt;p&gt;Last week I gave my first full-length &lt;em&gt;executable talk&lt;/em&gt;: one in which I showed the code that produced (almost) all the results I presented.  You can &lt;a href=&quot;http://www.davidketcheson.info/talks/SciCADE-talk.slides.html#/&quot;&gt;see the talk&lt;/a&gt; and &lt;a href=&quot;https://www.wakari.io/sharing/bundle/ketch/SciCADE-talk&quot;&gt;run the talk on Wakari&lt;/a&gt; (or download it and run it locally).  All you need is Python with its scientific packages (numpy, scipy, sympy -- I recommend just installing &lt;a href=&quot;http://www.continuum.io/downloads&quot;&gt;Anaconda Python&lt;/a&gt; if you haven&amp;#39;t already).  I took things a step further and actually ran a bunch of demo code live on Wakari.  I was excited beforehand, and judging by the number of people that came into the room right immediately before my talk (and left immediately afterward), so was the audience.  But I was disappointed with how it went.  Here&amp;#39;s why.&lt;/p&gt;
 
@@ -551,7 +551,7 @@ know the CSGF program and its significance, I urge you to do so too.&lt;/p&gt;
    <link href="/2013/01/16/sage_to_ipython.html"/>
    <updated>2013-01-16T00:00:00+00:00</updated>
    <id>h/2013/01/16/sage_to_ipython</id>
-   <content type="html">&lt;h1&gt;Converting a SAGE worksheet to an IPython notebook&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;converting-a-sage-worksheet-to-an-ipython-notebook&quot;&gt;Converting a SAGE worksheet to an IPython notebook&lt;/h1&gt;
 
 &lt;p&gt;Download link: &lt;a href=&quot;&quot;&gt;http://github.com/ketch/sage2ipython/&lt;/a&gt;&lt;/p&gt;
 
@@ -623,7 +623,7 @@ science&lt;/em&gt;, if you will.&lt;/p&gt;
 
 &lt;p&gt;What do I mean by open collaboration?  The use of online tools and social media to connect with new collaborators and provide your own expertise where it is needed most.  For an excellent introduction to the subject, go read &lt;a href=&quot;http://michaelnielsen.org/blog/reinventing-discovery/&quot;&gt;Michael Nielsen&amp;#39;s book, &lt;em&gt;Reinventing  Discovery&lt;/em&gt;&lt;/a&gt;. Here I&amp;#39;ll just focus on a few examples from my own experience:&lt;/p&gt;
 
-&lt;h3&gt;Scientific Q&amp;amp;A sites&lt;/h3&gt;
+&lt;h3 id=&quot;scientific-q-amp-a-sites&quot;&gt;Scientific Q&amp;amp;A sites&lt;/h3&gt;
 
 &lt;p&gt;Often scientific research involves elements of work that have been done before
 or are already well understood -- by someone, somewhere.  Sometimes this work
@@ -640,7 +640,7 @@ connecting questions with correct answers and making them readily available.&lt;
 mine, and typically far more useful than browsing through package documentation
 on CTAN.&lt;/p&gt;
 
-&lt;h3&gt;Social networks like &lt;a href=&quot;http://plus.google.com&quot;&gt;Google+&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;social-networks-like-google&quot;&gt;Social networks like &lt;a href=&quot;http://plus.google.com&quot;&gt;Google+&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;I use Google+ (and previously Reader, which was a far superior tool) for
 sharing new papers that I think may be of interest to my collaborators.  I&amp;#39;ve
@@ -654,7 +654,7 @@ content whereas a large community of G+ users (of which I am part) consider it
 to be a platform for sharing professional content.  But I&amp;#39;m not a good judge --
 I don&amp;#39;t even have a Facebook account.&lt;/p&gt;
 
-&lt;h3&gt;&lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;github&quot;&gt;&lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;I wanted to say &amp;quot;sites like Github&amp;quot;, but I don&amp;#39;t think there are any others.
 Online code hosting sites have long facilitated collaboration between existing
@@ -671,7 +671,7 @@ full source of his Jekyll-based website on
 Github&lt;/a&gt;, which enabled me (simply by
 forking it) to easily set up this site.&lt;/p&gt;
 
-&lt;h3&gt;A word of caution&lt;/h3&gt;
+&lt;h3 id=&quot;a-word-of-caution&quot;&gt;A word of caution&lt;/h3&gt;
 
 &lt;p&gt;As useful as all the above are, I&amp;#39;ve found that they can also be a way of
 wasting time.  You may find this to be the case if you&amp;#39;re merely trading
@@ -744,7 +744,7 @@ committee.&lt;/p&gt;
 doesn&amp;#39;t prohibit
 others from publishing for profit, which may be to [the authors&amp;#39;] disadvantage as
 well.&amp;quot;  They agreed instead to an addendum generated via
-http://scholars.sciencecommons.org/ that retains for the authors the right to
+&lt;a href=&quot;http://scholars.sciencecommons.org/&quot;&gt;http://scholars.sciencecommons.org/&lt;/a&gt; that retains for the authors the right to
 post the final article on any public server, as long as publication in SISC is
 stated.  Since this gave me what I wanted in practical terms, I agreed and
 signed the copyright transfer + addendum.  I&amp;#39;ve been told that an ad hoc

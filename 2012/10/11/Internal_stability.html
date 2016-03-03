@@ -229,7 +229,7 @@ The optimal ten-stage, fourth order SSP Runge-Kutta method
 _____|____________________________________________________________
      |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10
 </code></pre></div>
-<h2>Absolute stability regions</h2>
+<h2 id="absolute-stability-regions">Absolute stability regions</h2>
 
 <p>First we can use NodePy to plot the region of absolute stability for each method.  The absolute stability region is the set</p>
 
@@ -261,7 +261,7 @@ _____|____________________________________________________________
 </code></pre></div>
 <p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png" alt=""></p>
 
-<h1>Internal stability</h1>
+<h1 id="internal-stability">Internal stability</h1>
 
 <p>The stability function tells us by how much errors from one step are amplified in the next one.  This is important since we introduce truncation errors at every step.  However, we also introduce roundoff errors at the each stage within a step.  Internal stability tells us about the growth of those.  Internal stability is typically less important than (step-by-step) absolute stability for two reasons:</p>
 
@@ -274,7 +274,7 @@ _____|____________________________________________________________
 
 <p>Questions: <em>In the solution of PDEs, large spatial truncation errors enter at each stage.  Does this mean internal stability becomes more significant?  How does this relate to stiff accuracy analysis and order reduction?</em></p>
 
-<h2>Internal stability functions</h2>
+<h2 id="internal-stability-functions">Internal stability functions</h2>
 
 <p>We can write the equations of a Runge-Kutta method compactly as</p>
 
@@ -325,9 +325,9 @@ _____|____________________________________________________________
 </code></pre></div>
 <p>Thus the roundoff errors in the first stage are amplified by a factor $z^4/24 + z^3/12 + z^2/6 + z/6$, while the errors in the last stage are amplified by a factor $z/6$.</p>
 
-<h2>Internal instability</h2>
+<h2 id="internal-instability">Internal instability</h2>
 
-<p>Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon<em>{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon</em>{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&#39;t matter if the computation is not absolutely stable.</p>
+<p>Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon_{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon_{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&#39;t matter if the computation is not absolutely stable.</p>
 
 <p>We can get some idea about the amplification of stage errors by plotting the curves $|\theta(z)|=1$ along with the stability region.  Ideally these curves will all lie outside the stability region, so that all stage errors are damped.</p>
 
@@ -343,7 +343,7 @@ _____|____________________________________________________________
 
 <p>For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified.  But by how much?  We&#39;d really like to know the maximum amplification of the stage errors under the condition of absolute stability.  We therefore define the <em>maximum internal amplification factor</em> $M$:</p>
 
-<p><center>$M = \max<em>j \max</em>{z \in S} |\theta_j(z)|$</center></p>
+<p><center>$M = \max_j \max_{z \in S} |\theta_j(z)|$</center></p>
 
 <div class="highlight"><pre><span class="k">print</span> <span class="n">rk4</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
 <span class="k">print</span> <span class="n">ssprk4</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
@@ -357,7 +357,7 @@ _____|____________________________________________________________
 
 <p>Now let&#39;s look at some methods with many stages.</p>
 
-<h2>Runge-Kutta Chebyshev methods</h2>
+<h2 id="runge-kutta-chebyshev-methods">Runge-Kutta Chebyshev methods</h2>
 
 <p>The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages.  The construction of these methods is implemented in NodePy, so let&#39;s take a look at them.  The functions <code>RKC1(s)</code> and <code>RKC2(s)</code> construct RKC methods of order 1 and 2, respectively, with $s$ stages.</p>
 
@@ -416,7 +416,7 @@ ______|________________________
 
 <p>Remark 2: <em>of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials.  So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy&#39;s special functions library).  This would also be a nice check on the calculations above.</em></p>
 
-<h2>Other methods with many stages</h2>
+<h2 id="other-methods-with-many-stages">Other methods with many stages</h2>
 
 <p>Three other classes of methods with many stages have been implemented in NodePy:</p>
 
@@ -426,7 +426,7 @@ ______|________________________
 <li>Extrapolation methods</li>
 </ul>
 
-<h3>SSP Families</h3>
+<h3 id="ssp-families">SSP Families</h3>
 
 <div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
 <span class="n">ssprk</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">SSPRK2</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -454,7 +454,7 @@ ______|________________________
 
 <p>The SSP methods seem to have excellent internal stability properties.</p>
 
-<h3>IDC methods</h3>
+<h3 id="idc-methods">IDC methods</h3>
 
 <div class="highlight"><pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
 <span class="n">idc</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">DC</span><span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -472,7 +472,7 @@ ______|________________________
 
 <p>IDC methods also seem to have excellent internal stability.</p>
 
-<h3>Extrapolation methods</h3>
+<h3 id="extrapolation-methods">Extrapolation methods</h3>
 
 <div class="highlight"><pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
 <span class="n">ex</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">extrap</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -613,7 +613,7 @@ ______|________________________
    <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c8b04af8c68c7a82a26e426af2f728ec54aeea8b/_posts/2012-10-11-Internal_stability.md"> c8b04af8c68c7a82a26e426af2f728ec54aeea8b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2012-10-11-Internal_stability.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
 </aside>
 
 <br /><br />

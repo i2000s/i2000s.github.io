@@ -198,7 +198,7 @@ nilly.  Unfortunately, my experience indicates otherwise.  But words are cheap;
 let&#39;s investigate.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">%load_ext memory_profiler
 </code></pre></div>
-<h3>Memory profiling with <code>memory_profiler</code></h3>
+<h3 id="memory-profiling-with-memory_profiler">Memory profiling with <code>memory_profiler</code></h3>
 
 <p>I&#39;ve written a little script that just creates a DA and 3 vecs.  In order to
 make use of <code>memory_profiler</code>, I&#39;ll call it with system commands.  But I&#39;ve
@@ -228,7 +228,7 @@ don&#39;t need to run the next cell.</p>
 
 <p>Now let&#39;s run some tests.</p>
 
-<h3>The cost of a DA</h3>
+<h3 id="the-cost-of-a-da">The cost of a DA</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 1
 
 Filename: da.py
@@ -278,7 +278,7 @@ That&#39;s more than double the size of the whole DA we had with dof=1.  And the
 size of the Vec only increases (appropriately) by 16 MB.  So for large numbers
 of DOFs, the DA will be as large as 7 Vecs.</p>
 
-<h3>2D and 1D results</h3>
+<h3 id="2d-and-1d-results">2D and 1D results</h3>
 
 <p>The same phenomenon is evident in two dimensions:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 1024 2 1 / | sed -n -e 7p -e 10p
@@ -315,7 +315,7 @@ of DOFs, the DA will be as large as 7 Vecs.</p>
 <p>These results are relatively sane: regardless of the number of DOFs, the ratio
 is 3-3.5.</p>
 
-<h3>Conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>So DAs are not lightweight.  They cost as much as 3-8.5 Vecs, and their cost
 increases with the number of DOFs.  It is not clear to me <em>a priori</em> why their
@@ -387,7 +387,7 @@ simulations on Shaheen.</p>
    <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c8b04af8c68c7a82a26e426af2f728ec54aeea8b/_posts/2014-03-11-DMDA_memory.md"> c8b04af8c68c7a82a26e426af2f728ec54aeea8b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2014-03-11-DMDA_memory.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
 </aside>
 
 <br /><br />

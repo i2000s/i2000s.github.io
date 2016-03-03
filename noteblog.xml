@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-03T15:50:00+00:00</updated>
+ <updated>2016-03-03T16:38:01+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -24,27 +24,27 @@ students may mistakenly apply assumptions based on the scalar case to systems,
 leading to erroneous conclusions.  I&amp;#39;m surprised at how often I&amp;#39;ve seen
 this, and I&amp;#39;ve even made the mistake myself.&lt;/p&gt;
 
-&lt;h2&gt;Scalar equations&lt;/h2&gt;
+&lt;h2 id=&quot;scalar-equations&quot;&gt;Scalar equations&lt;/h2&gt;
 
 &lt;p&gt;Students in any undergraduate PDE course learn that solutions of the heat equation&lt;/p&gt;
 
 &lt;p&gt;$$
 \label{heat}
-u&lt;em&gt;t(x,t) = u&lt;/em&gt;{xx}(x,t)
+u_t(x,t) = u_{xx}(x,t)
 $$&lt;/p&gt;
 
 &lt;p&gt;diffuse in time whereas solutions of the wave equation&lt;/p&gt;
 
 &lt;p&gt;$$
 \label{wave}
-u&lt;em&gt;{tt} = u&lt;/em&gt;{xx}
+u_{tt} = u_{xx}
 $$&lt;/p&gt;
 
 &lt;p&gt;oscillate in time without growing or decaying.  They may even be introduced to
 a general approach for the Cauchy problem: given an evolution equation&lt;/p&gt;
 
 &lt;p&gt;$$ \label{evol}
-u&lt;em&gt;t = \sum&lt;/em&gt;{j=0}^n a_j \frac{\partial^j u}{\partial x^j},
+u_t = \sum_{j=0}^n a_j \frac{\partial^j u}{\partial x^j},
 $$&lt;/p&gt;
 
 &lt;p&gt;one inserts the Fourier mode solution&lt;/p&gt;
@@ -55,18 +55,18 @@ $$&lt;/p&gt;
 
 &lt;p&gt;to obtain&lt;/p&gt;
 
-&lt;p&gt;$$-i\omega(k) = \sum&lt;em&gt;{j=0}^n a&lt;/em&gt;j (ik)^j$$&lt;/p&gt;
+&lt;p&gt;$$-i\omega(k) = \sum_{j=0}^n a_j (ik)^j$$&lt;/p&gt;
 
 &lt;p&gt;or simply&lt;/p&gt;
 
-&lt;p&gt;$$\omega(k) = \sum&lt;em&gt;{j=0}^n a&lt;/em&gt;j i^{j+1} k^j.$$&lt;/p&gt;
+&lt;p&gt;$$\omega(k) = \sum_{j=0}^n a_j i^{j+1} k^j.$$&lt;/p&gt;
 
 &lt;p&gt;The function $\omega(k)$ is often referred to as the &lt;em&gt;dispersion relation&lt;/em&gt; for the PDE.  Any solution can be expressed as a sum of Fourier modes, and each mode propagates in a manner dictated by the dispersion relation.  It&amp;#39;s easy to see that&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If $\omega(k)$ is &lt;strong&gt;real&lt;/strong&gt;, then energy is conserved and each mode simply translates.  This occurs if only odd-numbered spatial derivatives appear in the evolution equation  \eqref{evol}.&lt;/li&gt;
 &lt;li&gt;If $\omega(k)$ has &lt;strong&gt;negative imaginary part&lt;/strong&gt;, energy decays in time.  The heat equation \eqref{heat} behaves this way.&lt;/li&gt;
-&lt;li&gt;If $\omega(k)$ has &lt;strong&gt;positive imaginary part&lt;/strong&gt;, then the energy will grow exponentially in time.  This doesn&amp;#39;t usually occur in physical systems.  An example of this behavior is obtained by changing the sign of the right side in the heat equation to get $u&lt;em&gt;t = - u&lt;/em&gt;{xx}$.&lt;/li&gt;
+&lt;li&gt;If $\omega(k)$ has &lt;strong&gt;positive imaginary part&lt;/strong&gt;, then the energy will grow exponentially in time.  This doesn&amp;#39;t usually occur in physical systems.  An example of this behavior is obtained by changing the sign of the right side in the heat equation to get $u_t = - u_{xx}$.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;What about the wave equation, which has two time derivatives?  Using the same Fourier mode ansatz
@@ -81,28 +81,28 @@ or $\omega = \pm k$.  Since $\omega$ is real, energy is conserved.&lt;/p&gt;
 &lt;p&gt;In the discussion above, we have assumed that $u$ is a scalar and that the coefficients $a_j$ are real.  Many undergraduate courses stop at this point, and students are left with the intuition that &lt;strong&gt;even-numbered derivative terms are diffusive&lt;/strong&gt; while &lt;strong&gt;odd-numbered derivative terms are dispersive&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;In practice, we often deal with systems of PDEs or PDEs with complex coefficients, and this intuition is then no longer correct.  There is nothing deep or mysterious about this topic, but it&amp;#39;s easy to jump to incorrect conclusions if one is not careful.  To take a common example, consider the time-dependent Schroedinger equation:
-$$i \psi&lt;em&gt;t = \psi&lt;/em&gt;{xx} + V\psi.$$
+$$i \psi_t = \psi_{xx} + V\psi.$$
 At first glance, we have on the right side a diffusion term ($\psi_{xx}$) and a reaction term ($V\psi$).  But what about that pesky factor of $i$ (the imaginary unit) on the left hand side?  It&amp;#39;s easy to find the answer using the usual ansatz, but let&amp;#39;s take a little detour first.&lt;/p&gt;
 
-&lt;h2&gt;Systems of equations&lt;/h2&gt;
+&lt;h2 id=&quot;systems-of-equations&quot;&gt;Systems of equations&lt;/h2&gt;
 
 &lt;p&gt;Consider the linear system
 $$
-\begin{align&lt;em&gt;}
+\begin{align*}
 u_t = A  \frac{\partial^j u}{\partial x^j},
-\end{align&lt;/em&gt;}
+\end{align*}
 $$
 where $u\in \mathbb{R}^m$ and $A$ is a square real matrix.
-Let $\lambda&lt;em&gt;m$ and $s&lt;/em&gt;m$ denote the eigenvalues and eigenvectors (respectively) of $A$.
+Let $\lambda_m$ and $s_m$ denote the eigenvalues and eigenvectors (respectively) of $A$.
 Inserting the Fourier mode solution
-$$u(x,t) = s&lt;em&gt;m e^{i(kx - \omega(k) t)},$$
+$$u(x,t) = s_m e^{i(kx - \omega(k) t)},$$
 we obtain
-$$\omega(k) = i^{j+1} k^j \lambda&lt;/em&gt;m s&lt;em&gt;m,$$
+$$\omega(k) = i^{j+1} k^j \lambda_m s_m,$$
 and any solution can be written as a superposition of these.  We see now that the behavior of the energy with respect to time depends on both the number $j$ of spatial derivatives and the nature of the eigenvalues of $A$.  For instance, if $j=1$ and $A$ has imaginary eigenvalues, energy is conserved.  We can obtain just such an example by rewriting the wave equation \eqref{wave} as a first-order system:
 $$
 \begin{align}
-u&lt;/em&gt;t &amp;amp; = v&lt;em&gt;x \label{w1} \
-v&lt;/em&gt;t &amp;amp; = u_x. \label{w2}
+u_t &amp;amp; = v_x \label{w1} \
+v_t &amp;amp; = u_x. \label{w2}
 \end{align}
 $$
 (If you&amp;#39;re not familiar with this, just differentiate \eqref{w1} w.r.t. $t$ and \eqref{w2} w.r.t. $x$, then equate partial derivatives to get back the second-order wave equation \eqref{wave}).  We have a linear system with $j=1$ and 
@@ -113,25 +113,25 @@ This matrix has eigenvalues $\lambda=\pm 1$, so $\omega(k)$ has zero imaginary p
 
 &lt;p&gt;In this example, our intuition from the scalar case works: our first-order system, with only odd-numbered derivatives, leads to wave-like behavior.  But notice that if $A$ had imaginary eigenvalues, our intuition would be wrong; for instance, the system
 $$
-\begin{align&lt;em&gt;}
-u&lt;em&gt;t &amp;amp; = -v&lt;/em&gt;x \
-v&lt;em&gt;t &amp;amp; = u&lt;/em&gt;x,
-\end{align&lt;/em&gt;}
+\begin{align*}
+u_t &amp;amp; = -v_x \
+v_t &amp;amp; = u_x,
+\end{align*}
 $$
-corresponding to the second-order equation $u&lt;em&gt;{tt} = - u&lt;/em&gt;{xx},$ admits exponentially growing solutions.&lt;/p&gt;
+corresponding to the second-order equation $u_{tt} = - u_{xx},$ admits exponentially growing solutions.&lt;/p&gt;
 
-&lt;h2&gt;Scalar problems with complex coefficients&lt;/h2&gt;
+&lt;h2 id=&quot;scalar-problems-with-complex-coefficients&quot;&gt;Scalar problems with complex coefficients&lt;/h2&gt;
 
 &lt;p&gt;Now that we understand the dispersion relation for systems, it&amp;#39;s easy to understand the dispersion relation for the Schrodinger equation.  Multiply by $-i$ to get
-$$\psi&lt;em&gt;t = -i\psi&lt;/em&gt;{xx} + -iV\psi.$$
+$$\psi_t = -i\psi_{xx} + -iV\psi.$$
 Now we can think of this in the same way as a system, where the coefficient matrices have purely imaginary eigenvalues.  Then it&amp;#39;s clear that the (even-derivative) terms on the right hand side are both related to wave behavior (i.e., energy is conserved).&lt;/p&gt;
 
-&lt;h2&gt;Systems with derivatives of different orders&lt;/h2&gt;
+&lt;h2 id=&quot;systems-with-derivatives-of-different-orders&quot;&gt;Systems with derivatives of different orders&lt;/h2&gt;
 
 &lt;p&gt;In the most general case, we have systems of linear PDEs with multiple spatial derivatives
 of different order:
 $$ \label{gensys}
-u&lt;em&gt;t = \sum&lt;/em&gt;{j=0}^n A_j  \frac{\partial^j u}{\partial x^j}.
+u_t = \sum_{j=0}^n A_j  \frac{\partial^j u}{\partial x^j}.
 $$&lt;/p&gt;
 
 &lt;p&gt;Here&amp;#39;s a real example from my research.  It comes from homogenization of
@@ -139,25 +139,25 @@ the wave equation in a spatially varying medium
 (see Equation (5.17) of &lt;a href=&quot;http://faculty.washington.edu/rjl/pubs/solitary/40815.pdf&quot;&gt;this paper&lt;/a&gt; for 
 more details).  It&amp;#39;s the wave equation plus some second-derivative terms:
 $$
-u&lt;em&gt;t = v&lt;/em&gt;x + v&lt;em&gt;{xx} \
-v&lt;/em&gt;t = u&lt;em&gt;x - u&lt;/em&gt;{xx}.
+u_t = v_x + v_{xx} \
+v_t = u_x - u_{xx}.
 $$
 You might (if you hadn&amp;#39;t read the example above) assume that this system
 is dissipative due to the second derivatives.
 This system is of the form \eqref{gensys} with
 $$
 \begin{align}
-A&lt;em&gt;1 &amp;amp; = \begin{pmatrix}
+A_1 &amp;amp; = \begin{pmatrix}
 0 &amp;amp; 1 \ 1 &amp;amp; 0
 \end{pmatrix}
 &amp;amp;
-A&lt;/em&gt;2 &amp;amp; = \begin{pmatrix}
+A_2 &amp;amp; = \begin{pmatrix}
 0 &amp;amp; 1 \ -1 &amp;amp; 0
 \end{pmatrix}.
 \end{align}
 $$
-Of course, $A&lt;em&gt;1$ has real eigenvalues and leads to wave-like behavior.
-But $A&lt;/em&gt;2$ has pure imaginary eigenvalues, so it also leads to wave-like
+Of course, $A_1$ has real eigenvalues and leads to wave-like behavior.
+But $A_2$ has pure imaginary eigenvalues, so it also leads to wave-like
 behavior! The second derivative terms are &lt;em&gt;dispersive&lt;/em&gt;.  In fact, it&amp;#39;s
 easy to show that the energy $E=u^2+v^2$ is a conserved quantity for this
 system (try it!).&lt;/p&gt;
@@ -170,19 +170,19 @@ be diagonalizable.  Let&amp;#39;s illustrate with a simple case.&lt;/p&gt;
 
 &lt;p&gt;Returning to the wave equation, let&amp;#39;s consider a different way of writing it as a system:
 $$
-\begin{align&lt;em&gt;}
-u&lt;em&gt;t &amp;amp; = v \ 
-v&lt;/em&gt;t &amp;amp; = u_{xx}.
-\end{align&lt;/em&gt;}
+\begin{align*}
+u_t &amp;amp; = v \ 
+v_t &amp;amp; = u_{xx}.
+\end{align*}
 $$
 It&amp;#39;s easy to check that this system is equivalent to the wave equation -- but notice that it&amp;#39;s composed of parts with only even derivatives! (&lt;em&gt;reaction&lt;/em&gt; and &lt;em&gt;diffusion&lt;/em&gt; equations in the terminology of scalar PDEs).  This system is of the form \eqref{gensys} with
 $$
 \begin{align}
-A&lt;em&gt;0 &amp;amp; = \begin{pmatrix}
+A_0 &amp;amp; = \begin{pmatrix}
 0 &amp;amp; 1 \ 0 &amp;amp; 0
 \end{pmatrix}
 &amp;amp;
-A&lt;/em&gt;2 &amp;amp; = \begin{pmatrix}
+A_2 &amp;amp; = \begin{pmatrix}
 0 &amp;amp; 0 \ 1 &amp;amp; 0
 \end{pmatrix}.
 \end{align}
@@ -200,15 +200,15 @@ Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
 
 &lt;p&gt;Consider the wave equation&lt;/p&gt;
 
-&lt;p&gt;$$u&lt;em&gt;{tt} = u&lt;/em&gt;{xx}$$&lt;/p&gt;
+&lt;p&gt;$$u_{tt} = u_{xx}$$&lt;/p&gt;
 
 &lt;p&gt;Introducing a new variable $v=u_t$ we can rewrite the wave equation as&lt;/p&gt;
 
 &lt;p&gt;$$
-\begin{align&lt;em&gt;}
-v&lt;em&gt;t &amp;amp; = u&lt;/em&gt;{xx} \
+\begin{align*}
+v_t &amp;amp; = u_{xx} \
 u_t &amp;amp; = v.
-\end{align&lt;/em&gt;}
+\end{align*}
 $$&lt;/p&gt;
 
 &lt;p&gt;Observe that the first of these equation is the diffusion equation, while the second is a reaction equation.  Thus we have reaction-diffusion!  &lt;/p&gt;
@@ -412,7 +412,7 @@ The optimal ten-stage, fourth order SSP Runge-Kutta method
 _____|____________________________________________________________
      |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Absolute stability regions&lt;/h2&gt;
+&lt;h2 id=&quot;absolute-stability-regions&quot;&gt;Absolute stability regions&lt;/h2&gt;
 
 &lt;p&gt;First we can use NodePy to plot the region of absolute stability for each method.  The absolute stability region is the set&lt;/p&gt;
 
@@ -444,7 +444,7 @@ _____|____________________________________________________________
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;h1&gt;Internal stability&lt;/h1&gt;
+&lt;h1 id=&quot;internal-stability&quot;&gt;Internal stability&lt;/h1&gt;
 
 &lt;p&gt;The stability function tells us by how much errors from one step are amplified in the next one.  This is important since we introduce truncation errors at every step.  However, we also introduce roundoff errors at the each stage within a step.  Internal stability tells us about the growth of those.  Internal stability is typically less important than (step-by-step) absolute stability for two reasons:&lt;/p&gt;
 
@@ -457,7 +457,7 @@ _____|____________________________________________________________
 
 &lt;p&gt;Questions: &lt;em&gt;In the solution of PDEs, large spatial truncation errors enter at each stage.  Does this mean internal stability becomes more significant?  How does this relate to stiff accuracy analysis and order reduction?&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2&gt;Internal stability functions&lt;/h2&gt;
+&lt;h2 id=&quot;internal-stability-functions&quot;&gt;Internal stability functions&lt;/h2&gt;
 
 &lt;p&gt;We can write the equations of a Runge-Kutta method compactly as&lt;/p&gt;
 
@@ -508,9 +508,9 @@ _____|____________________________________________________________
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Thus the roundoff errors in the first stage are amplified by a factor $z^4/24 + z^3/12 + z^2/6 + z/6$, while the errors in the last stage are amplified by a factor $z/6$.&lt;/p&gt;
 
-&lt;h2&gt;Internal instability&lt;/h2&gt;
+&lt;h2 id=&quot;internal-instability&quot;&gt;Internal instability&lt;/h2&gt;
 
-&lt;p&gt;Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&amp;#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon&lt;em&gt;{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon&lt;/em&gt;{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&amp;#39;t matter if the computation is not absolutely stable.&lt;/p&gt;
+&lt;p&gt;Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&amp;#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon_{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon_{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&amp;#39;t matter if the computation is not absolutely stable.&lt;/p&gt;
 
 &lt;p&gt;We can get some idea about the amplification of stage errors by plotting the curves $|\theta(z)|=1$ along with the stability region.  Ideally these curves will all lie outside the stability region, so that all stage errors are damped.&lt;/p&gt;
 
@@ -526,7 +526,7 @@ _____|____________________________________________________________
 
 &lt;p&gt;For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified.  But by how much?  We&amp;#39;d really like to know the maximum amplification of the stage errors under the condition of absolute stability.  We therefore define the &lt;em&gt;maximum internal amplification factor&lt;/em&gt; $M$:&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;$M = \max&lt;em&gt;j \max&lt;/em&gt;{z \in S} |\theta_j(z)|$&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;$M = \max_j \max_{z \in S} |\theta_j(z)|$&lt;/center&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -540,7 +540,7 @@ _____|____________________________________________________________
 
 &lt;p&gt;Now let&amp;#39;s look at some methods with many stages.&lt;/p&gt;
 
-&lt;h2&gt;Runge-Kutta Chebyshev methods&lt;/h2&gt;
+&lt;h2 id=&quot;runge-kutta-chebyshev-methods&quot;&gt;Runge-Kutta Chebyshev methods&lt;/h2&gt;
 
 &lt;p&gt;The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages.  The construction of these methods is implemented in NodePy, so let&amp;#39;s take a look at them.  The functions &lt;code&gt;RKC1(s)&lt;/code&gt; and &lt;code&gt;RKC2(s)&lt;/code&gt; construct RKC methods of order 1 and 2, respectively, with $s$ stages.&lt;/p&gt;
 
@@ -599,7 +599,7 @@ ______|________________________
 
 &lt;p&gt;Remark 2: &lt;em&gt;of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials.  So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy&amp;#39;s special functions library).  This would also be a nice check on the calculations above.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2&gt;Other methods with many stages&lt;/h2&gt;
+&lt;h2 id=&quot;other-methods-with-many-stages&quot;&gt;Other methods with many stages&lt;/h2&gt;
 
 &lt;p&gt;Three other classes of methods with many stages have been implemented in NodePy:&lt;/p&gt;
 
@@ -609,7 +609,7 @@ ______|________________________
 &lt;li&gt;Extrapolation methods&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;SSP Families&lt;/h3&gt;
+&lt;h3 id=&quot;ssp-families&quot;&gt;SSP Families&lt;/h3&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SSPRK2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -637,7 +637,7 @@ ______|________________________
 
 &lt;p&gt;The SSP methods seem to have excellent internal stability properties.&lt;/p&gt;
 
-&lt;h3&gt;IDC methods&lt;/h3&gt;
+&lt;h3 id=&quot;idc-methods&quot;&gt;IDC methods&lt;/h3&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;idc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -655,7 +655,7 @@ ______|________________________
 
 &lt;p&gt;IDC methods also seem to have excellent internal stability.&lt;/p&gt;
 
-&lt;h3&gt;Extrapolation methods&lt;/h3&gt;
+&lt;h3 id=&quot;extrapolation-methods&quot;&gt;Extrapolation methods&lt;/h3&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -737,12 +737,12 @@ ______|________________________
    <link href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
-   <content type="html">&lt;h2&gt;The CFL condition&lt;/h2&gt;
+   <content type="html">&lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
 
 &lt;p&gt;The CFL condition is one of the most basic and intuitive principles
 in the numerical solution of hyperbolic PDEs. First formulated by
 Courant, Friedrichs and Lewy in their seminal paper (in English for
-free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical
+free here](&lt;a href=&quot;http://www.stat.uchicago.edu/%7Elekheng/courses/302/classics/courant-friedrichs-lewy.pdf)&quot;&gt;http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)&lt;/a&gt;), it states that the domain of dependence of a numerical
 method for solving a PDE must contain the true domain of dependence.
 Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
 
@@ -752,16 +752,16 @@ nothing interesting about implicit schemes, since they include all
 points in their domain of dependence. But sometimes understanding the
 CFL condition for a particular scheme can be subtle.&lt;/p&gt;
 
-&lt;h3&gt;An implicit scheme&lt;/h3&gt;
+&lt;h3 id=&quot;an-implicit-scheme&quot;&gt;An implicit scheme&lt;/h3&gt;
 
 &lt;p&gt;Consider the advection equation&lt;/p&gt;
 
-&lt;p&gt;$$u&lt;em&gt;t + a u&lt;/em&gt;x = 0.$$&lt;/p&gt;
+&lt;p&gt;$$u_t + a u_x = 0.$$&lt;/p&gt;
 
 &lt;p&gt;Discretization using a backward difference in space and in time gives
 the scheme&lt;/p&gt;
 
-&lt;p&gt;$$U^{n+1}&lt;em&gt;j = U^n&lt;/em&gt;j - \nu(U^{n+1}&lt;em&gt;j - U^{n+1}&lt;/em&gt;{j-1}).$$&lt;/p&gt;
+&lt;p&gt;$$U^{n+1}&lt;em&gt;j = U^n_j - \nu(U^{n+1}&lt;/em&gt;j - U^{n+1}_{j-1}).$$&lt;/p&gt;
 
 &lt;p&gt;Where $\nu = ka/h$ is the CFL number and $k,h$ are the step sizes in
 time and space, respectively. This very simple scheme illustrates the
@@ -769,19 +769,19 @@ concepts of the CFL condition and stability in a remarkable way.&lt;/p&gt;
 
 &lt;p&gt;For simplicity, suppose that the problem is posed on the domain
 $0\le x \le 1$, with an appropriate boundary condition. Since this
-scheme computes $U^{n+1}&lt;em&gt;j$ in terms of $U^n&lt;/em&gt;j$ and $U^{n+1}&lt;em&gt;{j-1}$, it
-seems that the numerical domain of dependence for $U^n&lt;/em&gt;j$ is
-$(x,t)\in (0,x&lt;em&gt;j)\times[0,t&lt;/em&gt;n]$. Based on this, we may conclude that the
+scheme computes $U^{n+1}&lt;em&gt;j$ in terms of $U^n_j$ and $U^{n+1}&lt;/em&gt;{j-1}$, it
+seems that the numerical domain of dependence for $U^n_j$ is
+$(x,t)\in (0,x_j)\times[0,t_n]$. Based on this, we may conclude that the
 scheme is not convergent for $\nu&amp;lt;0$. Simple enough.&lt;/p&gt;
 
-&lt;p&gt;But what if $\nu=-1$? Then the scheme reads $$U^{n+1}&lt;em&gt;{j-1} = U^n&lt;/em&gt;j,$$
+&lt;p&gt;But what if $\nu=-1$? Then the scheme reads $$U^{n+1}_{j-1} = U^n_j,$$
 which gives &lt;strong&gt;the exact solution&lt;/strong&gt;! This is a sort of “anti-unit CFL
 condition”.&lt;/p&gt;
 
 &lt;p&gt;How can this scheme be convergent (in fact, exact!) for a negative CFL
 number when it doesn’t use any values to the right?&lt;/p&gt;
 
-&lt;h3&gt;Understanding the CFL condition&lt;/h3&gt;
+&lt;h3 id=&quot;understanding-the-cfl-condition&quot;&gt;Understanding the CFL condition&lt;/h3&gt;
 
 &lt;p&gt;Look at the exact formula above. In this case the scheme is not a method
 for computing $U^{n+1}&lt;em&gt;j$ but for computing $U^{n+1}&lt;/em&gt;{j-1}$, and it
@@ -805,15 +805,15 @@ further, we must consider two cases:&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;$\nu&amp;gt;0$: in this case, boundary values must be supplied along the
 left boundary at $x=0$. Then, starting from the known value at the
 boundary, we work to the right by substitution:
-$$U^{n+1}&lt;em&gt;j = \frac{U^n&lt;/em&gt;j+\nu U^{n+1}&lt;em&gt;{j-1}}{1+\nu}.$$ Hence the
-scheme is truly a way of computing $U^{n+1}&lt;/em&gt;j$ based on
-$U^n&lt;em&gt;j, U^{n+1}&lt;/em&gt;{j-1}$ and the resulting CFL condition is $\nu\ge0$.&lt;/p&gt;&lt;/li&gt;
+$$U^{n+1}&lt;em&gt;j = \frac{U^n_j+\nu U^{n+1}&lt;/em&gt;{j-1}}{1+\nu}.$$ Hence the
+scheme is truly a way of computing $U^{n+1}&lt;em&gt;j$ based on
+$U^n_j, U^{n+1}&lt;/em&gt;{j-1}$ and the resulting CFL condition is $\nu\ge0$.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;$\nu&amp;lt;0$: in this case, boundary values must be supplied along the
 right boundary at $x=1$. Then, starting from the known value at the
 boundary, we work to the left by substitution:
-$$U^{n+1}&lt;em&gt;{j-1} = \frac{(1+\nu)U^{n+1}&lt;/em&gt;j - U^n&lt;em&gt;j}{\nu}.$$ Hence the
+$$U^{n+1}&lt;em&gt;{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.$$ Hence the
 scheme is truly a way of computing $U^{n+1}&lt;/em&gt;{j-1}$ based on
-$U^n&lt;em&gt;j, U^{n+1}&lt;/em&gt;{j}$ and the resulting CFL condition is $\nu\le-1$.&lt;/p&gt;&lt;/li&gt;
+$U^n_j, U^{n+1}_{j}$ and the resulting CFL condition is $\nu\le-1$.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;This post was originally published on the KAUST Mathwiki &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection&quot;&gt;here&lt;/a&gt; (login required).&lt;/p&gt;

@@ -200,7 +200,7 @@ and running all the tests.  I use <a href="https://travis-ci.org/">Travis</a> to
 automatically run the tests every time I update the code -- or issue a pull
 request -- on Github.</p>
 
-<h1>Image regression tests</h1>
+<h1 id="image-regression-tests">Image regression tests</h1>
 
 <p>Usually, I can test the output of a routine by comparing numbers (generally, by
 taking norms of large arrays of numbers).  However, I also develop routines that
@@ -223,7 +223,7 @@ to slightly different output, depending on the versions of other libraries that
 are installed, the fonts available, etc.  Some more intelligent method of comparison
 is needed.</p>
 
-<h1>The image_comparison decorator</h1>
+<h1 id="the-image_comparison-decorator">The image_comparison decorator</h1>
 
 <p>Fortunately, the matplotlib developers have been grappling with these issues
 for a long time and have a nice packaged solution, in the form of a Python
@@ -239,7 +239,7 @@ things didn&#39;t immediately work.  Apparently <a href="http://matplotlib.10692
 experience</a>,
 so I thought I&#39;d share what I had to do to get things working.</p>
 
-<h1>Getting things to work locally</h1>
+<h1 id="getting-things-to-work-locally">Getting things to work locally</h1>
 
 <p>The decorator makes a few assumptions that are based on the directory
 structure of matplotlib&#39;s own test directories.  So you have two options:</p>
@@ -264,7 +264,7 @@ Note that the image names are specified as arguments to the decorator.</li>
 
 <p>Once I did that the tests passed on my machine.  However, they didn&#39;t pass on Travis.</p>
 
-<h1>Getting things to work on Travis</h1>
+<h1 id="getting-things-to-work-on-travis">Getting things to work on Travis</h1>
 
 <p>I ran into two issues on Travis:</p>
 
@@ -303,7 +303,7 @@ file:</p>
 <p>That&#39;s it!  Since examples are the best documentation, you can check out my
 working setup <a href="https://github.com/ketch/griddle">here</a>.</p>
 
-<h4>Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html">http://www.davidketcheson.info/2015/01/13/using<em>matplotlib</em>image_comparison.html</a></h4>
+<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-http-www-davidketcheson-info-2015-01-13-using_matplotlib_image_comparison-html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html">http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html</a></h4>
 
 <p>under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
 
@@ -361,7 +361,7 @@ working setup <a href="https://github.com/ketch/griddle">here</a>.</p>
    <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c8b04af8c68c7a82a26e426af2f728ec54aeea8b/_posts/2015-01-13-using_matplotlib_image_comparison.md"> c8b04af8c68c7a82a26e426af2f728ec54aeea8b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2015-01-13-using_matplotlib_image_comparison.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
 </aside>
 
 <br /><br />
