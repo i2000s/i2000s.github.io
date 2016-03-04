@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2013/01/16/sage_to_ipython.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2013-01-16 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2013/01/16/sage_to_ipython.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2013-01-16 00:00:00 +0000"/>
 <meta name="citation_title" content="Convert SAGE worksheets to IPython notebooks"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -193,55 +193,26 @@ $(document).ready(function() {
         <div class="col-md-7 col-md-offset-1"> 
           <article>
           <h1 id="converting-a-sage-worksheet-to-an-ipython-notebook">Converting a SAGE worksheet to an IPython notebook</h1>
-
 <p>Download link: <a href="">http://github.com/ketch/sage2ipython/</a></p>
-
-<p>I use Python to teach numerical methods here at KAUST, and I&#39;m in the process of
-switching from using <a href="http://www.sagemath.org">SAGE</a> worksheets to <a href="http://ipython.org">IPython</a>
-notebooks (more on the reasons in a later post).  I&#39;ve invested a lot of time over the 
-past three years in developing a set of SAGE worksheets and it would be a substantial 
-amount of tedious work to manually copy-paste their contents into IPython notebooks.
-So I decided to write an automated converter.  </p>
-
-<p>Each SAGE worksheet is usually stored in a .sws file that is a bzipped tarball;
-underneath, there is a text version (called worksheet.html).  If you run
-SAGE on your own machine, the text versions of your worksheets can usually be found
-in <code>~/.sage/sage_notebook.sagenb/home/username/number/</code>.</p>
-
-<p>It&#39;s a simple matter to convert the SAGE format (that uses triple braces to delimit
-code cells) into the IPython format (that I believe is JSON).<br>
-Rather than write an actual parser, which seemed like overkill, I just created
-a script that steps through the file line-by-line and keeps track of whether it&#39;s in 
-a cell.  Debugging it was slightly
-painful because if you have the tiniest syntax error, then the IPython notebook server just 
-tells you something is wrong and displays nothing.</p>
-
-<p>You can download the converter from the <a href="http://github.com/ketch/sage2ipython/">Github repository</a>.
-It has been tested with SAGE version 4.2.1 and IPython version 0.13.1.  Note that it
-has several limitations (see the list below).  But it has served my needs well.</p>
-
+<p>I use Python to teach numerical methods here at KAUST, and I’m in the process of switching from using <a href="http://www.sagemath.org">SAGE</a> worksheets to <a href="http://ipython.org">IPython</a> notebooks (more on the reasons in a later post). I’ve invested a lot of time over the past three years in developing a set of SAGE worksheets and it would be a substantial amount of tedious work to manually copy-paste their contents into IPython notebooks. So I decided to write an automated converter.</p>
+<p>Each SAGE worksheet is usually stored in a .sws file that is a bzipped tarball; underneath, there is a text version (called worksheet.html). If you run SAGE on your own machine, the text versions of your worksheets can usually be found in <code>~/.sage/sage_notebook.sagenb/home/username/number/</code>.</p>
+<p>It’s a simple matter to convert the SAGE format (that uses triple braces to delimit code cells) into the IPython format (that I believe is JSON).<br />Rather than write an actual parser, which seemed like overkill, I just created a script that steps through the file line-by-line and keeps track of whether it’s in a cell. Debugging it was slightly painful because if you have the tiniest syntax error, then the IPython notebook server just tells you something is wrong and displays nothing.</p>
+<p>You can download the converter from the <a href="http://github.com/ketch/sage2ipython/">Github repository</a>. It has been tested with SAGE version 4.2.1 and IPython version 0.13.1. Note that it has several limitations (see the list below). But it has served my needs well.</p>
 <p>Usage:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sage2ipython</span>
-<span class="n">sage2ipython</span><span class="o">.</span><span class="n">sage2ipy</span><span class="p">(</span><span class="s">&#39;/path/to/sage/worksheet/html/file&#39;</span><span class="p">,</span><span class="s">&#39;output_file_name.ipynb&#39;</span><span class="p">)</span>
-</code></pre></div>
+<pre class="sourceCode python"><code class="sourceCode python">   
+<span class="ch">import</span> sage2ipython
+sage2ipython.sage2ipy(<span class="st">&#39;/path/to/sage/worksheet/html/file&#39;</span>,<span class="st">&#39;output_file_name.ipynb&#39;</span>)</code></pre>
 <p>To convert all your SAGE worksheets, do:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt;&gt;&gt; import sage2ipython
-&gt;&gt;&gt; sage2ipython.convert_all_sage_worksheets(&#39;username&#39;)
-</code></pre></div>
-<p>where <em>username</em> is your account name.  You may also need to edit the 
-SAGE notebook account name that occurs in the path in <code>convert_all_sage_worksheets()</code>.</p>
-
-<p>If you have any problems, it is likely that your worksheet contains some special characters that
-need to be escaped in the IPython notebook.  I&#39;ve included fixes for several of those, but almost
-certainly not all of them.  Please let me know.</p>
-
+<pre><code>&gt;&gt;&gt; import sage2ipython
+&gt;&gt;&gt; sage2ipython.convert_all_sage_worksheets(&#39;username&#39;)</code></pre>
+<p>where <em>username</em> is your account name. You may also need to edit the SAGE notebook account name that occurs in the path in <code>convert_all_sage_worksheets()</code>.</p>
+<p>If you have any problems, it is likely that your worksheet contains some special characters that need to be escaped in the IPython notebook. I’ve included fixes for several of those, but almost certainly not all of them. Please let me know.</p>
 <p>General notes/limitations:</p>
-
 <ul>
 <li>All code blocks are assumed to be Python code blocks.</li>
 <li>Output is simply deleted.</li>
 <li>Everything else is put in Markdown cells.</li>
-<li>Double backslashes are handled properly only if you have the development version of IPython.  Otherwise, you should convert them to quadruple backslashes.</li>
+<li>Double backslashes are handled properly only if you have the development version of IPython. Otherwise, you should convert them to quadruple backslashes.</li>
 </ul>
 
           </article>
@@ -295,10 +266,10 @@ certainly not all of them.  Please let me know.</p>
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2013-01-16-sage_to_ipython.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2013-01-16-sage_to_ipython.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

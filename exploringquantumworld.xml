@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Xiaodong Qi's academic NoteBlog</title>
+ <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-03T16:38:01+00:00</updated>
+ <updated>2016-03-04T03:38:05+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -17,27 +17,12 @@
    <link href="/2014/07/18/teaching_in_the_open.html"/>
    <updated>2014-07-18T00:00:00+00:00</updated>
    <id>h/2014/07/18/teaching_in_the_open</id>
-   <content type="html">&lt;p&gt;If you examine the menu bar above, you&amp;#39;ll notice that my site has a new top-level
-page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;.  This is a direct result of my attending 
-&lt;a href=&quot;http://www.youtube.com/watch?v=1e26rp6qPbA&amp;amp;t=26m12s&quot;&gt;Greg Wilson&amp;#39;s inspiring keynote at Scipy 2014&lt;/a&gt;.
-That link will take you to the key (for me) part of the talk, but I recommend
-watching the whole thing.  His message is: massive collaboration is the real
-revolution.  Michael Nielsen made the same statement in &lt;em&gt;Reinventing Discovery&lt;/em&gt;;
-here Greg applies this statement to university education, and asks:&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;If you examine the menu bar above, you’ll notice that my site has a new top-level page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;. This is a direct result of my attending &lt;a href=&quot;http://www.youtube.com/watch?v=1e26rp6qPbA&amp;amp;t=26m12s&quot;&gt;Greg Wilson’s inspiring keynote at Scipy 2014&lt;/a&gt;. That link will take you to the key (for me) part of the talk, but I recommend watching the whole thing. His message is: massive collaboration is the real revolution. Michael Nielsen made the same statement in &lt;em&gt;Reinventing Discovery&lt;/em&gt;; here Greg applies this statement to university education, and asks:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Why don&amp;#39;t instructors open-source their teaching materials?&lt;/p&gt;
+&lt;p&gt;Why don’t instructors open-source their teaching materials?&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;This new page is my own effort to enable that revolution.  In fact, I&amp;#39;ve been
-gradually putting my teaching materials online for the past couple of years, without
-giving it much thought.  The teaching page collects all the resources I&amp;#39;ve made
-available in one place.&lt;/p&gt;
-
-&lt;p&gt;Something even more exciting in this vein is coming in the fall.  If you want to
-know a little about it, watch 
-&lt;a href=&quot;http://www.youtube.com/watch?v=TWxwKDT88GU&amp;amp;t=56m2s&quot;&gt;the last few minutes of Lorena Barba&amp;#39;s excellent Scipy keynote on computational thinking and teaching&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;This new page is my own effort to enable that revolution. In fact, I’ve been gradually putting my teaching materials online for the past couple of years, without giving it much thought. The teaching page collects all the resources I’ve made available in one place.&lt;/p&gt;
+&lt;p&gt;Something even more exciting in this vein is coming in the fall. If you want to know a little about it, watch &lt;a href=&quot;http://www.youtube.com/watch?v=TWxwKDT88GU&amp;amp;t=56m2s&quot;&gt;the last few minutes of Lorena Barba’s excellent Scipy keynote on computational thinking and teaching&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Stay tuned.&lt;/p&gt;
 </content>
  </entry>
@@ -47,108 +32,33 @@ know a little about it, watch
    <link href="/2014/05/31/teaching_with_SMC.html"/>
    <updated>2014-05-31T00:00:00+00:00</updated>
    <id>h/2014/05/31/teaching_with_SMC</id>
-   <content type="html">&lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level
-course on numerical analysis for differential equations.  I&amp;#39;ve been teaching the course
-using Python for 5 years now.  This year, for the first time, &lt;em&gt;I didn&amp;#39;t spend
-any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;.  In fact, I even
-had them use Clawpack -- and they didn&amp;#39;t need to install it.  Why?  Because they
-all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level course on numerical analysis for differential equations. I’ve been teaching the course using Python for 5 years now. This year, for the first time, &lt;em&gt;I didn’t spend any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;. In fact, I even had them use Clawpack – and they didn’t need to install it. Why? Because they all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
 &lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
-
-&lt;p&gt;For the past several years, I have been increasingly integrating into the
-course &lt;a href=&quot;https://github.com/ketch/AMCS252&quot;&gt;a set of electronic notebooks&lt;/a&gt; in
-which the students are presented with some explanations and code, followed by exercises
-that involve modifying, running, and understanding the numerical algorithms implemented
-in the notebook.  At first these were a set of Sage worksheets, and I ran a local
-Sage server within the KAUST network.  When the VM that held the server died a horrible
-and irreversible death, I decided to switch to the IPython notebook format that had
-become increasingly popular.  It wasn&amp;#39;t too hard to &lt;a href=&quot;http://www.davidketcheson.info/2013/01/16/sage_to_ipython.html&quot;&gt;convert all my Sage worksheets
-to IPython notebooks&lt;/a&gt;.  But my students had to either do all their work in the
-computer lab or figure out how to install the necessary Python packages on their
-own machines.  This was a bit of a time sink for me, although it has gotten easier
-each year thanks to packages like &lt;a href=&quot;https://store.continuum.io/cshop/anaconda/&quot;&gt;Anaconda&lt;/a&gt; and &lt;a href=&quot;https://www.enthought.com/products/canopy/&quot;&gt;Canopy&lt;/a&gt;.  This also meant
-that they all ended up working in slightly different environments, which occasionally
-caused problems.&lt;/p&gt;
-
+&lt;p&gt;For the past several years, I have been increasingly integrating into the course &lt;a href=&quot;https://github.com/ketch/AMCS252&quot;&gt;a set of electronic notebooks&lt;/a&gt; in which the students are presented with some explanations and code, followed by exercises that involve modifying, running, and understanding the numerical algorithms implemented in the notebook. At first these were a set of Sage worksheets, and I ran a local Sage server within the KAUST network. When the VM that held the server died a horrible and irreversible death, I decided to switch to the IPython notebook format that had become increasingly popular. It wasn’t too hard to &lt;a href=&quot;http://www.davidketcheson.info/2013/01/16/sage_to_ipython.html&quot;&gt;convert all my Sage worksheets to IPython notebooks&lt;/a&gt;. But my students had to either do all their work in the computer lab or figure out how to install the necessary Python packages on their own machines. This was a bit of a time sink for me, although it has gotten easier each year thanks to packages like &lt;a href=&quot;https://store.continuum.io/cshop/anaconda/&quot;&gt;Anaconda&lt;/a&gt; and &lt;a href=&quot;https://www.enthought.com/products/canopy/&quot;&gt;Canopy&lt;/a&gt;. This also meant that they all ended up working in slightly different environments, which occasionally caused problems.&lt;/p&gt;
 &lt;h2 id=&quot;ipython-notebooks-in-the-cloud&quot;&gt;IPython notebooks in the cloud&lt;/h2&gt;
-
-&lt;p&gt;In the last year, two new cloud services emerged, both offering free accounts
-with the ability to run IPython notebooks:&lt;/p&gt;
-
+&lt;p&gt;In the last year, two new cloud services emerged, both offering free accounts with the ability to run IPython notebooks:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://wakari.io&quot;&gt;Wakari&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;Sage Math Cloud&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;I realized that by using one of these services, I could avoid dealing with installation
-issues and ensure that everyone worked in an identical environment.  Though I
-have found both Wakari and SMC to be useful, I ended up going with SMC for the course
-because it has, in my opinion, a more intuitive user interface.&lt;/p&gt;
-
+&lt;p&gt;I realized that by using one of these services, I could avoid dealing with installation issues and ensure that everyone worked in an identical environment. Though I have found both Wakari and SMC to be useful, I ended up going with SMC for the course because it has, in my opinion, a more intuitive user interface.&lt;/p&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
-
-&lt;p&gt;On the first day of class, students had only to create a free SMC account,
-create a new project, and type the URL of the course github repo into the &amp;quot;new file&amp;quot;
-box, which automatically caused it to be cloned into their SMC project.  As I
-updated materials during the semester, all they had to do was open a SMC terminal
-and type &amp;quot;git pull&amp;quot; (in fact, none of the students had ever used git before,
-but none of them had any difficulty with this during the course).  &lt;/p&gt;
-
+&lt;p&gt;On the first day of class, students had only to create a free SMC account, create a new project, and type the URL of the course github repo into the “new file” box, which automatically caused it to be cloned into their SMC project. As I updated materials during the semester, all they had to do was open a SMC terminal and type “git pull” (in fact, none of the students had ever used git before, but none of them had any difficulty with this during the course).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloud.sagemath.com/art/templates.png&quot; alt=&quot;Git clone via SMC&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Another great advantage of using a cloud service was that students could work
-or show their work from any computer.  Since it was a small class, I had them
-present homework solutions in-class.  They could all present solutions using
-the computer attached to the projector in the room by just logging into their own
-SMC account.  That meant we avoided losing 5 or 10 minutes of class time in
-order to switch cables or transfer files.&lt;/p&gt;
-
+&lt;p&gt;Another great advantage of using a cloud service was that students could work or show their work from any computer. Since it was a small class, I had them present homework solutions in-class. They could all present solutions using the computer attached to the projector in the room by just logging into their own SMC account. That meant we avoided losing 5 or 10 minutes of class time in order to switch cables or transfer files.&lt;/p&gt;
 &lt;h2 id=&quot;feedback&quot;&gt;Feedback&lt;/h2&gt;
-
-&lt;p&gt;Overall, the students&amp;#39; feedback was very positive.  Most notably, although some
-of them did eventually install Python and the related packages locally on their
-laptops, they all chose to use SMC for their homework assignments throughout the
-course.  There were some noticeable latency issues (the ping time between Saudi Arabia
-and Seattle is 200ms), and SMC currently has a 10-20 second delay the first time
-you open an IPython notebook (there&amp;#39;s no such delay for Sage worksheets).  But those
-were not showstoppers, and I think by the time I teach my next course those issues
-will be resolved (by an IPython upgrade on SMC and by the launch of a European SMC
-server, respectively).  William Stein, creator of SMC (and Sage) was extremely
-responsive and helpful (in fact, he created a trial European server recently in response
-to my and others&amp;#39; comments about latency).&lt;/p&gt;
-
+&lt;p&gt;Overall, the students’ feedback was very positive. Most notably, although some of them did eventually install Python and the related packages locally on their laptops, they all chose to use SMC for their homework assignments throughout the course. There were some noticeable latency issues (the ping time between Saudi Arabia and Seattle is 200ms), and SMC currently has a 10-20 second delay the first time you open an IPython notebook (there’s no such delay for Sage worksheets). But those were not showstoppers, and I think by the time I teach my next course those issues will be resolved (by an IPython upgrade on SMC and by the launch of a European SMC server, respectively). William Stein, creator of SMC (and Sage) was extremely responsive and helpful (in fact, he created a trial European server recently in response to my and others’ comments about latency).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/656693/smc_screenshot.png&quot; alt=&quot;SMC&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;I used SMC again to &lt;a href=&quot;https://github.com/ketch/HyperPython/blob/master/README.md&quot;&gt;teach a 1-day tutorial&lt;/a&gt; at &lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;a workshop&lt;/a&gt; this month.  Other than
-a couple of minor hiccups, it again worked very well.  I plan to continue
-using it for teaching in the future.  One feature I haven&amp;#39;t used yet (but intend
-to) is the ability to &amp;quot;collaborate&amp;quot; on a project so that multiple users can edit it
-at the same time.  I understand that 
-&lt;a href=&quot;http://sagemath.blogspot.com/2014/04/the-sagemathcloud-roadmap.html&quot;&gt;many other great features are in the works&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I would strongly recommend SMC to other teachers of computationally-oriented
-courses, even if you&amp;#39;re not using
-IPython notebooks or Sage worksheets.  As long as all the software for your
-course is freely available, you can install it all on SMC so that students
-have identical environments, accessible from anything with a web browser,
-with no need to do any installation of their own.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#39;re interested in my notebooks, you can find them here:&lt;/p&gt;
-
+&lt;p&gt;I used SMC again to &lt;a href=&quot;https://github.com/ketch/HyperPython/blob/master/README.md&quot;&gt;teach a 1-day tutorial&lt;/a&gt; at &lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;a workshop&lt;/a&gt; this month. Other than a couple of minor hiccups, it again worked very well. I plan to continue using it for teaching in the future. One feature I haven’t used yet (but intend to) is the ability to “collaborate” on a project so that multiple users can edit it at the same time. I understand that &lt;a href=&quot;http://sagemath.blogspot.com/2014/04/the-sagemathcloud-roadmap.html&quot;&gt;many other great features are in the works&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I would strongly recommend SMC to other teachers of computationally-oriented courses, even if you’re not using IPython notebooks or Sage worksheets. As long as all the software for your course is freely available, you can install it all on SMC so that students have identical environments, accessible from anything with a web browser, with no need to do any installation of their own.&lt;/p&gt;
+&lt;p&gt;If you’re interested in my notebooks, you can find them here:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ketch/finite-difference-course&quot;&gt;Spring 2013 course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ketch/AMCS252&quot;&gt;Spring 2014 course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ketch/HyperPython&quot;&gt;HyperPython tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Just be warned that some are more polished than others, and they&amp;#39;re likely
-to all get a makeover soon.&lt;/p&gt;
-
-&lt;p&gt;Now that I keep a lot of my &lt;a href=&quot;https://github.com/ketch/shallow_water_periodic_bathymetry/blob/master/pyclaw/shallow_water_diffraction.ipynb&quot;&gt;research in IPython notebooks on Github&lt;/a&gt;,  I&amp;#39;m also
-thinking that SMC is a way to be able to show that research to anyone, anywhere.
-Heck, I can create a project, clone a Github repo, and run PyClaw in a notebook &lt;strong&gt;on my phone!&lt;/strong&gt;
-Just amazing.&lt;/p&gt;
+&lt;p&gt;Just be warned that some are more polished than others, and they’re likely to all get a makeover soon.&lt;/p&gt;
+&lt;p&gt;Now that I keep a lot of my &lt;a href=&quot;https://github.com/ketch/shallow_water_periodic_bathymetry/blob/master/pyclaw/shallow_water_diffraction.ipynb&quot;&gt;research in IPython notebooks on Github&lt;/a&gt;, I’m also thinking that SMC is a way to be able to show that research to anyone, anywhere. Heck, I can create a project, clone a Github repo, and run PyClaw in a notebook &lt;strong&gt;on my phone!&lt;/strong&gt; Just amazing.&lt;/p&gt;
 </content>
  </entry>
  
@@ -158,18 +68,8 @@ Just amazing.&lt;/p&gt;
    <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/hyperpython</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ketch/HyperPython/master/figures/finite_volume.png&quot; alt=&quot;Finite volumes&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Last week, I ran a 1-day tutorial at the 
-&lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;Workshop on Design, Simulation, Optimization and Control of Green Vehicles and Transportation&lt;/a&gt;.  The idea was to teach attendees about Python programming,
-basic theory of hyperbolic conservation laws, finite volume methods, and how to use 
-&lt;a href=&quot;http://clawpack.github.io/doc/pyclaw/&quot;&gt;PyClaw&lt;/a&gt;, all in the space of a few hours.&lt;/p&gt;
-
-&lt;p&gt;Inspired by Lorena Barba&amp;#39;s recent release of 
-&lt;a href=&quot;http://lorenabarba.com/blog/announcing-aeropython/&quot;&gt;AeroPython&lt;/a&gt;,
-I decided to develop a short set of IPython notebooks for the tutorial.
-The result is &lt;a href=&quot;https://github.com/ketch/HyperPython&quot;&gt;HyperPython&lt;/a&gt;,
-a set of 5 lessons (plus Python crash course):&lt;/p&gt;
-
+&lt;p&gt;Last week, I ran a 1-day tutorial at the &lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;Workshop on Design, Simulation, Optimization and Control of Green Vehicles and Transportation&lt;/a&gt;. The idea was to teach attendees about Python programming, basic theory of hyperbolic conservation laws, finite volume methods, and how to use &lt;a href=&quot;http://clawpack.github.io/doc/pyclaw/&quot;&gt;PyClaw&lt;/a&gt;, all in the space of a few hours.&lt;/p&gt;
+&lt;p&gt;Inspired by Lorena Barba’s recent release of &lt;a href=&quot;http://lorenabarba.com/blog/announcing-aeropython/&quot;&gt;AeroPython&lt;/a&gt;, I decided to develop a short set of IPython notebooks for the tutorial. The result is &lt;a href=&quot;https://github.com/ketch/HyperPython&quot;&gt;HyperPython&lt;/a&gt;, a set of 5 lessons (plus Python crash course):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/HyperPython/blob/master/Lesson_00_Python.ipynb&quot;&gt;Lesson 0: Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/HyperPython/blob/master/Lesson_01_Advection.ipynb&quot;&gt;Lesson 1: Advection&lt;/a&gt;&lt;/li&gt;
@@ -178,11 +78,7 @@ a set of 5 lessons (plus Python crash course):&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/HyperPython/blob/master/Lesson_04_Fluid_dynamics.ipynb&quot;&gt;Lesson 4: Fluid dynamics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/HyperPython/blob/master/Lesson_05_PyClaw.ipynb&quot;&gt;Lesson 5: PyClaw&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;These won&amp;#39;t make you an expert, but if you&amp;#39;re looking for something short,
-practical, and fun, please give them a try.  You may also find the last two
-notebooks useful if you&amp;#39;re looking for a good introduction to PyClaw.&lt;/p&gt;
-
+&lt;p&gt;These won’t make you an expert, but if you’re looking for something short, practical, and fun, please give them a try. You may also find the last two notebooks useful if you’re looking for a good introduction to PyClaw.&lt;/p&gt;
 &lt;p&gt;These may be greatly expanded in the future into a full-fledged semester-length course.&lt;/p&gt;
 </content>
  </entry>
@@ -192,47 +88,22 @@ notebooks useful if you&amp;#39;re looking for a good introduction to PyClaw.&lt
    <link href="/2013/12/13/open_access_means_open_access.html"/>
    <updated>2013-12-13T00:00:00+00:00</updated>
    <id>h/2013/12/13/open_access_means_open_access</id>
-   <content type="html">&lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open
-access&lt;/a&gt;.
-Among the questions:&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open access&lt;/a&gt;. Among the questions:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;How important is it for scientific papers to be freely accessible to the public?&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Of the papers that you published in the last 3 years, what percentage did you submit to 
-fully open access journals?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Of the papers that you published in the last 3 years, what percentage did you submit to fully open access journals?&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;72%&lt;/strong&gt; replied &amp;quot;extremely important&amp;quot; to the first question, while only &lt;strong&gt;58%&lt;/strong&gt;
-indicated they had submitted any paper to an open access journal.  Does this
-mean that scientists are not acting in agreement with their own principles?&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;72%&lt;/strong&gt; replied “extremely important” to the first question, while only &lt;strong&gt;58%&lt;/strong&gt; indicated they had submitted any paper to an open access journal. Does this mean that scientists are not acting in agreement with their own principles?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;No!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;It may shock the editors of Science, but the open access movement is not about
-changing the funding model for academic publishers.  &lt;/p&gt;
-
+&lt;p&gt;It may shock the editors of Science, but the open access movement is not about changing the funding model for academic publishers.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Open access means that research results can be read by anyone, for free.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Scientists can accomplish that without any help from publishers.  The fact is
-that most scientists don&amp;#39;t view &lt;em&gt;open access journals&lt;/em&gt; as the best way to make
-their work accessible.  Another question from the Science survey asked&lt;/p&gt;
-
+&lt;p&gt;Scientists can accomplish that without any help from publishers. The fact is that most scientists don’t view &lt;em&gt;open access journals&lt;/em&gt; as the best way to make their work accessible. Another question from the Science survey asked&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Which options for making papers freely available do you prefer?&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;The most common answer (66%) was &lt;strong&gt;&amp;quot;Immediate access through a repository, such
-as PubMedCentral or Arxiv, or on an author’s web site&amp;quot;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is quick and painless.  &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/statistics.php?la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;It is allowed by an overwhelming majority of
-publishers&lt;/a&gt;.
-It requires no mandates from governments or universities.  It requires no extra
-funding.  Anyone can do it, and every scientist who cares a whit about open
-access already has done it.  &lt;/p&gt;
-
-&lt;p&gt;If someone tells you that we need governments or publishers to intervene to
-make open access possible, you can be sure that his agenda is something other
-than open access.  The only obstacle left is our own apathy.&lt;/p&gt;
+&lt;p&gt;The most common answer (66%) was &lt;strong&gt;“Immediate access through a repository, such as PubMedCentral or Arxiv, or on an author’s web site”&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This is quick and painless. &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/statistics.php?la=en&amp;amp;fIDnum=|&amp;amp;mode=simple&quot;&gt;It is allowed by an overwhelming majority of publishers&lt;/a&gt;. It requires no mandates from governments or universities. It requires no extra funding. Anyone can do it, and every scientist who cares a whit about open access already has done it.&lt;/p&gt;
+&lt;p&gt;If someone tells you that we need governments or publishers to intervene to make open access possible, you can be sure that his agenda is something other than open access. The only obstacle left is our own apathy.&lt;/p&gt;
 </content>
  </entry>
  
@@ -241,135 +112,40 @@ than open access.  The only obstacle left is our own apathy.&lt;/p&gt;
    <link href="/2013/10/14/CFL-disk.html"/>
    <updated>2013-10-14T00:00:00+00:00</updated>
    <id>h/2013/10/14/CFL-disk</id>
-   <content type="html">&lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;,
-Courant, Friedrichs, and Lewy proved a geometric condition that must be
-satisfied by a convergent &lt;strong&gt;partial&lt;/strong&gt; differential equation discretization --
-the famous CFL condition.  Briefly, the CFL theorem says that the numerical
-method must transport information at least as quickly as information travels in
-the true PDE solution.  The proof is geometric and is conveyed through numerous
-diagrams.&lt;/p&gt;
-
-&lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna
-&lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with
-bounding the modulus of a polynomial $\psi(z)$ over a disk of the form 
-$$D_r = {z \in {\mathbb C} : |z-r|\le r}.$$  Their theorem says that if
-$\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s$ and $|\psi(z)|\le 1$ for all $z$
-in such a disk $D_r$, then the disk radius $r$ is at most $s$.  The proof of
-this result is, of course, purely algebraic.&lt;/p&gt;
-
-&lt;p&gt;These results apparently have nothing to do with one another.  And yet it turns
-out that &lt;strong&gt;they are equivalent statements!&lt;/strong&gt;  That is, the CFL theorem can be
-proved using the JN disk theorem.  And the JN disk theorem can be proved using
-the CFL condition (and no algebraic techniques).  This was explained in &lt;a href=&quot;http://dx.doi.org/10.1007/BF01389633&quot;&gt;a
-beautiful paper of Sanz-Serna and
-Spijker&lt;/a&gt; [SS] in 1986, and the result
-deserves to be much more well known.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent &lt;strong&gt;partial&lt;/strong&gt; differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.&lt;/p&gt;
+&lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with bounding the modulus of a polynomial &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; over a disk of the form &lt;span class=&quot;math&quot;&gt;\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]&lt;/span&gt; Their theorem says that if &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt; in such a disk &lt;span class=&quot;math&quot;&gt;\(D_r\)&lt;/span&gt;, then the disk radius &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; is at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. The proof of this result is, of course, purely algebraic.&lt;/p&gt;
+&lt;p&gt;These results apparently have nothing to do with one another. And yet it turns out that &lt;strong&gt;they are equivalent statements!&lt;/strong&gt; That is, the CFL theorem can be proved using the JN disk theorem. And the JN disk theorem can be proved using the CFL condition (and no algebraic techniques). This was explained in &lt;a href=&quot;http://dx.doi.org/10.1007/BF01389633&quot;&gt;a beautiful paper of Sanz-Serna and Spijker&lt;/a&gt; [SS] in 1986, and the result deserves to be much more well known.&lt;/p&gt;
 &lt;h3 id=&quot;first-order-upwinding&quot;&gt;First order upwinding&lt;/h3&gt;
-
-&lt;p&gt;Consider the problem of approximating the value $u(x_i,t_n)$ for the advection equation
-$$u_t + u_x = 0.$$
-The exact solution can be obtained by characteristics from the previous time level:
-$$u(x_i,t_n) = u(x_i-k,t_{n-1}),$$
-where $k$ is the time step size.
-The CFL theorem says that the stencil used for approximating $u(x_i,t_n)$ must
-enclose the point $x_i-k$.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s discretize the advection equation in space using upwind differences:
-$$U_i&amp;#39;(t) = -\left(U_i-U_{i-1}\right).$$
-Here for simplicity we&amp;#39;ve assumed a spatial mesh width of 1.
-Taking periodic boundary conditions, this semi-discretization is a system of
-ODEs of the form $U&amp;#39;=LU$ where $L$ is the circulant matrix 
-$$
+&lt;p&gt;Consider the problem of approximating the value &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; for the advection equation &lt;span class=&quot;math&quot;&gt;\[u_t + u_x = 0.\]&lt;/span&gt; The exact solution can be obtained by characteristics from the previous time level: &lt;span class=&quot;math&quot;&gt;\[u(x_i,t_n) = u(x_i-k,t_{n-1}),\]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; is the time step size. The CFL theorem says that the stencil used for approximating &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; must enclose the point &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s discretize the advection equation in space using upwind differences: &lt;span class=&quot;math&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_i-U_{i-1}\right).\]&lt;/span&gt; Here for simplicity we’ve assumed a spatial mesh width of 1. Taking periodic boundary conditions, this semi-discretization is a system of ODEs of the form &lt;span class=&quot;math&quot;&gt;\(U&amp;#39;=LU\)&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; is the circulant matrix &lt;span class=&quot;math&quot;&gt;\[
 \begin{pmatrix}
--1 &amp;amp; &amp;amp; &amp;amp; 1 \
-1  &amp;amp; -1 &amp;amp; &amp;amp; \
-&amp;amp; \ddots &amp;amp; \ddots \
-&amp;amp; &amp;amp; 1 &amp;amp; -1 \
-\end{pmatrix}$$
-(as usual, all the omitted entries are zero).
-The eigenvalues of this matrix all lie on the boundary of the disk of radius
-one centered at $z=-1$, which we denote by $D_1$.  Here are the eigenvalues of
-a 50-point discretization:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;If we discretize in time with Euler&amp;#39;s method, we get the scheme
-$$U^n_i = U^{n-1}&lt;em&gt;i - k\left(U_i-U&lt;/em&gt;{i-1}\right).$$
-This scheme computes the solution at $(x_i,t_n)$ using values at
-$(x_{i-1},t_{n-1})$ and $(x_i,t_{n-1})$, so the CFL theorem says it can be
-convergent only if $x_i-k$ lies in the interval $(x_{i-1},x_i)$.  Since
-$x_{i-1} = x_i - 1$, this holds iff the step size $k$ is smaller than 1.  &lt;/p&gt;
-
-&lt;p&gt;This result -- that the first-order upwind method is stable and convergent only
-for CFL number at most one -- is well known, and can also be derived using
-basic method of lines stability theory.  The stability function for Euler&amp;#39;s
-method is $\psi(z) = 1 + z$, so it is stable only if $z=k\lambda$ lies in the
-disk ${z : |1+z|\le 1} = D_1$ for each eigenvalue $\lambda$ of $L$.  What we
-have seen in the foregoing is that this stability condition can be derived
-directly from the CFL condition, without considering the eigenvalues of $L$ or
-the stability region of Euler&amp;#39;s method.&lt;/p&gt;
-
+-1 &amp;amp; &amp;amp; &amp;amp; 1 \\
+1  &amp;amp; -1 &amp;amp; &amp;amp; \\
+&amp;amp; \ddots &amp;amp; \ddots \\
+&amp;amp; &amp;amp; 1 &amp;amp; -1 \\
+\end{pmatrix}\]&lt;/span&gt; (as usual, all the omitted entries are zero). The eigenvalues of this matrix all lie on the boundary of the disk of radius one centered at &lt;span class=&quot;math&quot;&gt;\(z=-1\)&lt;/span&gt;, which we denote by &lt;span class=&quot;math&quot;&gt;\(D_1\)&lt;/span&gt;. Here are the eigenvalues of a 50-point discretization:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;If we discretize in time with Euler’s method, we get the scheme &lt;span class=&quot;math&quot;&gt;\[U^n_i = U^{n-1}_i - k\left(U_i-U_{i-1}\right).\]&lt;/span&gt; This scheme computes the solution at &lt;span class=&quot;math&quot;&gt;\((x_i,t_n)\)&lt;/span&gt; using values at &lt;span class=&quot;math&quot;&gt;\((x_{i-1},t_{n-1})\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\((x_i,t_{n-1})\)&lt;/span&gt;, so the CFL theorem says it can be convergent only if &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math&quot;&gt;\((x_{i-1},x_i)\)&lt;/span&gt;. Since &lt;span class=&quot;math&quot;&gt;\(x_{i-1} = x_i - 1\)&lt;/span&gt;, this holds iff the step size &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; is smaller than 1.&lt;/p&gt;
+&lt;p&gt;This result – that the first-order upwind method is stable and convergent only for CFL number at most one – is well known, and can also be derived using basic method of lines stability theory. The stability function for Euler’s method is &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z\)&lt;/span&gt;, so it is stable only if &lt;span class=&quot;math&quot;&gt;\(z=k\lambda\)&lt;/span&gt; lies in the disk &lt;span class=&quot;math&quot;&gt;\(\{z : |1+z|\le 1\} = D_1\)&lt;/span&gt; for each eigenvalue &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt;. What we have seen in the foregoing is that this stability condition can be derived directly from the CFL condition, without considering the eigenvalues of &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; or the stability region of Euler’s method.&lt;/p&gt;
 &lt;h3 id=&quot;proving-the-jn-disk-theorem-via-the-cfl-theorem&quot;&gt;Proving the JN disk theorem via the CFL theorem&lt;/h3&gt;
-
-&lt;p&gt;For higher order discretizations, the CFL condition is necessary but not
-generally sufficient for stability.  Nevertheless, we can use it to derive the
-JN disk theorem.  I&amp;#39;ll restrict the explanation here to Runge-Kutta methods,
-but the extension to multistep methods is very simple.  Suppose that we
-discretize in time using a Runge-Kutta method with $s$ stages.  In each stage,
-one point further to the left is used, so typically the stencil for computing
-$u(x_i,t_n)$ includes the values from the previous step at $x_{i-s}, x_{i-s+1},
-\dots, x_i$.  Thus the CFL theorem says the method cannot be convergent unless
-$x_i-k$ lies in the interval $(x_{i-s},x_i)$; i.e., unless $k\le s$.
-Meanwhile, the stability function $\psi(z)$ of the Runge-Kutta method is a
-polynomial of degree at most $s$.  Method of lines analysis tells us that the
-full discretization is stable if $kD_1$ lies inside the region ${z :
-|\psi(z)|\le 1}.$  Since we know it is unstable for $k&amp;gt;s$, this implies that
-if $|\psi(z)|\le 1$ over the disk $D_k$, then $k \le s$. &lt;/p&gt;
-
+&lt;p&gt;For higher order discretizations, the CFL condition is necessary but not generally sufficient for stability. Nevertheless, we can use it to derive the JN disk theorem. I’ll restrict the explanation here to Runge-Kutta methods, but the extension to multistep methods is very simple. Suppose that we discretize in time using a Runge-Kutta method with &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt; stages. In each stage, one point further to the left is used, so typically the stencil for computing &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; includes the values from the previous step at &lt;span class=&quot;math&quot;&gt;\(x_{i-s}, x_{i-s+1}, \dots, x_i\)&lt;/span&gt;. Thus the CFL theorem says the method cannot be convergent unless &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math&quot;&gt;\((x_{i-s},x_i)\)&lt;/span&gt;; i.e., unless &lt;span class=&quot;math&quot;&gt;\(k\le s\)&lt;/span&gt;. Meanwhile, the stability function &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; of the Runge-Kutta method is a polynomial of degree at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. Method of lines analysis tells us that the full discretization is stable if &lt;span class=&quot;math&quot;&gt;\(kD_1\)&lt;/span&gt; lies inside the region &lt;span class=&quot;math&quot;&gt;\(\{z : |\psi(z)|\le 1\}.\)&lt;/span&gt; Since we know it is unstable for &lt;span class=&quot;math&quot;&gt;\(k&amp;gt;s\)&lt;/span&gt;, this implies that if &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; over the disk &lt;span class=&quot;math&quot;&gt;\(D_k\)&lt;/span&gt;, then &lt;span class=&quot;math&quot;&gt;\(k \le s\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;recap&quot;&gt;Recap&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;An $s$-stage upwind discretization has stencil width $s$.&lt;/li&gt;
-&lt;li&gt;The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than $s$.&lt;/li&gt;
-&lt;li&gt;The spectrum of the semi-discretization is the boundary of the disk $D_1$.&lt;/li&gt;
-&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum $kD_1 = D_k$ lies inside the stability region of the time discretization.&lt;/li&gt;
-&lt;li&gt;Thus no $s$-stage time discretization can have a stability region including the disk larger than $D_s$ (this is the content of the JN disk theorem).&lt;/li&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;An &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage upwind discretization has stencil width &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The spectrum of the semi-discretization is the boundary of the disk &lt;span class=&quot;math&quot;&gt;\(D_1\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum &lt;span class=&quot;math&quot;&gt;\(kD_1 = D_k\)&lt;/span&gt; lies inside the stability region of the time discretization.&lt;/li&gt;
+&lt;li&gt;Thus no &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage time discretization can have a stability region including the disk larger than &lt;span class=&quot;math&quot;&gt;\(D_s\)&lt;/span&gt; (this is the content of the JN disk theorem).&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h3 id=&quot;ellipses&quot;&gt;Ellipses&lt;/h3&gt;
-
-&lt;p&gt;Of course, we didn&amp;#39;t have to choose first-order upwinding in space; we could
-have taken any spatial discretization.  For instance, if we use centered
-differences:
-$$U_i&amp;#39;(t) = -\left(U_{i+1}-U_{i-1}\right)$$
-then the spectrum of the semi-discretization lies on the imaginary axis in the
-interval $[-i,i]$.  Then the same line of reasoning then tells us that the
-largest imaginary-axis interval of stability for an $s$-stage method is
-$[-is,is]$.  By considering convex combinations of upwind and centered
-differences, we get similar results for a family of ellipses; this is the
-content of Theorem 5 of [SS].&lt;/p&gt;
-
+&lt;p&gt;Of course, we didn’t have to choose first-order upwinding in space; we could have taken any spatial discretization. For instance, if we use centered differences: &lt;span class=&quot;math&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_{i+1}-U_{i-1}\right)\]&lt;/span&gt; then the spectrum of the semi-discretization lies on the imaginary axis in the interval &lt;span class=&quot;math&quot;&gt;\([-i,i]\)&lt;/span&gt;. Then the same line of reasoning then tells us that the largest imaginary-axis interval of stability for an &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage method is &lt;span class=&quot;math&quot;&gt;\([-is,is]\)&lt;/span&gt;. By considering convex combinations of upwind and centered differences, we get similar results for a family of ellipses; this is the content of Theorem 5 of [SS].&lt;/p&gt;
 &lt;h3 id=&quot;parabolic-problems&quot;&gt;Parabolic problems&lt;/h3&gt;
-
-&lt;p&gt;It&amp;#39;s well known that the largest interval of stability of a consistent
-$s$-stage method on the negative real axis has length $s^2$; the corresponding
-polynomials are (shifted) Chebyshev polynomials.  You might hope that this
-could also be deduced by considering a centered difference semi-discretization
-of the heat equation and applying the CFL theorem.  That would be very neat,
-since it would provide a connection between PDE stability theory and the
-optimality of Chebyshev polynomials.&lt;/p&gt;
-
-&lt;p&gt;Indeed, explicit time discretizations generally lead to step size restrictions
-depending on the square of the spatial mesh width when paired with the usual
-centered spatial discretization.  But the CFL theorem is not sharp for these
-discretizations; it only tells us that $k$ must vanish vanish more quickly than
-the spatial mesh width.  So no deduction along these lines seems possible.&lt;/p&gt;
-
+&lt;p&gt;It’s well known that the largest interval of stability of a consistent &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage method on the negative real axis has length &lt;span class=&quot;math&quot;&gt;\(s^2\)&lt;/span&gt;; the corresponding polynomials are (shifted) Chebyshev polynomials. You might hope that this could also be deduced by considering a centered difference semi-discretization of the heat equation and applying the CFL theorem. That would be very neat, since it would provide a connection between PDE stability theory and the optimality of Chebyshev polynomials.&lt;/p&gt;
+&lt;p&gt;Indeed, explicit time discretizations generally lead to step size restrictions depending on the square of the spatial mesh width when paired with the usual centered spatial discretization. But the CFL theorem is not sharp for these discretizations; it only tells us that &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; must vanish vanish more quickly than the spatial mesh width. So no deduction along these lines seems possible.&lt;/p&gt;
 &lt;p&gt;#spnetwork #recommend doi:/10.1007/BF01389633&lt;/p&gt;
-
-&lt;p&gt;#discusses doi:10.1147/rd.112.0215
-#discusses doi:10.1007/BF01932030&lt;/p&gt;
+&lt;p&gt;#discusses doi:10.1147/rd.112.0215 #discusses doi:10.1007/BF01932030&lt;/p&gt;
 </content>
  </entry>
  
@@ -378,93 +154,24 @@ the spatial mesh width.  So no deduction along these lines seems possible.&lt;/p
    <link href="/2013/10/12/MATLAB-docs-testing.html"/>
    <updated>2013-10-12T00:00:00+00:00</updated>
    <id>h/2013/10/12/MATLAB-docs-testing</id>
-   <content type="html">&lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for
-certain things.  For instance, I haven&amp;#39;t found a Python-friendly nonlinear
-optimization package that measures up to the capabilities of MATLAB&amp;#39;s
-optimization toolbox (fmincon).  So my RK-opt package for optimising
-Runge-Kutta methods is written all in MATLAB.&lt;/p&gt;
-
-&lt;p&gt;The trouble is that working in Python has spoiled me for other languages.
-Python has the excellent &lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; package for writing
-&lt;strong&gt;beautiful documentation&lt;/strong&gt;.  Python has the
-&lt;a href=&quot;http://nose.readthedocs.org/&quot;&gt;nosetests&lt;/a&gt; harness for easily writing and
-running &lt;strong&gt;tests&lt;/strong&gt;.  And Python has &lt;a href=&quot;http://www.diveintopython.net/power_of_introspection/optional_arguments.html&quot;&gt;a simple syntax for including &lt;strong&gt;optional function
-arguments&lt;/strong&gt; with default
-values&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;MATLAB doesn&amp;#39;t support any of these things so elegantly*.&lt;/p&gt;
-
-&lt;p&gt;*&lt;em&gt;This was true one year ago, when I started writing this.  But it seems things
-have improved -- see below&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;In any case, all is not lost -- I have found reasonable approximations in the
-MATLAB ecosystem, and in some cases I&amp;#39;ve adapted the Python tools to work with
-MATLAB. &lt;/p&gt;
-
+   <content type="html">&lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.&lt;/p&gt;
+&lt;p&gt;The trouble is that working in Python has spoiled me for other languages. Python has the excellent &lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; package for writing &lt;strong&gt;beautiful documentation&lt;/strong&gt;. Python has the &lt;a href=&quot;http://nose.readthedocs.org/&quot;&gt;nosetests&lt;/a&gt; harness for easily writing and running &lt;strong&gt;tests&lt;/strong&gt;. And Python has &lt;a href=&quot;http://www.diveintopython.net/power_of_introspection/optional_arguments.html&quot;&gt;a simple syntax for including &lt;strong&gt;optional function arguments&lt;/strong&gt; with default values&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;MATLAB doesn’t support any of these things so elegantly*.&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;This was true one year ago, when I started writing this. But it seems things have improved – see below&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In any case, all is not lost – I have found reasonable approximations in the MATLAB ecosystem, and in some cases I’ve adapted the Python tools to work with MATLAB.&lt;/p&gt;
 &lt;h3 id=&quot;documenting-matlab-projects-using-sphinx&quot;&gt;Documenting MATLAB projects using Sphinx&lt;/h3&gt;
-
-&lt;p&gt;In principle, Sphinx can be used to write documentation for packages written in
-any language.  However, its &lt;a href=&quot;http://sphinx-doc.org/ext/autodoc.html&quot;&gt;autodoc&lt;/a&gt;
-functionality, which automatically extracts Python docstrings, doesn&amp;#39;t work
-with MATLAB.  For RK-Opt, I hacked together a simple workaround in &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/doc/m2rst.py&quot;&gt;this
-74-line Python file&lt;/a&gt;.
-It goes through a given directory, extracts the MATLAB docstring for each
-function, and compiles them into an .rst file for Sphinx processing.  You can
-see an &lt;a href=&quot;http://numerics.kaust.edu.sa/RK-opt/RK-coeff-opt.html&quot;&gt;example of the results
-here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: &lt;em&gt;as I&amp;#39;m writing this, I&amp;#39;ve discovered a new &lt;a href=&quot;https://bitbucket.org/bwanamarko/sphinx-contrib/src/tip/matlabdomain/README.rst&quot;&gt;MATLAB extension for
-Sphinx&amp;#39;s
-autodoc&lt;/a&gt;.
-I will have to try it out sometime; please let me know in the comments if
-you&amp;#39;ve used it.&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;In principle, Sphinx can be used to write documentation for packages written in any language. However, its &lt;a href=&quot;http://sphinx-doc.org/ext/autodoc.html&quot;&gt;autodoc&lt;/a&gt; functionality, which automatically extracts Python docstrings, doesn’t work with MATLAB. For RK-Opt, I hacked together a simple workaround in &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/doc/m2rst.py&quot;&gt;this 74-line Python file&lt;/a&gt;. It goes through a given directory, extracts the MATLAB docstring for each function, and compiles them into an .rst file for Sphinx processing. You can see an &lt;a href=&quot;http://numerics.kaust.edu.sa/RK-opt/RK-coeff-opt.html&quot;&gt;example of the results here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: &lt;em&gt;as I’m writing this, I’ve discovered a new &lt;a href=&quot;https://bitbucket.org/bwanamarko/sphinx-contrib/src/tip/matlabdomain/README.rst&quot;&gt;MATLAB extension for Sphinx’s autodoc&lt;/a&gt;. I will have to try it out sometime; please let me know in the comments if you’ve used it.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&quot;automated-testing-in-matlab&quot;&gt;Automated testing in MATLAB&lt;/h3&gt;
-
-&lt;p&gt;I&amp;#39;ve become convinced that writing at least one or two tests is worthwhile for
-even small, experimental packages.  In Python, it&amp;#39;s simple to include test in
-the docs and run them with doctest, or write test suites and run them with
-nosetest.  For MATLAB, I would have recommended the third-party &lt;a href=&quot;http://www.mathworks.com/matlabcentral/fileexchange/22846-matlab-xunit-test-framework&quot;&gt;xunit
-framework&lt;/a&gt;.
-But it seems that this year &lt;a href=&quot;http://www.mathworks.com/help/matlab/matlab-unit-test-framework.html&quot;&gt;Mathworks finally added this functionality to
-MATLAB&lt;/a&gt;.
-Even so, you might want to use xunit because &lt;a href=&quot;https://github.com/tgs/matlab-xunit-doctest&quot;&gt;it&amp;#39;s possible to run doctests
-with it&lt;/a&gt; but not with MATLAB&amp;#39;s new
-built-in framework.  Also, you can get XML output from xunit, which a number of
-other tools can analyze (for instance, to tell you about code coverage).  For
-an example of how to use xunit, &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/RK-coeff-opt/test_rkopt.m&quot;&gt;see
-RK-Opt&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Again, I&amp;#39;d be interested to hear from you in the comments if you&amp;#39;ve used
-MATLAB&amp;#39;s new built-in test harness.&lt;/p&gt;
-
+&lt;p&gt;I’ve become convinced that writing at least one or two tests is worthwhile for even small, experimental packages. In Python, it’s simple to include test in the docs and run them with doctest, or write test suites and run them with nosetest. For MATLAB, I would have recommended the third-party &lt;a href=&quot;http://www.mathworks.com/matlabcentral/fileexchange/22846-matlab-xunit-test-framework&quot;&gt;xunit framework&lt;/a&gt;. But it seems that this year &lt;a href=&quot;http://www.mathworks.com/help/matlab/matlab-unit-test-framework.html&quot;&gt;Mathworks finally added this functionality to MATLAB&lt;/a&gt;. Even so, you might want to use xunit because &lt;a href=&quot;https://github.com/tgs/matlab-xunit-doctest&quot;&gt;it’s possible to run doctests with it&lt;/a&gt; but not with MATLAB’s new built-in framework. Also, you can get XML output from xunit, which a number of other tools can analyze (for instance, to tell you about code coverage). For an example of how to use xunit, &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/RK-coeff-opt/test_rkopt.m&quot;&gt;see RK-Opt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Again, I’d be interested to hear from you in the comments if you’ve used MATLAB’s new built-in test harness.&lt;/p&gt;
 &lt;h3 id=&quot;optional-arguments-with-default-values&quot;&gt;Optional arguments with default values&lt;/h3&gt;
-
-&lt;p&gt;MATLAB does allow the user to specify only some subset of the input arguments
-to a function -- as long as the omitted ones all come after the included ones.
-I used to take advantage of this, with this kind of code inside the function:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;if nargin&amp;lt;5 rmax=50; end
-if nargin&amp;lt;4 eps=1.e-10; end
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is a reasonable solution in very small functions, but it breaks if you
-want to add new arguments that don&amp;#39;t come at the end, and if you want to
-specify the very last value then you have to specify them all.  A better
-general solution is the &lt;a href=&quot;http://www.mathworks.com/help/matlab/ref/inputparserclass.html&quot;&gt;inputParser
-object&lt;/a&gt;.
-It&amp;#39;s much less natural than Python&amp;#39;s syntax, but the result for the user is the
-same: arbitrary subsets of the optional arguments can be specified; default
-values will be used for the rest.  As a bonus, you can check the types of the
-inputs.  &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/polyopt/opt_poly_bisect.m#L258&quot;&gt;Here&amp;#39;s an example of
-usage&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;MATLAB does allow the user to specify only some subset of the input arguments to a function – as long as the omitted ones all come after the included ones. I used to take advantage of this, with this kind of code inside the function:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if nargin&amp;lt;5 rmax=50; end
+if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a reasonable solution in very small functions, but it breaks if you want to add new arguments that don’t come at the end, and if you want to specify the very last value then you have to specify them all. A better general solution is the &lt;a href=&quot;http://www.mathworks.com/help/matlab/ref/inputparserclass.html&quot;&gt;inputParser object&lt;/a&gt;. It’s much less natural than Python’s syntax, but the result for the user is the same: arbitrary subsets of the optional arguments can be specified; default values will be used for the rest. As a bonus, you can check the types of the inputs. &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/polyopt/opt_poly_bisect.m#L258&quot;&gt;Here’s an example of usage&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you know of better ways to do any of these things, please let me know in the comments!&lt;/p&gt;
-
-&lt;p&gt;Of course, it&amp;#39;s entirely possible to develop large, well-documented,
-well-tested, user-friendly packages in MATLAB --
-&lt;a href=&quot;http://www.chebfun.org/&quot;&gt;Chebfun&lt;/a&gt; is one example.  It&amp;#39;s just that
-this is the exception and not the rule in the MATLAB community.  Hopefully
-better integration with testing and documentation tools will improve this
-situation.&lt;/p&gt;
+&lt;p&gt;Of course, it’s entirely possible to develop large, well-documented, well-tested, user-friendly packages in MATLAB – &lt;a href=&quot;http://www.chebfun.org/&quot;&gt;Chebfun&lt;/a&gt; is one example. It’s just that this is the exception and not the rule in the MATLAB community. Hopefully better integration with testing and documentation tools will improve this situation.&lt;/p&gt;
 </content>
  </entry>
  
@@ -474,26 +181,16 @@ situation.&lt;/p&gt;
    <updated>2013-09-21T00:00:00+00:00</updated>
    <id>h/2013/09/21/ipython_notebook_slides_talks</id>
    <content type="html">&lt;h1 id=&quot;giving-a-math-talk-using-ipython-notebook-slides-and-wakari&quot;&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
-
-&lt;p&gt;Last week I gave my first full-length &lt;em&gt;executable talk&lt;/em&gt;: one in which I showed the code that produced (almost) all the results I presented.  You can &lt;a href=&quot;http://www.davidketcheson.info/talks/SciCADE-talk.slides.html#/&quot;&gt;see the talk&lt;/a&gt; and &lt;a href=&quot;https://www.wakari.io/sharing/bundle/ketch/SciCADE-talk&quot;&gt;run the talk on Wakari&lt;/a&gt; (or download it and run it locally).  All you need is Python with its scientific packages (numpy, scipy, sympy -- I recommend just installing &lt;a href=&quot;http://www.continuum.io/downloads&quot;&gt;Anaconda Python&lt;/a&gt; if you haven&amp;#39;t already).  I took things a step further and actually ran a bunch of demo code live on Wakari.  I was excited beforehand, and judging by the number of people that came into the room right immediately before my talk (and left immediately afterward), so was the audience.  But I was disappointed with how it went.  Here&amp;#39;s why.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Composing a talk in an IPython notebook is counterintuitive&lt;/strong&gt;.  When I give a talk, I try to tell a compelling and coherent story.  This requires a certain mindset, and somehow the IPython notebook helps rather than hinders -- at least, for me.  I think there is too much of a disconnect between how things look when I&amp;#39;m writing them and how they look as slides.  In theory Beamer is worse in this respect, but it felt worse with the notebook.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;It is hard to engage your audience with code&lt;/strong&gt;.  Almost nobody can digest complicated formulas during a talk, which is why even when I speak to mathematicians I usually have very few equations and lots of pictures.  Well, the same goes for code -- nobody can digest more than a few simple lines on a slide.  I think I did a good job of keeping the code short, high-level, and intuitive, but it still felt flat.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Code in the talk needs to execute very quickly&lt;/strong&gt;.  This is obvious for code that you run as a live demo, but I found it necessary also for code snippets that I didn&amp;#39;t run live (but where I wanted to show the results).  That&amp;#39;s because when you recompile your talk (which I do &lt;em&gt;many, many times&lt;/em&gt; during the composing process), you have to wait for all that code to execute again.  It doesn&amp;#39;t help that things seem to run significantly slower on Wakari than on my laptop.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The IPython notebook format is not (yet) good at displaying graphs and tables&lt;/strong&gt;.  Talks full of text put people to sleep, and code is text, so this kind of talk already has a strike against it.  But to makes matters worse, I can&amp;#39;t insert images into my notebook slides without putting an ugly line of code above them.  And the notebook refuses to let me embed vector graphics formats (like PDF), so I have to degrade them to slightly blurry pngs.  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;It&amp;#39;s hard to judge how long a code-based talk will take&lt;/strong&gt;.  I usually judge conservatively so I can move at a relaxed pace.  But my demo took much longer than I planned (partly due to the difficulty of using a Spanish keyboard), and I had to rush through the last third of the talk in about 2 minutes.  I guess this is something to learn with practice.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The default fonts in notebook-converted slides are just too small&lt;/strong&gt;.  They are fine for someone sitting at a computer screen, but much too small for the projector screen at the front of a large screen.  You can adjust the size in the browser using &amp;#39;+&amp;#39;, but the result looks ugly for some reason.  I know the fonts can be changed using CSS, and I&amp;#39;ll make them larger next time.&lt;/p&gt;
-
-&lt;p&gt;For me, the worst condemnation of any talk is that no questions are asked afterward.  I haven&amp;#39;t had that happen in a long time, but this was close: there was only one question, and that question demonstrated that I had completely failed to convey what was going on behind a lot of the code I had showed.&lt;/p&gt;
-
-&lt;p&gt;It feels too soon to give up on this approach to talks; I will try it again some time.  Perhaps I just haven&amp;#39;t found the right use for this medium.  If you have tried giving a similar talk, I&amp;#39;d love to hear your opinion or suggestions.&lt;/p&gt;
-
-&lt;p&gt;One note about the slides: parts of them will not make sense in the absence of my verbal explanations.  I generally avoid including a lot of explanatory text in the slides.  I actually added a lot more than usual in this case because I was planning to post them online.&lt;/p&gt;
+&lt;p&gt;Last week I gave my first full-length &lt;em&gt;executable talk&lt;/em&gt;: one in which I showed the code that produced (almost) all the results I presented. You can &lt;a href=&quot;http://www.davidketcheson.info/talks/SciCADE-talk.slides.html#/&quot;&gt;see the talk&lt;/a&gt; and &lt;a href=&quot;https://www.wakari.io/sharing/bundle/ketch/SciCADE-talk&quot;&gt;run the talk on Wakari&lt;/a&gt; (or download it and run it locally). All you need is Python with its scientific packages (numpy, scipy, sympy – I recommend just installing &lt;a href=&quot;http://www.continuum.io/downloads&quot;&gt;Anaconda Python&lt;/a&gt; if you haven’t already). I took things a step further and actually ran a bunch of demo code live on Wakari. I was excited beforehand, and judging by the number of people that came into the room right immediately before my talk (and left immediately afterward), so was the audience. But I was disappointed with how it went. Here’s why.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Composing a talk in an IPython notebook is counterintuitive&lt;/strong&gt;. When I give a talk, I try to tell a compelling and coherent story. This requires a certain mindset, and somehow the IPython notebook helps rather than hinders – at least, for me. I think there is too much of a disconnect between how things look when I’m writing them and how they look as slides. In theory Beamer is worse in this respect, but it felt worse with the notebook.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It is hard to engage your audience with code&lt;/strong&gt;. Almost nobody can digest complicated formulas during a talk, which is why even when I speak to mathematicians I usually have very few equations and lots of pictures. Well, the same goes for code – nobody can digest more than a few simple lines on a slide. I think I did a good job of keeping the code short, high-level, and intuitive, but it still felt flat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code in the talk needs to execute very quickly&lt;/strong&gt;. This is obvious for code that you run as a live demo, but I found it necessary also for code snippets that I didn’t run live (but where I wanted to show the results). That’s because when you recompile your talk (which I do &lt;em&gt;many, many times&lt;/em&gt; during the composing process), you have to wait for all that code to execute again. It doesn’t help that things seem to run significantly slower on Wakari than on my laptop.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The IPython notebook format is not (yet) good at displaying graphs and tables&lt;/strong&gt;. Talks full of text put people to sleep, and code is text, so this kind of talk already has a strike against it. But to makes matters worse, I can’t insert images into my notebook slides without putting an ugly line of code above them. And the notebook refuses to let me embed vector graphics formats (like PDF), so I have to degrade them to slightly blurry pngs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It’s hard to judge how long a code-based talk will take&lt;/strong&gt;. I usually judge conservatively so I can move at a relaxed pace. But my demo took much longer than I planned (partly due to the difficulty of using a Spanish keyboard), and I had to rush through the last third of the talk in about 2 minutes. I guess this is something to learn with practice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The default fonts in notebook-converted slides are just too small&lt;/strong&gt;. They are fine for someone sitting at a computer screen, but much too small for the projector screen at the front of a large screen. You can adjust the size in the browser using ‘+’, but the result looks ugly for some reason. I know the fonts can be changed using CSS, and I’ll make them larger next time.&lt;/p&gt;
+&lt;p&gt;For me, the worst condemnation of any talk is that no questions are asked afterward. I haven’t had that happen in a long time, but this was close: there was only one question, and that question demonstrated that I had completely failed to convey what was going on behind a lot of the code I had showed.&lt;/p&gt;
+&lt;p&gt;It feels too soon to give up on this approach to talks; I will try it again some time. Perhaps I just haven’t found the right use for this medium. If you have tried giving a similar talk, I’d love to hear your opinion or suggestions.&lt;/p&gt;
+&lt;p&gt;One note about the slides: parts of them will not make sense in the absence of my verbal explanations. I generally avoid including a lot of explanatory text in the slides. I actually added a lot more than usual in this case because I was planning to post them online.&lt;/p&gt;
 </content>
  </entry>
  
@@ -502,45 +199,30 @@ situation.&lt;/p&gt;
    <link href="/2013/06/23/csgf-letter-to-congress.html"/>
    <updated>2013-06-23T00:00:00+00:00</updated>
    <id>h/2013/06/23/csgf-letter-to-congress</id>
-   <content type="html">&lt;p&gt;The US federal government &lt;a href=&quot;http://energy.gov/sites/prod/files/2013/04/f0/Volume4.pdf&quot;&gt;has proposed to eliminate a number of smaller
-graduate fellowship programs&lt;/a&gt;
-and lump them together with the &lt;a href=&quot;http://www.nsfgrfp.org/&quot;&gt;NSF graduate
-fellowship&lt;/a&gt;.  Unfortunately, this includes the Dept.
-of Energy&amp;#39;s illustrious
-&lt;a href=&quot;http://www.krellinst.org/csgf/&quot;&gt;Computational Science Graduate Fellowship (CSGF) program&lt;/a&gt;, 
-of which I&amp;#39;m an alumnus.
-I think the CSGF program is an irreplaceable
-asset that is nurturing the &lt;em&gt;third pillar&lt;/em&gt; of science across disciplines in a way that
-a much larger program never could.  &lt;/p&gt;
-
-&lt;p&gt;Here are just a few of the definite, tangible impacts the CSGF program had on me,
-off the top of my head:&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;The US federal government &lt;a href=&quot;http://energy.gov/sites/prod/files/2013/04/f0/Volume4.pdf&quot;&gt;has proposed to eliminate a number of smaller graduate fellowship programs&lt;/a&gt; and lump them together with the &lt;a href=&quot;http://www.nsfgrfp.org/&quot;&gt;NSF graduate fellowship&lt;/a&gt;. Unfortunately, this includes the Dept. of Energy’s illustrious &lt;a href=&quot;http://www.krellinst.org/csgf/&quot;&gt;Computational Science Graduate Fellowship (CSGF) program&lt;/a&gt;, of which I’m an alumnus. I think the CSGF program is an irreplaceable asset that is nurturing the &lt;em&gt;third pillar&lt;/em&gt; of science across disciplines in a way that a much larger program never could.&lt;/p&gt;
+&lt;p&gt;Here are just a few of the definite, tangible impacts the CSGF program had on me, off the top of my head:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Because of the program of study requirements, I took a course in optimization,
-without which I would never have written &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-09-02209-1&quot;&gt;this paper&lt;/a&gt;, parts of &lt;a href=&quot;http://arxiv.org/abs/1105.5798&quot;&gt;this paper&lt;/a&gt;, and probably
-&lt;a href=&quot;http://dx.doi.org/10.2140/camcos.2012.7.247&quot;&gt;this paper&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I met Xiaodong Keyes (a member of the steering committee) and came to KAUST!
-I almost certainly would not be here if it weren&amp;#39;t for the CSGF program.&lt;/li&gt;
-&lt;li&gt;I met Carl Boettiger and learned about using Jekyll for open notebook science,
-resulting in the site you are reading.&lt;/li&gt;
+&lt;li&gt;Because of the program of study requirements, I took a course in optimization, without which I would never have written &lt;a href=&quot;http://dx.doi.org/10.1090/S0025-5718-09-02209-1&quot;&gt;this paper&lt;/a&gt;, parts of &lt;a href=&quot;http://arxiv.org/abs/1105.5798&quot;&gt;this paper&lt;/a&gt;, and probably &lt;a href=&quot;http://dx.doi.org/10.2140/camcos.2012.7.247&quot;&gt;this paper&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I met Xiaodong Keyes (a member of the steering committee) and came to KAUST! I almost certainly would not be here if it weren’t for the CSGF program.&lt;/li&gt;
+&lt;li&gt;I met Carl Boettiger and learned about using Jekyll for open notebook science, resulting in the site you are reading.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Here is the letter I sent to four 
-congressional committee members asking them to save the program.  If you 
-know the CSGF program and its significance, I urge you to do so too.&lt;/p&gt;
-
+&lt;p&gt;Here is the letter I sent to four congressional committee members asking them to save the program. If you know the CSGF program and its significance, I urge you to do so too.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Dear Senator/Congressman,&lt;/p&gt;
-
-&lt;p&gt;I am writing to you because of your leadership role on the Appropriations Subcommittee on Energy and Water Development.  I am an applied mathematician and an alumnus of the DOE computational science graduate fellowship (CSGF) program.  I am writing because I have learned that funding for the CSGF program is slated to be merged into a much larger NSF graduate fellowship program.  I think this would be a terrible decision, because it would destroy the unique benefits of the CSGF program.&lt;/p&gt;
-
-&lt;p&gt;The CSGF program was the second federal graduate fellowship that I received while pursuing a Ph.D.  The first was a fellowship from the Dept. of Homeland Security.  I would like to emphasize the value of the CSGF program by contrasting it with the DHS fellowship program.  Under the DHS fellowship, I received valuable funding, but that was essentially all.  In contrast,  the CSGF program dramatically altered my career path in several positive ways.  It required me to receive a broader graduate education including computer science and physics, which has allowed me to pursue interdisciplinary research that would otherwise be impossible.  It sent me to a practicum at Sandia National Laboratory, where I established collaborations that continue to this day.  Most importantly, it introduced me to the network of CSGF fellows and alumni, a small and very cohesive community of outstanding computational scientists that is beginning to transform this relatively new scientific discipline.  It is no exaggeration to say that my career has been shaped by my interaction with that community.  I am now a successful professor with my own research funding and have no obligation to attend the annual CSGF conference.  But that interaction is important enough that last year I flew half way around the world, using my own research funds, to spend a few days with the current fellows and other alumni.&lt;/p&gt;
-
-&lt;p&gt;I think that many federal fellowships, including the DHS fellowship, may be well served by their being merged into a larger NSF program.  But the unique benefits of the CSGF program, and especially the scientific community that it fosters, could not exist under a larger program with less focus.  Please keep the DOE CSGF program intact and keep the funding for it within the Advanced Scientific Computing Research (ASCR) office.&lt;/p&gt;
-
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am writing to you because of your leadership role on the Appropriations Subcommittee on Energy and Water Development. I am an applied mathematician and an alumnus of the DOE computational science graduate fellowship (CSGF) program. I am writing because I have learned that funding for the CSGF program is slated to be merged into a much larger NSF graduate fellowship program. I think this would be a terrible decision, because it would destroy the unique benefits of the CSGF program.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The CSGF program was the second federal graduate fellowship that I received while pursuing a Ph.D. The first was a fellowship from the Dept. of Homeland Security. I would like to emphasize the value of the CSGF program by contrasting it with the DHS fellowship program. Under the DHS fellowship, I received valuable funding, but that was essentially all. In contrast, the CSGF program dramatically altered my career path in several positive ways. It required me to receive a broader graduate education including computer science and physics, which has allowed me to pursue interdisciplinary research that would otherwise be impossible. It sent me to a practicum at Sandia National Laboratory, where I established collaborations that continue to this day. Most importantly, it introduced me to the network of CSGF fellows and alumni, a small and very cohesive community of outstanding computational scientists that is beginning to transform this relatively new scientific discipline. It is no exaggeration to say that my career has been shaped by my interaction with that community. I am now a successful professor with my own research funding and have no obligation to attend the annual CSGF conference. But that interaction is important enough that last year I flew half way around the world, using my own research funds, to spend a few days with the current fellows and other alumni.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I think that many federal fellowships, including the DHS fellowship, may be well served by their being merged into a larger NSF program. But the unique benefits of the CSGF program, and especially the scientific community that it fosters, could not exist under a larger program with less focus. Please keep the DOE CSGF program intact and keep the funding for it within the Advanced Scientific Computing Research (ASCR) office.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Sincerely,&lt;/p&gt;
-
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Professor Xiaodong I. Qi&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
@@ -552,55 +234,26 @@ know the CSGF program and its significance, I urge you to do so too.&lt;/p&gt;
    <updated>2013-01-16T00:00:00+00:00</updated>
    <id>h/2013/01/16/sage_to_ipython</id>
    <content type="html">&lt;h1 id=&quot;converting-a-sage-worksheet-to-an-ipython-notebook&quot;&gt;Converting a SAGE worksheet to an IPython notebook&lt;/h1&gt;
-
 &lt;p&gt;Download link: &lt;a href=&quot;&quot;&gt;http://github.com/ketch/sage2ipython/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I use Python to teach numerical methods here at KAUST, and I&amp;#39;m in the process of
-switching from using &lt;a href=&quot;http://www.sagemath.org&quot;&gt;SAGE&lt;/a&gt; worksheets to &lt;a href=&quot;http://ipython.org&quot;&gt;IPython&lt;/a&gt;
-notebooks (more on the reasons in a later post).  I&amp;#39;ve invested a lot of time over the 
-past three years in developing a set of SAGE worksheets and it would be a substantial 
-amount of tedious work to manually copy-paste their contents into IPython notebooks.
-So I decided to write an automated converter.  &lt;/p&gt;
-
-&lt;p&gt;Each SAGE worksheet is usually stored in a .sws file that is a bzipped tarball;
-underneath, there is a text version (called worksheet.html).  If you run
-SAGE on your own machine, the text versions of your worksheets can usually be found
-in &lt;code&gt;~/.sage/sage_notebook.sagenb/home/username/number/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s a simple matter to convert the SAGE format (that uses triple braces to delimit
-code cells) into the IPython format (that I believe is JSON).&lt;br&gt;
-Rather than write an actual parser, which seemed like overkill, I just created
-a script that steps through the file line-by-line and keeps track of whether it&amp;#39;s in 
-a cell.  Debugging it was slightly
-painful because if you have the tiniest syntax error, then the IPython notebook server just 
-tells you something is wrong and displays nothing.&lt;/p&gt;
-
-&lt;p&gt;You can download the converter from the &lt;a href=&quot;http://github.com/ketch/sage2ipython/&quot;&gt;Github repository&lt;/a&gt;.
-It has been tested with SAGE version 4.2.1 and IPython version 0.13.1.  Note that it
-has several limitations (see the list below).  But it has served my needs well.&lt;/p&gt;
-
+&lt;p&gt;I use Python to teach numerical methods here at KAUST, and I’m in the process of switching from using &lt;a href=&quot;http://www.sagemath.org&quot;&gt;SAGE&lt;/a&gt; worksheets to &lt;a href=&quot;http://ipython.org&quot;&gt;IPython&lt;/a&gt; notebooks (more on the reasons in a later post). I’ve invested a lot of time over the past three years in developing a set of SAGE worksheets and it would be a substantial amount of tedious work to manually copy-paste their contents into IPython notebooks. So I decided to write an automated converter.&lt;/p&gt;
+&lt;p&gt;Each SAGE worksheet is usually stored in a .sws file that is a bzipped tarball; underneath, there is a text version (called worksheet.html). If you run SAGE on your own machine, the text versions of your worksheets can usually be found in &lt;code&gt;~/.sage/sage_notebook.sagenb/home/username/number/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It’s a simple matter to convert the SAGE format (that uses triple braces to delimit code cells) into the IPython format (that I believe is JSON).&lt;br /&gt;Rather than write an actual parser, which seemed like overkill, I just created a script that steps through the file line-by-line and keeps track of whether it’s in a cell. Debugging it was slightly painful because if you have the tiniest syntax error, then the IPython notebook server just tells you something is wrong and displays nothing.&lt;/p&gt;
+&lt;p&gt;You can download the converter from the &lt;a href=&quot;http://github.com/ketch/sage2ipython/&quot;&gt;Github repository&lt;/a&gt;. It has been tested with SAGE version 4.2.1 and IPython version 0.13.1. Note that it has several limitations (see the list below). But it has served my needs well.&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sage2ipython&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage2ipython&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sage2ipy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/path/to/sage/worksheet/html/file&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;output_file_name.ipynb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class=&quot;sourceCode python&quot;&gt;&lt;code class=&quot;sourceCode python&quot;&gt;   
+&lt;span class=&quot;ch&quot;&gt;import&lt;/span&gt; sage2ipython
+sage2ipython.sage2ipy(&lt;span class=&quot;st&quot;&gt;&amp;#39;/path/to/sage/worksheet/html/file&amp;#39;&lt;/span&gt;,&lt;span class=&quot;st&quot;&gt;&amp;#39;output_file_name.ipynb&amp;#39;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To convert all your SAGE worksheets, do:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import sage2ipython
-&amp;gt;&amp;gt;&amp;gt; sage2ipython.convert_all_sage_worksheets(&amp;#39;username&amp;#39;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;where &lt;em&gt;username&lt;/em&gt; is your account name.  You may also need to edit the 
-SAGE notebook account name that occurs in the path in &lt;code&gt;convert_all_sage_worksheets()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you have any problems, it is likely that your worksheet contains some special characters that
-need to be escaped in the IPython notebook.  I&amp;#39;ve included fixes for several of those, but almost
-certainly not all of them.  Please let me know.&lt;/p&gt;
-
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import sage2ipython
+&amp;gt;&amp;gt;&amp;gt; sage2ipython.convert_all_sage_worksheets(&amp;#39;username&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;em&gt;username&lt;/em&gt; is your account name. You may also need to edit the SAGE notebook account name that occurs in the path in &lt;code&gt;convert_all_sage_worksheets()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you have any problems, it is likely that your worksheet contains some special characters that need to be escaped in the IPython notebook. I’ve included fixes for several of those, but almost certainly not all of them. Please let me know.&lt;/p&gt;
 &lt;p&gt;General notes/limitations:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;All code blocks are assumed to be Python code blocks.&lt;/li&gt;
 &lt;li&gt;Output is simply deleted.&lt;/li&gt;
 &lt;li&gt;Everything else is put in Markdown cells.&lt;/li&gt;
-&lt;li&gt;Double backslashes are handled properly only if you have the development version of IPython.  Otherwise, you should convert them to quadruple backslashes.&lt;/li&gt;
+&lt;li&gt;Double backslashes are handled properly only if you have the development version of IPython. Otherwise, you should convert them to quadruple backslashes.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -610,79 +263,21 @@ certainly not all of them.  Please let me know.&lt;/p&gt;
    <link href="/2012/12/22/habits-of-open-scientist-4-collab.html"/>
    <updated>2012-12-22T00:00:00+00:00</updated>
    <id>h/2012/12/22/habits-of-open-scientist-4-collab</id>
-   <content type="html">&lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open
-scientist&lt;/a&gt;.
-Here I discuss the fourth habit, &lt;strong&gt;open collaboration&lt;/strong&gt;.  The previous post was
-on &lt;a href=&quot;http://davidketcheson.info/2012/08/22/habits-of-open-scientist-3-pre.html&quot;&gt;Pre-publication dissemination of
-research&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As mentioned in the introduction to this series, the first three habits are
-truly essential for any conscientious scientist.  With the fourth habit, we&amp;#39;re
-moving into things that are valuable but less essential -- &lt;em&gt;advanced open
-science&lt;/em&gt;, if you will.&lt;/p&gt;
-
-&lt;p&gt;What do I mean by open collaboration?  The use of online tools and social media to connect with new collaborators and provide your own expertise where it is needed most.  For an excellent introduction to the subject, go read &lt;a href=&quot;http://michaelnielsen.org/blog/reinventing-discovery/&quot;&gt;Michael Nielsen&amp;#39;s book, &lt;em&gt;Reinventing  Discovery&lt;/em&gt;&lt;/a&gt;. Here I&amp;#39;ll just focus on a few examples from my own experience:&lt;/p&gt;
-
-&lt;h3 id=&quot;scientific-q-amp-a-sites&quot;&gt;Scientific Q&amp;amp;A sites&lt;/h3&gt;
-
-&lt;p&gt;Often scientific research involves elements of work that have been done before
-or are already well understood -- by someone, somewhere.  Sometimes this work
-is published and readily available, but other times it is unpublished or
-perhaps published in a place you wouldn&amp;#39;t know to look.  Finding the person
-with the specialized knowlege you need might take much longer than &amp;quot;reinventing
-the wheel&amp;quot;, i.e. redoing the work yourself.  Enter StackExchange, an engine for
-connecting questions with correct answers and making them readily available.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m an avid participant in (and former moderator of) the
-&lt;a href=&quot;http://scicomp.stackexchange.com&quot;&gt;Stack Exchange for Computational Science&lt;/a&gt;.  I also use &lt;a href=&quot;http://mathoverflow.net&quot;&gt;Mathoverflow&lt;/a&gt; and &lt;a href=&quot;http://stackoverflow.com&quot;&gt;Stack Overflow&lt;/a&gt;.    Some personal examples of the kind of connections I&amp;#39;m talking about are &lt;a href=&quot;http://math.stackexchange.com/questions/86977/polynomials-that-are-orthogonal-over-curves-in-the-complex-plane/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://scicomp.stackexchange.com/questions/65/are-there-operator-splitting-approaches-for-multiphysics-pdes-that-achieve-high&quot;&gt;here&lt;/a&gt;.  These are conversations that would never have taken place &amp;quot;in real life&amp;quot; simply because the people involved have never met each other.&lt;/p&gt;
-
-&lt;p&gt;I also find the &lt;a href=&quot;http://tex.stackexchange.com&quot;&gt;TeX stack exchange&lt;/a&gt; to be a gold
-mine, and typically far more useful than browsing through package documentation
-on CTAN.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open scientist&lt;/a&gt;. Here I discuss the fourth habit, &lt;strong&gt;open collaboration&lt;/strong&gt;. The previous post was on &lt;a href=&quot;http://davidketcheson.info/2012/08/22/habits-of-open-scientist-3-pre.html&quot;&gt;Pre-publication dissemination of research&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As mentioned in the introduction to this series, the first three habits are truly essential for any conscientious scientist. With the fourth habit, we’re moving into things that are valuable but less essential – &lt;em&gt;advanced open science&lt;/em&gt;, if you will.&lt;/p&gt;
+&lt;p&gt;What do I mean by open collaboration? The use of online tools and social media to connect with new collaborators and provide your own expertise where it is needed most. For an excellent introduction to the subject, go read &lt;a href=&quot;http://michaelnielsen.org/blog/reinventing-discovery/&quot;&gt;Michael Nielsen’s book, &lt;em&gt;Reinventing Discovery&lt;/em&gt;&lt;/a&gt;. Here I’ll just focus on a few examples from my own experience:&lt;/p&gt;
+&lt;h3 id=&quot;scientific-qa-sites&quot;&gt;Scientific Q&amp;amp;A sites&lt;/h3&gt;
+&lt;p&gt;Often scientific research involves elements of work that have been done before or are already well understood – by someone, somewhere. Sometimes this work is published and readily available, but other times it is unpublished or perhaps published in a place you wouldn’t know to look. Finding the person with the specialized knowlege you need might take much longer than “reinventing the wheel”, i.e. redoing the work yourself. Enter StackExchange, an engine for connecting questions with correct answers and making them readily available.&lt;/p&gt;
+&lt;p&gt;I’m an avid participant in (and former moderator of) the &lt;a href=&quot;http://scicomp.stackexchange.com&quot;&gt;Stack Exchange for Computational Science&lt;/a&gt;. I also use &lt;a href=&quot;http://mathoverflow.net&quot;&gt;Mathoverflow&lt;/a&gt; and &lt;a href=&quot;http://stackoverflow.com&quot;&gt;Stack Overflow&lt;/a&gt;. Some personal examples of the kind of connections I’m talking about are &lt;a href=&quot;http://math.stackexchange.com/questions/86977/polynomials-that-are-orthogonal-over-curves-in-the-complex-plane/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://scicomp.stackexchange.com/questions/65/are-there-operator-splitting-approaches-for-multiphysics-pdes-that-achieve-high&quot;&gt;here&lt;/a&gt;. These are conversations that would never have taken place “in real life” simply because the people involved have never met each other.&lt;/p&gt;
+&lt;p&gt;I also find the &lt;a href=&quot;http://tex.stackexchange.com&quot;&gt;TeX stack exchange&lt;/a&gt; to be a gold mine, and typically far more useful than browsing through package documentation on CTAN.&lt;/p&gt;
 &lt;h3 id=&quot;social-networks-like-google&quot;&gt;Social networks like &lt;a href=&quot;http://plus.google.com&quot;&gt;Google+&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;I use Google+ (and previously Reader, which was a far superior tool) for
-sharing new papers that I think may be of interest to my collaborators.  I&amp;#39;ve
-also used it to debate journals&amp;#39; editorial policies (with the editors) and for
-preliminary planning of conferences and proposals -- to find out who may be
-interested in participating.  It&amp;#39;s certainly not suited to discussing
-scientific or mathematical concepts in any detail, and it is annoyingly
-difficult to sort through new things that are posted.  I think that Facebook is
-less useful for this purpose because Facebook is used primarily for personal
-content whereas a large community of G+ users (of which I am part) consider it
-to be a platform for sharing professional content.  But I&amp;#39;m not a good judge --
-I don&amp;#39;t even have a Facebook account.&lt;/p&gt;
-
+&lt;p&gt;I use Google+ (and previously Reader, which was a far superior tool) for sharing new papers that I think may be of interest to my collaborators. I’ve also used it to debate journals’ editorial policies (with the editors) and for preliminary planning of conferences and proposals – to find out who may be interested in participating. It’s certainly not suited to discussing scientific or mathematical concepts in any detail, and it is annoyingly difficult to sort through new things that are posted. I think that Facebook is less useful for this purpose because Facebook is used primarily for personal content whereas a large community of G+ users (of which I am part) consider it to be a platform for sharing professional content. But I’m not a good judge – I don’t even have a Facebook account.&lt;/p&gt;
 &lt;h3 id=&quot;github&quot;&gt;&lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;I wanted to say &amp;quot;sites like Github&amp;quot;, but I don&amp;#39;t think there are any others.
-Online code hosting sites have long facilitated collaboration between existing
-teams, but Github takes this to a new level by explicitly promoting
-collaboration between people who have never met.  Surprisingly, this paradigm
-shift didn&amp;#39;t require any new technology.  Rather, it stems from a combination
-of their &amp;quot;code first, ask permission later&amp;quot; pull-request mindset and subtle
-differences in the user interface -- like a &amp;quot;fork me&amp;quot; button on every page,
-just begging you to modify some stranger&amp;#39;s code.&lt;/p&gt;
-
-&lt;p&gt;Now this philosophy -- and use 0f Github -- has moved beyond just sharing what
-we usually think of as computer code.  For instance, Carl Boettiger puts &lt;a href=&quot;http://github.com/cboettig/labnotebook&quot;&gt;the
-full source of his Jekyll-based website on
-Github&lt;/a&gt;, which enabled me (simply by
-forking it) to easily set up this site.&lt;/p&gt;
-
+&lt;p&gt;I wanted to say “sites like Github”, but I don’t think there are any others. Online code hosting sites have long facilitated collaboration between existing teams, but Github takes this to a new level by explicitly promoting collaboration between people who have never met. Surprisingly, this paradigm shift didn’t require any new technology. Rather, it stems from a combination of their “code first, ask permission later” pull-request mindset and subtle differences in the user interface – like a “fork me” button on every page, just begging you to modify some stranger’s code.&lt;/p&gt;
+&lt;p&gt;Now this philosophy – and use 0f Github – has moved beyond just sharing what we usually think of as computer code. For instance, Carl Boettiger puts &lt;a href=&quot;http://github.com/cboettig/labnotebook&quot;&gt;the full source of his Jekyll-based website on Github&lt;/a&gt;, which enabled me (simply by forking it) to easily set up this site.&lt;/p&gt;
 &lt;h3 id=&quot;a-word-of-caution&quot;&gt;A word of caution&lt;/h3&gt;
-
-&lt;p&gt;As useful as all the above are, I&amp;#39;ve found that they can also be a way of
-wasting time.  You may find this to be the case if you&amp;#39;re merely trading
-opinions with strangers or consuming tidbits of information that aren&amp;#39;t really
-relevant to your research -- for instance, I find that my time spent on the
-&lt;a href=&quot;http://academia.stackexchange.com&quot;&gt;Academia Stack Exchange&lt;/a&gt; is of dubious
-value.  I stepped down from moderating the SciComp Stack Exchange because I
-felt it was too time-consuming.  But if used in a focused way, open
-collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
-
-&lt;p&gt;What other tools or sites ought to be mentioned here?  Let me know in the comments.&lt;/p&gt;
+&lt;p&gt;As useful as all the above are, I’ve found that they can also be a way of wasting time. You may find this to be the case if you’re merely trading opinions with strangers or consuming tidbits of information that aren’t really relevant to your research – for instance, I find that my time spent on the &lt;a href=&quot;http://academia.stackexchange.com&quot;&gt;Academia Stack Exchange&lt;/a&gt; is of dubious value. I stepped down from moderating the SciComp Stack Exchange because I felt it was too time-consuming. But if used in a focused way, open collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
+&lt;p&gt;What other tools or sites ought to be mentioned here? Let me know in the comments.&lt;/p&gt;
 </content>
  </entry>
  
@@ -691,12 +286,7 @@ collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
    <link href="/2012/12/06/reproducible-research-standard.html"/>
    <updated>2012-12-06T00:00:00+00:00</updated>
    <id>h/2012/12/06/reproducible-research-standard</id>
-   <content type="html">&lt;p&gt;Back in July, I read Victoria Stodden&amp;#39;s work on licensing reproducible
-research.  Victoria has proposed the Reproducible Research Standard (RRS),
-which is an amalgamation of recommended licenses for what she calls the
-&lt;em&gt;research compendium&lt;/em&gt;.  The research compendium is the full set of outputs of a
-research project, including:&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;Back in July, I read Victoria Stodden’s work on licensing reproducible research. Victoria has proposed the Reproducible Research Standard (RRS), which is an amalgamation of recommended licenses for what she calls the &lt;em&gt;research compendium&lt;/em&gt;. The research compendium is the full set of outputs of a research project, including:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The research paper&lt;/li&gt;
 &lt;li&gt;Additional media, such as movies&lt;/li&gt;
@@ -704,83 +294,21 @@ research project, including:&lt;/p&gt;
 &lt;li&gt;Data&lt;/li&gt;
 &lt;li&gt;A record of the computing environment used to process the code and data&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;The idea is that all of these components are part of your research and someone
-wanting to understand your research may need access to all of them.  The RRS
-consists of the following licenses:&lt;/p&gt;
-
+&lt;p&gt;The idea is that all of these components are part of your research and someone wanting to understand your research may need access to all of them. The RRS consists of the following licenses:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by/3.0/&quot;&gt;Creative Commons Attribution (BY)&lt;/a&gt; for &lt;strong&gt;media&lt;/strong&gt; (text, figures, movies)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/BSD_licenses%233-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29&quot;&gt;Modified BSD&lt;/a&gt; for &lt;strong&gt;code&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://sciencecommons.org/resources/faq/database-protocol&quot;&gt;Science Commons Database Protocol&lt;/a&gt; for &lt;strong&gt;data&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;For the most part, this is easy enough to implement: the current academic
- research system frankly doesn&amp;#39;t care what you do with your code, data or
- miscellaneous media outputs.  And I think that actually releasing those is
- the most important part of the RRS.
- But the text and figures of the paper itself
- must be published in a journal, and typically the journal will want the
- copyright -- preventing you from releasing those media under CC-BY.&lt;/p&gt;
-
-&lt;p&gt;Nevertheless, I&amp;#39;ve attempted to follow the full RRS with each of the two papers
-I&amp;#39;ve had accepted since then.  &lt;a href=&quot;http://arxiv.org/abs/1111.3499&quot;&gt;The first&lt;/a&gt;
-(still in press) was accepted to the SIAM Journal on Scientific Computing
-(SISC).  The code is licensed under modified BSD as part of the
-&lt;a href=&quot;https://github.com/clawpack/sharpclaw&quot;&gt;SharpClaw&lt;/a&gt; package (now rolled into
-&lt;a href=&quot;https://github.com/clawpack/pyclaw&quot;&gt;PyClaw&lt;/a&gt;). After reading &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/&quot;&gt;one author&amp;#39;s
-experience retaining copyright to an article published by
-SIAM&lt;/a&gt;, I
-decided to try the same approach of modifying the copyright transfer agreement
-by &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/#jp-carousel-138&quot;&gt;striking out the transfer of
-copyright&lt;/a&gt;.
-I suspected that the instance just linked to went &amp;quot;below the radar&amp;quot;, and I
-wanted to be completely above-board, so I pointed out to SIAM that I had
-modified the agreement.  What made this particularly interesting is that one of
-my co-authors on the paper is Randy LeVeque, chair of the SIAM journals
-committee.&lt;/p&gt;
-
-&lt;p&gt;Eventually, SIAM objected  &amp;quot;on the grounds that non-exclusive right to publish
-doesn&amp;#39;t prohibit
-others from publishing for profit, which may be to [the authors&amp;#39;] disadvantage as
-well.&amp;quot;  They agreed instead to an addendum generated via
-&lt;a href=&quot;http://scholars.sciencecommons.org/&quot;&gt;http://scholars.sciencecommons.org/&lt;/a&gt; that retains for the authors the right to
-post the final article on any public server, as long as publication in SISC is
-stated.  Since this gave me what I wanted in practical terms, I agreed and
-signed the copyright transfer + addendum.  I&amp;#39;ve been told that an ad hoc
-committee of SIAM leadership is now discussing how SIAM should handle these
-copyright questions like this.&lt;/p&gt;
-
-&lt;p&gt;I came away from this feeling like we had made progress, but I still wanted to
-see if I could implement the full RRS with respect to the next paper.  My &lt;a href=&quot;http://arxiv.org/pdf/1201.3035v3.pdf&quot;&gt;next
-accepted paper&lt;/a&gt; (also still in press) 
-was a submission to &lt;a href=&quot;msp.org/camcos/&quot;&gt;Communications in Applied Mathematics and
-Computational Science&lt;/a&gt;, published by the extremely progressive
-not-for-profit &lt;a href=&quot;http://msp.org/about/&quot;&gt;Math­em­at­ic­al Sci­ences
-Pub­lish­ers&lt;/a&gt;.  This is a truly remarkable journal that
-will be the subject of another blog post in the near future, but what&amp;#39;s
-important in this context is that the journal doesn&amp;#39;t require authors to
-transfer copyright!  They only require a &lt;a href=&quot;http://msp.berkeley.edu/editorial/uploads/camcos/accepted/120712-Qi/copyright.pdf&quot;&gt;license to
-publish&lt;/a&gt;
-which includes this clause:&lt;/p&gt;
-
+&lt;p&gt;For the most part, this is easy enough to implement: the current academic research system frankly doesn’t care what you do with your code, data or miscellaneous media outputs. And I think that actually releasing those is the most important part of the RRS. But the text and figures of the paper itself must be published in a journal, and typically the journal will want the copyright – preventing you from releasing those media under CC-BY.&lt;/p&gt;
+&lt;p&gt;Nevertheless, I’ve attempted to follow the full RRS with each of the two papers I’ve had accepted since then. &lt;a href=&quot;http://arxiv.org/abs/1111.3499&quot;&gt;The first&lt;/a&gt; (still in press) was accepted to the SIAM Journal on Scientific Computing (SISC). The code is licensed under modified BSD as part of the &lt;a href=&quot;https://github.com/clawpack/sharpclaw&quot;&gt;SharpClaw&lt;/a&gt; package (now rolled into &lt;a href=&quot;https://github.com/clawpack/pyclaw&quot;&gt;PyClaw&lt;/a&gt;). After reading &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/&quot;&gt;one author’s experience retaining copyright to an article published by SIAM&lt;/a&gt;, I decided to try the same approach of modifying the copyright transfer agreement by &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/#jp-carousel-138&quot;&gt;striking out the transfer of copyright&lt;/a&gt;. I suspected that the instance just linked to went “below the radar”, and I wanted to be completely above-board, so I pointed out to SIAM that I had modified the agreement. What made this particularly interesting is that one of my co-authors on the paper is Randy LeVeque, chair of the SIAM journals committee.&lt;/p&gt;
+&lt;p&gt;Eventually, SIAM objected “on the grounds that non-exclusive right to publish doesn’t prohibit others from publishing for profit, which may be to [the authors’] disadvantage as well.” They agreed instead to an addendum generated via http://scholars.sciencecommons.org/ that retains for the authors the right to post the final article on any public server, as long as publication in SISC is stated. Since this gave me what I wanted in practical terms, I agreed and signed the copyright transfer + addendum. I’ve been told that an ad hoc committee of SIAM leadership is now discussing how SIAM should handle these copyright questions like this.&lt;/p&gt;
+&lt;p&gt;I came away from this feeling like we had made progress, but I still wanted to see if I could implement the full RRS with respect to the next paper. My &lt;a href=&quot;http://arxiv.org/pdf/1201.3035v3.pdf&quot;&gt;next accepted paper&lt;/a&gt; (also still in press) was a submission to &lt;a href=&quot;msp.org/camcos/&quot;&gt;Communications in Applied Mathematics and Computational Science&lt;/a&gt;, published by the extremely progressive not-for-profit &lt;a href=&quot;http://msp.org/about/&quot;&gt;Math­em­at­ic­al Sci­ences Pub­lish­ers&lt;/a&gt;. This is a truly remarkable journal that will be the subject of another blog post in the near future, but what’s important in this context is that the journal doesn’t require authors to transfer copyright! They only require a &lt;a href=&quot;http://msp.berkeley.edu/editorial/uploads/camcos/accepted/120712-Qi/copyright.pdf&quot;&gt;license to publish&lt;/a&gt; which includes this clause:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;The copyright holder retains the right to duplicate the Work by any means and to permit others to do the same with the exception of reproduction by services that collect fees for delivery of documents, which may be licensed only by the Publisher. In each case of authorized duplication of the Work in whole or in part, the Author(s) must still ensure that the original publication by the Publisher is properly credited.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;After discussion with my co-author Aron Ahmadia, we&amp;#39;re retaining copyright and
-licensing the paper under CC-BY-NC.  The NC (non-commercial clause) seems
-necessary to comply with the paragraph above, and seems reasonable to me.  The
-code for the paper is released as part of the &lt;a href=&quot;https://github.com/ketch/RK-opt&quot;&gt;RK-opt
-package&lt;/a&gt;.  So I&amp;#39;m calling this mission
-accomplished.&lt;/p&gt;
-
-&lt;p&gt;I have mixed feelings about whether it makes sense for journals to let authors
-keep copyright -- I can see some sense in SIAM&amp;#39;s objection, and I think that
-non-profit publishers need to protect enough of a revenue stream to support
-their activities.  I think it is better that that revenue come from (low-cost)
-subscriptions than from author fees.  It will be interesting to see where
-SIAM&amp;#39;s policy falls.&lt;/p&gt;
+&lt;p&gt;After discussion with my co-author Aron Ahmadia, we’re retaining copyright and licensing the paper under CC-BY-NC. The NC (non-commercial clause) seems necessary to comply with the paragraph above, and seems reasonable to me. The code for the paper is released as part of the &lt;a href=&quot;https://github.com/ketch/RK-opt&quot;&gt;RK-opt package&lt;/a&gt;. So I’m calling this mission accomplished.&lt;/p&gt;
+&lt;p&gt;I have mixed feelings about whether it makes sense for journals to let authors keep copyright – I can see some sense in SIAM’s objection, and I think that non-profit publishers need to protect enough of a revenue stream to support their activities. I think it is better that that revenue come from (low-cost) subscriptions than from author fees. It will be interesting to see where SIAM’s policy falls.&lt;/p&gt;
 </content>
  </entry>
  
@@ -789,33 +317,21 @@ SIAM&amp;#39;s policy falls.&lt;/p&gt;
    <link href="/2012/10/16/low_quality_journal.html"/>
    <updated>2012-10-16T00:00:00+00:00</updated>
    <id>h/2012/10/16/low_quality_journal</id>
-   <content type="html">&lt;p&gt;In the spirit of Xiaodong Letterman&amp;#39;s top 10 lists, here are my top 10 signs you might be 
-a low quality scientific journal, inspired by an e-mail I received today from
-&lt;a href=&quot;http://www.ampublisher.com/Canadian-Journal-Computing.html&quot;&gt;Computing in Mathematics, Natural Sciences, Engineering and Medicine&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;You are incorporated in Canada, and have &amp;quot;Canadian&amp;quot; in your title, but none of
- your editors lives in Canada.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Your scope is so broad that it includes abstract algebra, textile engineering,
-and dermatology all in one journal.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Most of your abstracts include misspellings of common English words, like &lt;a href=&quot;http://www.ampublisher.com/June%202010/CMNSEM%20Jun%202010.html&quot;&gt;&amp;quot;stander&amp;quot; for
-standard&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Most of your article titles could be used as exercises for grade school students
-learning to fix improper verb conjugations and subject-noun agreement.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;You promise to complete reviews of articles in mathematics or similar fields in
-two weeks.&lt;/p&gt;&lt;/li&gt;
+   <content type="html">&lt;p&gt;In the spirit of Xiaodong Letterman’s top 10 lists, here are my top 10 signs you might be a low quality scientific journal, inspired by an e-mail I received today from &lt;a href=&quot;http://www.ampublisher.com/Canadian-Journal-Computing.html&quot;&gt;Computing in Mathematics, Natural Sciences, Engineering and Medicine&lt;/a&gt;.&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;You are incorporated in Canada, and have “Canadian” in your title, but none of your editors lives in Canada.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your scope is so broad that it includes abstract algebra, textile engineering, and dermatology all in one journal.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Most of your abstracts include misspellings of common English words, like &lt;a href=&quot;http://www.ampublisher.com/June%202010/CMNSEM%20Jun%202010.html&quot;&gt;“stander” for standard&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Most of your article titles could be used as exercises for grade school students learning to fix improper verb conjugations and subject-noun agreement.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You promise to complete reviews of articles in mathematics or similar fields in two weeks.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;You require math and physics manuscript submissions to be in Microsoft Word format.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;You spam researchers in other disciplines with your calls for papers.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Your chief editor received a Ph.D. in the last five years.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your chief editor received a Ph.D. in the last five years.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Your funding model is &lt;s&gt;vanity press&lt;/s&gt; gold open access.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;You regularly invite graduate students to serve on your editorial board.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;On a serious note: a few of these, taken by themselves, might not necessarily be a bad sign.  And
-I must say that AM Publishers&amp;#39; author charges (95 USD) are the lowest I&amp;#39;ve ever seen.&lt;/p&gt;
-
-&lt;p&gt;For a related, more serious analysis, see 
-&lt;a href=&quot;http://scholarlyoa.com/publishers/&quot;&gt;Beall’s List of Predatory Open-Access Publishers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On a serious note: a few of these, taken by themselves, might not necessarily be a bad sign. And I must say that AM Publishers’ author charges (95 USD) are the lowest I’ve ever seen.&lt;/p&gt;
+&lt;p&gt;For a related, more serious analysis, see &lt;a href=&quot;http://scholarlyoa.com/publishers/&quot;&gt;Beall’s List of Predatory Open-Access Publishers&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -825,45 +341,15 @@ I must say that AM Publishers&amp;#39; author charges (95 USD) are the lowest I&
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Update as of December 2014: Don&amp;#39;t bother using what&amp;#39;s below; go to 
-&lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley&amp;#39;s blog&lt;/a&gt;
-for a much better setup!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;I&amp;#39;ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt;
-for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; 
-worksheets for my numerical analysis course next spring.  As a warmup,
-I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta 
-methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also wanted to post the notebook on my blog here; the ability to more easily
-include math and code in blog posts was one of my main motivations for moving
-away from Blogger to my own site.  I first tried following &lt;a href=&quot;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&quot;&gt;the instructions given
-by Fernando Perez&lt;/a&gt;.
-That was quite painless and worked flawlessly, using &lt;code&gt;nbconvert.py&lt;/code&gt; to convert the
-.ipynb file directly to HTML, with graphics embedded.  The only issue was that I didn&amp;#39;t love
-the look of the output quite as much as I love how Carl Boettiger&amp;#39;s Markdown + Jekyll
-posts with code and math look (see an example &lt;a href=&quot;http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html&quot;&gt;here&lt;/a&gt;).  Besides, Markdown is so much nicer
-than HTML, and &lt;code&gt;nbconvert.py&lt;/code&gt; has a Markdown output option.&lt;/p&gt;
-
+&lt;p&gt;I’ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt; for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; worksheets for my numerical analysis course next spring. As a warmup, I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also wanted to post the notebook on my blog here; the ability to more easily include math and code in blog posts was one of my main motivations for moving away from Blogger to my own site. I first tried following &lt;a href=&quot;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&quot;&gt;the instructions given by Fernando Perez&lt;/a&gt;. That was quite painless and worked flawlessly, using &lt;code&gt;nbconvert.py&lt;/code&gt; to convert the .ipynb file directly to HTML, with graphics embedded. The only issue was that I didn’t love the look of the output quite as much as I love how Carl Boettiger’s Markdown + Jekyll posts with code and math look (see an example &lt;a href=&quot;http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html&quot;&gt;here&lt;/a&gt;). Besides, Markdown is so much nicer than HTML, and &lt;code&gt;nbconvert.py&lt;/code&gt; has a Markdown output option.&lt;/p&gt;
 &lt;p&gt;So I tried the markdown option:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;nbconvert.py my_nb.ipynb -f markdown
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I copied the result to my &lt;code&gt;_posts/&lt;/code&gt; directory, added the &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML front-matter&lt;/a&gt; that
-Jekyll expects, and took a look.  Everything
-was great except that all my plots were gone, of course.  After considering a
-few options, I decided for now to put plots for such posts in a subfolder 
-&lt;code&gt;jekyll_images/&lt;/code&gt; of my public Dropbox folder.  Then it was a simple matter
-of search/replace all the paths to the images.  At that point, it looked
-great; you can see the &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;source&lt;/a&gt;
-and the &lt;a href=&quot;http://davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;result&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The only issue was that I didn&amp;#39;t want to manually do all that work every time.
-I considered creating a new Converter class in &lt;code&gt;nbconvert&lt;/code&gt; to handle it,
-but finally decided that it would be more convenient to just write a shell
-script that calls &lt;code&gt;nbconvert&lt;/code&gt; and then operates on the result.&lt;br&gt;
-Here  it is:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#!/bin/bash
+&lt;pre&gt;&lt;code&gt;nbconvert.py my_nb.ipynb -f markdown&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I copied the result to my &lt;code&gt;_posts/&lt;/code&gt; directory, added the &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML front-matter&lt;/a&gt; that Jekyll expects, and took a look. Everything was great except that all my plots were gone, of course. After considering a few options, I decided for now to put plots for such posts in a subfolder &lt;code&gt;jekyll_images/&lt;/code&gt; of my public Dropbox folder. Then it was a simple matter of search/replace all the paths to the images. At that point, it looked great; you can see the &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;source&lt;/a&gt; and the &lt;a href=&quot;http://davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;result&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in &lt;code&gt;nbconvert&lt;/code&gt; to handle it, but finally decided that it would be more convenient to just write a shell script that calls &lt;code&gt;nbconvert&lt;/code&gt; and then operates on the result.&lt;br /&gt;Here it is:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
 
 fname=$1
 
@@ -883,17 +369,13 @@ tags:      TAG-ME
 .
 w&amp;quot; | ed ${fname}.md
 
-mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It&amp;#39;s also on Github &lt;a href=&quot;https://github.com/ketch/labnotebook/blob/master/nbconv.sh&quot;&gt;here&lt;/a&gt;.
-This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:&lt;/p&gt;
-
+mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s also on Github &lt;a href=&quot;https://github.com/ketch/labnotebook/blob/master/nbconv.sh&quot;&gt;here&lt;/a&gt;. This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;how to use command-line arguments&lt;/li&gt;
 &lt;li&gt;how to use sed and ed&lt;/li&gt;
 &lt;li&gt;how to use data&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;You can expect a lot more iPython-notebook based posts in the future.&lt;/p&gt;
 </content>
  </entry>

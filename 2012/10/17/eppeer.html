@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2012/10/17/eppeer.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2012-10-17 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2012/10/17/eppeer.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2012-10-17 00:00:00 +0000"/>
 <meta name="citation_title" content="The parallel EPPEER code"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -192,29 +192,19 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and
-OpenMP, because I’m thinking of writing a shared-memory parallel ODE
-solver code myself.</p>
-
+          <p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.</p>
 <p>I downloaded the code from</p>
-
-<p><a href="http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/eppeer.zip" title="Go to wiki page">http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip</a></p>
-
+<p><a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip" title="Go to wiki page">http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip</a></p>
 <p>unzipped, and ran</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">gfortran -c mbod4h.f90 
+<pre><code>gfortran -c mbod4h.f90 
 gfortran -c ivprkp.f90 
 gfortran -c -fopenmp ivpepp.f90 
 gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
-./a.out
-</code></pre></div>
-<p>I had to fix one line that was trying to open a logfile and failed. I
-also set</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">export OMP_NUM_THREADS=4
-</code></pre></div>
-<p>This runs the code with increasingly tight tolerances on a 400-body
-problem. The output was (I killed it before it finished the really tight
-tolerance run(s)</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> tol, err, otime, cpu  0.10E-01 0.10702      2.9556      10.534    
+./a.out</code></pre>
+<p>I had to fix one line that was trying to open a logfile and failed. I also set</p>
+<pre><code>export OMP_NUM_THREADS=4</code></pre>
+<p>This runs the code with increasingly tight tolerances on a 400-body problem. The output was (I killed it before it finished the really tight tolerance run(s)</p>
+<pre><code> tol, err, otime, cpu  0.10E-01 0.10702      2.9556      10.534    
  steps,rej,nfcn:  337   88     1399
  tol, err, otime, cpu  0.10E-02 0.93692E-01  4.9853      18.585    
  steps,rej,nfcn:  605  159     2465
@@ -223,14 +213,11 @@ tolerance run(s)</p>
  tol, err, otime, cpu  0.10E-04 0.47637E-01  12.026      46.477    
  steps,rej,nfcn: 1534  324     6175
  tol, err, otime, cpu  0.10E-05 0.24241E-01  18.239      70.756    
- steps,rej,nfcn: 2338  415     9391
-</code></pre></div>
-<p>If I understand correctly, the last column is total CPU time; the next
-to last is wall time. For comparison, I ran it without parallelism:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">export OMP_NUM_THREADS=1
-</code></pre></div>
+ steps,rej,nfcn: 2338  415     9391</code></pre>
+<p>If I understand correctly, the last column is total CPU time; the next to last is wall time. For comparison, I ran it without parallelism:</p>
+<pre><code>export OMP_NUM_THREADS=1</code></pre>
 <p>Then I got the following:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> tol, err, otime, cpu  0.10E-01 0.10702      10.382      10.382    
+<pre><code> tol, err, otime, cpu  0.10E-01 0.10702      10.382      10.382    
  steps,rej,nfcn:  337   88     1399
  tol, err, otime, cpu  0.10E-02 0.93692E-01  18.297      18.297    
  steps,rej,nfcn:  605  159     2465
@@ -241,16 +228,9 @@ to last is wall time. For comparison, I ran it without parallelism:</p>
  tol, err, otime, cpu  0.10E-05 0.24241E-01  69.725      69.726    
  steps,rej,nfcn: 2338  415     9391
  tol, err, otime, cpu  0.10E-06 0.53727E-02  105.47      105.48    
- steps,rej,nfcn: 3539  484    14195
-</code></pre></div>
-<p>The numbers of function evaluations were identical, confirming that the
-computations being performed were the same. The speedup (about 3x) is
-very nice. We should be able to achieve something similar with
-extrapolation.</p>
-
-<p>These results are actually plotted in <a href="http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/man_epp.pdf">the user guide</a>, at the end of
-Section 4.</p>
-
+ steps,rej,nfcn: 3539  484    14195</code></pre>
+<p>The numbers of function evaluations were identical, confirming that the computations being performed were the same. The speedup (about 3x) is very nice. We should be able to achieve something similar with extrapolation.</p>
+<p>These results are actually plotted in <a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/man_epp.pdf">the user guide</a>, at the end of Section 4.</p>
 <p>This was originally posted on <a href="https://mathwiki.kaust.edu.sa/david/eppeer">mathwiki</a>.</p>
 
           </article>
@@ -296,10 +276,10 @@ Section 4.</p>
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2012-10-17-eppeer.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2012-10-17-eppeer.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

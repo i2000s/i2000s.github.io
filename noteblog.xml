@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Xiaodong Qi's academic NoteBlog</title>
+ <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-03T16:38:01+00:00</updated>
+ <updated>2016-03-04T03:38:05+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -17,177 +17,99 @@
    <link href="/2014/05/28/dispersion_relations.html"/>
    <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/dispersion_relations</id>
-   <content type="html">&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of
-solutions to linear equations.  Often, this analysis is introduced to students in the
-context of scalar equations with real coefficients.  If nothing more is said,
-students may mistakenly apply assumptions based on the scalar case to systems,
-leading to erroneous conclusions.  I&amp;#39;m surprised at how often I&amp;#39;ve seen
-this, and I&amp;#39;ve even made the mistake myself.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.&lt;/p&gt;
 &lt;h2 id=&quot;scalar-equations&quot;&gt;Scalar equations&lt;/h2&gt;
-
 &lt;p&gt;Students in any undergraduate PDE course learn that solutions of the heat equation&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
 \label{heat}
 u_t(x,t) = u_{xx}(x,t)
-$$&lt;/p&gt;
-
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;diffuse in time whereas solutions of the wave equation&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
 \label{wave}
 u_{tt} = u_{xx}
-$$&lt;/p&gt;
-
-&lt;p&gt;oscillate in time without growing or decaying.  They may even be introduced to
-a general approach for the Cauchy problem: given an evolution equation&lt;/p&gt;
-
-&lt;p&gt;$$ \label{evol}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;oscillate in time without growing or decaying. They may even be introduced to a general approach for the Cauchy problem: given an evolution equation&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \label{evol}
 u_t = \sum_{j=0}^n a_j \frac{\partial^j u}{\partial x^j},
-$$&lt;/p&gt;
-
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;one inserts the Fourier mode solution&lt;/p&gt;
-
-&lt;p&gt;$$ \label{fourier}
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \label{fourier}
 u(x,t) = e^{i(kx - \omega(k) t)}
-$$&lt;/p&gt;
-
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;to obtain&lt;/p&gt;
-
-&lt;p&gt;$$-i\omega(k) = \sum_{j=0}^n a_j (ik)^j$$&lt;/p&gt;
-
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[-i\omega(k) = \sum_{j=0}^n a_j (ik)^j\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;or simply&lt;/p&gt;
-
-&lt;p&gt;$$\omega(k) = \sum_{j=0}^n a_j i^{j+1} k^j.$$&lt;/p&gt;
-
-&lt;p&gt;The function $\omega(k)$ is often referred to as the &lt;em&gt;dispersion relation&lt;/em&gt; for the PDE.  Any solution can be expressed as a sum of Fourier modes, and each mode propagates in a manner dictated by the dispersion relation.  It&amp;#39;s easy to see that&lt;/p&gt;
-
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\omega(k) = \sum_{j=0}^n a_j i^{j+1} k^j.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The function &lt;span class=&quot;math&quot;&gt;\(\omega(k)\)&lt;/span&gt; is often referred to as the &lt;em&gt;dispersion relation&lt;/em&gt; for the PDE. Any solution can be expressed as a sum of Fourier modes, and each mode propagates in a manner dictated by the dispersion relation. It’s easy to see that&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If $\omega(k)$ is &lt;strong&gt;real&lt;/strong&gt;, then energy is conserved and each mode simply translates.  This occurs if only odd-numbered spatial derivatives appear in the evolution equation  \eqref{evol}.&lt;/li&gt;
-&lt;li&gt;If $\omega(k)$ has &lt;strong&gt;negative imaginary part&lt;/strong&gt;, energy decays in time.  The heat equation \eqref{heat} behaves this way.&lt;/li&gt;
-&lt;li&gt;If $\omega(k)$ has &lt;strong&gt;positive imaginary part&lt;/strong&gt;, then the energy will grow exponentially in time.  This doesn&amp;#39;t usually occur in physical systems.  An example of this behavior is obtained by changing the sign of the right side in the heat equation to get $u_t = - u_{xx}$.&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&quot;math&quot;&gt;\(\omega(k)\)&lt;/span&gt; is &lt;strong&gt;real&lt;/strong&gt;, then energy is conserved and each mode simply translates. This occurs if only odd-numbered spatial derivatives appear in the evolution equation \eqref{evol}.&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&quot;math&quot;&gt;\(\omega(k)\)&lt;/span&gt; has &lt;strong&gt;negative imaginary part&lt;/strong&gt;, energy decays in time. The heat equation \eqref{heat} behaves this way.&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&quot;math&quot;&gt;\(\omega(k)\)&lt;/span&gt; has &lt;strong&gt;positive imaginary part&lt;/strong&gt;, then the energy will grow exponentially in time. This doesn’t usually occur in physical systems. An example of this behavior is obtained by changing the sign of the right side in the heat equation to get &lt;span class=&quot;math&quot;&gt;\(u_t = - u_{xx}\)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;What about the wave equation, which has two time derivatives?  Using the same Fourier mode ansatz
-\eqref{fourier}, one obtains
-$$
+&lt;p&gt;What about the wave equation, which has two time derivatives? Using the same Fourier mode ansatz \eqref{fourier}, one obtains &lt;span class=&quot;math&quot;&gt;\[
 \begin{align}
 \omega^2 &amp;amp; = k^2
 \end{align}
-$$
-or $\omega = \pm k$.  Since $\omega$ is real, energy is conserved.&lt;/p&gt;
-
-&lt;p&gt;In the discussion above, we have assumed that $u$ is a scalar and that the coefficients $a_j$ are real.  Many undergraduate courses stop at this point, and students are left with the intuition that &lt;strong&gt;even-numbered derivative terms are diffusive&lt;/strong&gt; while &lt;strong&gt;odd-numbered derivative terms are dispersive&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In practice, we often deal with systems of PDEs or PDEs with complex coefficients, and this intuition is then no longer correct.  There is nothing deep or mysterious about this topic, but it&amp;#39;s easy to jump to incorrect conclusions if one is not careful.  To take a common example, consider the time-dependent Schroedinger equation:
-$$i \psi_t = \psi_{xx} + V\psi.$$
-At first glance, we have on the right side a diffusion term ($\psi_{xx}$) and a reaction term ($V\psi$).  But what about that pesky factor of $i$ (the imaginary unit) on the left hand side?  It&amp;#39;s easy to find the answer using the usual ansatz, but let&amp;#39;s take a little detour first.&lt;/p&gt;
-
+\]&lt;/span&gt; or &lt;span class=&quot;math&quot;&gt;\(\omega = \pm k\)&lt;/span&gt;. Since &lt;span class=&quot;math&quot;&gt;\(\omega\)&lt;/span&gt; is real, energy is conserved.&lt;/p&gt;
+&lt;p&gt;In the discussion above, we have assumed that &lt;span class=&quot;math&quot;&gt;\(u\)&lt;/span&gt; is a scalar and that the coefficients &lt;span class=&quot;math&quot;&gt;\(a_j\)&lt;/span&gt; are real. Many undergraduate courses stop at this point, and students are left with the intuition that &lt;strong&gt;even-numbered derivative terms are diffusive&lt;/strong&gt; while &lt;strong&gt;odd-numbered derivative terms are dispersive&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In practice, we often deal with systems of PDEs or PDEs with complex coefficients, and this intuition is then no longer correct. There is nothing deep or mysterious about this topic, but it’s easy to jump to incorrect conclusions if one is not careful. To take a common example, consider the time-dependent Schroedinger equation: &lt;span class=&quot;math&quot;&gt;\[i \psi_t = \psi_{xx} + V\psi.\]&lt;/span&gt; At first glance, we have on the right side a diffusion term (&lt;span class=&quot;math&quot;&gt;\(\psi_{xx}\)&lt;/span&gt;) and a reaction term (&lt;span class=&quot;math&quot;&gt;\(V\psi\)&lt;/span&gt;). But what about that pesky factor of &lt;span class=&quot;math&quot;&gt;\(i\)&lt;/span&gt; (the imaginary unit) on the left hand side? It’s easy to find the answer using the usual ansatz, but let’s take a little detour first.&lt;/p&gt;
 &lt;h2 id=&quot;systems-of-equations&quot;&gt;Systems of equations&lt;/h2&gt;
-
-&lt;p&gt;Consider the linear system
-$$
+&lt;p&gt;Consider the linear system &lt;span class=&quot;math&quot;&gt;\[
 \begin{align*}
 u_t = A  \frac{\partial^j u}{\partial x^j},
 \end{align*}
-$$
-where $u\in \mathbb{R}^m$ and $A$ is a square real matrix.
-Let $\lambda_m$ and $s_m$ denote the eigenvalues and eigenvectors (respectively) of $A$.
-Inserting the Fourier mode solution
-$$u(x,t) = s_m e^{i(kx - \omega(k) t)},$$
-we obtain
-$$\omega(k) = i^{j+1} k^j \lambda_m s_m,$$
-and any solution can be written as a superposition of these.  We see now that the behavior of the energy with respect to time depends on both the number $j$ of spatial derivatives and the nature of the eigenvalues of $A$.  For instance, if $j=1$ and $A$ has imaginary eigenvalues, energy is conserved.  We can obtain just such an example by rewriting the wave equation \eqref{wave} as a first-order system:
-$$
+\]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(u\in \mathbb{R}^m\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt; is a square real matrix. Let &lt;span class=&quot;math&quot;&gt;\(\lambda_m\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(s_m\)&lt;/span&gt; denote the eigenvalues and eigenvectors (respectively) of &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt;. Inserting the Fourier mode solution &lt;span class=&quot;math&quot;&gt;\[u(x,t) = s_m e^{i(kx - \omega(k) t)},\]&lt;/span&gt; we obtain &lt;span class=&quot;math&quot;&gt;\[\omega(k) = i^{j+1} k^j \lambda_m s_m,\]&lt;/span&gt; and any solution can be written as a superposition of these. We see now that the behavior of the energy with respect to time depends on both the number &lt;span class=&quot;math&quot;&gt;\(j\)&lt;/span&gt; of spatial derivatives and the nature of the eigenvalues of &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt;. For instance, if &lt;span class=&quot;math&quot;&gt;\(j=1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt; has imaginary eigenvalues, energy is conserved. We can obtain just such an example by rewriting the wave equation \eqref{wave} as a first-order system: &lt;span class=&quot;math&quot;&gt;\[
 \begin{align}
-u_t &amp;amp; = v_x \label{w1} \
+u_t &amp;amp; = v_x \label{w1} \\
 v_t &amp;amp; = u_x. \label{w2}
 \end{align}
-$$
-(If you&amp;#39;re not familiar with this, just differentiate \eqref{w1} w.r.t. $t$ and \eqref{w2} w.r.t. $x$, then equate partial derivatives to get back the second-order wave equation \eqref{wave}).  We have a linear system with $j=1$ and 
-$$ A = \begin{pmatrix}
-0 &amp;amp; 1 \ 1 &amp;amp; 0
-\end{pmatrix}.$$
-This matrix has eigenvalues $\lambda=\pm 1$, so $\omega(k)$ has zero imaginary part.&lt;/p&gt;
-
-&lt;p&gt;In this example, our intuition from the scalar case works: our first-order system, with only odd-numbered derivatives, leads to wave-like behavior.  But notice that if $A$ had imaginary eigenvalues, our intuition would be wrong; for instance, the system
-$$
+\]&lt;/span&gt; (If you’re not familiar with this, just differentiate \eqref{w1} w.r.t. &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt; and \eqref{w2} w.r.t. &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt;, then equate partial derivatives to get back the second-order wave equation \eqref{wave}). We have a linear system with &lt;span class=&quot;math&quot;&gt;\(j=1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\[ A = \begin{pmatrix}
+0 &amp;amp; 1 \\ 1 &amp;amp; 0
+\end{pmatrix}.\]&lt;/span&gt; This matrix has eigenvalues &lt;span class=&quot;math&quot;&gt;\(\lambda=\pm 1\)&lt;/span&gt;, so &lt;span class=&quot;math&quot;&gt;\(\omega(k)\)&lt;/span&gt; has zero imaginary part.&lt;/p&gt;
+&lt;p&gt;In this example, our intuition from the scalar case works: our first-order system, with only odd-numbered derivatives, leads to wave-like behavior. But notice that if &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt; had imaginary eigenvalues, our intuition would be wrong; for instance, the system &lt;span class=&quot;math&quot;&gt;\[
 \begin{align*}
-u_t &amp;amp; = -v_x \
+u_t &amp;amp; = -v_x \\
 v_t &amp;amp; = u_x,
 \end{align*}
-$$
-corresponding to the second-order equation $u_{tt} = - u_{xx},$ admits exponentially growing solutions.&lt;/p&gt;
-
+\]&lt;/span&gt; corresponding to the second-order equation &lt;span class=&quot;math&quot;&gt;\(u_{tt} = - u_{xx},\)&lt;/span&gt; admits exponentially growing solutions.&lt;/p&gt;
 &lt;h2 id=&quot;scalar-problems-with-complex-coefficients&quot;&gt;Scalar problems with complex coefficients&lt;/h2&gt;
-
-&lt;p&gt;Now that we understand the dispersion relation for systems, it&amp;#39;s easy to understand the dispersion relation for the Schrodinger equation.  Multiply by $-i$ to get
-$$\psi_t = -i\psi_{xx} + -iV\psi.$$
-Now we can think of this in the same way as a system, where the coefficient matrices have purely imaginary eigenvalues.  Then it&amp;#39;s clear that the (even-derivative) terms on the right hand side are both related to wave behavior (i.e., energy is conserved).&lt;/p&gt;
-
+&lt;p&gt;Now that we understand the dispersion relation for systems, it’s easy to understand the dispersion relation for the Schrodinger equation. Multiply by &lt;span class=&quot;math&quot;&gt;\(-i\)&lt;/span&gt; to get &lt;span class=&quot;math&quot;&gt;\[\psi_t = -i\psi_{xx} + -iV\psi.\]&lt;/span&gt; Now we can think of this in the same way as a system, where the coefficient matrices have purely imaginary eigenvalues. Then it’s clear that the (even-derivative) terms on the right hand side are both related to wave behavior (i.e., energy is conserved).&lt;/p&gt;
 &lt;h2 id=&quot;systems-with-derivatives-of-different-orders&quot;&gt;Systems with derivatives of different orders&lt;/h2&gt;
-
-&lt;p&gt;In the most general case, we have systems of linear PDEs with multiple spatial derivatives
-of different order:
-$$ \label{gensys}
+&lt;p&gt;In the most general case, we have systems of linear PDEs with multiple spatial derivatives of different order: &lt;span class=&quot;math&quot;&gt;\[ \label{gensys}
 u_t = \sum_{j=0}^n A_j  \frac{\partial^j u}{\partial x^j}.
-$$&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a real example from my research.  It comes from homogenization of
-the wave equation in a spatially varying medium 
-(see Equation (5.17) of &lt;a href=&quot;http://faculty.washington.edu/rjl/pubs/solitary/40815.pdf&quot;&gt;this paper&lt;/a&gt; for 
-more details).  It&amp;#39;s the wave equation plus some second-derivative terms:
-$$
-u_t = v_x + v_{xx} \
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here’s a real example from my research. It comes from homogenization of the wave equation in a spatially varying medium (see Equation (5.17) of &lt;a href=&quot;http://faculty.washington.edu/rjl/pubs/solitary/40815.pdf&quot;&gt;this paper&lt;/a&gt; for more details). It’s the wave equation plus some second-derivative terms: &lt;span class=&quot;math&quot;&gt;\[
+u_t = v_x + v_{xx} \\
 v_t = u_x - u_{xx}.
-$$
-You might (if you hadn&amp;#39;t read the example above) assume that this system
-is dissipative due to the second derivatives.
-This system is of the form \eqref{gensys} with
-$$
+\]&lt;/span&gt; You might (if you hadn’t read the example above) assume that this system is dissipative due to the second derivatives. This system is of the form \eqref{gensys} with &lt;span class=&quot;math&quot;&gt;\[
 \begin{align}
 A_1 &amp;amp; = \begin{pmatrix}
-0 &amp;amp; 1 \ 1 &amp;amp; 0
+0 &amp;amp; 1 \\ 1 &amp;amp; 0
 \end{pmatrix}
 &amp;amp;
 A_2 &amp;amp; = \begin{pmatrix}
-0 &amp;amp; 1 \ -1 &amp;amp; 0
+0 &amp;amp; 1 \\ -1 &amp;amp; 0
 \end{pmatrix}.
 \end{align}
-$$
-Of course, $A_1$ has real eigenvalues and leads to wave-like behavior.
-But $A_2$ has pure imaginary eigenvalues, so it also leads to wave-like
-behavior! The second derivative terms are &lt;em&gt;dispersive&lt;/em&gt;.  In fact, it&amp;#39;s
-easy to show that the energy $E=u^2+v^2$ is a conserved quantity for this
-system (try it!).&lt;/p&gt;
-
-&lt;p&gt;Strictly speaking, Fourier analysis like what we&amp;#39;ve described can&amp;#39;t usually be
-applied to \eqref{gensys} because the matrices $A_j$ will not generally be simultaneously
-diagonalizable (though this analysis can still give us intuition for what
-each set of terms may do).  Worse yet, the individual matrices may not
-be diagonalizable.  Let&amp;#39;s illustrate with a simple case.&lt;/p&gt;
-
-&lt;p&gt;Returning to the wave equation, let&amp;#39;s consider a different way of writing it as a system:
-$$
+\]&lt;/span&gt; Of course, &lt;span class=&quot;math&quot;&gt;\(A_1\)&lt;/span&gt; has real eigenvalues and leads to wave-like behavior. But &lt;span class=&quot;math&quot;&gt;\(A_2\)&lt;/span&gt; has pure imaginary eigenvalues, so it also leads to wave-like behavior! The second derivative terms are &lt;em&gt;dispersive&lt;/em&gt;. In fact, it’s easy to show that the energy &lt;span class=&quot;math&quot;&gt;\(E=u^2+v^2\)&lt;/span&gt; is a conserved quantity for this system (try it!).&lt;/p&gt;
+&lt;p&gt;Strictly speaking, Fourier analysis like what we’ve described can’t usually be applied to \eqref{gensys} because the matrices &lt;span class=&quot;math&quot;&gt;\(A_j\)&lt;/span&gt; will not generally be simultaneously diagonalizable (though this analysis can still give us intuition for what each set of terms may do). Worse yet, the individual matrices may not be diagonalizable. Let’s illustrate with a simple case.&lt;/p&gt;
+&lt;p&gt;Returning to the wave equation, let’s consider a different way of writing it as a system: &lt;span class=&quot;math&quot;&gt;\[
 \begin{align*}
-u_t &amp;amp; = v \ 
+u_t &amp;amp; = v \\ 
 v_t &amp;amp; = u_{xx}.
 \end{align*}
-$$
-It&amp;#39;s easy to check that this system is equivalent to the wave equation -- but notice that it&amp;#39;s composed of parts with only even derivatives! (&lt;em&gt;reaction&lt;/em&gt; and &lt;em&gt;diffusion&lt;/em&gt; equations in the terminology of scalar PDEs).  This system is of the form \eqref{gensys} with
-$$
+\]&lt;/span&gt; It’s easy to check that this system is equivalent to the wave equation – but notice that it’s composed of parts with only even derivatives! (&lt;em&gt;reaction&lt;/em&gt; and &lt;em&gt;diffusion&lt;/em&gt; equations in the terminology of scalar PDEs). This system is of the form \eqref{gensys} with &lt;span class=&quot;math&quot;&gt;\[
 \begin{align}
 A_0 &amp;amp; = \begin{pmatrix}
-0 &amp;amp; 1 \ 0 &amp;amp; 0
+0 &amp;amp; 1 \\ 0 &amp;amp; 0
 \end{pmatrix}
 &amp;amp;
 A_2 &amp;amp; = \begin{pmatrix}
-0 &amp;amp; 0 \ 1 &amp;amp; 0
+0 &amp;amp; 0 \\ 1 &amp;amp; 0
 \end{pmatrix}.
 \end{align}
-$$
-Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
+\]&lt;/span&gt; Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
 </content>
  </entry>
  
@@ -196,30 +118,20 @@ Notice that both eigenvalues of both matrices are equal to zero.&lt;/p&gt;
    <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
    <updated>2014-02-22T00:00:00+00:00</updated>
    <id>h/2014/02/22/schrodinger-is-not-diffusion</id>
-   <content type="html">&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;.  I&amp;#39;ll set aside semantic arguments about the meaning of &amp;quot;effectively&amp;quot;, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
 &lt;p&gt;Consider the wave equation&lt;/p&gt;
-
-&lt;p&gt;$$u_{tt} = u_{xx}$$&lt;/p&gt;
-
-&lt;p&gt;Introducing a new variable $v=u_t$ we can rewrite the wave equation as&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[u_{tt} = u_{xx}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Introducing a new variable &lt;span class=&quot;math&quot;&gt;\(v=u_t\)&lt;/span&gt; we can rewrite the wave equation as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
 \begin{align*}
-v_t &amp;amp; = u_{xx} \
+v_t &amp;amp; = u_{xx} \\
 u_t &amp;amp; = v.
 \end{align*}
-$$&lt;/p&gt;
-
-&lt;p&gt;Observe that the first of these equation is the diffusion equation, while the second is a reaction equation.  Thus we have reaction-diffusion!  &lt;/p&gt;
-
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Observe that the first of these equation is the diffusion equation, while the second is a reaction equation. Thus we have reaction-diffusion!&lt;/p&gt;
 &lt;p&gt;Right?&lt;/p&gt;
-
-&lt;p&gt;Wrong.  We&amp;#39;ve disguised the true nature of this equation by applying our intuition (which is based on scalar PDEs) to a system of PDEs.  In the same way, the &amp;quot;reaction-diffusion&amp;quot; label for Schrodinger is obtained by applying intuition based on PDEs with real coefficients to a PDE with complex coefficients.&lt;/p&gt;
-
-&lt;p&gt;Of course, in both cases you can use numerical methods that are appropriate for
-reaction-diffusion problems in order to solve a wave equation.&lt;br&gt;
-&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/exposition/blob/master/Wave%20equation%20as%20reaction-diffusion.ipynb&quot;&gt;Here is a quick ipython notebook implementation of the obvious method for the system above&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wrong. We’ve disguised the true nature of this equation by applying our intuition (which is based on scalar PDEs) to a system of PDEs. In the same way, the “reaction-diffusion” label for Schrodinger is obtained by applying intuition based on PDEs with real coefficients to a PDE with complex coefficients.&lt;/p&gt;
+&lt;p&gt;Of course, in both cases you can use numerical methods that are appropriate for reaction-diffusion problems in order to solve a wave equation.&lt;br /&gt;&lt;a href=&quot;http://nbviewer.ipython.org/github/ketch/exposition/blob/master/Wave%20equation%20as%20reaction-diffusion.ipynb&quot;&gt;Here is a quick ipython notebook implementation of the obvious method for the system above&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -228,29 +140,19 @@ reaction-diffusion problems in order to solve a wave equation.&lt;br&gt;
    <link href="/2012/10/17/eppeer.html"/>
    <updated>2012-10-17T00:00:00+00:00</updated>
    <id>h/2012/10/17/eppeer</id>
-   <content type="html">&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and
-OpenMP, because I’m thinking of writing a shared-memory parallel ODE
-solver code myself.&lt;/p&gt;
-
+   <content type="html">&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.&lt;/p&gt;
 &lt;p&gt;I downloaded the code from&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/eppeer.zip&quot; title=&quot;Go to wiki page&quot;&gt;http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&quot;http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip&quot; title=&quot;Go to wiki page&quot;&gt;http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;unzipped, and ran&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gfortran -c mbod4h.f90 
+&lt;pre&gt;&lt;code&gt;gfortran -c mbod4h.f90 
 gfortran -c ivprkp.f90 
 gfortran -c -fopenmp ivpepp.f90 
 gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
-./a.out
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I had to fix one line that was trying to open a logfile and failed. I
-also set&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export OMP_NUM_THREADS=4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This runs the code with increasingly tight tolerances on a 400-body
-problem. The output was (I killed it before it finished the really tight
-tolerance run(s)&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; tol, err, otime, cpu  0.10E-01 0.10702      2.9556      10.534    
+./a.out&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I had to fix one line that was trying to open a logfile and failed. I also set&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export OMP_NUM_THREADS=4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This runs the code with increasingly tight tolerances on a 400-body problem. The output was (I killed it before it finished the really tight tolerance run(s)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; tol, err, otime, cpu  0.10E-01 0.10702      2.9556      10.534    
  steps,rej,nfcn:  337   88     1399
  tol, err, otime, cpu  0.10E-02 0.93692E-01  4.9853      18.585    
  steps,rej,nfcn:  605  159     2465
@@ -259,14 +161,11 @@ tolerance run(s)&lt;/p&gt;
  tol, err, otime, cpu  0.10E-04 0.47637E-01  12.026      46.477    
  steps,rej,nfcn: 1534  324     6175
  tol, err, otime, cpu  0.10E-05 0.24241E-01  18.239      70.756    
- steps,rej,nfcn: 2338  415     9391
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If I understand correctly, the last column is total CPU time; the next
-to last is wall time. For comparison, I ran it without parallelism:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export OMP_NUM_THREADS=1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ steps,rej,nfcn: 2338  415     9391&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If I understand correctly, the last column is total CPU time; the next to last is wall time. For comparison, I ran it without parallelism:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export OMP_NUM_THREADS=1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then I got the following:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; tol, err, otime, cpu  0.10E-01 0.10702      10.382      10.382    
+&lt;pre&gt;&lt;code&gt; tol, err, otime, cpu  0.10E-01 0.10702      10.382      10.382    
  steps,rej,nfcn:  337   88     1399
  tol, err, otime, cpu  0.10E-02 0.93692E-01  18.297      18.297    
  steps,rej,nfcn:  605  159     2465
@@ -277,16 +176,9 @@ to last is wall time. For comparison, I ran it without parallelism:&lt;/p&gt;
  tol, err, otime, cpu  0.10E-05 0.24241E-01  69.725      69.726    
  steps,rej,nfcn: 2338  415     9391
  tol, err, otime, cpu  0.10E-06 0.53727E-02  105.47      105.48    
- steps,rej,nfcn: 3539  484    14195
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The numbers of function evaluations were identical, confirming that the
-computations being performed were the same. The speedup (about 3x) is
-very nice. We should be able to achieve something similar with
-extrapolation.&lt;/p&gt;
-
-&lt;p&gt;These results are actually plotted in &lt;a href=&quot;http://www.mathematik.uni-marburg.de/%7Eschmitt/peer/man_epp.pdf&quot;&gt;the user guide&lt;/a&gt;, at the end of
-Section 4.&lt;/p&gt;
-
+ steps,rej,nfcn: 3539  484    14195&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The numbers of function evaluations were identical, confirming that the computations being performed were the same. The speedup (about 3x) is very nice. We should be able to achieve something similar with extrapolation.&lt;/p&gt;
+&lt;p&gt;These results are actually plotted in &lt;a href=&quot;http://www.mathematik.uni-marburg.de/~schmitt/peer/man_epp.pdf&quot;&gt;the user guide&lt;/a&gt;, at the end of Section 4.&lt;/p&gt;
 &lt;p&gt;This was originally posted on &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/eppeer&quot;&gt;mathwiki&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
@@ -297,45 +189,15 @@ Section 4.&lt;/p&gt;
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Update as of December 2014: Don&amp;#39;t bother using what&amp;#39;s below; go to 
-&lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley&amp;#39;s blog&lt;/a&gt;
-for a much better setup!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;I&amp;#39;ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt;
-for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; 
-worksheets for my numerical analysis course next spring.  As a warmup,
-I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta 
-methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also wanted to post the notebook on my blog here; the ability to more easily
-include math and code in blog posts was one of my main motivations for moving
-away from Blogger to my own site.  I first tried following &lt;a href=&quot;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&quot;&gt;the instructions given
-by Fernando Perez&lt;/a&gt;.
-That was quite painless and worked flawlessly, using &lt;code&gt;nbconvert.py&lt;/code&gt; to convert the
-.ipynb file directly to HTML, with graphics embedded.  The only issue was that I didn&amp;#39;t love
-the look of the output quite as much as I love how Carl Boettiger&amp;#39;s Markdown + Jekyll
-posts with code and math look (see an example &lt;a href=&quot;http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html&quot;&gt;here&lt;/a&gt;).  Besides, Markdown is so much nicer
-than HTML, and &lt;code&gt;nbconvert.py&lt;/code&gt; has a Markdown output option.&lt;/p&gt;
-
+&lt;p&gt;I’ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt; for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; worksheets for my numerical analysis course next spring. As a warmup, I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also wanted to post the notebook on my blog here; the ability to more easily include math and code in blog posts was one of my main motivations for moving away from Blogger to my own site. I first tried following &lt;a href=&quot;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&quot;&gt;the instructions given by Fernando Perez&lt;/a&gt;. That was quite painless and worked flawlessly, using &lt;code&gt;nbconvert.py&lt;/code&gt; to convert the .ipynb file directly to HTML, with graphics embedded. The only issue was that I didn’t love the look of the output quite as much as I love how Carl Boettiger’s Markdown + Jekyll posts with code and math look (see an example &lt;a href=&quot;http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html&quot;&gt;here&lt;/a&gt;). Besides, Markdown is so much nicer than HTML, and &lt;code&gt;nbconvert.py&lt;/code&gt; has a Markdown output option.&lt;/p&gt;
 &lt;p&gt;So I tried the markdown option:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;nbconvert.py my_nb.ipynb -f markdown
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I copied the result to my &lt;code&gt;_posts/&lt;/code&gt; directory, added the &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML front-matter&lt;/a&gt; that
-Jekyll expects, and took a look.  Everything
-was great except that all my plots were gone, of course.  After considering a
-few options, I decided for now to put plots for such posts in a subfolder 
-&lt;code&gt;jekyll_images/&lt;/code&gt; of my public Dropbox folder.  Then it was a simple matter
-of search/replace all the paths to the images.  At that point, it looked
-great; you can see the &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;source&lt;/a&gt;
-and the &lt;a href=&quot;http://davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;result&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The only issue was that I didn&amp;#39;t want to manually do all that work every time.
-I considered creating a new Converter class in &lt;code&gt;nbconvert&lt;/code&gt; to handle it,
-but finally decided that it would be more convenient to just write a shell
-script that calls &lt;code&gt;nbconvert&lt;/code&gt; and then operates on the result.&lt;br&gt;
-Here  it is:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#!/bin/bash
+&lt;pre&gt;&lt;code&gt;nbconvert.py my_nb.ipynb -f markdown&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I copied the result to my &lt;code&gt;_posts/&lt;/code&gt; directory, added the &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML front-matter&lt;/a&gt; that Jekyll expects, and took a look. Everything was great except that all my plots were gone, of course. After considering a few options, I decided for now to put plots for such posts in a subfolder &lt;code&gt;jekyll_images/&lt;/code&gt; of my public Dropbox folder. Then it was a simple matter of search/replace all the paths to the images. At that point, it looked great; you can see the &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;source&lt;/a&gt; and the &lt;a href=&quot;http://davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;result&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in &lt;code&gt;nbconvert&lt;/code&gt; to handle it, but finally decided that it would be more convenient to just write a shell script that calls &lt;code&gt;nbconvert&lt;/code&gt; and then operates on the result.&lt;br /&gt;Here it is:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
 
 fname=$1
 
@@ -355,17 +217,13 @@ tags:      TAG-ME
 .
 w&amp;quot; | ed ${fname}.md
 
-mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It&amp;#39;s also on Github &lt;a href=&quot;https://github.com/ketch/labnotebook/blob/master/nbconv.sh&quot;&gt;here&lt;/a&gt;.
-This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:&lt;/p&gt;
-
+mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s also on Github &lt;a href=&quot;https://github.com/ketch/labnotebook/blob/master/nbconv.sh&quot;&gt;here&lt;/a&gt;. This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;how to use command-line arguments&lt;/li&gt;
 &lt;li&gt;how to use sed and ed&lt;/li&gt;
 &lt;li&gt;how to use data&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;You can expect a lot more iPython-notebook based posts in the future.&lt;/p&gt;
 </content>
  </entry>
@@ -375,21 +233,19 @@ This was a nice educational exercise in constructing shell scripts, in which I l
    <link href="/2012/10/11/Internal_stability.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/Internal_stability</id>
-   <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook.  You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the
-notebook from github&lt;/a&gt; and execute all the code yourself.&lt;/p&gt;
-
-&lt;p&gt;Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step.  It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large.  An excellent explanation of internal stability is given in &lt;a href=&quot;http://oai.cwi.nl/oai/asset/1652/1652A.pdf&quot;&gt;this paper&lt;/a&gt;.  Here we demonstrate some tools for studying internal stability in NodePy.&lt;/p&gt;
-
-&lt;p&gt;First, let&amp;#39;s load a couple of RK methods:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nodepy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;
+   <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook. You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the notebook from github&lt;/a&gt; and execute all the code yourself.&lt;/p&gt;
+&lt;p&gt;Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in &lt;a href=&quot;http://oai.cwi.nl/oai/asset/1652/1652A.pdf&quot;&gt;this paper&lt;/a&gt;. Here we demonstrate some tools for studying internal stability in NodePy.&lt;/p&gt;
+&lt;p&gt;First, let’s load a couple of RK methods:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nodepy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;reload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadRKM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;RK44&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadRKM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;SSP104&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Classical RK4
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;Classical RK4
 The original four-stage, fourth-order method of Kutta
  0   |
  1/2 |  1/2
@@ -410,83 +266,87 @@ The optimal ten-stage, fourth order SSP Runge-Kutta method
  5/6 |  1/15  1/15  1/15  1/15  1/15  1/6   1/6   1/6
  1   |  1/15  1/15  1/15  1/15  1/15  1/6   1/6   1/6   1/6
 _____|____________________________________________________________
-     |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+     |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;absolute-stability-regions&quot;&gt;Absolute stability regions&lt;/h2&gt;
+&lt;p&gt;First we can use NodePy to plot the region of absolute stability for each method. The absolute stability region is the set&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(\\{ z \in C : |\phi (z)|\le 1 \\}\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;First we can use NodePy to plot the region of absolute stability for each method.  The absolute stability region is the set&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math&quot;&gt;\(\phi(z)\)&lt;/span&gt; is the &lt;em&gt;stability function&lt;/em&gt; of the method:&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(1 + z b^T (I-zA)^{-1}\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;&lt;center&gt;$\{ z \in C : |\phi (z)|\le 1 \}$&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;where $\phi(z)$ is the &lt;em&gt;stability function&lt;/em&gt; of the method:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;$1 + z b^T (I-zA)^{-1}$&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;If we solve $u&amp;#39;(t) = \lambda u$ with a given method, then $z=\lambda \Delta t$ must lie inside this region or the computation will be unstable.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stability_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;p&gt;If we solve &lt;span class=&quot;math&quot;&gt;\(u&amp;#39;(t) = \lambda u\)&lt;/span&gt; with a given method, then &lt;span class=&quot;math&quot;&gt;\(z=\lambda \Delta t\)&lt;/span&gt; must lie inside this region or the computation will be unstable.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stability_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_stability_region&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;         4          3       2
-0.04167 x + 0.1667 x + 0.5 x + 1 x + 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_00.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stability_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;         4          3       2
+0.04167 x + 0.1667 x + 0.5 x + 1 x + 1&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_00.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stability_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_stability_region&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;           10             9            8             7           6
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;           10             9            8             7           6
 3.969e-09 x  + 2.381e-07 x + 6.43e-06 x + 0.0001029 x + 0.00108 x
             5           4          3       2
- + 0.00787 x + 0.04167 x + 0.1667 x + 0.5 x + 1 x + 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
+ + 0.00787 x + 0.04167 x + 0.1667 x + 0.5 x + 1 x + 1&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png&quot; /&gt;
+&lt;/figure&gt;
 &lt;h1 id=&quot;internal-stability&quot;&gt;Internal stability&lt;/h1&gt;
-
-&lt;p&gt;The stability function tells us by how much errors from one step are amplified in the next one.  This is important since we introduce truncation errors at every step.  However, we also introduce roundoff errors at the each stage within a step.  Internal stability tells us about the growth of those.  Internal stability is typically less important than (step-by-step) absolute stability for two reasons:&lt;/p&gt;
-
+&lt;p&gt;The stability function tells us by how much errors from one step are amplified in the next one. This is important since we introduce truncation errors at every step. However, we also introduce roundoff errors at the each stage within a step. Internal stability tells us about the growth of those. Internal stability is typically less important than (step-by-step) absolute stability for two reasons:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Roundoff errors are typically much smaller than truncation errors, so moderate amplification of them typically is not significant&lt;/li&gt;
 &lt;li&gt;Although the propagation of stage errors within a step is governed by internal stability functions, in later steps these errors are propagated according to the (principal) stability function&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Nevertheless, in methods with many stages, internal stability can play a key role.&lt;/p&gt;
-
-&lt;p&gt;Questions: &lt;em&gt;In the solution of PDEs, large spatial truncation errors enter at each stage.  Does this mean internal stability becomes more significant?  How does this relate to stiff accuracy analysis and order reduction?&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;Questions: &lt;em&gt;In the solution of PDEs, large spatial truncation errors enter at each stage. Does this mean internal stability becomes more significant? How does this relate to stiff accuracy analysis and order reduction?&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;internal-stability-functions&quot;&gt;Internal stability functions&lt;/h2&gt;
-
 &lt;p&gt;We can write the equations of a Runge-Kutta method compactly as&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(y = u^n e + h A F(y)\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;&lt;center&gt;$y = u^n e + h A F(y)$&lt;/center&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(u^{n+1} = u^n + h b^T F(y),\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;&lt;center&gt;$u^{n+1} = u^n + h b^T F(y),$&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt; is the vector of stage values, &lt;span class=&quot;math&quot;&gt;\(u^n\)&lt;/span&gt; is the previous step solution, &lt;span class=&quot;math&quot;&gt;\(e\)&lt;/span&gt; is a vector with all entries equal to 1, &lt;span class=&quot;math&quot;&gt;\(h\)&lt;/span&gt; is the step size, &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(b\)&lt;/span&gt; are the coefficients in the Butcher tableau, and &lt;span class=&quot;math&quot;&gt;\(F(y)\)&lt;/span&gt; is the vector of stage derivatives. In floating point arithmetic, roundoff errors will be made at each stage. Representing these errors by a vector &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt;, we have&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(y = u^n e + h A F(y) + r.\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;where $y$ is the vector of stage values, $u^n$ is the previous step solution, $e$ is a vector with all entries equal to 1, $h$ is the step size, $A$ and $b$ are the coefficients in the Butcher tableau, and $F(y)$ is the vector of stage derivatives.  In floating point arithmetic, roundoff errors will be made at each stage.  Representing these errors by a vector $r$, we have&lt;/p&gt;
+&lt;p&gt;Considering the test problem &lt;span class=&quot;math&quot;&gt;\(F(y)=\lambda y\)&lt;/span&gt; and solving for &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt; gives&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(y = u^n (I-zA)^{-1}e + (I-zA)^{-1}r,\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;&lt;center&gt;$y = u^n e + h A F(y) + r.$&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math&quot;&gt;\(z=h\lambda\)&lt;/span&gt;. Substituting this result in the equation for &lt;span class=&quot;math&quot;&gt;\(u^{n+1}\)&lt;/span&gt; gives&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(u^{n+1} = u^n (1 + zb^T(I-zA)^{-1}e) + zb^T(I-zA)^{-1}r = \psi(z) u^n + \theta(z)^T r.\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;Considering the test problem $F(y)=\lambda y$ and solving for $y$ gives&lt;/p&gt;
+&lt;p&gt;Here &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; is the &lt;em&gt;stability function&lt;/em&gt; of the method, that we already encountered above. Meanwhile, the vector &lt;span class=&quot;math&quot;&gt;\(\theta(z)\)&lt;/span&gt; contains the &lt;em&gt;internal stability functions&lt;/em&gt; that govern the amplification of roundoff errors &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; within a step:&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(\theta(z) = z b^T (I-zA)^{-1}.\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;&lt;center&gt;$y = u^n (I-zA)^{-1}e + (I-zA)^{-1}r,$&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;where $z=h\lambda$.  Substituting this result in the equation for $u^{n+1}$ gives&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;$u^{n+1} = u^n (1 + zb^T(I-zA)^{-1}e) + zb^T(I-zA)^{-1}r = \psi(z) u^n + \theta(z)^T r.$&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Here $\psi(z)$ is the &lt;em&gt;stability function&lt;/em&gt; of the method, that we already encountered above.  Meanwhile, the vector $\theta(z)$ contains the &lt;em&gt;internal stability functions&lt;/em&gt; that govern the amplification of roundoff errors $r$ within a step:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;$\theta(z) = z b^T (I-zA)^{-1}.$&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s compute $\theta$ for the classical RK4 method:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_polynomials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;p&gt;Let’s compute &lt;span class=&quot;math&quot;&gt;\(\theta\)&lt;/span&gt; for the classical RK4 method:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_polynomials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     [poly1d([1/24, 1/12, 1/6, 1/6, 0], dtype=object),
      poly1d([1/12, 1/6, 1/3, 0], dtype=object),
@@ -494,203 +354,210 @@ _____|____________________________________________________________
      poly1d([1/6, 0], dtype=object)]
 &lt;/pre&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta_j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta_j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta_j&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;         4           3          2
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;         4           3          2
 0.04167 x + 0.08333 x + 0.1667 x + 0.1667 x
          3          2
 0.08333 x + 0.1667 x + 0.3333 x
         2
 0.1667 x + 0.3333 x
-
-0.1667 x
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Thus the roundoff errors in the first stage are amplified by a factor $z^4/24 + z^3/12 + z^2/6 + z/6$, while the errors in the last stage are amplified by a factor $z/6$.&lt;/p&gt;
-
+ 
+0.1667 x&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thus the roundoff errors in the first stage are amplified by a factor &lt;span class=&quot;math&quot;&gt;\(z^4/24 + z^3/12 + z^2/6 + z/6\)&lt;/span&gt;, while the errors in the last stage are amplified by a factor &lt;span class=&quot;math&quot;&gt;\(z/6\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;internal-instability&quot;&gt;Internal instability&lt;/h2&gt;
+&lt;p&gt;Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small. Let’s think about when things can go wrong in terms of internal instability. If &lt;span class=&quot;math&quot;&gt;\(|\theta(z)|\)&lt;/span&gt; is of the order &lt;span class=&quot;math&quot;&gt;\(1/\epsilon_{machine}\)&lt;/span&gt;, then roundoff errors could be amplified so much that they destroy the accuracy of the computation. More specifically, we should be concerned if &lt;span class=&quot;math&quot;&gt;\(|\theta(z)|\)&lt;/span&gt; is of the order &lt;span class=&quot;math&quot;&gt;\(tol/\epsilon_{machine}\)&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(tol\)&lt;/span&gt; is our desired error tolerance. Of course, we only care about values of &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt; that lie inside the absolute stability region &lt;span class=&quot;math&quot;&gt;\(S\)&lt;/span&gt;, since internal stability won’t matter if the computation is not absolutely stable.&lt;/p&gt;
+&lt;p&gt;We can get some idea about the amplification of stage errors by plotting the curves &lt;span class=&quot;math&quot;&gt;\(|\theta(z)|=1\)&lt;/span&gt; along with the stability region. Ideally these curves will all lie outside the stability region, so that all stage errors are damped.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_02.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_03.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified. But by how much? We’d really like to know the maximum amplification of the stage errors under the condition of absolute stability. We therefore define the &lt;em&gt;maximum internal amplification factor&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt;:&lt;/p&gt;
+&lt;center&gt;
+&lt;span class=&quot;math&quot;&gt;\(M = \max_j \max_{z \in S} |\theta_j(z)|\)&lt;/span&gt;
+&lt;/center&gt;
 
-&lt;p&gt;Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&amp;#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon_{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon_{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&amp;#39;t matter if the computation is not absolutely stable.&lt;/p&gt;
-
-&lt;p&gt;We can get some idea about the amplification of stage errors by plotting the curves $|\theta(z)|=1$ along with the stability region.  Ideally these curves will all lie outside the stability region, so that all stage errors are damped.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_02.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_03.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified.  But by how much?  We&amp;#39;d really like to know the maximum amplification of the stage errors under the condition of absolute stability.  We therefore define the &lt;em&gt;maximum internal amplification factor&lt;/em&gt; $M$:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;$M = \max_j \max_{z \in S} |\theta_j(z)|$&lt;/center&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssprk4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;2.15239281554
-4.04399941143
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;We see that both methods have small internal amplification factors, so internal stability is not a concern in either case.  This is not surprising for the method with only four stages; it is a surprisingly good property of the method with ten stages.&lt;/p&gt;
-
-&lt;p&gt;Questions: &lt;em&gt;Do SSP RK methods always (necessarily) have small amplification factors?  Can we prove it?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Now let&amp;#39;s look at some methods with many stages.&lt;/p&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;2.15239281554
+4.04399941143&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We see that both methods have small internal amplification factors, so internal stability is not a concern in either case. This is not surprising for the method with only four stages; it is a surprisingly good property of the method with ten stages.&lt;/p&gt;
+&lt;p&gt;Questions: &lt;em&gt;Do SSP RK methods always (necessarily) have small amplification factors? Can we prove it?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Now let’s look at some methods with many stages.&lt;/p&gt;
 &lt;h2 id=&quot;runge-kutta-chebyshev-methods&quot;&gt;Runge-Kutta Chebyshev methods&lt;/h2&gt;
-
-&lt;p&gt;The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages.  The construction of these methods is implemented in NodePy, so let&amp;#39;s take a look at them.  The functions &lt;code&gt;RKC1(s)&lt;/code&gt; and &lt;code&gt;RKC2(s)&lt;/code&gt; construct RKC methods of order 1 and 2, respectively, with $s$ stages.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;p&gt;The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages. The construction of these methods is implemented in NodePy, so let’s take a look at them. The functions &lt;code&gt;RKC1(s)&lt;/code&gt; and &lt;code&gt;RKC2(s)&lt;/code&gt; construct RKC methods of order 1 and 2, respectively, with &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt; stages.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RKC1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RKC41
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;RKC41
 
  0    |
  1/16 |  1/16
  1/4  |  1/8   1/8
  9/16 |  3/16  1/4   1/8
 ______|________________________
-      |   1/4   3/8   1/4   1/8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_04.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;It looks like there could be some significant internal amplification here.  Let&amp;#39;s see:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+      |   1/4   3/8   1/4   1/8&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_04.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;It looks like there could be some significant internal amplification here. Let’s see:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     11.760869405962685
 &lt;/pre&gt;
 
-&lt;p&gt;Nothing catastrophic.  Let&amp;#39;s try a larger value of $s$:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;p&gt;Nothing catastrophic. Let’s try a larger value of &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RKC1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     42.665327220219126
 &lt;/pre&gt;
 
-&lt;p&gt;As promised, these methods seem to have good internal stability properties.  What about the second-order methods?&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;p&gt;As promised, these methods seem to have good internal stability properties. What about the second-order methods?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RKC2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rkc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     106.69110992619214
 &lt;/pre&gt;
 
-&lt;p&gt;Again, nothing catastrophic.  We could take $s$ much larger than 20, but the calculations get to be rather slow (in Python) and since we&amp;#39;re using floating point arithmetic, the accuracy deteriorates.&lt;/p&gt;
 
-&lt;p&gt;Remark: &lt;em&gt;we could do the calculations in exact arithmetic using Sympy, but things would get even slower.  Perhaps there are some optimizations that could be done to speed this up.  Or perhaps we should use Mathematica if we need to do this kind of thing.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Remark 2: &lt;em&gt;of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials.  So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy&amp;#39;s special functions library).  This would also be a nice check on the calculations above.&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;Again, nothing catastrophic. We could take &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt; much larger than 20, but the calculations get to be rather slow (in Python) and since we’re using floating point arithmetic, the accuracy deteriorates.&lt;/p&gt;
+&lt;p&gt;Remark: &lt;em&gt;we could do the calculations in exact arithmetic using Sympy, but things would get even slower. Perhaps there are some optimizations that could be done to speed this up. Or perhaps we should use Mathematica if we need to do this kind of thing.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Remark 2: &lt;em&gt;of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials. So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy’s special functions library). This would also be a nice check on the calculations above.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;other-methods-with-many-stages&quot;&gt;Other methods with many stages&lt;/h2&gt;
-
 &lt;p&gt;Three other classes of methods with many stages have been implemented in NodePy:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;SSP families&lt;/li&gt;
 &lt;li&gt;Integral deferred correction (IDC) methods&lt;/li&gt;
 &lt;li&gt;Extrapolation methods&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&quot;ssp-families&quot;&gt;SSP Families&lt;/h3&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SSPRK2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     2.0212921484995547
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_05.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# # of stages&lt;/span&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_05.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# # of stages&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SSPRK3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ssprk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     3.8049237837215397
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_06.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_06.png&quot; /&gt;
+&lt;/figure&gt;
 &lt;p&gt;The SSP methods seem to have excellent internal stability properties.&lt;/p&gt;
-
 &lt;h3 id=&quot;idc-methods&quot;&gt;IDC methods&lt;/h3&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;idc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;idc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;idc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;26
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;26&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;
     6.4140166271998815
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_07.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_07.png&quot; /&gt;
+&lt;/figure&gt;
 &lt;p&gt;IDC methods also seem to have excellent internal stability.&lt;/p&gt;
-
 &lt;h3 id=&quot;extrapolation-methods&quot;&gt;Extrapolation methods&lt;/h3&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal_stability_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;16
-6
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_08.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Not so good.  Let&amp;#39;s try a method with even more stages (this next computation will take a while; go stretch your legs).&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;16
+6&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_08.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not so good. Let’s try a method with even more stages (this next computation will take a while; go stretch your legs).&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#order&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;46
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;46&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;
     28073.244376758907
 &lt;/pre&gt;
 
-&lt;p&gt;Now we&amp;#39;re starting to see something that might cause trouble, especially since such high order extrapolation methods are usually used when extremely tight error tolerances are required.  Internal amplification will cause a loss of about 5 digits of accuracy here, so the best we can hope for is about 10 digits of accuracy in double precision.  Higher order extrapolation methods will make things even worse.  How large are their amplification factors?  (Really long calculation here...)&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;pmax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+&lt;p&gt;Now we’re starting to see something that might cause trouble, especially since such high order extrapolation methods are usually used when extremely tight error tolerances are required. Internal amplification will cause a loss of about 5 digits of accuracy here, so the best we can hope for is about 10 digits of accuracy in double precision. Higher order extrapolation methods will make things even worse. How large are their amplification factors? (Really long calculation here…)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;pmax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ampfac&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pmax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pmax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;ampfac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximum_internal_amplification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ampfac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1 1.99777378912
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;1 1.99777378912
 2 2.40329384375
 3
  5.07204078733
@@ -711,24 +578,28 @@ ______|________________________
 11
  126011.586473
 12
- 169897.662582
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ 169897.662582&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;
     [&lt;matplotlib.lines.Line2D at 0x2611bbe10&gt;]
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_09.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;semilogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ampfac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linewidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_09.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;semilogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ampfac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linewidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;pre&gt;
     [&lt;matplotlib.lines.Line2D at 0x2611a6710&gt;]
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_10.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;We see roughly geometric growth of the internal amplification factor as a function of the order $p$.  It seems clear that very high order extrapolation methods applied to problems with high accuracy requirements will fall victim to internal stability issues.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_10.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;We see roughly geometric growth of the internal amplification factor as a function of the order &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;. It seems clear that very high order extrapolation methods applied to problems with high accuracy requirements will fall victim to internal stability issues.&lt;/p&gt;
 </content>
  </entry>
  
@@ -738,84 +609,25 @@ ______|________________________
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
    <content type="html">&lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
-
-&lt;p&gt;The CFL condition is one of the most basic and intuitive principles
-in the numerical solution of hyperbolic PDEs. First formulated by
-Courant, Friedrichs and Lewy in their seminal paper (in English for
-free here](&lt;a href=&quot;http://www.stat.uchicago.edu/%7Elekheng/courses/302/classics/courant-friedrichs-lewy.pdf)&quot;&gt;http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)&lt;/a&gt;), it states that the domain of dependence of a numerical
-method for solving a PDE must contain the true domain of dependence.
-Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
-
-&lt;p&gt;The CFL condition is geometric and easily understood in the context of,
-say, a first-order upwind discretization of advection. Usually it says
-nothing interesting about implicit schemes, since they include all
-points in their domain of dependence. But sometimes understanding the
-CFL condition for a particular scheme can be subtle.&lt;/p&gt;
-
+&lt;p&gt;The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
+&lt;p&gt;The CFL condition is geometric and easily understood in the context of, say, a first-order upwind discretization of advection. Usually it says nothing interesting about implicit schemes, since they include all points in their domain of dependence. But sometimes understanding the CFL condition for a particular scheme can be subtle.&lt;/p&gt;
 &lt;h3 id=&quot;an-implicit-scheme&quot;&gt;An implicit scheme&lt;/h3&gt;
-
 &lt;p&gt;Consider the advection equation&lt;/p&gt;
-
-&lt;p&gt;$$u_t + a u_x = 0.$$&lt;/p&gt;
-
-&lt;p&gt;Discretization using a backward difference in space and in time gives
-the scheme&lt;/p&gt;
-
-&lt;p&gt;$$U^{n+1}&lt;em&gt;j = U^n_j - \nu(U^{n+1}&lt;/em&gt;j - U^{n+1}_{j-1}).$$&lt;/p&gt;
-
-&lt;p&gt;Where $\nu = ka/h$ is the CFL number and $k,h$ are the step sizes in
-time and space, respectively. This very simple scheme illustrates the
-concepts of the CFL condition and stability in a remarkable way.&lt;/p&gt;
-
-&lt;p&gt;For simplicity, suppose that the problem is posed on the domain
-$0\le x \le 1$, with an appropriate boundary condition. Since this
-scheme computes $U^{n+1}&lt;em&gt;j$ in terms of $U^n_j$ and $U^{n+1}&lt;/em&gt;{j-1}$, it
-seems that the numerical domain of dependence for $U^n_j$ is
-$(x,t)\in (0,x_j)\times[0,t_n]$. Based on this, we may conclude that the
-scheme is not convergent for $\nu&amp;lt;0$. Simple enough.&lt;/p&gt;
-
-&lt;p&gt;But what if $\nu=-1$? Then the scheme reads $$U^{n+1}_{j-1} = U^n_j,$$
-which gives &lt;strong&gt;the exact solution&lt;/strong&gt;! This is a sort of “anti-unit CFL
-condition”.&lt;/p&gt;
-
-&lt;p&gt;How can this scheme be convergent (in fact, exact!) for a negative CFL
-number when it doesn’t use any values to the right?&lt;/p&gt;
-
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[u_t + a u_x = 0.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Discretization using a backward difference in space and in time gives the scheme&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[U^{n+1}_j = U^n_j - \nu(U^{n+1}_j - U^{n+1}_{j-1}).\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&quot;math&quot;&gt;\(\nu = ka/h\)&lt;/span&gt; is the CFL number and &lt;span class=&quot;math&quot;&gt;\(k,h\)&lt;/span&gt; are the step sizes in time and space, respectively. This very simple scheme illustrates the concepts of the CFL condition and stability in a remarkable way.&lt;/p&gt;
+&lt;p&gt;For simplicity, suppose that the problem is posed on the domain &lt;span class=&quot;math&quot;&gt;\(0\le x \le 1\)&lt;/span&gt;, with an appropriate boundary condition. Since this scheme computes &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_j\)&lt;/span&gt; in terms of &lt;span class=&quot;math&quot;&gt;\(U^n_j\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_{j-1}\)&lt;/span&gt;, it seems that the numerical domain of dependence for &lt;span class=&quot;math&quot;&gt;\(U^n_j\)&lt;/span&gt; is &lt;span class=&quot;math&quot;&gt;\((x,t)\in (0,x_j)\times[0,t_n]\)&lt;/span&gt;. Based on this, we may conclude that the scheme is not convergent for &lt;span class=&quot;math&quot;&gt;\(\nu&amp;lt;0\)&lt;/span&gt;. Simple enough.&lt;/p&gt;
+&lt;p&gt;But what if &lt;span class=&quot;math&quot;&gt;\(\nu=-1\)&lt;/span&gt;? Then the scheme reads &lt;span class=&quot;math&quot;&gt;\[U^{n+1}_{j-1} = U^n_j,\]&lt;/span&gt; which gives &lt;strong&gt;the exact solution&lt;/strong&gt;! This is a sort of “anti-unit CFL condition”.&lt;/p&gt;
+&lt;p&gt;How can this scheme be convergent (in fact, exact!) for a negative CFL number when it doesn’t use any values to the right?&lt;/p&gt;
 &lt;h3 id=&quot;understanding-the-cfl-condition&quot;&gt;Understanding the CFL condition&lt;/h3&gt;
-
-&lt;p&gt;Look at the exact formula above. In this case the scheme is not a method
-for computing $U^{n+1}&lt;em&gt;j$ but for computing $U^{n+1}&lt;/em&gt;{j-1}$, and it
-&lt;em&gt;does&lt;/em&gt; use a value from the previous time step that lies to the right.&lt;/p&gt;
-
-&lt;p&gt;So we can view the scheme with $\nu=-1$ as a method for computing
-$U^{n+1}&lt;em&gt;j$, in which case the CFL condition is satisfied only for
-$\nu\ge0$, or we can view the scheme as a method for computing
-$U^{n+1}&lt;/em&gt;{j-1}$, in which case the CFL condition is satisfied only for
-$\nu\le-1$. &lt;strong&gt;Which viewpoint is correct?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To answer that question, remember that the CFL condition is purely
-algebraic – that is, it relates to which values are actually used to
-compute which other values. To understand this scheme, we need to think
-about how we actually solve for $U^{n+1}$ when using it. Notice that the
-scheme can be written as $$A U^{n+1} = U^n$$ where the matrix $A$ is
-lower-triangular. Hence the system can be solved by substitution. To go
-further, we must consider two cases:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;$\nu&amp;gt;0$: in this case, boundary values must be supplied along the
-left boundary at $x=0$. Then, starting from the known value at the
-boundary, we work to the right by substitution:
-$$U^{n+1}&lt;em&gt;j = \frac{U^n_j+\nu U^{n+1}&lt;/em&gt;{j-1}}{1+\nu}.$$ Hence the
-scheme is truly a way of computing $U^{n+1}&lt;em&gt;j$ based on
-$U^n_j, U^{n+1}&lt;/em&gt;{j-1}$ and the resulting CFL condition is $\nu\ge0$.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;$\nu&amp;lt;0$: in this case, boundary values must be supplied along the
-right boundary at $x=1$. Then, starting from the known value at the
-boundary, we work to the left by substitution:
-$$U^{n+1}&lt;em&gt;{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.$$ Hence the
-scheme is truly a way of computing $U^{n+1}&lt;/em&gt;{j-1}$ based on
-$U^n_j, U^{n+1}_{j}$ and the resulting CFL condition is $\nu\le-1$.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Look at the exact formula above. In this case the scheme is not a method for computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_j\)&lt;/span&gt; but for computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_{j-1}\)&lt;/span&gt;, and it &lt;em&gt;does&lt;/em&gt; use a value from the previous time step that lies to the right.&lt;/p&gt;
+&lt;p&gt;So we can view the scheme with &lt;span class=&quot;math&quot;&gt;\(\nu=-1\)&lt;/span&gt; as a method for computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_j\)&lt;/span&gt;, in which case the CFL condition is satisfied only for &lt;span class=&quot;math&quot;&gt;\(\nu\ge0\)&lt;/span&gt;, or we can view the scheme as a method for computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_{j-1}\)&lt;/span&gt;, in which case the CFL condition is satisfied only for &lt;span class=&quot;math&quot;&gt;\(\nu\le-1\)&lt;/span&gt;. &lt;strong&gt;Which viewpoint is correct?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To answer that question, remember that the CFL condition is purely algebraic – that is, it relates to which values are actually used to compute which other values. To understand this scheme, we need to think about how we actually solve for &lt;span class=&quot;math&quot;&gt;\(U^{n+1}\)&lt;/span&gt; when using it. Notice that the scheme can be written as &lt;span class=&quot;math&quot;&gt;\[A U^{n+1} = U^n\]&lt;/span&gt; where the matrix &lt;span class=&quot;math&quot;&gt;\(A\)&lt;/span&gt; is lower-triangular. Hence the system can be solved by substitution. To go further, we must consider two cases:&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\nu&amp;gt;0\)&lt;/span&gt;: in this case, boundary values must be supplied along the left boundary at &lt;span class=&quot;math&quot;&gt;\(x=0\)&lt;/span&gt;. Then, starting from the known value at the boundary, we work to the right by substitution: &lt;span class=&quot;math&quot;&gt;\[U^{n+1}_j = \frac{U^n_j+\nu U^{n+1}_{j-1}}{1+\nu}.\]&lt;/span&gt; Hence the scheme is truly a way of computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_j\)&lt;/span&gt; based on &lt;span class=&quot;math&quot;&gt;\(U^n_j, U^{n+1}_{j-1}\)&lt;/span&gt; and the resulting CFL condition is &lt;span class=&quot;math&quot;&gt;\(\nu\ge0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\nu&amp;lt;0\)&lt;/span&gt;: in this case, boundary values must be supplied along the right boundary at &lt;span class=&quot;math&quot;&gt;\(x=1\)&lt;/span&gt;. Then, starting from the known value at the boundary, we work to the left by substitution: &lt;span class=&quot;math&quot;&gt;\[U^{n+1}_{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.\]&lt;/span&gt; Hence the scheme is truly a way of computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_{j-1}\)&lt;/span&gt; based on &lt;span class=&quot;math&quot;&gt;\(U^n_j, U^{n+1}_{j}\)&lt;/span&gt; and the resulting CFL condition is &lt;span class=&quot;math&quot;&gt;\(\nu\le-1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;This post was originally published on the KAUST Mathwiki &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection&quot;&gt;here&lt;/a&gt; (login required).&lt;/p&gt;
 </content>
  </entry>

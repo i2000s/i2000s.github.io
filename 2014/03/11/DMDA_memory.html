@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2014/03/11/DMDA_memory.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2014-03-11 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2014/03/11/DMDA_memory.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2014-03-11 00:00:00 +0000"/>
 <meta name="citation_title" content="The PETSc DMDA is not lightweight"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -192,44 +192,32 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <p>In <a href="http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html">this PETSc-users thread</a>, my good friend Matt Knepley claims that the
-DMDA object is lightweight, and suggests that it is okay to make them willy-
-nilly.  Unfortunately, my experience indicates otherwise.  But words are cheap;
-let&#39;s investigate.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">%load_ext memory_profiler
-</code></pre></div>
+          <p>In <a href="http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html">this PETSc-users thread</a>, my good friend Matt Knepley claims that the DMDA object is lightweight, and suggests that it is okay to make them willy- nilly. Unfortunately, my experience indicates otherwise. But words are cheap; let’s investigate.</p>
+<pre><code>%load_ext memory_profiler</code></pre>
 <h3 id="memory-profiling-with-memory_profiler">Memory profiling with <code>memory_profiler</code></h3>
+<p>I’ve written a little script that just creates a DA and 3 vecs. In order to make use of <code>memory_profiler</code>, I’ll call it with system commands. But I’ve pasted the contents here for completeness. If you’re running the notebook, you don’t need to run the next cell.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># contents of da.py</span>
+<span class="ch">from</span> petsc4py <span class="ch">import</span> PETSc
+<span class="ch">import</span> sys
 
-<p>I&#39;ve written a little script that just creates a DA and 3 vecs.  In order to
-make use of <code>memory_profiler</code>, I&#39;ll call it with system commands.  But I&#39;ve
-pasted the contents here for completeness.  If you&#39;re running the notebook, you
-don&#39;t need to run the next cell.</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># contents of da.py</span>
-<span class="kn">from</span> <span class="nn">petsc4py</span> <span class="kn">import</span> <span class="n">PETSc</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="ot">@profile</span>
+<span class="kw">def</span> foo(size=<span class="dv">128</span>,ndim=<span class="dv">3</span>,dof=<span class="dv">1</span>):
+    da = PETSc.DA().create(sizes=[size]*ndim,dof=dof)
+    q1 = da.createGlobalVec()
+    q2 = da.createGlobalVec()
+    q3 = da.createGlobalVec()
 
-<span class="nd">@profile</span>
-<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span><span class="n">ndim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">dof</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">PETSc</span><span class="o">.</span><span class="n">DA</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">sizes</span><span class="o">=</span><span class="p">[</span><span class="n">size</span><span class="p">]</span><span class="o">*</span><span class="n">ndim</span><span class="p">,</span><span class="n">dof</span><span class="o">=</span><span class="n">dof</span><span class="p">)</span>
-    <span class="n">q1</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
-    <span class="n">q2</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
-    <span class="n">q3</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">createGlobalVec</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">foo</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
-</code></pre></div>
+<span class="kw">if</span> <span class="ot">__name__</span> == <span class="st">&#39;__main__&#39;</span>:
+    foo(<span class="dt">int</span>(sys.argv[<span class="dv">1</span>]),<span class="dt">int</span>(sys.argv[<span class="dv">2</span>]),<span class="dt">int</span>(sys.argv[<span class="dv">3</span>]))</code></pre>
 <p>Notice that the command line arguments are</p>
-
-<ol>
+<ol type="1">
 <li>The size of the grid</li>
 <li>The number of dimensions</li>
 <li>The number of DOFs</li>
 </ol>
-
-<p>Now let&#39;s run some tests.</p>
-
+<p>Now let’s run some tests.</p>
 <h3 id="the-cost-of-a-da">The cost of a DA</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 1
+<pre><code>!python -m memory_profiler da.py 128 3 1
 
 Filename: da.py
 
@@ -240,48 +228,29 @@ Line #    Mem usage    Increment   Line Contents
      6   72.395 MiB   48.922 MiB       da = PETSc.DA().create([size]*ndim,dof)
      7   72.480 MiB    0.086 MiB       q1 = da.createGlobalVec()
      8   88.484 MiB   16.004 MiB       q2 = da.createGlobalVec()
-     9  104.488 MiB   16.004 MiB       q3 = da.createGlobalVec()
-</code></pre></div>
-<p>The third column (&quot;increment&quot;) is the key here -- it shows the increase in total
-memory usage after executing each line.</p>
-
-<p>The first thing you notice is that the DA is NOT lightweight.  It takes as much
-memory as 3 Vecs!  But that will look cheap in a moment.</p>
-
-<p>Notice also that the first vec seems to use no memory.  I think this is because
-memory_profiler just tracks peak usage, and the DA creation creates and destroys
-a vec.</p>
-
-<p>In what follows, I&#39;ve used sed to extract just the essential lines of the
-output.</p>
-
-<p>Let&#39;s try that again, with 2 DOFs.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 2 / | sed -n -e 7p -e 10p
+     9  104.488 MiB   16.004 MiB       q3 = da.createGlobalVec()</code></pre>
+<p>The third column (“increment”) is the key here – it shows the increase in total memory usage after executing each line.</p>
+<p>The first thing you notice is that the DA is NOT lightweight. It takes as much memory as 3 Vecs! But that will look cheap in a moment.</p>
+<p>Notice also that the first vec seems to use no memory. I think this is because memory_profiler just tracks peak usage, and the DA creation creates and destroys a vec.</p>
+<p>In what follows, I’ve used sed to extract just the essential lines of the output.</p>
+<p>Let’s try that again, with 2 DOFs.</p>
+<pre><code>!python -m memory_profiler da.py 128 3 2 / | sed -n -e 7p -e 10p
 
      6  296.215 MiB  272.945 MiB       da = PETSc.DA().create([size]*ndim,dof)
-     9  328.309 MiB   32.004 MiB       q3 = da.createGlobalVec()
-</code></pre></div>
-<p>Whoa!  Now the DA is 8.5 times as large as a Vec!</p>
-
-<p>As expected, the Vec is just twice as large.  What if we keep increasing the
-number of DOFs?</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 128 3 3 / | sed -n -e 7p -e 10p
+     9  328.309 MiB   32.004 MiB       q3 = da.createGlobalVec()</code></pre>
+<p>Whoa! Now the DA is 8.5 times as large as a Vec!</p>
+<p>As expected, the Vec is just twice as large. What if we keep increasing the number of DOFs?</p>
+<pre><code>!python -m memory_profiler da.py 128 3 3 / | sed -n -e 7p -e 10p
 !python -m memory_profiler da.py 128 3 4 / | sed -n -e 7p -e 10p
 
      6  408.219 MiB  384.949 MiB       da = PETSc.DA().create([size]*ndim,dof)
      9  504.316 MiB   48.004 MiB       q3 = da.createGlobalVec()
      6  520.219 MiB  496.949 MiB       da = PETSc.DA().create([size]*ndim,dof)
-     9  648.316 MiB   64.004 MiB       q3 = da.createGlobalVec()
-</code></pre></div>
-<p>It&#39;s clear that each additional DOF increases the size of the DA by 112 MB.
-That&#39;s more than double the size of the whole DA we had with dof=1.  And the
-size of the Vec only increases (appropriately) by 16 MB.  So for large numbers
-of DOFs, the DA will be as large as 7 Vecs.</p>
-
-<h3 id="2d-and-1d-results">2D and 1D results</h3>
-
+     9  648.316 MiB   64.004 MiB       q3 = da.createGlobalVec()</code></pre>
+<p>It’s clear that each additional DOF increases the size of the DA by 112 MB. That’s more than double the size of the whole DA we had with dof=1. And the size of the Vec only increases (appropriately) by 16 MB. So for large numbers of DOFs, the DA will be as large as 7 Vecs.</p>
+<h3 id="d-and-1d-results">2D and 1D results</h3>
 <p>The same phenomenon is evident in two dimensions:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 1024 2 1 / | sed -n -e 7p -e 10p
+<pre><code>!python -m memory_profiler da.py 1024 2 1 / | sed -n -e 7p -e 10p
 !python -m memory_profiler da.py 1024 2 2 / | sed -n -e 7p -e 10p
 !python -m memory_profiler da.py 1024 2 3 / | sed -n -e 7p -e 10p
 
@@ -290,18 +259,15 @@ of DOFs, the DA will be as large as 7 Vecs.</p>
      6  160.398 MiB  136.922 MiB       da = PETSc.DA().create([size]*ndim,dof)
      9  176.492 MiB   16.004 MiB       q3 = da.createGlobalVec()
      6  216.402 MiB  192.926 MiB       da = PETSc.DA().create([size]*ndim,dof)
-     9  264.500 MiB   24.004 MiB       q3 = da.createGlobalVec()
-</code></pre></div>
+     9  264.500 MiB   24.004 MiB       q3 = da.createGlobalVec()</code></pre>
 <p>Again we see that:</p>
-
 <ul>
 <li>The 1-DOF DA costs 3 Vecs</li>
 <li>The 2-DOF DA costs about 8.5 Vecs</li>
 <li>Asymptotically, a DA with many DOFs costs 7 Vecs</li>
 </ul>
-
 <p>What about 1D?</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">!python -m memory_profiler da.py 1000000 1 1 / | sed -n -e 7p -e 10p
+<pre><code>!python -m memory_profiler da.py 1000000 1 1 / | sed -n -e 7p -e 10p
 !python -m memory_profiler da.py 1000000 1 2 / | sed -n -e 7p -e 10p
 !python -m memory_profiler da.py 1000000 1 3 / | sed -n -e 7p -e 10p
 
@@ -310,20 +276,11 @@ of DOFs, the DA will be as large as 7 Vecs.</p>
      6   77.684 MiB   54.207 MiB       da = PETSc.DA().create([size]*ndim,dof)
      9  123.582 MiB   15.285 MiB       q3 = da.createGlobalVec()
      6  100.570 MiB   77.094 MiB       da = PETSc.DA().create([size]*ndim,dof)
-     9  169.355 MiB   22.914 MiB       q3 = da.createGlobalVec()
-</code></pre></div>
-<p>These results are relatively sane: regardless of the number of DOFs, the ratio
-is 3-3.5.</p>
-
+     9  169.355 MiB   22.914 MiB       q3 = da.createGlobalVec()</code></pre>
+<p>These results are relatively sane: regardless of the number of DOFs, the ratio is 3-3.5.</p>
 <h3 id="conclusion">Conclusion</h3>
-
-<p>So DAs are not lightweight.  They cost as much as 3-8.5 Vecs, and their cost
-increases with the number of DOFs.  It is not clear to me <em>a priori</em> why their
-cost should even depend on the number of DOFs.</p>
-
-<p>In PyClaw, this means that the DAs always occupy much more memory than the Vecs
-themselves!  This is becoming a serious bottleneck for our current 3D
-simulations on Shaheen.</p>
+<p>So DAs are not lightweight. They cost as much as 3-8.5 Vecs, and their cost increases with the number of DOFs. It is not clear to me <em>a priori</em> why their cost should even depend on the number of DOFs.</p>
+<p>In PyClaw, this means that the DAs always occupy much more memory than the Vecs themselves! This is becoming a serious bottleneck for our current 3D simulations on Shaheen.</p>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -384,10 +341,10 @@ simulations on Shaheen.</p>
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2014-03-11-DMDA_memory.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2014-03-11-DMDA_memory.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2014/02/22/schrodinger-is-not-diffusion.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2014-02-22 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2014/02/22/schrodinger-is-not-diffusion.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2014-02-22 00:00:00 +0000"/>
 <meta name="citation_title" content="The Schrodinger equation is not a reaction-diffusion equation"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -192,30 +192,20 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <p>Recently, a stackexchange answer claimed that <a href="http://scicomp.stackexchange.com/a/10878/123">the Schrodinger equation is effectively a reaction-diffusion equation</a>.  I&#39;ll set aside semantic arguments about the meaning of &quot;effectively&quot;, and give a more obvious example to explain why I think this statement is misleading.</p>
-
+          <p>Recently, a stackexchange answer claimed that <a href="http://scicomp.stackexchange.com/a/10878/123">the Schrodinger equation is effectively a reaction-diffusion equation</a>. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.</p>
 <p>Consider the wave equation</p>
-
-<p>$$u_{tt} = u_{xx}$$</p>
-
-<p>Introducing a new variable $v=u_t$ we can rewrite the wave equation as</p>
-
-<p>$$
+<p><span class="math">\[u_{tt} = u_{xx}\]</span></p>
+<p>Introducing a new variable <span class="math">\(v=u_t\)</span> we can rewrite the wave equation as</p>
+<p><span class="math">\[
 \begin{align*}
-v_t &amp; = u_{xx} \
+v_t &amp; = u_{xx} \\
 u_t &amp; = v.
 \end{align*}
-$$</p>
-
-<p>Observe that the first of these equation is the diffusion equation, while the second is a reaction equation.  Thus we have reaction-diffusion!  </p>
-
+\]</span></p>
+<p>Observe that the first of these equation is the diffusion equation, while the second is a reaction equation. Thus we have reaction-diffusion!</p>
 <p>Right?</p>
-
-<p>Wrong.  We&#39;ve disguised the true nature of this equation by applying our intuition (which is based on scalar PDEs) to a system of PDEs.  In the same way, the &quot;reaction-diffusion&quot; label for Schrodinger is obtained by applying intuition based on PDEs with real coefficients to a PDE with complex coefficients.</p>
-
-<p>Of course, in both cases you can use numerical methods that are appropriate for
-reaction-diffusion problems in order to solve a wave equation.<br>
-<a href="http://nbviewer.ipython.org/github/ketch/exposition/blob/master/Wave%20equation%20as%20reaction-diffusion.ipynb">Here is a quick ipython notebook implementation of the obvious method for the system above</a>.</p>
+<p>Wrong. We’ve disguised the true nature of this equation by applying our intuition (which is based on scalar PDEs) to a system of PDEs. In the same way, the “reaction-diffusion” label for Schrodinger is obtained by applying intuition based on PDEs with real coefficients to a PDE with complex coefficients.</p>
+<p>Of course, in both cases you can use numerical methods that are appropriate for reaction-diffusion problems in order to solve a wave equation.<br /><a href="http://nbviewer.ipython.org/github/ketch/exposition/blob/master/Wave%20equation%20as%20reaction-diffusion.ipynb">Here is a quick ipython notebook implementation of the obvious method for the system above</a>.</p>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -268,10 +258,10 @@ reaction-diffusion problems in order to solve a wave equation.<br>
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2014-02-22-schrodinger-is-not-diffusion.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2014-02-22-schrodinger-is-not-diffusion.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

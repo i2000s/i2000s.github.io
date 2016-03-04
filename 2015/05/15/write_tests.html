@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2015/05/15/write_tests.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2015-05-15 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2015/05/15/write_tests.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2015-05-15 00:00:00 +0000"/>
 <meta name="citation_title" content="Step 5 - write tests"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -193,48 +193,29 @@ $(document).ready(function() {
         <div class="col-md-7 col-md-offset-1"> 
           <article>
           <p>This is step 5 in your journey toward <a href="/2015/05/10/rock_solid_code.html">rock-solid scientific Python code</a>: <strong>write tests</strong>.</p>
-
-<p>Tests?  Ugh.</p>
-
-<p>I hear you.  Writing tests is not an inherently fun process.  However, the alternative is debugging, staring at code and thinking real hard about what could be wrong, and more debugging.  I&#39;ll take writing tests any day of the week.</p>
-
-<p>You may still not be convinced.  Fortunately, I don&#39;t have to convince you, because I&#39;m not going to ask you to write tests in this step.  As a matter of fact, I tricked you into writing tests in step 4.  Remember those examples you put in your docstring?</p>
-
-<p>Yeah, I&#39;m sneaky like that.</p>
-
-<p>What is a test?  It&#39;s a bit of code that uses your project code, together with assertions regarding the output.  Here&#39;s how you can use the docstring you wrote as a test:</p>
-
-<ol>
-<li>Go to your project directory and identify the file to which you added one or more docstrings in step 4.  We&#39;ll refer to that as <code>my_file.py</code>.</li>
+<p>Tests? Ugh.</p>
+<p>I hear you. Writing tests is not an inherently fun process. However, the alternative is debugging, staring at code and thinking real hard about what could be wrong, and more debugging. I’ll take writing tests any day of the week.</p>
+<p>You may still not be convinced. Fortunately, I don’t have to convince you, because I’m not going to ask you to write tests in this step. As a matter of fact, I tricked you into writing tests in step 4. Remember those examples you put in your docstring?</p>
+<p>Yeah, I’m sneaky like that.</p>
+<p>What is a test? It’s a bit of code that uses your project code, together with assertions regarding the output. Here’s how you can use the docstring you wrote as a test:</p>
+<ol type="1">
+<li>Go to your project directory and identify the file to which you added one or more docstrings in step 4. We’ll refer to that as <code>my_file.py</code>.</li>
 <li>At the command line (i.e., in a terminal), type <code>python -m doctest -v my_file.py</code> (but substitute the name of your file).</li>
 <li>Look at the printed output to see if your test(s) passed.</li>
 </ol>
-
-<p>What just happened?  Doctest is a python module that takes all the examples in your docstrings, runs them, and checks whether the output in the docstring matches the actual output.  If any of your doctests failed, you should compare the actual output with your docstring and correct things.</p>
-
+<p>What just happened? Doctest is a python module that takes all the examples in your docstrings, runs them, and checks whether the output in the docstring matches the actual output. If any of your doctests failed, you should compare the actual output with your docstring and correct things.</p>
 <p>I always forget how to invoke doctest, so I put the following code at the bottom of all my <code>.py</code> files:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">doctest</span>
-    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-</code></pre></div>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">if</span> <span class="ot">__name__</span> == <span class="st">&quot;__main__&quot;</span>:
+    <span class="ch">import</span> doctest
+    doctest.testmod()</code></pre>
 <p>After adding that, I can just do</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">python my_file.py -v
-</code></pre></div>
-<p>and it will automatically run the doctests.  One warning: if you don&#39;t add the
-<code>-v</code> flag (for verbose) on the command line, then there will be no printed
-output at all unless some test fails.  And if you put <code>-v</code> before your filename,
-you&#39;ll get something totally different.</p>
-
-<p>Doctests are certainly not all there is to testing in Python, but for me they are a minimal-effort approach that makes my code much more reliable.  If you add a docstring with a doctest to each function and module in your code, you&#39;ll spend a lot less time debugging later on.  I bet you&#39;ll also find some bugs as you add the doctests.</p>
-
-<p>From now on, just make it a habit to add a docstring and a doctest whenever you write a new function.  Your future self will thank you.</p>
-
-<p><a href="https://github.com/ketch/rock-solid-code-demo/blob/13ab3f8af4e6be813eaee512897948e4c5a178a7/factor.py">Here&#39;s what my demo repository looks like at this stage</a>.</p>
-
+<pre><code>python my_file.py -v</code></pre>
+<p>and it will automatically run the doctests. One warning: if you don’t add the <code>-v</code> flag (for verbose) on the command line, then there will be no printed output at all unless some test fails. And if you put <code>-v</code> before your filename, you’ll get something totally different.</p>
+<p>Doctests are certainly not all there is to testing in Python, but for me they are a minimal-effort approach that makes my code much more reliable. If you add a docstring with a doctest to each function and module in your code, you’ll spend a lot less time debugging later on. I bet you’ll also find some bugs as you add the doctests.</p>
+<p>From now on, just make it a habit to add a docstring and a doctest whenever you write a new function. Your future self will thank you.</p>
+<p><a href="https://github.com/ketch/rock-solid-code-demo/blob/13ab3f8af4e6be813eaee512897948e4c5a178a7/factor.py">Here’s what my demo repository looks like at this stage</a>.</p>
 <p><a href="/2015/05/16/track_issues.html">Continue to step six</a>.</p>
-
-<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-http-www-davidketcheson-info-2015-05-15-write_tests-html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/05/15/write_tests.html">http://www.davidketcheson.info/2015/05/15/write_tests.html</a></h4>
-
+<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-httpwww.davidketcheson.info20150515write_tests.html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/05/15/write_tests.html">http://www.davidketcheson.info/2015/05/15/write_tests.html</a></h4>
 <p>under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
 
           </article>
@@ -284,10 +265,10 @@ you&#39;ll get something totally different.</p>
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2015-05-15-write_tests.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2015-05-15-write_tests.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

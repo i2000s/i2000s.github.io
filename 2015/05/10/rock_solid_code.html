@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2015/05/10/rock_solid_code.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2015-05-10 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2015/05/10/rock_solid_code.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2015-05-10 00:00:00 +0000"/>
 <meta name="citation_title" content="12 steps toward rock-solid scientific Python code"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -192,28 +192,13 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <p>Much of my research is based on computer code.  My code has bugs.  </p>
-
-<p><em>Does that mean that my research has errors?</em>  Quite possibly.  </p>
-
-<p><em>Are you, my fellow scientist, in the same boat?</em>  Probably.</p>
-
+          <p>Much of my research is based on computer code. My code has bugs.</p>
+<p><em>Does that mean that my research has errors?</em> Quite possibly.</p>
+<p><em>Are you, my fellow scientist, in the same boat?</em> Probably.</p>
 <p><em>What can we do about it?</em></p>
-
-<p>We must adopt practices that are known to lead to more correct code.
-We must be willing to devote the time and energy that those practices require.
-Most of the time, this is neither fun nor glorious.  We don&#39;t try to cut corners
-when developing a mathematical proof or preparing an experiment -- we know that
-leads to error.  Writing computer code is no different; if anything, it requires
-that we take an even more methodical approach.
-It is time for computational scientists to own up to this.  If we want to have
-confidence in our results, and if we want others to be able to build on them,
-there is no other choice.</p>
-
-<p>The bonus is that adopting these practices can lead to cleaner, simpler code that is easier to understand, maintain, and debug.  In the long term, I believe that these practices lead to an overall time <em>savings</em>, and the opportunity to spend more time using our computational tools to perform research.</p>
-
-<p>In short, what I&#39;m about to show you will allow you to:</p>
-
+<p>We must adopt practices that are known to lead to more correct code. We must be willing to devote the time and energy that those practices require. Most of the time, this is neither fun nor glorious. We don’t try to cut corners when developing a mathematical proof or preparing an experiment – we know that leads to error. Writing computer code is no different; if anything, it requires that we take an even more methodical approach. It is time for computational scientists to own up to this. If we want to have confidence in our results, and if we want others to be able to build on them, there is no other choice.</p>
+<p>The bonus is that adopting these practices can lead to cleaner, simpler code that is easier to understand, maintain, and debug. In the long term, I believe that these practices lead to an overall time <em>savings</em>, and the opportunity to spend more time using our computational tools to perform research.</p>
+<p>In short, what I’m about to show you will allow you to:</p>
 <ul>
 <li>Have confidence in your computed results</li>
 <li>Accelerate your research</li>
@@ -221,17 +206,14 @@ there is no other choice.</p>
 <li>Collaborate more effectively</li>
 <li>Help others build on your work</li>
 </ul>
-
 <h2 id="twelve-baby-steps">Twelve (baby) steps</h2>
-
 <p>So here it is: my 12-step program to writing scientific code that you can believe in:</p>
-
-<ol>
+<ol type="1">
 <li><a href="/2015/05/11/use_version_control.html">Use version control</a></li>
 <li><a href="/2015/05/12/code_in_the_open.html">Put your code in the cloud, in the open</a></li>
 <li><a href="/2015/05/13/add_a_readme.html">Add a README and a License</a></li>
 <li><a href="/2015/05/14/write_docstrings.html">Write docstrings</a></li>
-<li><a href="/2015/05/15/write_tests.html">Write  tests</a></li>
+<li><a href="/2015/05/15/write_tests.html">Write tests</a></li>
 <li><a href="/2015/05/16/track_issues.html">Keep track of issues</a></li>
 <li><a href="/2015/05/29/automate_tests.html">Automate the tests</a></li>
 <li>Automate the build (<em>coming soon</em>)</li>
@@ -240,63 +222,37 @@ there is no other choice.</p>
 <li>Write narrative documentation (<em>coming soon</em>)</li>
 <li>Catch errors as you type them (<em>coming soon</em>)</li>
 </ol>
-
-<p>I know what you&#39;re thinking: that sounds like a lot of work.  It is.  But my goal in this series is to make each of these steps as straightforward and painless as possible.  Thanks to a number of recently-developed tools, <strong>most of these tasks can be done very quickly</strong>, at least for small and simple projects.</p>
-
-<p>There is nothing magical about this precise set of steps; I could have broken them down in a different way or included others.  What&#39;s essential are the underlying principles:</p>
-
+<p>I know what you’re thinking: that sounds like a lot of work. It is. But my goal in this series is to make each of these steps as straightforward and painless as possible. Thanks to a number of recently-developed tools, <strong>most of these tasks can be done very quickly</strong>, at least for small and simple projects.</p>
+<p>There is nothing magical about this precise set of steps; I could have broken them down in a different way or included others. What’s essential are the underlying principles:</p>
 <ul>
 <li>Automation (steps 1, 5, 6,7, 8, 9, 10, 12): Removal of manual processes makes code more reliable.</li>
 <li>Documentation (steps 3, 4, 5, 6, 11): Writing and thinking about the code makes it more reliable.</li>
 <li>Communication/collaboration (steps 1, 2, 3, 4, 5, 6, 11): Code that is read and used by more than one person is more reliable.</li>
 </ul>
-
 <h2 id="the-12-step-challenge">The 12-step challenge</h2>
-
-<p>You could casually read through this series of posts and think about implementing these changes someday.  But don&#39;t.  <strong>Pick a current scientific project with code</strong>, and commit yourself now to getting it in order by following these steps.  Then go through the posts and <strong>apply the instructions at each step</strong> to the project you&#39;ve chosen.  When you&#39;re done, you&#39;ll have one rock-solid code project and the know-how to run all of your projects that way.  The next one will be even easier.</p>
-
+<p>You could casually read through this series of posts and think about implementing these changes someday. But don’t. <strong>Pick a current scientific project with code</strong>, and commit yourself now to getting it in order by following these steps. Then go through the posts and <strong>apply the instructions at each step</strong> to the project you’ve chosen. When you’re done, you’ll have one rock-solid code project and the know-how to run all of your projects that way. The next one will be even easier.</p>
 <h2 id="pre-requisites">Pre-requisites</h2>
-
-<p>I&#39;ve tried to make these posts very simple, but there is a minimal amount of know-how I assume.  In particular, you must be able to:</p>
-
+<p>I’ve tried to make these posts very simple, but there is a minimal amount of know-how I assume. In particular, you must be able to:</p>
 <ul>
 <li>Open a terminal, navigate your file system, and execute commands</li>
 <li>Edit text files</li>
 </ul>
-
-<p>If you&#39;ve taken a <a href="http://software-carpentry.org/">Software Carpentry</a> course, you&#39;re more than prepared.</p>
-
-<h2 id="what-these-steps-won-39-t-do">What these steps won&#39;t do</h2>
-
-<p>I&#39;m not going to tell you how to actually <em>design</em> better code.  That&#39;s much harder!  For that, you should read a book on programming style, like <a href="https://pragprog.com/the-pragmatic-programmer">The Pragmatic Programmer</a> or <a href="http://cc2e.com/">Code Complete</a>.</p>
-
-<p>I&#39;m not going to make you an expert in the topics listed above.  My goal is just to get you over the initial
-psychological bump, from &quot;<em>I have no idea what that is</em>&quot; to &quot;<em>yeah, I can basically do that</em>&quot;.  This is the 20%
-effort that gives 80% of the benefit.</p>
-
+<p>If you’ve taken a <a href="http://software-carpentry.org/">Software Carpentry</a> course, you’re more than prepared.</p>
+<h2 id="what-these-steps-wont-do">What these steps won’t do</h2>
+<p>I’m not going to tell you how to actually <em>design</em> better code. That’s much harder! For that, you should read a book on programming style, like <a href="https://pragprog.com/the-pragmatic-programmer">The Pragmatic Programmer</a> or <a href="http://cc2e.com/">Code Complete</a>.</p>
+<p>I’m not going to make you an expert in the topics listed above. My goal is just to get you over the initial psychological bump, from “<em>I have no idea what that is</em>” to “<em>yeah, I can basically do that</em>”. This is the 20% effort that gives 80% of the benefit.</p>
 <h2 id="questions">Questions</h2>
-
 <h3 id="my-code-is-just-some-simple-scripts-does-this-stuff-still-apply">My code is just some simple scripts; does this stuff still apply?</h3>
-
-<p>Yes!  In fact, I suggest starting with a small and simple project -- the smaller the better.  To demonstrate, I&#39;ve written <a href="https://github.com/ketch/rock-solid-code-demo">a tiny package that does LU factorization (Gaussian elimination) for square matrices</a>.</p>
-
+<p>Yes! In fact, I suggest starting with a small and simple project – the smaller the better. To demonstrate, I’ve written <a href="https://github.com/ketch/rock-solid-code-demo">a tiny package that does LU factorization (Gaussian elimination) for square matrices</a>.</p>
 <h3 id="why-python">Why Python?</h3>
-
-<p>Useful tutorials need to be concrete.  The steps are applicable to any language, but the best tools
-for achieving them vary by language.  Python is a popular language, and is what I use most.</p>
-
+<p>Useful tutorials need to be concrete. The steps are applicable to any language, but the best tools for achieving them vary by language. Python is a popular language, and is what I use most.</p>
 <h3 id="why-are-you-so-sure-my-code-has-bugs">Why are you so sure my code has bugs?</h3>
-
-<p>If you&#39;re asking this, go read <a href="http://statweb.stanford.edu/%7Edonoho/Reports/2008/15YrsReproResch-20080426.pdf">Donoho et. al.&#39;s paper on reproducible computing</a>, from which I quote:</p>
-
+<p>If you’re asking this, go read <a href="http://statweb.stanford.edu/~donoho/Reports/2008/15YrsReproResch-20080426.pdf">Donoho et. al.’s paper on reproducible computing</a>, from which I quote:</p>
 <blockquote>
-<p>&quot;<em>Error is ubiquitous in scientific computing, and one needs to work very diligently and energetically to eliminate it.</em>&quot;</p>
+<p>“<em>Error is ubiquitous in scientific computing, and one needs to work very diligently and energetically to eliminate it.</em>”</p>
 </blockquote>
-
-<p>Okay, what are you waiting for?  Go read <a href="/2015/05/11/use_version_control.html">step one</a>!</p>
-
-<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-http-www-davidketcheson-info-2015-05-10-rock_solid_code-html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/05/10/rock_solid_code.html">http://www.davidketcheson.info/2015/05/10/rock_solid_code.html</a></h4>
-
+<p>Okay, what are you waiting for? Go read <a href="/2015/05/11/use_version_control.html">step one</a>!</p>
+<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-httpwww.davidketcheson.info20150510rock_solid_code.html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/05/10/rock_solid_code.html">http://www.davidketcheson.info/2015/05/10/rock_solid_code.html</a></h4>
 <p>under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
 
           </article>
@@ -358,10 +314,10 @@ for achieving them vary by language.  Python is a popular language, and is what 
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2015-05-10-rock_solid_code.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2015-05-10-rock_solid_code.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

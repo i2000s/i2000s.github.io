@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2012-10-11 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2012/10/11/blogging_ipython_notebooks_with_jekyll.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2012-10-11 00:00:00 +0000"/>
 <meta name="citation_title" content="Blogging an iPython notebook with Jekyll"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -193,45 +193,15 @@ $(document).ready(function() {
         <div class="col-md-7 col-md-offset-1"> 
           <article>
           <blockquote>
-<p><strong>Update as of December 2014: Don&#39;t bother using what&#39;s below; go to 
-<a href="http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/">Christop Corley&#39;s blog</a>
-for a much better setup!</strong></p>
+<p><strong>Update as of December 2014: Don’t bother using what’s below; go to <a href="http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/">Christop Corley’s blog</a> for a much better setup!</strong></p>
 </blockquote>
-
-<p>I&#39;ve been playing around with <a href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html">iPython notebooks</a>
-for a while and planning to use them instead of <a href="http://www.sagemath.org/">SAGE</a> 
-worksheets for my numerical analysis course next spring.  As a warmup,
-I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta 
-methods and showing some new research results using <a href="http://numerics.kaust.edu.sa/nodepy/">NodePy</a>.</p>
-
-<p>I also wanted to post the notebook on my blog here; the ability to more easily
-include math and code in blog posts was one of my main motivations for moving
-away from Blogger to my own site.  I first tried following <a href="http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html">the instructions given
-by Fernando Perez</a>.
-That was quite painless and worked flawlessly, using <code>nbconvert.py</code> to convert the
-.ipynb file directly to HTML, with graphics embedded.  The only issue was that I didn&#39;t love
-the look of the output quite as much as I love how Carl Boettiger&#39;s Markdown + Jekyll
-posts with code and math look (see an example <a href="http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html">here</a>).  Besides, Markdown is so much nicer
-than HTML, and <code>nbconvert.py</code> has a Markdown output option.</p>
-
+<p>I’ve been playing around with <a href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html">iPython notebooks</a> for a while and planning to use them instead of <a href="http://www.sagemath.org/">SAGE</a> worksheets for my numerical analysis course next spring. As a warmup, I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta methods and showing some new research results using <a href="http://numerics.kaust.edu.sa/nodepy/">NodePy</a>.</p>
+<p>I also wanted to post the notebook on my blog here; the ability to more easily include math and code in blog posts was one of my main motivations for moving away from Blogger to my own site. I first tried following <a href="http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html">the instructions given by Fernando Perez</a>. That was quite painless and worked flawlessly, using <code>nbconvert.py</code> to convert the .ipynb file directly to HTML, with graphics embedded. The only issue was that I didn’t love the look of the output quite as much as I love how Carl Boettiger’s Markdown + Jekyll posts with code and math look (see an example <a href="http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html">here</a>). Besides, Markdown is so much nicer than HTML, and <code>nbconvert.py</code> has a Markdown output option.</p>
 <p>So I tried the markdown option:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">nbconvert.py my_nb.ipynb -f markdown
-</code></pre></div>
-<p>I copied the result to my <code>_posts/</code> directory, added the <a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML front-matter</a> that
-Jekyll expects, and took a look.  Everything
-was great except that all my plots were gone, of course.  After considering a
-few options, I decided for now to put plots for such posts in a subfolder 
-<code>jekyll_images/</code> of my public Dropbox folder.  Then it was a simple matter
-of search/replace all the paths to the images.  At that point, it looked
-great; you can see the <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">source</a>
-and the <a href="http://davidketcheson.info/2012/10/11/Internal_stability.html">result</a>.</p>
-
-<p>The only issue was that I didn&#39;t want to manually do all that work every time.
-I considered creating a new Converter class in <code>nbconvert</code> to handle it,
-but finally decided that it would be more convenient to just write a shell
-script that calls <code>nbconvert</code> and then operates on the result.<br>
-Here  it is:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">#!/bin/bash
+<pre><code>nbconvert.py my_nb.ipynb -f markdown</code></pre>
+<p>I copied the result to my <code>_posts/</code> directory, added the <a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML front-matter</a> that Jekyll expects, and took a look. Everything was great except that all my plots were gone, of course. After considering a few options, I decided for now to put plots for such posts in a subfolder <code>jekyll_images/</code> of my public Dropbox folder. Then it was a simple matter of search/replace all the paths to the images. At that point, it looked great; you can see the <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">source</a> and the <a href="http://davidketcheson.info/2012/10/11/Internal_stability.html">result</a>.</p>
+<p>The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in <code>nbconvert</code> to handle it, but finally decided that it would be more convenient to just write a shell script that calls <code>nbconvert</code> and then operates on the result.<br />Here it is:</p>
+<pre><code>#!/bin/bash
 
 fname=$1
 
@@ -251,17 +221,13 @@ tags:      TAG-ME
 .
 w&quot; | ed ${fname}.md
 
-mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md
-</code></pre></div>
-<p>It&#39;s also on Github <a href="https://github.com/ketch/labnotebook/blob/master/nbconv.sh">here</a>.
-This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:</p>
-
+mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md</code></pre>
+<p>It’s also on Github <a href="https://github.com/ketch/labnotebook/blob/master/nbconv.sh">here</a>. This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:</p>
 <ul>
 <li>how to use command-line arguments</li>
 <li>how to use sed and ed</li>
 <li>how to use data</li>
 </ul>
-
 <p>You can expect a lot more iPython-notebook based posts in the future.</p>
 
           </article>
@@ -311,10 +277,10 @@ This was a nice educational exercise in constructing shell scripts, in which I l
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2012-10-11-blogging_ipython_notebooks_with_jekyll.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2012-10-11-blogging_ipython_notebooks_with_jekyll.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />

@@ -33,7 +33,7 @@
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2012/10/11/Internal_stability.html" />
 <meta property="dc:rights" content="CC-BY" />
-<meta property="dc:source" content="Xiaodong Qi's academic NoteBlog" />
+<meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" /> 
 <meta property="dc:type" content="website" /> 
 <meta name="dc.language" content="en, zh-Hans, cmn">
@@ -43,14 +43,14 @@
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2012-10-11 00:00:00 +0000" />
-<meta property="og:site_name" content="Xiaodong Qi's academic NoteBlog" /> <!-- Same as dc:source? -->
+<meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2012/10/11/Internal_stability.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
 <meta name="citation_date" content="2012-10-11 00:00:00 +0000"/>
 <meta name="citation_title" content="Internal stability of Runge-Kutta methods"/>
-<meta name="citation_journal_title" content="Xiaodong Qi's academic NoteBlog"/>
+<meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
@@ -192,21 +192,19 @@ $(document).ready(function() {
       <div class="row" margin-left="-50px">
         <div class="col-md-7 col-md-offset-1"> 
           <article>
-          <p>Note: this post was generated from an iPython notebook.  You can <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">download the
-notebook from github</a> and execute all the code yourself.</p>
-
-<p>Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step.  It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large.  An excellent explanation of internal stability is given in <a href="http://oai.cwi.nl/oai/asset/1652/1652A.pdf">this paper</a>.  Here we demonstrate some tools for studying internal stability in NodePy.</p>
-
-<p>First, let&#39;s load a couple of RK methods:</p>
-
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">nodepy</span> <span class="kn">import</span> <span class="n">rk</span>
+          <p>Note: this post was generated from an iPython notebook. You can <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">download the notebook from github</a> and execute all the code yourself.</p>
+<p>Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in <a href="http://oai.cwi.nl/oai/asset/1652/1652A.pdf">this paper</a>. Here we demonstrate some tools for studying internal stability in NodePy.</p>
+<p>First, let’s load a couple of RK methods:</p>
+<div class="highlight">
+<pre><span class="kn">from</span> <span class="nn">nodepy</span> <span class="kn">import</span> <span class="n">rk</span>
 <span class="nb">reload</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span>
 <span class="n">rk4</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">loadRKM</span><span class="p">(</span><span class="s">&#39;RK44&#39;</span><span class="p">)</span>
 <span class="n">ssprk4</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">loadRKM</span><span class="p">(</span><span class="s">&#39;SSP104&#39;</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">rk4</span>
 <span class="k">print</span> <span class="n">ssprk4</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Classical RK4
+</pre>
+</div>
+<pre><code>Classical RK4
 The original four-stage, fourth-order method of Kutta
  0   |
  1/2 |  1/2
@@ -227,83 +225,87 @@ The optimal ten-stage, fourth order SSP Runge-Kutta method
  5/6 |  1/15  1/15  1/15  1/15  1/15  1/6   1/6   1/6
  1   |  1/15  1/15  1/15  1/15  1/15  1/6   1/6   1/6   1/6
 _____|____________________________________________________________
-     |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10
-</code></pre></div>
+     |  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10  1/10</code></pre>
 <h2 id="absolute-stability-regions">Absolute stability regions</h2>
+<p>First we can use NodePy to plot the region of absolute stability for each method. The absolute stability region is the set</p>
+<center>
+<span class="math">\(\\{ z \in C : |\phi (z)|\le 1 \\}\)</span>
+</center>
 
-<p>First we can use NodePy to plot the region of absolute stability for each method.  The absolute stability region is the set</p>
+<p>where <span class="math">\(\phi(z)\)</span> is the <em>stability function</em> of the method:</p>
+<center>
+<span class="math">\(1 + z b^T (I-zA)^{-1}\)</span>
+</center>
 
-<p><center>$\{ z \in C : |\phi (z)|\le 1 \}$</center></p>
-
-<p>where $\phi(z)$ is the <em>stability function</em> of the method:</p>
-
-<p><center>$1 + z b^T (I-zA)^{-1}$</center></p>
-
-<p>If we solve $u&#39;(t) = \lambda u$ with a given method, then $z=\lambda \Delta t$ must lie inside this region or the computation will be unstable.</p>
-
-<div class="highlight"><pre><span class="n">p</span><span class="p">,</span><span class="n">q</span> <span class="o">=</span> <span class="n">rk4</span><span class="o">.</span><span class="n">stability_function</span><span class="p">()</span>
+<p>If we solve <span class="math">\(u&#39;(t) = \lambda u\)</span> with a given method, then <span class="math">\(z=\lambda \Delta t\)</span> must lie inside this region or the computation will be unstable.</p>
+<div class="highlight">
+<pre><span class="n">p</span><span class="p">,</span><span class="n">q</span> <span class="o">=</span> <span class="n">rk4</span><span class="o">.</span><span class="n">stability_function</span><span class="p">()</span>
 <span class="k">print</span> <span class="n">p</span>
 <span class="n">h1</span><span class="o">=</span><span class="n">rk4</span><span class="o">.</span><span class="n">plot_stability_region</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">         4          3       2
-0.04167 x + 0.1667 x + 0.5 x + 1 x + 1
-</code></pre></div>
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_00.png" alt=""></p>
-
-<div class="highlight"><pre><span class="n">p</span><span class="p">,</span><span class="n">q</span> <span class="o">=</span> <span class="n">ssprk4</span><span class="o">.</span><span class="n">stability_function</span><span class="p">()</span>
+</pre>
+</div>
+<pre><code>         4          3       2
+0.04167 x + 0.1667 x + 0.5 x + 1 x + 1</code></pre>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_00.png" />
+</figure>
+<div class="highlight">
+<pre><span class="n">p</span><span class="p">,</span><span class="n">q</span> <span class="o">=</span> <span class="n">ssprk4</span><span class="o">.</span><span class="n">stability_function</span><span class="p">()</span>
 <span class="k">print</span> <span class="n">p</span>
 <span class="n">h2</span><span class="o">=</span><span class="n">ssprk4</span><span class="o">.</span><span class="n">plot_stability_region</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">           10             9            8             7           6
+</pre>
+</div>
+<pre><code>           10             9            8             7           6
 3.969e-09 x  + 2.381e-07 x + 6.43e-06 x + 0.0001029 x + 0.00108 x
             5           4          3       2
- + 0.00787 x + 0.04167 x + 0.1667 x + 0.5 x + 1 x + 1
-</code></pre></div>
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png" alt=""></p>
-
+ + 0.00787 x + 0.04167 x + 0.1667 x + 0.5 x + 1 x + 1</code></pre>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_01.png" />
+</figure>
 <h1 id="internal-stability">Internal stability</h1>
-
-<p>The stability function tells us by how much errors from one step are amplified in the next one.  This is important since we introduce truncation errors at every step.  However, we also introduce roundoff errors at the each stage within a step.  Internal stability tells us about the growth of those.  Internal stability is typically less important than (step-by-step) absolute stability for two reasons:</p>
-
+<p>The stability function tells us by how much errors from one step are amplified in the next one. This is important since we introduce truncation errors at every step. However, we also introduce roundoff errors at the each stage within a step. Internal stability tells us about the growth of those. Internal stability is typically less important than (step-by-step) absolute stability for two reasons:</p>
 <ul>
 <li>Roundoff errors are typically much smaller than truncation errors, so moderate amplification of them typically is not significant</li>
 <li>Although the propagation of stage errors within a step is governed by internal stability functions, in later steps these errors are propagated according to the (principal) stability function</li>
 </ul>
-
 <p>Nevertheless, in methods with many stages, internal stability can play a key role.</p>
-
-<p>Questions: <em>In the solution of PDEs, large spatial truncation errors enter at each stage.  Does this mean internal stability becomes more significant?  How does this relate to stiff accuracy analysis and order reduction?</em></p>
-
+<p>Questions: <em>In the solution of PDEs, large spatial truncation errors enter at each stage. Does this mean internal stability becomes more significant? How does this relate to stiff accuracy analysis and order reduction?</em></p>
 <h2 id="internal-stability-functions">Internal stability functions</h2>
-
 <p>We can write the equations of a Runge-Kutta method compactly as</p>
+<center>
+<span class="math">\(y = u^n e + h A F(y)\)</span>
+</center>
 
-<p><center>$y = u^n e + h A F(y)$</center></p>
+<center>
+<span class="math">\(u^{n+1} = u^n + h b^T F(y),\)</span>
+</center>
 
-<p><center>$u^{n+1} = u^n + h b^T F(y),$</center></p>
+<p>where <span class="math">\(y\)</span> is the vector of stage values, <span class="math">\(u^n\)</span> is the previous step solution, <span class="math">\(e\)</span> is a vector with all entries equal to 1, <span class="math">\(h\)</span> is the step size, <span class="math">\(A\)</span> and <span class="math">\(b\)</span> are the coefficients in the Butcher tableau, and <span class="math">\(F(y)\)</span> is the vector of stage derivatives. In floating point arithmetic, roundoff errors will be made at each stage. Representing these errors by a vector <span class="math">\(r\)</span>, we have</p>
+<center>
+<span class="math">\(y = u^n e + h A F(y) + r.\)</span>
+</center>
 
-<p>where $y$ is the vector of stage values, $u^n$ is the previous step solution, $e$ is a vector with all entries equal to 1, $h$ is the step size, $A$ and $b$ are the coefficients in the Butcher tableau, and $F(y)$ is the vector of stage derivatives.  In floating point arithmetic, roundoff errors will be made at each stage.  Representing these errors by a vector $r$, we have</p>
+<p>Considering the test problem <span class="math">\(F(y)=\lambda y\)</span> and solving for <span class="math">\(y\)</span> gives</p>
+<center>
+<span class="math">\(y = u^n (I-zA)^{-1}e + (I-zA)^{-1}r,\)</span>
+</center>
 
-<p><center>$y = u^n e + h A F(y) + r.$</center></p>
+<p>where <span class="math">\(z=h\lambda\)</span>. Substituting this result in the equation for <span class="math">\(u^{n+1}\)</span> gives</p>
+<center>
+<span class="math">\(u^{n+1} = u^n (1 + zb^T(I-zA)^{-1}e) + zb^T(I-zA)^{-1}r = \psi(z) u^n + \theta(z)^T r.\)</span>
+</center>
 
-<p>Considering the test problem $F(y)=\lambda y$ and solving for $y$ gives</p>
+<p>Here <span class="math">\(\psi(z)\)</span> is the <em>stability function</em> of the method, that we already encountered above. Meanwhile, the vector <span class="math">\(\theta(z)\)</span> contains the <em>internal stability functions</em> that govern the amplification of roundoff errors <span class="math">\(r\)</span> within a step:</p>
+<center>
+<span class="math">\(\theta(z) = z b^T (I-zA)^{-1}.\)</span>
+</center>
 
-<p><center>$y = u^n (I-zA)^{-1}e + (I-zA)^{-1}r,$</center></p>
-
-<p>where $z=h\lambda$.  Substituting this result in the equation for $u^{n+1}$ gives</p>
-
-<p><center>$u^{n+1} = u^n (1 + zb^T(I-zA)^{-1}e) + zb^T(I-zA)^{-1}r = \psi(z) u^n + \theta(z)^T r.$</center></p>
-
-<p>Here $\psi(z)$ is the <em>stability function</em> of the method, that we already encountered above.  Meanwhile, the vector $\theta(z)$ contains the <em>internal stability functions</em> that govern the amplification of roundoff errors $r$ within a step:</p>
-
-<p><center>$\theta(z) = z b^T (I-zA)^{-1}.$</center></p>
-
-<p>Let&#39;s compute $\theta$ for the classical RK4 method:</p>
-
-<div class="highlight"><pre><span class="n">theta</span><span class="o">=</span><span class="n">rk4</span><span class="o">.</span><span class="n">internal_stability_polynomials</span><span class="p">()</span>
+<p>Let’s compute <span class="math">\(\theta\)</span> for the classical RK4 method:</p>
+<div class="highlight">
+<pre><span class="n">theta</span><span class="o">=</span><span class="n">rk4</span><span class="o">.</span><span class="n">internal_stability_polynomials</span><span class="p">()</span>
 <span class="n">theta</span>
-</pre></div>
-
+</pre>
+</div>
 <pre>
     [poly1d([1/24, 1/12, 1/6, 1/6, 0], dtype=object),
      poly1d([1/12, 1/6, 1/3, 0], dtype=object),
@@ -311,203 +313,210 @@ _____|____________________________________________________________
      poly1d([1/6, 0], dtype=object)]
 </pre>
 
-<div class="highlight"><pre><span class="k">for</span> <span class="n">theta_j</span> <span class="ow">in</span> <span class="n">theta</span><span class="p">:</span>
+
+<div class="highlight">
+<pre><span class="k">for</span> <span class="n">theta_j</span> <span class="ow">in</span> <span class="n">theta</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">theta_j</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">         4           3          2
+</pre>
+</div>
+<pre><code>         4           3          2
 0.04167 x + 0.08333 x + 0.1667 x + 0.1667 x
          3          2
 0.08333 x + 0.1667 x + 0.3333 x
         2
 0.1667 x + 0.3333 x
-
-0.1667 x
-</code></pre></div>
-<p>Thus the roundoff errors in the first stage are amplified by a factor $z^4/24 + z^3/12 + z^2/6 + z/6$, while the errors in the last stage are amplified by a factor $z/6$.</p>
-
+ 
+0.1667 x</code></pre>
+<p>Thus the roundoff errors in the first stage are amplified by a factor <span class="math">\(z^4/24 + z^3/12 + z^2/6 + z/6\)</span>, while the errors in the last stage are amplified by a factor <span class="math">\(z/6\)</span>.</p>
 <h2 id="internal-instability">Internal instability</h2>
+<p>Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small. Let’s think about when things can go wrong in terms of internal instability. If <span class="math">\(|\theta(z)|\)</span> is of the order <span class="math">\(1/\epsilon_{machine}\)</span>, then roundoff errors could be amplified so much that they destroy the accuracy of the computation. More specifically, we should be concerned if <span class="math">\(|\theta(z)|\)</span> is of the order <span class="math">\(tol/\epsilon_{machine}\)</span> where <span class="math">\(tol\)</span> is our desired error tolerance. Of course, we only care about values of <span class="math">\(z\)</span> that lie inside the absolute stability region <span class="math">\(S\)</span>, since internal stability won’t matter if the computation is not absolutely stable.</p>
+<p>We can get some idea about the amplification of stage errors by plotting the curves <span class="math">\(|\theta(z)|=1\)</span> along with the stability region. Ideally these curves will all lie outside the stability region, so that all stage errors are damped.</p>
+<div class="highlight">
+<pre><span class="n">rk4</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
+</pre>
+</div>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_02.png" />
+</figure>
+<div class="highlight">
+<pre><span class="n">ssprk4</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
+</pre>
+</div>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_03.png" />
+</figure>
+<p>For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified. But by how much? We’d really like to know the maximum amplification of the stage errors under the condition of absolute stability. We therefore define the <em>maximum internal amplification factor</em> <span class="math">\(M\)</span>:</p>
+<center>
+<span class="math">\(M = \max_j \max_{z \in S} |\theta_j(z)|\)</span>
+</center>
 
-<p>Usually internal stability is unimportant since it relates to amplification of roundoff errors, which are very small.  Let&#39;s think about when things can go wrong in terms of internal instability.  If $|\theta(z)|$ is of the order $1/\epsilon_{machine}$, then roundoff errors could be amplified so much that they destroy the accuracy of the computation.  More specifically, we should be concerned if $|\theta(z)|$ is of the order $tol/\epsilon_{machine}$ where $tol$ is our desired error tolerance.  Of course, we only care about values of $z$ that lie inside the absolute stability region $S$, since internal stability won&#39;t matter if the computation is not absolutely stable.</p>
-
-<p>We can get some idea about the amplification of stage errors by plotting the curves $|\theta(z)|=1$ along with the stability region.  Ideally these curves will all lie outside the stability region, so that all stage errors are damped.</p>
-
-<div class="highlight"><pre><span class="n">rk4</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
-</pre></div>
-
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_02.png" alt=""></p>
-
-<div class="highlight"><pre><span class="n">ssprk4</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
-</pre></div>
-
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_03.png" alt=""></p>
-
-<p>For both methods, we see that some of the curves intersect the absolute stability region, so some stage errors are amplified.  But by how much?  We&#39;d really like to know the maximum amplification of the stage errors under the condition of absolute stability.  We therefore define the <em>maximum internal amplification factor</em> $M$:</p>
-
-<p><center>$M = \max_j \max_{z \in S} |\theta_j(z)|$</center></p>
-
-<div class="highlight"><pre><span class="k">print</span> <span class="n">rk4</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
+<div class="highlight">
+<pre><span class="k">print</span> <span class="n">rk4</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
 <span class="k">print</span> <span class="n">ssprk4</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">2.15239281554
-4.04399941143
-</code></pre></div>
-<p>We see that both methods have small internal amplification factors, so internal stability is not a concern in either case.  This is not surprising for the method with only four stages; it is a surprisingly good property of the method with ten stages.</p>
-
-<p>Questions: <em>Do SSP RK methods always (necessarily) have small amplification factors?  Can we prove it?</em></p>
-
-<p>Now let&#39;s look at some methods with many stages.</p>
-
+</pre>
+</div>
+<pre><code>2.15239281554
+4.04399941143</code></pre>
+<p>We see that both methods have small internal amplification factors, so internal stability is not a concern in either case. This is not surprising for the method with only four stages; it is a surprisingly good property of the method with ten stages.</p>
+<p>Questions: <em>Do SSP RK methods always (necessarily) have small amplification factors? Can we prove it?</em></p>
+<p>Now let’s look at some methods with many stages.</p>
 <h2 id="runge-kutta-chebyshev-methods">Runge-Kutta Chebyshev methods</h2>
-
-<p>The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages.  The construction of these methods is implemented in NodePy, so let&#39;s take a look at them.  The functions <code>RKC1(s)</code> and <code>RKC2(s)</code> construct RKC methods of order 1 and 2, respectively, with $s$ stages.</p>
-
-<div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">4</span>
+<p>The paper of Verwer, Hundsdorfer, and Sommeijer deals with RKC methods, which can have very many stages. The construction of these methods is implemented in NodePy, so let’s take a look at them. The functions <code>RKC1(s)</code> and <code>RKC2(s)</code> construct RKC methods of order 1 and 2, respectively, with <span class="math">\(s\)</span> stages.</p>
+<div class="highlight">
+<pre><span class="n">s</span><span class="o">=</span><span class="mi">4</span>
 <span class="n">rkc</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">RKC1</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">rkc</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">RKC41
+</pre>
+</div>
+<pre><code>RKC41
 
  0    |
  1/16 |  1/16
  1/4  |  1/8   1/8
  9/16 |  3/16  1/4   1/8
 ______|________________________
-      |   1/4   3/8   1/4   1/8
-</code></pre></div>
-<div class="highlight"><pre><span class="n">rkc</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
-</pre></div>
-
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_04.png" alt=""></p>
-
-<p>It looks like there could be some significant internal amplification here.  Let&#39;s see:</p>
-
-<div class="highlight"><pre><span class="n">rkc</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-
+      |   1/4   3/8   1/4   1/8</code></pre>
+<div class="highlight">
+<pre><span class="n">rkc</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
+</pre>
+</div>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_04.png" />
+</figure>
+<p>It looks like there could be some significant internal amplification here. Let’s see:</p>
+<div class="highlight">
+<pre><span class="n">rkc</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
+</pre>
+</div>
 <pre>
     11.760869405962685
 </pre>
 
-<p>Nothing catastrophic.  Let&#39;s try a larger value of $s$:</p>
 
-<div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
+<p>Nothing catastrophic. Let’s try a larger value of <span class="math">\(s\)</span>:</p>
+<div class="highlight">
+<pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
 <span class="n">rkc</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">RKC1</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">rkc</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-
+</pre>
+</div>
 <pre>
     42.665327220219126
 </pre>
 
-<p>As promised, these methods seem to have good internal stability properties.  What about the second-order methods?</p>
 
-<div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
+<p>As promised, these methods seem to have good internal stability properties. What about the second-order methods?</p>
+<div class="highlight">
+<pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
 <span class="n">rkc</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">RKC2</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">rkc</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-
+</pre>
+</div>
 <pre>
     106.69110992619214
 </pre>
 
-<p>Again, nothing catastrophic.  We could take $s$ much larger than 20, but the calculations get to be rather slow (in Python) and since we&#39;re using floating point arithmetic, the accuracy deteriorates.</p>
 
-<p>Remark: <em>we could do the calculations in exact arithmetic using Sympy, but things would get even slower.  Perhaps there are some optimizations that could be done to speed this up.  Or perhaps we should use Mathematica if we need to do this kind of thing.</em></p>
-
-<p>Remark 2: <em>of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials.  So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy&#39;s special functions library).  This would also be a nice check on the calculations above.</em></p>
-
+<p>Again, nothing catastrophic. We could take <span class="math">\(s\)</span> much larger than 20, but the calculations get to be rather slow (in Python) and since we’re using floating point arithmetic, the accuracy deteriorates.</p>
+<p>Remark: <em>we could do the calculations in exact arithmetic using Sympy, but things would get even slower. Perhaps there are some optimizations that could be done to speed this up. Or perhaps we should use Mathematica if we need to do this kind of thing.</em></p>
+<p>Remark 2: <em>of course, for the RKC methods the internal stability polynomials are shifted Chebyshev polynomials. So we could evaluate them directly in a stable manner using the three-term recurrence (or perhaps scipy’s special functions library). This would also be a nice check on the calculations above.</em></p>
 <h2 id="other-methods-with-many-stages">Other methods with many stages</h2>
-
 <p>Three other classes of methods with many stages have been implemented in NodePy:</p>
-
 <ul>
 <li>SSP families</li>
 <li>Integral deferred correction (IDC) methods</li>
 <li>Extrapolation methods</li>
 </ul>
-
 <h3 id="ssp-families">SSP Families</h3>
-
-<div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
+<div class="highlight">
+<pre><span class="n">s</span><span class="o">=</span><span class="mi">20</span>
 <span class="n">ssprk</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">SSPRK2</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">ssprk</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
 <span class="n">ssprk</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-
+</pre>
+</div>
 <pre>
     2.0212921484995547
 </pre>
 
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_05.png" alt=""></p>
 
-<div class="highlight"><pre><span class="n">s</span><span class="o">=</span><span class="mi">25</span> <span class="c"># # of stages</span>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_05.png" />
+</figure>
+<div class="highlight">
+<pre><span class="n">s</span><span class="o">=</span><span class="mi">25</span> <span class="c"># # of stages</span>
 <span class="n">ssprk</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">SSPRK3</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">ssprk</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
 <span class="n">ssprk</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-
+</pre>
+</div>
 <pre>
     3.8049237837215397
 </pre>
 
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_06.png" alt=""></p>
 
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_06.png" />
+</figure>
 <p>The SSP methods seem to have excellent internal stability properties.</p>
-
 <h3 id="idc-methods">IDC methods</h3>
-
-<div class="highlight"><pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
+<div class="highlight">
+<pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
 <span class="n">idc</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">DC</span><span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">idc</span><span class="p">)</span>
 <span class="n">idc</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
 <span class="n">idc</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">26
-</code></pre></div>
+</pre>
+</div>
+<pre><code>26</code></pre>
 <pre>
     6.4140166271998815
 </pre>
 
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_07.png" alt=""></p>
 
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_07.png" />
+</figure>
 <p>IDC methods also seem to have excellent internal stability.</p>
-
 <h3 id="extrapolation-methods">Extrapolation methods</h3>
-
-<div class="highlight"><pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
+<div class="highlight">
+<pre><span class="n">p</span><span class="o">=</span><span class="mi">6</span> <span class="c">#order</span>
 <span class="n">ex</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">extrap</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
 <span class="n">ex</span><span class="o">.</span><span class="n">internal_stability_plot</span><span class="p">()</span>
 <span class="n">ex</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">16
-6
-</code></pre></div>
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_08.png" alt=""></p>
-
-<p>Not so good.  Let&#39;s try a method with even more stages (this next computation will take a while; go stretch your legs).</p>
-
-<div class="highlight"><pre><span class="n">p</span><span class="o">=</span><span class="mi">10</span> <span class="c">#order</span>
+</pre>
+</div>
+<pre><code>16
+6</code></pre>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_08.png" />
+</figure>
+<p>Not so good. Let’s try a method with even more stages (this next computation will take a while; go stretch your legs).</p>
+<div class="highlight">
+<pre><span class="n">p</span><span class="o">=</span><span class="mi">10</span> <span class="c">#order</span>
 <span class="n">ex</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">extrap</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
 <span class="n">ex</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">46
-</code></pre></div>
+</pre>
+</div>
+<pre><code>46</code></pre>
 <pre>
     28073.244376758907
 </pre>
 
-<p>Now we&#39;re starting to see something that might cause trouble, especially since such high order extrapolation methods are usually used when extremely tight error tolerances are required.  Internal amplification will cause a loss of about 5 digits of accuracy here, so the best we can hope for is about 10 digits of accuracy in double precision.  Higher order extrapolation methods will make things even worse.  How large are their amplification factors?  (Really long calculation here...)</p>
 
-<div class="highlight"><pre><span class="n">pmax</span> <span class="o">=</span> <span class="mi">12</span>
+<p>Now we’re starting to see something that might cause trouble, especially since such high order extrapolation methods are usually used when extremely tight error tolerances are required. Internal amplification will cause a loss of about 5 digits of accuracy here, so the best we can hope for is about 10 digits of accuracy in double precision. Higher order extrapolation methods will make things even worse. How large are their amplification factors? (Really long calculation here…)</p>
+<div class="highlight">
+<pre><span class="n">pmax</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="n">ampfac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">pmax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">pmax</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">ex</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">extrap</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
     <span class="n">ampfac</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">ex</span><span class="o">.</span><span class="n">maximum_internal_amplification</span><span class="p">()</span>
     <span class="k">print</span> <span class="n">p</span><span class="p">,</span> <span class="n">ampfac</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-</pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">1 1.99777378912
+</pre>
+</div>
+<pre><code>1 1.99777378912
 2 2.40329384375
 3
  5.07204078733
@@ -528,24 +537,28 @@ ______|________________________
 11
  126011.586473
 12
- 169897.662582
-</code></pre></div>
+ 169897.662582</code></pre>
 <pre>
     [<matplotlib.lines.Line2D at 0x2611bbe10>]
 </pre>
 
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_09.png" alt=""></p>
 
-<div class="highlight"><pre><span class="n">semilogy</span><span class="p">(</span><span class="n">ampfac</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_09.png" />
+</figure>
+<div class="highlight">
+<pre><span class="n">semilogy</span><span class="p">(</span><span class="n">ampfac</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre>
+</div>
 <pre>
     [<matplotlib.lines.Line2D at 0x2611a6710>]
 </pre>
 
-<p><img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_10.png" alt=""></p>
 
-<p>We see roughly geometric growth of the internal amplification factor as a function of the order $p$.  It seems clear that very high order extrapolation methods applied to problems with high accuracy requirements will fall victim to internal stability issues.</p>
+<figure>
+<img src="https://dl.dropbox.com/u/656693/jekyll_images/Internal_stability_files/Internal_stability_fig_10.png" />
+</figure>
+<p>We see roughly geometric growth of the internal amplification factor as a function of the order <span class="math">\(p\)</span>. It seems clear that very high order extrapolation methods applied to problems with high accuracy requirements will fall victim to internal stability issues.</p>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -610,10 +623,10 @@ ______|________________________
 
   <!-- <br/>
 
-   <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: </p>
+  
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/6d0ae0f8376382464367c1acc46adbcafded1c8d/_posts/2012-10-11-Internal_stability.md"> 6d0ae0f8376382464367c1acc46adbcafded1c8d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/2d791b01916242bb3bd7e10a48d31f423efbdb55/_posts/2012-10-11-Internal_stability.md"> 2d791b01916242bb3bd7e10a48d31f423efbdb55</a></tiny></p> -->
 </aside>
 
 <br /><br />
