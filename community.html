@@ -139,11 +139,11 @@
         var $item = $("<li>").addClass("repo rep " + (repo.language || '').toLowerCase());
         var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
         $link.append($("<h2>").text(repo.name));
-        $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
+        // $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
         $link.append($("<p style='line-height:1em;'>").text(repoDescription(repo)));
         $link.append($("<p style='line-height:1em;'>").text("Updated " +
           strftime("%h %e, %Y", repo.pushed_at)));
-        $link.append($("<h3 style='top:25px; right:25px;'>").addClass("language").text(repo.language));
+        $link.append($("<h3 style='top:20px; right:25px;'>").addClass("language").text(repo.language));
 
         $item.appendTo("#repos");
       }
@@ -340,7 +340,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Detuning style sheet.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/0884c16e04...ef126bc27d">05:17 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 0884c16e04aa1112b7d5c0cc524bcd3dd0bc2b72.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6163ebf96e...7a61958517">03:52 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Recombine a self-defined style sheet.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/504f0f3d37...0884c16e04">03:48 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 504f0f3d37013accab848bb8211c473322bb94e5.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f31d10d907...6163ebf96e">02:02 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Turn off some of the old style sheets to see what will be changed. Minor adjusts.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/9fd83f308c...504f0f3d37">01:57 2016/03/05</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Detuning style sheet.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/ef126bc27d...f439da5b6b">06:10 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to ef126bc27d95d7ab434f178f31786a86ab218af6.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/7a61958517...b3687f22dd">05:21 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Detuning style sheet.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/0884c16e04...ef126bc27d">05:17 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 0884c16e04aa1112b7d5c0cc524bcd3dd0bc2b72.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6163ebf96e...7a61958517">03:52 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Recombine a self-defined style sheet.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/504f0f3d37...0884c16e04">03:48 2016/03/05</a></li></ul>
            </div>
        </div>
     </div>

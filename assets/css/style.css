@@ -195,7 +195,7 @@ li.repo a:hover {
 }
 
 li.repo h2, li.repo h3, li.repo p {
-  margin: 10px 15px;
+  margin: 1px 5px;
 }
 
 li.repo h2 {
@@ -571,23 +571,14 @@ div.excerpt{height:200px;overflow:hidden}div.scroll{width:110%;height:110%;overf
 
 
 /* -- Self-defined new content -- */
-/* -- Define figure and caption to have the same width -- */ 
+/* -- Define figure and caption to have the same width. 
+Ref:http://stackoverflow.com/questions/6534473/how-can-i-make-the-width-of-my-figcaption-match-the-width-of-the-img-inside -- */ 
 figure {
-   background-color: #fff;
-   padding: 5px;
-   font-size: 15px;
    display: table;
+   width: 10px;
 }
 
-figure img {
-    display: block;
-    width: 100%;
-}
-
-figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    background: #fff;
-    padding: 0 5px 5px;
+img, figcaption {
+    display: table-row;
     font-size: 14px;
 } 
