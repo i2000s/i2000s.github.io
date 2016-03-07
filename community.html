@@ -149,12 +149,49 @@
         $item.appendTo("#repos");
       }
 
-      $.getJSON("https://api.github.com/users/i2000s/repos?per_page=100&callback=?", function (result) {
-          repos = result.data;
+      function queryorgrepo(requrl){
+      //return $.ajax({
+      $.ajax({
+         url: requrl,
+         async: false,
+         dataType: 'json',
+         success: function (result) {
+         //repos = result.data;
+         $.merge(repos, result.data);
+         }
       });
-      // Add organization repos.
-      $.getJSON("https://api.github.com/orgs/CQuIC/repos?per_page=100&callback=?", function (result) {
-          repos.append(result.data);
+      return repos;
+      //console.log(repos);
+      };
+      
+      var orgnames = ;
+      var orgurls = [];
+      for (var indx = 0; indx < orgnames.length; indx++){
+        orgurls[indx] = "https://api.github.com/orgs/"+orgnames[indx]+"/repos?per_page=100&callback=?";
+      };
+      //alert(orgurls);
+      for (var indx = 0; indx < orgurls.length; indx++){
+        //repos=$.merge(repos,queryorgrepo(orgurls[indx]));
+        queryorgrepo(orgurls[indx]);
+        //repos.push(queryorgrepo(orgurls[indx]));
+        //results.push(queryorgrepo(orgurls[indx]));
+        console.log(repos);
+       };
+      
+      //alert(repos);
+      // invoke each function stored in the result array and proceed when they are all done
+      //$.when.apply(this, repos).done(function () {
+        //console.log(repos);
+      //});
+      //alert(repos);
+      // Add user repos.
+      $.ajax({
+         url: 'https://api.github.com/users/i2000s/repos?per_page=100&callback=?',
+         async: false,
+         dataType: 'json',
+         success: function (result){
+          
+          $.merge(repos,result.data);
           $(function () {
           $("#num-repos").text(repos.length);
 
@@ -346,7 +383,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Remove self-defined function.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f4b9dfaf9f...d3c9bf96cf">02:27 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to f4b9dfaf9fdf1611021a865f626637657af4eeb1.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/670b14b8cd...3a60a7e3f6">02:23 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test moving jQuery function inside.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/9a80a50335...f4b9dfaf9f">02:19 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 9a80a503353ac32e153131960839ac3abb110213.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/345085cfe0...670b14b8cd">02:06 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Declare global variable repos.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/1fe7e1ca2d...9a80a50335">02:02 2016/03/07</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Further test.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/d3c9bf96cf...80d66658c4">07:14 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to d3c9bf96cf64b584ce502d95f7ba6eb9152e5efe.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/3a60a7e3f6...4892859c3c">02:31 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Remove self-defined function.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f4b9dfaf9f...d3c9bf96cf">02:27 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to f4b9dfaf9fdf1611021a865f626637657af4eeb1.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/670b14b8cd...3a60a7e3f6">02:23 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test moving jQuery function inside.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/9a80a50335...f4b9dfaf9f">02:19 2016/03/07</a></li></ul>
            </div>
        </div>
     </div>
