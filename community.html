@@ -150,11 +150,15 @@
 
       $.getJSON("https://api.github.com/users/i2000s/repos?per_page=100&callback=?", function (result) {
         var repos = result.data;
-
+      });
+        
+      $.getJSON("https://api.github.com/orgs/CQuIC/repos?per_page=100&callback=?", function (result) {
+          repos.append(result.data);
       });
       
       // Do the sorting and define ids.
-      $(function () {
+      printRepo(repos);
+      function printRepo(repos) {
           $("#num-repos").text(repos.length);
 
           // Convert pushed_at to Date.
@@ -194,7 +198,7 @@
           $.each(repos.slice(0, 3), function (i, repo) {
             addRecentlyUpdatedRepo(repo);
           });
-     });
+     }
 
     })(jQuery);
     </script>
@@ -342,7 +346,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test moving the sorting and printing function out of a getJSON.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/ab0cbeb731...f9c9f04f13">01:06 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to ab0cbeb731b4d4faa56691920f5ef0891f4d3fb5.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/dc401f3829...86a545c036">12:45 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test only show limited number of repos.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/460410872c...ab0cbeb731">12:41 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 460410872c62842fbebf724240ec22ce3315b995.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f82e17571c...dc401f3829">09:16 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Minor improvement.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/853a4f408f...460410872c">09:12 2016/03/05</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Change function style and append one test org repos.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f9c9f04f13...4c7bc5e8ad">01:19 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to f9c9f04f136226401b99dd7254c6650f80f23b53.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/86a545c036...76f7576065">01:11 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test moving the sorting and printing function out of a getJSON.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/ab0cbeb731...f9c9f04f13">01:06 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to ab0cbeb731b4d4faa56691920f5ef0891f4d3fb5.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/dc401f3829...86a545c036">12:45 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test only show limited number of repos.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/460410872c...ab0cbeb731">12:41 2016/03/07</a></li></ul>
            </div>
        </div>
     </div>
