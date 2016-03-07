@@ -176,8 +176,8 @@
             if (b.hotness < a.hotness) return -1;
             return 0;
           });
-
-          $.each(repos, function (i, repo) {
+          // Only first 12 hotest repos are shown.
+          $.each(repos.slice(0,11), function (i, repo) {
             addRepo(repo);
           });
 
@@ -340,7 +340,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Minor improvement.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/853a4f408f...460410872c">09:12 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 853a4f408f199f9931e0f567055f3fa0474303cc.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/0073c1efbd...f82e17571c">09:00 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Hide the update time. Still work on the repo style.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/a48dc7eb64...853a4f408f">08:55 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to a48dc7eb6413cf041da05e5a3f7e3df4d8cdfe48.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/382bb1e2a8...0073c1efbd">08:21 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Try to fix the repo display by showing the language on the second line.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/7a7f6ecce2...a48dc7eb64">08:17 2016/03/05</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test only show limited number of repos.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/460410872c...ab0cbeb731">12:41 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 460410872c62842fbebf724240ec22ce3315b995.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/f82e17571c...dc401f3829">09:16 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Minor improvement.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/853a4f408f...460410872c">09:12 2016/03/05</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 853a4f408f199f9931e0f567055f3fa0474303cc.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/0073c1efbd...f82e17571c">09:00 2016/03/05</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Hide the update time. Still work on the repo style.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/a48dc7eb64...853a4f408f">08:55 2016/03/05</a></li></ul>
            </div>
        </div>
     </div>
