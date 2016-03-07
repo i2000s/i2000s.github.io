@@ -155,6 +155,7 @@
          url: requrl,
          async: false,
          dataType: 'json',
+         headers: {'Authorization: token '+process.env.GH_TOKEN},
          success: function (result) {
          //repos = result.data;
          $.merge(repos, result.data);
@@ -172,10 +173,10 @@
       //alert(orgurls);
       for (var indx = 0; indx < orgurls.length; indx++){
         //repos=$.merge(repos,queryorgrepo(orgurls[indx]));
-        //queryorgrepo(orgurls[indx]);
+        queryorgrepo(orgurls[indx]);
         //repos.push(queryorgrepo(orgurls[indx]));
         //results.push(queryorgrepo(orgurls[indx]));
-        //console.log(repos);
+        console.log(repos);
        };
       
       //alert(repos);
@@ -189,6 +190,7 @@
          url: 'https://api.github.com/users/i2000s/repos?per_page=100&callback=?',
          async: false,
          dataType: 'json',
+          headers: {'Authorization: token '+process.env.GH_TOKEN},
          success: function (result){
           
           $.merge(repos,result.data);
@@ -379,7 +381,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test user repo query only.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/64564d9bce...9365e7fb05">10:10 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 64564d9bce49ee9aa6a89aaf94c5bfd9b45bd9e3.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/84ba3b442e...0585fc8e41">09:45 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Minor polish.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/85ed2dc104...64564d9bce">09:41 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 85ed2dc1047ac6234882a92f4d719cab48984767.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/80c31d4962...84ba3b442e">07:33 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Further test.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/80d66658c4...85ed2dc104">07:29 2016/03/07</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test adding GitHub oauth token.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/9365e7fb05...d099038d1f">10:55 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 9365e7fb059ef6e5bbf2162b47ba5594a97f8b1d.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/0585fc8e41...29589a3bb7">10:16 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test user repo query only.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/64564d9bce...9365e7fb05">10:10 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 64564d9bce49ee9aa6a89aaf94c5bfd9b45bd9e3.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/84ba3b442e...0585fc8e41">09:45 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Minor polish.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/85ed2dc104...64564d9bce">09:41 2016/03/07</a></li></ul>
            </div>
        </div>
     </div>
