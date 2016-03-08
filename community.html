@@ -149,96 +149,51 @@
         $item.appendTo("#repos");
       }
       
-      tokenkey=process.env.GH_TOKEN;
-      function queryorgrepo(requrl){
-      //return $.ajax({
-      $.ajax({
-         url: requrl,
-         async: false,
-         dataType: 'json',
-         headers: 'Authorization: token '+tokenkey,
-         success: function (result) {
-         //repos = result.data;
-         $.merge(repos, result.data);
-         }
-      });
-      return repos;
-      //console.log(repos);
-      };
-      
-      var orgnames = ['CQuIC', 'JuliaCN', 'JuliaQuantum', 'ICIQ'];//;
-      var orgurls = [];
-      for (var indx = 0; indx < orgnames.length; indx++){
-        orgurls[indx] = "https://api.github.com/orgs/"+orgnames[indx]+"/repos?per_page=100&callback=?";
-      };
-      //alert(orgurls);
-      for (var indx = 0; indx < orgurls.length; indx++){
-        //repos=$.merge(repos,queryorgrepo(orgurls[indx]));
-        queryorgrepo(orgurls[indx]);
-        //repos.push(queryorgrepo(orgurls[indx]));
-        //results.push(queryorgrepo(orgurls[indx]));
-        console.log(repos);
-       };
-      
-      alert(tokenkey);
-      // invoke each function stored in the result array and proceed when they are all done
-      //$.when.apply(this, repos).done(function () {
-        //console.log(repos);
-      //});
-      //alert(repos);
-      // Add user repos.
-      $.ajax({
-         url: 'https://api.github.com/users/i2000s/repos?per_page=100&callback=?',
-         async: false,
-         dataType: 'json',
-         headers: 'Authorization: token '+tokenkey,
-         success: function (result){
-          
-          $.merge(repos,result.data);
-          $(function () {
-          $("#num-repos").text(repos.length);
-
-          // Convert pushed_at to Date.
-          $.each(repos, function (i, repo) {
-            repo.pushed_at = new Date(repo.pushed_at);
-
-            var weekHalfLife  = 1.146 * Math.pow(10, -9);
-
-            var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
-            var createdDelta = (new Date) - Date.parse(repo.created_at);
-
-            var weightForPush = 1;
-            var weightForWatchers = 1.314 * Math.pow(10, 7);
-
-            repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
-            repo.hotness += weightForWatchers * repo.watchers / createdDelta;
-          });
-
-          // Sort by highest # of watchers.
-          repos.sort(function (a, b) {
-            if (a.hotness < b.hotness) return 1;
-            if (b.hotness < a.hotness) return -1;
-            return 0;
-          });
+      $.getJSON("https://api.github.com/users/i2000s/repos?per_page=100&callback=?", function (result) {
+         var repos = result.data;
+ 
+         $(function () {
+           $("#num-repos").text(repos.length);
+ 
+           // Convert pushed_at to Date.
+           $.each(repos, function (i, repo) {
+             repo.pushed_at = new Date(repo.pushed_at);
+ 
+             var weekHalfLife  = 1.146 * Math.pow(10, -9);
+ 
+             var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
+             var createdDelta = (new Date) - Date.parse(repo.created_at);
+ 
+             var weightForPush = 1;
+             var weightForWatchers = 1.314 * Math.pow(10, 7);
+ 
+             repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
+             repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+           });
+ 
+           // Sort by highest # of watchers.
+           repos.sort(function (a, b) {
+             if (a.hotness < b.hotness) return 1;
+              if (b.hotness < a.hotness) return -1;
+              return 0;
+            });
           // Only first 12 hotest repos are shown.
-          $.each(repos.slice(0,12), function (i, repo) {
-            addRepo(repo);
-          });
-
-          // Sort by most-recently pushed to.
-          repos.sort(function (a, b) {
-            if (a.pushed_at < b.pushed_at) return 1;
-            if (b.pushed_at < a.pushed_at) return -1;
-            return 0;
-          });
-
-          $.each(repos.slice(0, 3), function (i, repo) {
-            addRecentlyUpdatedRepo(repo);
-          });
-        });
-      });
-      
-     
+ +          $.each(repos.slice(0,12), function (i, repo) {
+              addRepo(repo);
+            });
+  
+           // Sort by most-recently pushed to.
+           repos.sort(function (a, b) {
+             if (a.pushed_at < b.pushed_at) return 1;
+             if (b.pushed_at < a.pushed_at) return -1;
+             return 0;
+           });
+ 
+           $.each(repos.slice(0, 3), function (i, repo) {
+             addRecentlyUpdatedRepo(repo);
+           });
+         });
+       }); 
 
     })(jQuery);
     </script>
@@ -382,7 +337,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Print GitHub oauth token.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/e746d8d4f9...8ab0bdec50">11:25 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to e746d8d4f9b97fc1dd3de050f5ca6cce39410b5a.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/265818b832...fe695c943d">11:13 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Retry GitHub oauth token.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/d099038d1f...e746d8d4f9">11:06 2016/03/07</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to d099038d1f539a9b1a828701c8b7e566a3cfeb38.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/29589a3bb7...265818b832">11:03 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Test adding GitHub oauth token.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/9365e7fb05...d099038d1f">10:55 2016/03/07</a></li></ul>
+                <ul><li>i2000s opened issue vellerefond/project-ring#45: <em>Uncaught TypeError: Cannot read property 'open' of undefined</em> <a href="https://github.com/vellerefond/project-ring/issues/45">04:05 2016/03/08</a></li><li>i2000s commented on issue alias1/devalias.net#1: <em>Echo up, I am still experiencing this problem now. It stuck at the rebuilding index stage all the time. The only way seems to me to avoid this prob…</em> <a href="https://github.com/alias1/devalias.net/issues/1#issuecomment-193582974">03:21 2016/03/08</a></li><li>i2000s opened issue travis-ci/travis-ci#5758: <em>auth-token cannot be updated?</em> <a href="https://github.com/travis-ci/travis-ci/issues/5758">02:58 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Remove composer.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6b0b8391df...ff699e985a">02:35 2016/03/07</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Update composer.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/7959c142c7...6b0b8391df">02:23 2016/03/07</a></li></ul>
            </div>
        </div>
     </div>
@@ -391,12 +346,12 @@
         <h4><a property="account" href="https://twitter.com/i2000s" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><img src="/assets/img/icon-twitter.png" height=45px alt="Twitter"> Discussing </a></h4>
         <div class="excerpt" height="300px">
             <div class="scroll">
-                <ul><li><p>RT @quantum_graeme: I hope quantum computing just tunnels through the barrier.  Not sure I can take more hype than this. h/t @nickbronn htt…</p>
- <a href="http://twitter.com/i2000s/statuses/705260913251581954">05:17 2016/03/03</a> </li><li><p>RT @acidflask: #julialang accepted for Google Summer of Code 2016! <a href="https://t.co/zEvElZRHDg">https://t.co/zEvElZRHDg</a></p>
- <a href="http://twitter.com/i2000s/statuses/704545387252584449">05:54 2016/03/01</a> </li><li><p>I liked a @YouTube video from @i2000s <a href="https://t.co/ozebqxEzIV">https://t.co/ozebqxEzIV</a> Huawei Honor 5X drop test in an office environment</p>
- <a href="http://twitter.com/i2000s/statuses/703769635682918401">02:32 2016/02/28</a> </li><li><p>A simple free fall test on the Huawei Honor 5X phone for a user review. <a href="https://t.co/ozebqxEzIV">https://t.co/ozebqxEzIV</a></p>
- <a href="http://twitter.com/i2000s/statuses/703462412943499264">06:11 2016/02/27</a> </li><li><p>honor 5X review: B-day returns -- Using in a conference! Thanks for voting up! <a href="https://t.co/NcCZWBua4G">https://t.co/NcCZWBua4G</a> via @Honor_USA</p>
- <a href="http://twitter.com/i2000s/statuses/703413762955423745">02:58 2016/02/27</a> </li></ul>
+                <ul><li><p>Could computers do more on science? Focus: Computer Chooses Quantum Experiments <a href="https://t.co/iDz6HNv20o">https://t.co/iDz6HNv20o</a></p>
+ <a href="http://twitter.com/i2000s/statuses/707011747861897216">06:15 2016/03/07</a> </li><li><p>RT @quantum_graeme: I hope quantum computing just tunnels through the barrier.  Not sure I can take more hype than this. h/t @nickbronn htt…</p>
+ <a href="http://twitter.com/i2000s/statuses/705260913251581954">10:17 2016/03/02</a> </li><li><p>RT @acidflask: #julialang accepted for Google Summer of Code 2016! <a href="https://t.co/zEvElZRHDg">https://t.co/zEvElZRHDg</a></p>
+ <a href="http://twitter.com/i2000s/statuses/704545387252584449">10:54 2016/02/29</a> </li><li><p>I liked a @YouTube video from @i2000s <a href="https://t.co/ozebqxEzIV">https://t.co/ozebqxEzIV</a> Huawei Honor 5X drop test in an office environment</p>
+ <a href="http://twitter.com/i2000s/statuses/703769635682918401">07:32 2016/02/27</a> </li><li><p>A simple free fall test on the Huawei Honor 5X phone for a user review. <a href="https://t.co/ozebqxEzIV">https://t.co/ozebqxEzIV</a></p>
+ <a href="http://twitter.com/i2000s/statuses/703462412943499264">11:11 2016/02/26</a> </li></ul>
             </div>
         </div>  
      </div>

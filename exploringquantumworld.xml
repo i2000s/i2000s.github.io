@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-07T11:29:37+00:00</updated>
+ <updated>2016-03-07T21:22:26-07:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Teaching in the open</title>
    <link href="/2014/07/18/teaching_in_the_open.html"/>
-   <updated>2014-07-18T00:00:00+00:00</updated>
+   <updated>2014-07-18T00:00:00-06:00</updated>
    <id>h/2014/07/18/teaching_in_the_open</id>
    <content type="html">&lt;p&gt;If you examine the menu bar above, you’ll notice that my site has a new top-level page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;. This is a direct result of my attending &lt;a href=&quot;http://www.youtube.com/watch?v=1e26rp6qPbA&amp;amp;t=26m12s&quot;&gt;Greg Wilson’s inspiring keynote at Scipy 2014&lt;/a&gt;. That link will take you to the key (for me) part of the talk, but I recommend watching the whole thing. His message is: massive collaboration is the real revolution. Michael Nielsen made the same statement in &lt;em&gt;Reinventing Discovery&lt;/em&gt;; here Greg applies this statement to university education, and asks:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -30,7 +30,7 @@
  <entry>
    <title>Teaching with SageMathCloud</title>
    <link href="/2014/05/31/teaching_with_SMC.html"/>
-   <updated>2014-05-31T00:00:00+00:00</updated>
+   <updated>2014-05-31T00:00:00-06:00</updated>
    <id>h/2014/05/31/teaching_with_SMC</id>
    <content type="html">&lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level course on numerical analysis for differential equations. I’ve been teaching the course using Python for 5 years now. This year, for the first time, &lt;em&gt;I didn’t spend any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;. In fact, I even had them use Clawpack – and they didn’t need to install it. Why? Because they all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
 &lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
@@ -65,7 +65,7 @@
  <entry>
    <title>HyperPython</title>
    <link href="/2014/05/28/hyperpython.html"/>
-   <updated>2014-05-28T00:00:00+00:00</updated>
+   <updated>2014-05-28T00:00:00-06:00</updated>
    <id>h/2014/05/28/hyperpython</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ketch/HyperPython/master/figures/finite_volume.png&quot; alt=&quot;Finite volumes&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Last week, I ran a 1-day tutorial at the &lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;Workshop on Design, Simulation, Optimization and Control of Green Vehicles and Transportation&lt;/a&gt;. The idea was to teach attendees about Python programming, basic theory of hyperbolic conservation laws, finite volume methods, and how to use &lt;a href=&quot;http://clawpack.github.io/doc/pyclaw/&quot;&gt;PyClaw&lt;/a&gt;, all in the space of a few hours.&lt;/p&gt;
@@ -86,7 +86,7 @@
  <entry>
    <title>Open access is about open access, not journals</title>
    <link href="/2013/12/13/open_access_means_open_access.html"/>
-   <updated>2013-12-13T00:00:00+00:00</updated>
+   <updated>2013-12-13T00:00:00-07:00</updated>
    <id>h/2013/12/13/open_access_means_open_access</id>
    <content type="html">&lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open access&lt;/a&gt;. Among the questions:&lt;/p&gt;
 &lt;ul&gt;
@@ -110,7 +110,7 @@
  <entry>
    <title>A Tale of Two Theorems</title>
    <link href="/2013/10/14/CFL-disk.html"/>
-   <updated>2013-10-14T00:00:00+00:00</updated>
+   <updated>2013-10-14T00:00:00-06:00</updated>
    <id>h/2013/10/14/CFL-disk</id>
    <content type="html">&lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent &lt;strong&gt;partial&lt;/strong&gt; differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.&lt;/p&gt;
 &lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with bounding the modulus of a polynomial &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; over a disk of the form &lt;span class=&quot;math&quot;&gt;\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]&lt;/span&gt; Their theorem says that if &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt; in such a disk &lt;span class=&quot;math&quot;&gt;\(D_r\)&lt;/span&gt;, then the disk radius &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; is at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. The proof of this result is, of course, purely algebraic.&lt;/p&gt;
@@ -152,7 +152,7 @@
  <entry>
    <title>Documentation, testing, and default arguments for your MATLAB packages</title>
    <link href="/2013/10/12/MATLAB-docs-testing.html"/>
-   <updated>2013-10-12T00:00:00+00:00</updated>
+   <updated>2013-10-12T00:00:00-06:00</updated>
    <id>h/2013/10/12/MATLAB-docs-testing</id>
    <content type="html">&lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.&lt;/p&gt;
 &lt;p&gt;The trouble is that working in Python has spoiled me for other languages. Python has the excellent &lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; package for writing &lt;strong&gt;beautiful documentation&lt;/strong&gt;. Python has the &lt;a href=&quot;http://nose.readthedocs.org/&quot;&gt;nosetests&lt;/a&gt; harness for easily writing and running &lt;strong&gt;tests&lt;/strong&gt;. And Python has &lt;a href=&quot;http://www.diveintopython.net/power_of_introspection/optional_arguments.html&quot;&gt;a simple syntax for including &lt;strong&gt;optional function arguments&lt;/strong&gt; with default values&lt;/a&gt;.&lt;/p&gt;
@@ -178,7 +178,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Giving a math talk using IPython notebook slides and Wakari</title>
    <link href="/2013/09/21/ipython_notebook_slides_talks.html"/>
-   <updated>2013-09-21T00:00:00+00:00</updated>
+   <updated>2013-09-21T00:00:00-06:00</updated>
    <id>h/2013/09/21/ipython_notebook_slides_talks</id>
    <content type="html">&lt;h1 id=&quot;giving-a-math-talk-using-ipython-notebook-slides-and-wakari&quot;&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
 &lt;p&gt;Last week I gave my first full-length &lt;em&gt;executable talk&lt;/em&gt;: one in which I showed the code that produced (almost) all the results I presented. You can &lt;a href=&quot;http://www.davidketcheson.info/talks/SciCADE-talk.slides.html#/&quot;&gt;see the talk&lt;/a&gt; and &lt;a href=&quot;https://www.wakari.io/sharing/bundle/ketch/SciCADE-talk&quot;&gt;run the talk on Wakari&lt;/a&gt; (or download it and run it locally). All you need is Python with its scientific packages (numpy, scipy, sympy – I recommend just installing &lt;a href=&quot;http://www.continuum.io/downloads&quot;&gt;Anaconda Python&lt;/a&gt; if you haven’t already). I took things a step further and actually ran a bunch of demo code live on Wakari. I was excited beforehand, and judging by the number of people that came into the room right immediately before my talk (and left immediately afterward), so was the audience. But I was disappointed with how it went. Here’s why.&lt;/p&gt;
@@ -197,7 +197,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Don't scrap the DOE CSGF program</title>
    <link href="/2013/06/23/csgf-letter-to-congress.html"/>
-   <updated>2013-06-23T00:00:00+00:00</updated>
+   <updated>2013-06-23T00:00:00-06:00</updated>
    <id>h/2013/06/23/csgf-letter-to-congress</id>
    <content type="html">&lt;p&gt;The US federal government &lt;a href=&quot;http://energy.gov/sites/prod/files/2013/04/f0/Volume4.pdf&quot;&gt;has proposed to eliminate a number of smaller graduate fellowship programs&lt;/a&gt; and lump them together with the &lt;a href=&quot;http://www.nsfgrfp.org/&quot;&gt;NSF graduate fellowship&lt;/a&gt;. Unfortunately, this includes the Dept. of Energy’s illustrious &lt;a href=&quot;http://www.krellinst.org/csgf/&quot;&gt;Computational Science Graduate Fellowship (CSGF) program&lt;/a&gt;, of which I’m an alumnus. I think the CSGF program is an irreplaceable asset that is nurturing the &lt;em&gt;third pillar&lt;/em&gt; of science across disciplines in a way that a much larger program never could.&lt;/p&gt;
 &lt;p&gt;Here are just a few of the definite, tangible impacts the CSGF program had on me, off the top of my head:&lt;/p&gt;
@@ -231,7 +231,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Convert SAGE worksheets to IPython notebooks</title>
    <link href="/2013/01/16/sage_to_ipython.html"/>
-   <updated>2013-01-16T00:00:00+00:00</updated>
+   <updated>2013-01-16T00:00:00-07:00</updated>
    <id>h/2013/01/16/sage_to_ipython</id>
    <content type="html">&lt;h1 id=&quot;converting-a-sage-worksheet-to-an-ipython-notebook&quot;&gt;Converting a SAGE worksheet to an IPython notebook&lt;/h1&gt;
 &lt;p&gt;Download link: &lt;a href=&quot;&quot;&gt;http://github.com/ketch/sage2ipython/&lt;/a&gt;&lt;/p&gt;
@@ -261,7 +261,7 @@ sage2ipython.sage2ipy(&lt;span class=&quot;st&quot;&gt;&amp;#39;/path/to/sage/wo
  <entry>
    <title>Open scientific collaboration</title>
    <link href="/2012/12/22/habits-of-open-scientist-4-collab.html"/>
-   <updated>2012-12-22T00:00:00+00:00</updated>
+   <updated>2012-12-22T00:00:00-07:00</updated>
    <id>h/2012/12/22/habits-of-open-scientist-4-collab</id>
    <content type="html">&lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open scientist&lt;/a&gt;. Here I discuss the fourth habit, &lt;strong&gt;open collaboration&lt;/strong&gt;. The previous post was on &lt;a href=&quot;http://davidketcheson.info/2012/08/22/habits-of-open-scientist-3-pre.html&quot;&gt;Pre-publication dissemination of research&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As mentioned in the introduction to this series, the first three habits are truly essential for any conscientious scientist. With the fourth habit, we’re moving into things that are valuable but less essential – &lt;em&gt;advanced open science&lt;/em&gt;, if you will.&lt;/p&gt;
@@ -284,7 +284,7 @@ sage2ipython.sage2ipy(&lt;span class=&quot;st&quot;&gt;&amp;#39;/path/to/sage/wo
  <entry>
    <title>Adopting the Reproducible Research Standard</title>
    <link href="/2012/12/06/reproducible-research-standard.html"/>
-   <updated>2012-12-06T00:00:00+00:00</updated>
+   <updated>2012-12-06T00:00:00-07:00</updated>
    <id>h/2012/12/06/reproducible-research-standard</id>
    <content type="html">&lt;p&gt;Back in July, I read Victoria Stodden’s work on licensing reproducible research. Victoria has proposed the Reproducible Research Standard (RRS), which is an amalgamation of recommended licenses for what she calls the &lt;em&gt;research compendium&lt;/em&gt;. The research compendium is the full set of outputs of a research project, including:&lt;/p&gt;
 &lt;ul&gt;
@@ -315,7 +315,7 @@ sage2ipython.sage2ipy(&lt;span class=&quot;st&quot;&gt;&amp;#39;/path/to/sage/wo
  <entry>
    <title>You might be a low-quality scientific journal if...</title>
    <link href="/2012/10/16/low_quality_journal.html"/>
-   <updated>2012-10-16T00:00:00+00:00</updated>
+   <updated>2012-10-16T00:00:00-06:00</updated>
    <id>h/2012/10/16/low_quality_journal</id>
    <content type="html">&lt;p&gt;In the spirit of Xiaodong Letterman’s top 10 lists, here are my top 10 signs you might be a low quality scientific journal, inspired by an e-mail I received today from &lt;a href=&quot;http://www.ampublisher.com/Canadian-Journal-Computing.html&quot;&gt;Computing in Mathematics, Natural Sciences, Engineering and Medicine&lt;/a&gt;.&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
@@ -338,7 +338,7 @@ sage2ipython.sage2ipy(&lt;span class=&quot;st&quot;&gt;&amp;#39;/path/to/sage/wo
  <entry>
    <title>Blogging an iPython notebook with Jekyll</title>
    <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
-   <updated>2012-10-11T00:00:00+00:00</updated>
+   <updated>2012-10-11T00:00:00-06:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;

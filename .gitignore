@@ -7,3 +7,4 @@ _TEMP
 _twitter.yml
 _garb.yml
 Gemfile.lock
+*.stackdump
