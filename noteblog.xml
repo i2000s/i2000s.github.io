@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-07T22:15:20-07:00</updated>
+ <updated>2016-03-08T05:58:59+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Dispersion relations for linear systems of PDEs</title>
    <link href="/2014/05/28/dispersion_relations.html"/>
-   <updated>2014-05-28T00:00:00-06:00</updated>
+   <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/dispersion_relations</id>
    <content type="html">&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.&lt;/p&gt;
 &lt;h2 id=&quot;scalar-equations&quot;&gt;Scalar equations&lt;/h2&gt;
@@ -116,7 +116,7 @@ A_2 &amp;amp; = \begin{pmatrix}
  <entry>
    <title>The Schrodinger equation is not a reaction-diffusion equation</title>
    <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
-   <updated>2014-02-22T00:00:00-07:00</updated>
+   <updated>2014-02-22T00:00:00+00:00</updated>
    <id>h/2014/02/22/schrodinger-is-not-diffusion</id>
    <content type="html">&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
 &lt;p&gt;Consider the wave equation&lt;/p&gt;
@@ -138,7 +138,7 @@ u_t &amp;amp; = v.
  <entry>
    <title>The parallel EPPEER code</title>
    <link href="/2012/10/17/eppeer.html"/>
-   <updated>2012-10-17T00:00:00-06:00</updated>
+   <updated>2012-10-17T00:00:00+00:00</updated>
    <id>h/2012/10/17/eppeer</id>
    <content type="html">&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.&lt;/p&gt;
 &lt;p&gt;I downloaded the code from&lt;/p&gt;
@@ -186,7 +186,7 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
  <entry>
    <title>Blogging an iPython notebook with Jekyll</title>
    <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;
@@ -231,7 +231,7 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Internal stability of Runge-Kutta methods</title>
    <link href="/2012/10/11/Internal_stability.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/Internal_stability</id>
    <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook. You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the notebook from github&lt;/a&gt; and execute all the code yourself.&lt;/p&gt;
 &lt;p&gt;Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in &lt;a href=&quot;http://oai.cwi.nl/oai/asset/1652/1652A.pdf&quot;&gt;this paper&lt;/a&gt;. Here we demonstrate some tools for studying internal stability in NodePy.&lt;/p&gt;
@@ -606,7 +606,7 @@ ______|________________________
  <entry>
    <title>A curious upwind implicit scheme for advection</title>
    <link href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
    <content type="html">&lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
 &lt;p&gt;The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
