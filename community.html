@@ -169,10 +169,22 @@
        });
       };
       
-      var orgnames = ['CQuIC', 
-                      'JuliaCN', 
-                      'JuliaQuantum', 
-                      'ICIQ'];
+        // Call organization names from the YAML.
+      var orgnames = [];
+      var indx=0;
+        
+          orgnames[indx]= CQuIC;
+          indx ++ ;
+        
+          orgnames[indx]= JuliaQuantum;
+          indx ++ ;
+        
+          orgnames[indx]= ICIQ;
+          indx ++ ;
+        
+          orgnames[indx]= JuliaCN;
+          indx ++ ;
+        ;
       //Define url list as a combination of user's url and the orgs' urls.
       var orgurls = ['https://api.github.com/users/i2000s/repos?per_page=100&callback=?'];
       for (var indx = 0; indx < orgnames.length; indx++){
@@ -383,7 +395,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Clean up a little bit.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6f8e2f97b2...2be381a7cc">08:18 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>Good observation! The "YourOrg/chat" channel slogan shines my eyes. We could use that, and make a button on the top-right corner?</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194724895">08:13 2016/03/10</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 6f8e2f97b244290667b9870b6f1aebf70ae1905a.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/18a62fab1d...2f1e8f2381">08:04 2016/03/10</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Try to add the query for organizational repos again.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/8645051b34...6f8e2f97b2">07:59 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>@amitjamadagni I don't know who created the JuliaQuantum room, can you help inform our discussion to the creator to see if it is acceptable to chan…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194717151">07:36 2016/03/10</a></li></ul>
+                <ul><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>Yeah, we need a new public channel room may be called JuliaQuantum/Chat from the link you gave to me. Should this work? For example you may wish to…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194739980">08:52 2016/03/10</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Query org names from YAML file.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/2be381a7cc...3326ce0f3e">08:46 2016/03/10</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 2be381a7cc4b725a2b76d6b615d088004a98203b.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/2f1e8f2381...bd343b939a">08:23 2016/03/10</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Clean up a little bit.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6f8e2f97b2...2be381a7cc">08:18 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>Good observation! The "YourOrg/chat" channel slogan shines my eyes. We could use that, and make a button on the top-right corner?</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194724895">08:13 2016/03/10</a></li></ul>
            </div>
        </div>
     </div>
