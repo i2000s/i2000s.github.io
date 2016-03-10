@@ -166,8 +166,7 @@
          //We only need results.data in the end. Is this blank function correct?
          // return result.data;
          }
-      });
-      //console.log(promises);
+       });
       };
       
       var orgnames = ['CQuIC', 
@@ -179,12 +178,10 @@
       for (var indx = 0; indx < orgnames.length; indx++){
         orgurls[indx + 1] = "https://api.github.com/orgs/"+orgnames[indx]+"/repos?per_page=100&callback=?";
       };
-      //alert(orgurls);
       for (var indx = 0; indx < orgurls.length; indx++){
         //add promises in each loop of query.
         promises.push(queryorgrepo(orgurls[indx]));
        }
-      //alert(promises);
       // Invoke each function stored in the result array and proceed when they are all done
       $.when.apply(this, promises).done(function () {
       // Fetch the result from each arguments.
@@ -194,7 +191,7 @@
         for (var i = 0; i < arguments.length; i++) {
         // retrieve the entries from the argument parameter
           values = arguments[i][0].data;
-          console.log(values);
+          //console.log(values);
          // Push the retrieved value to a global function variable, which we can.
          // this function is processed synchronously, when all ajax calls have been completed
          tempdata.push(values);
@@ -204,12 +201,9 @@
       for (var i = 0; i < tempdata.length; i++) {
         $.merge(repos, tempdata[i]);
       };
-      
-      //  console.log(repos);
       // sort the repos and define html elememts.
       $(function () {
           $("#num-repos").text(repos.length);
-
           // Convert pushed_at to Date.
           $.each(repos, function (i, repo) {
             repo.pushed_at = new Date(repo.pushed_at);
@@ -248,7 +242,6 @@
             addRecentlyUpdatedRepo(repo);
           });
         });//function
-        //alert(repos);
       }); //when.apply.done
 
     })(jQuery);
@@ -390,7 +383,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Try to add the query for organizational repos again.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/8645051b34...6f8e2f97b2">07:59 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>@amitjamadagni I don't know who created the JuliaQuantum room, can you help inform our discussion to the creator to see if it is acceptable to chan…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194717151">07:36 2016/03/10</a></li><li>i2000s closed issue CQuIC/qcircuit#21: <em>Changing the organization's name to CQuIC</em> <a href="https://github.com/CQuIC/qcircuit/issues/21">03:29 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>@amitjamadagni The JuliaQuantum room was set as a "shared room with JuliaQuantum members" only. To invite people outside of the org to that room wi…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194406171">05:15 2016/03/09</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>Sorry for the late response. I like the idea, and actually prefer to use Gitter. @amitjamadagni and a few others and I have been using it for Julia…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194095600">03:20 2016/03/09</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Clean up a little bit.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6f8e2f97b2...2be381a7cc">08:18 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>Good observation! The "YourOrg/chat" channel slogan shines my eyes. We could use that, and make a button on the top-right corner?</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194724895">08:13 2016/03/10</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to 6f8e2f97b244290667b9870b6f1aebf70ae1905a.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/18a62fab1d...2f1e8f2381">08:04 2016/03/10</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Try to add the query for organizational repos again.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/8645051b34...6f8e2f97b2">07:59 2016/03/10</a></li><li>i2000s commented on issue JuliaQuantum/JuliaQuantum.github.io#22: <em>@amitjamadagni I don't know who created the JuliaQuantum room, can you help inform our discussion to the creator to see if it is acceptable to chan…</em> <a href="https://github.com/JuliaQuantum/JuliaQuantum.github.io/issues/22#issuecomment-194717151">07:36 2016/03/10</a></li></ul>
            </div>
        </div>
     </div>
