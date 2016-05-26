@@ -207,7 +207,8 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>In their <a href="http://dx.doi.org/10.1147/rd.112.0215">celebrated 1928 paper</a>, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent <strong>partial</strong> differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.</p>
+          <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2013/10/14/CFL-disk.html">David Ketcheson</a>.</p>
+<p>In their <a href="http://dx.doi.org/10.1147/rd.112.0215">celebrated 1928 paper</a>, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent <strong>partial</strong> differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.</p>
 <p>Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna <a href="http://dx.doi.org/10.1007/BF01932030">published a theorem</a> [JN] that deals with bounding the modulus of a polynomial <span class="math">\(\psi(z)\)</span> over a disk of the form <span class="math">\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]</span> Their theorem says that if <span class="math">\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)</span> and <span class="math">\(|\psi(z)|\le 1\)</span> for all <span class="math">\(z\)</span> in such a disk <span class="math">\(D_r\)</span>, then the disk radius <span class="math">\(r\)</span> is at most <span class="math">\(s\)</span>. The proof of this result is, of course, purely algebraic.</p>
 <p>These results apparently have nothing to do with one another. And yet it turns out that <strong>they are equivalent statements!</strong> That is, the CFL theorem can be proved using the JN disk theorem. And the JN disk theorem can be proved using the CFL condition (and no algebraic techniques). This was explained in <a href="http://dx.doi.org/10.1007/BF01389633">a beautiful paper of Sanz-Serna and Spijker</a> [SS] in 1986, and the result deserves to be much more well known.</p>
 <h3 id="first-order-upwinding">First order upwinding</h3>
@@ -322,7 +323,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2013-10-14-CFL-disk.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2013-10-14-CFL-disk.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />

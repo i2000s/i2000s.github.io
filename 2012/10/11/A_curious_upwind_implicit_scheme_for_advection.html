@@ -207,7 +207,8 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <h2 id="the-cfl-condition">The CFL condition</h2>
+          <p>Note: This post was originally published on the KAUST Mathwiki <a href="https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection">here</a> (login required) by <a href="http://www.davidketcheson.info/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html">David Ketcheson</a>.</p>
+<h2 id="the-cfl-condition">The CFL condition</h2>
 <p>The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.</p>
 <p>The CFL condition is geometric and easily understood in the context of, say, a first-order upwind discretization of advection. Usually it says nothing interesting about implicit schemes, since they include all points in their domain of dependence. But sometimes understanding the CFL condition for a particular scheme can be subtle.</p>
 <h3 id="an-implicit-scheme">An implicit scheme</h3>
@@ -227,7 +228,6 @@ $(document).ready(function() {
 <li><p><span class="math">\(\nu&gt;0\)</span>: in this case, boundary values must be supplied along the left boundary at <span class="math">\(x=0\)</span>. Then, starting from the known value at the boundary, we work to the right by substitution: <span class="math">\[U^{n+1}_j = \frac{U^n_j+\nu U^{n+1}_{j-1}}{1+\nu}.\]</span> Hence the scheme is truly a way of computing <span class="math">\(U^{n+1}_j\)</span> based on <span class="math">\(U^n_j, U^{n+1}_{j-1}\)</span> and the resulting CFL condition is <span class="math">\(\nu\ge0\)</span>.</p></li>
 <li><p><span class="math">\(\nu&lt;0\)</span>: in this case, boundary values must be supplied along the right boundary at <span class="math">\(x=1\)</span>. Then, starting from the known value at the boundary, we work to the left by substitution: <span class="math">\[U^{n+1}_{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.\]</span> Hence the scheme is truly a way of computing <span class="math">\(U^{n+1}_{j-1}\)</span> based on <span class="math">\(U^n_j, U^{n+1}_{j}\)</span> and the resulting CFL condition is <span class="math">\(\nu\le-1\)</span>.</p></li>
 </ol>
-<p>This post was originally published on the KAUST Mathwiki <a href="https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection">here</a> (login required).</p>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -246,7 +246,7 @@ $(document).ready(function() {
 
  <br />
           
-            <p><a class="btn btn-default" href='/2012/08/28/released.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2012/08/22/habits-of-open-scientist-3-pre.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
             <a class="btn btn-default" href='/2012/10/11/Internal_stability.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
@@ -289,7 +289,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -311,7 +311,7 @@ $(document).ready(function() {
     
       <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
     
-      <li><span>31 May 2011</span> &raquo; <a href="/2011/05/31/positivity-pipe-dream-fulfilled.html">The positivity pipe dream fulfilled?</a></li>
+      <li><span>28 May 2014</span> &raquo; <a href="/2014/05/28/dispersion_relations.html">Dispersion relations for linear systems of PDEs</a></li>
     
   </ul>
 </div>

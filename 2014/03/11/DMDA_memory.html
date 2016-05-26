@@ -207,7 +207,8 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>In <a href="http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html">this PETSc-users thread</a>, my good friend Matt Knepley claims that the DMDA object is lightweight, and suggests that it is okay to make them willy- nilly. Unfortunately, my experience indicates otherwise. But words are cheap; let’s investigate.</p>
+          <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2014/03/11/DMDA_memory.html">David Ketcheson</a>.</p>
+<p>In <a href="http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html">this PETSc-users thread</a>, my good friend Matt Knepley claims that the DMDA object is lightweight, and suggests that it is okay to make them willy- nilly. Unfortunately, my experience indicates otherwise. But words are cheap; let’s investigate.</p>
 <pre><code>%load_ext memory_profiler</code></pre>
 <h3 id="memory-profiling-with-memory_profiler">Memory profiling with <code>memory_profiler</code></h3>
 <p>I’ve written a little script that just creates a DA and 3 vecs. In order to make use of <code>memory_profiler</code>, I’ll call it with system commands. But I’ve pasted the contents here for completeness. If you’re running the notebook, you don’t need to run the next cell.</p>
@@ -357,7 +358,7 @@ Line #    Mem usage    Increment   Line Contents
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2014-03-11-DMDA_memory.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2014-03-11-DMDA_memory.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />

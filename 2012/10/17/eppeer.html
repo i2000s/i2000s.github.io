@@ -207,13 +207,14 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.</p>
+          <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2012/10/17/eppeer.html">David Ketcheson</a>.</p>
+<p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.</p>
 <p>I downloaded the code from</p>
 <p><a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip" title="Go to wiki page">http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip</a></p>
 <p>unzipped, and ran</p>
-<pre><code>gfortran -c mbod4h.f90 
-gfortran -c ivprkp.f90 
-gfortran -c -fopenmp ivpepp.f90 
+<pre><code>gfortran -c mbod4h.f90
+gfortran -c ivprkp.f90
+gfortran -c -fopenmp ivpepp.f90
 gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
 ./a.out</code></pre>
 <p>I had to fix one line that was trying to open a logfile and failed. I also set</p>
@@ -265,7 +266,7 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
 
  <br />
           
-            <p><a class="btn btn-default" href='/2012/10/16/low_quality_journal.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2012/10/11/blogging_ipython_notebooks_with_jekyll.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
             <a class="btn btn-default" href='/2012/12/06/reproducible-research-standard.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
@@ -292,7 +293,7 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2012-10-17-eppeer.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2012-10-17-eppeer.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />

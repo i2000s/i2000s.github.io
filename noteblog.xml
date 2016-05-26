@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-05-26T07:15:33+00:00</updated>
+ <updated>2016-05-26T08:56:47+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -17,7 +17,8 @@
    <link href="/2014/05/28/dispersion_relations.html"/>
    <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/dispersion_relations</id>
-   <content type="html">&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/28/dispersion_relations.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.&lt;/p&gt;
 &lt;h2 id=&quot;scalar-equations&quot;&gt;Scalar equations&lt;/h2&gt;
 &lt;p&gt;Students in any undergraduate PDE course learn that solutions of the heat equation&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
@@ -96,7 +97,7 @@ A_2 &amp;amp; = \begin{pmatrix}
 &lt;p&gt;Strictly speaking, Fourier analysis like what we’ve described can’t usually be applied to \eqref{gensys} because the matrices &lt;span class=&quot;math&quot;&gt;\(A_j\)&lt;/span&gt; will not generally be simultaneously diagonalizable (though this analysis can still give us intuition for what each set of terms may do). Worse yet, the individual matrices may not be diagonalizable. Let’s illustrate with a simple case.&lt;/p&gt;
 &lt;p&gt;Returning to the wave equation, let’s consider a different way of writing it as a system: &lt;span class=&quot;math&quot;&gt;\[
 \begin{align*}
-u_t &amp;amp; = v \\ 
+u_t &amp;amp; = v \\
 v_t &amp;amp; = u_{xx}.
 \end{align*}
 \]&lt;/span&gt; It’s easy to check that this system is equivalent to the wave equation – but notice that it’s composed of parts with only even derivatives! (&lt;em&gt;reaction&lt;/em&gt; and &lt;em&gt;diffusion&lt;/em&gt; equations in the terminology of scalar PDEs). This system is of the form \eqref{gensys} with &lt;span class=&quot;math&quot;&gt;\[
@@ -118,7 +119,8 @@ A_2 &amp;amp; = \begin{pmatrix}
    <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
    <updated>2014-02-22T00:00:00+00:00</updated>
    <id>h/2014/02/22/schrodinger-is-not-diffusion</id>
-   <content type="html">&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/02/22/schrodinger-is-not-diffusion.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
 &lt;p&gt;Consider the wave equation&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[u_{tt} = u_{xx}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Introducing a new variable &lt;span class=&quot;math&quot;&gt;\(v=u_t\)&lt;/span&gt; we can rewrite the wave equation as&lt;/p&gt;
@@ -140,13 +142,14 @@ u_t &amp;amp; = v.
    <link href="/2012/10/17/eppeer.html"/>
    <updated>2012-10-17T00:00:00+00:00</updated>
    <id>h/2012/10/17/eppeer</id>
-   <content type="html">&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/17/eppeer.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.&lt;/p&gt;
 &lt;p&gt;I downloaded the code from&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip&quot; title=&quot;Go to wiki page&quot;&gt;http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;unzipped, and ran&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gfortran -c mbod4h.f90 
-gfortran -c ivprkp.f90 
-gfortran -c -fopenmp ivpepp.f90 
+&lt;pre&gt;&lt;code&gt;gfortran -c mbod4h.f90
+gfortran -c ivprkp.f90
+gfortran -c -fopenmp ivpepp.f90
 gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
 ./a.out&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I had to fix one line that was trying to open a logfile and failed. I also set&lt;/p&gt;
@@ -188,7 +191,8 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
    <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
-   <content type="html">&lt;blockquote&gt;
+   <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/blogging_ipython_notebooks_with_jekyll.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I’ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt; for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; worksheets for my numerical analysis course next spring. As a warmup, I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
@@ -233,7 +237,7 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
    <link href="/2012/10/11/Internal_stability.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/Internal_stability</id>
-   <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook. You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the notebook from github&lt;/a&gt; and execute all the code yourself.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook. You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the notebook from github&lt;/a&gt; and execute all the code yourself. This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in &lt;a href=&quot;http://oai.cwi.nl/oai/asset/1652/1652A.pdf&quot;&gt;this paper&lt;/a&gt;. Here we demonstrate some tools for studying internal stability in NodePy.&lt;/p&gt;
 &lt;p&gt;First, let’s load a couple of RK methods:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;
@@ -366,7 +370,7 @@ _____|____________________________________________________________
 0.08333 x + 0.1667 x + 0.3333 x
         2
 0.1667 x + 0.3333 x
- 
+
 0.1667 x&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thus the roundoff errors in the first stage are amplified by a factor &lt;span class=&quot;math&quot;&gt;\(z^4/24 + z^3/12 + z^2/6 + z/6\)&lt;/span&gt;, while the errors in the last stage are amplified by a factor &lt;span class=&quot;math&quot;&gt;\(z/6\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;internal-instability&quot;&gt;Internal instability&lt;/h2&gt;
@@ -608,7 +612,8 @@ ______|________________________
    <link href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
-   <content type="html">&lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
+   <content type="html">&lt;p&gt;Note: This post was originally published on the KAUST Mathwiki &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection&quot;&gt;here&lt;/a&gt; (login required) by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
 &lt;p&gt;The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
 &lt;p&gt;The CFL condition is geometric and easily understood in the context of, say, a first-order upwind discretization of advection. Usually it says nothing interesting about implicit schemes, since they include all points in their domain of dependence. But sometimes understanding the CFL condition for a particular scheme can be subtle.&lt;/p&gt;
 &lt;h3 id=&quot;an-implicit-scheme&quot;&gt;An implicit scheme&lt;/h3&gt;
@@ -628,7 +633,6 @@ ______|________________________
 &lt;li&gt;&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\nu&amp;gt;0\)&lt;/span&gt;: in this case, boundary values must be supplied along the left boundary at &lt;span class=&quot;math&quot;&gt;\(x=0\)&lt;/span&gt;. Then, starting from the known value at the boundary, we work to the right by substitution: &lt;span class=&quot;math&quot;&gt;\[U^{n+1}_j = \frac{U^n_j+\nu U^{n+1}_{j-1}}{1+\nu}.\]&lt;/span&gt; Hence the scheme is truly a way of computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_j\)&lt;/span&gt; based on &lt;span class=&quot;math&quot;&gt;\(U^n_j, U^{n+1}_{j-1}\)&lt;/span&gt; and the resulting CFL condition is &lt;span class=&quot;math&quot;&gt;\(\nu\ge0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\nu&amp;lt;0\)&lt;/span&gt;: in this case, boundary values must be supplied along the right boundary at &lt;span class=&quot;math&quot;&gt;\(x=1\)&lt;/span&gt;. Then, starting from the known value at the boundary, we work to the left by substitution: &lt;span class=&quot;math&quot;&gt;\[U^{n+1}_{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.\]&lt;/span&gt; Hence the scheme is truly a way of computing &lt;span class=&quot;math&quot;&gt;\(U^{n+1}_{j-1}\)&lt;/span&gt; based on &lt;span class=&quot;math&quot;&gt;\(U^n_j, U^{n+1}_{j}\)&lt;/span&gt; and the resulting CFL condition is &lt;span class=&quot;math&quot;&gt;\(\nu\le-1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;This post was originally published on the KAUST Mathwiki &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection&quot;&gt;here&lt;/a&gt; (login required).&lt;/p&gt;
 </content>
  </entry>
  

@@ -207,7 +207,7 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>Note: this post was generated from an iPython notebook. You can <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">download the notebook from github</a> and execute all the code yourself.</p>
+          <p>Note: this post was generated from an iPython notebook. You can <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">download the notebook from github</a> and execute all the code yourself. This post was originally written by <a href="http://www.davidketcheson.info/2012/10/11/Internal_stability.html">David Ketcheson</a>.</p>
 <p>Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in <a href="http://oai.cwi.nl/oai/asset/1652/1652A.pdf">this paper</a>. Here we demonstrate some tools for studying internal stability in NodePy.</p>
 <p>First, let’s load a couple of RK methods:</p>
 <div class="highlight">
@@ -340,7 +340,7 @@ _____|____________________________________________________________
 0.08333 x + 0.1667 x + 0.3333 x
         2
 0.1667 x + 0.3333 x
- 
+
 0.1667 x</code></pre>
 <p>Thus the roundoff errors in the first stage are amplified by a factor <span class="math">\(z^4/24 + z^3/12 + z^2/6 + z/6\)</span>, while the errors in the last stage are amplified by a factor <span class="math">\(z/6\)</span>.</p>
 <h2 id="internal-instability">Internal instability</h2>
@@ -639,7 +639,7 @@ ______|________________________
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2012-10-11-Internal_stability.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2012-10-11-Internal_stability.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -659,9 +659,9 @@ ______|________________________
     
       <li><span>14 Oct 2013</span> &raquo; <a href="/2013/10/14/CFL-disk.html">A Tale of Two Theorems</a></li>
     
-      <li><span>31 May 2011</span> &raquo; <a href="/2011/05/31/positivity-pipe-dream-fulfilled.html">The positivity pipe dream fulfilled?</a></li>
-    
       <li><span>10 May 2015</span> &raquo; <a href="/2015/05/10/rock_solid_code.html">12 steps toward rock-solid scientific Python code</a></li>
+    
+      <li><span>28 May 2014</span> &raquo; <a href="/2014/05/28/dispersion_relations.html">Dispersion relations for linear systems of PDEs</a></li>
     
   </ul>
 </div>

@@ -207,7 +207,8 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.</p>
+          <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2014/05/28/dispersion_relations.html">David Ketcheson</a>.</p>
+<p>Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.</p>
 <h2 id="scalar-equations">Scalar equations</h2>
 <p>Students in any undergraduate PDE course learn that solutions of the heat equation</p>
 <p><span class="math">\[
@@ -286,7 +287,7 @@ A_2 &amp; = \begin{pmatrix}
 <p>Strictly speaking, Fourier analysis like what we’ve described can’t usually be applied to \eqref{gensys} because the matrices <span class="math">\(A_j\)</span> will not generally be simultaneously diagonalizable (though this analysis can still give us intuition for what each set of terms may do). Worse yet, the individual matrices may not be diagonalizable. Let’s illustrate with a simple case.</p>
 <p>Returning to the wave equation, let’s consider a different way of writing it as a system: <span class="math">\[
 \begin{align*}
-u_t &amp; = v \\ 
+u_t &amp; = v \\
 v_t &amp; = u_{xx}.
 \end{align*}
 \]</span> It’s easy to check that this system is equivalent to the wave equation – but notice that it’s composed of parts with only even derivatives! (<em>reaction</em> and <em>diffusion</em> equations in the terminology of scalar PDEs). This system is of the form \eqref{gensys} with <span class="math">\[
@@ -357,7 +358,7 @@ A_2 &amp; = \begin{pmatrix}
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2014-05-28-dispersion_relations.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2014-05-28-dispersion_relations.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />

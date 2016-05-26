@@ -207,7 +207,9 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
+          Note: This post was originally written by <a href="http://www.davidketcheson.info/2011/06/27/how-to-edit-all-files-containing.html" target="_blank">David Ketcheson</a>.
+
+It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -226,10 +228,10 @@ $(document).ready(function() {
 
  <br />
           
-            <p><a class="btn btn-default" href='/2011/06/23/kaust-beacon-is-fully-lit.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            <a class="btn btn-default" href='/2011/10/27/searching-scientific-literature.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+            <a class="btn btn-default" href='/2011/10/28/managing-publication-lists-in-html.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -257,7 +259,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2011-06-27-how-to-edit-all-files-containing.html"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -279,7 +281,7 @@ $(document).ready(function() {
     
       <li><span>11 May 2015</span> &raquo; <a href="/2015/05/11/use_version_control.html">Step 1 - Use version control</a></li>
     
-      <li><span>29 May 2015</span> &raquo; <a href="/2015/05/29/automate_tests.html">Step 7 - Automate the tests</a></li>
+      <li><span>03 Aug 2012</span> &raquo; <a href="/2012/08/03/habits-of-open-scientist-2.html">7 Habits of the Open Scientist: #2 -- Reproducible Research</a></li>
     
   </ul>
 </div>

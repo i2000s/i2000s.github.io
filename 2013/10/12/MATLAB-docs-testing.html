@@ -207,7 +207,8 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          <p>I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.</p>
+          <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2013/10/12/MATLAB-docs-testing.html">David Ketcheson</a>.</p>
+<p>I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.</p>
 <p>The trouble is that working in Python has spoiled me for other languages. Python has the excellent <a href="http://sphinx-doc.org/">Sphinx</a> package for writing <strong>beautiful documentation</strong>. Python has the <a href="http://nose.readthedocs.org/">nosetests</a> harness for easily writing and running <strong>tests</strong>. And Python has <a href="http://www.diveintopython.net/power_of_introspection/optional_arguments.html">a simple syntax for including <strong>optional function arguments</strong> with default values</a>.</p>
 <p>MATLAB doesn’t support any of these things so elegantly*.</p>
 <p>*<em>This was true one year ago, when I started writing this. But it seems things have improved – see below</em>.</p>
@@ -294,7 +295,7 @@ if nargin&lt;4 eps=1.e-10; end</code></pre>
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/f34fd070938a121a852632973734df5dc01afb55/_posts/2013-10-12-MATLAB-docs-testing.md"> f34fd070938a121a852632973734df5dc01afb55</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de/_posts/2013-10-12-MATLAB-docs-testing.md"> 1d7a8e4b61ee6ff9e93e04a80f7cedc1d4f655de</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -312,9 +313,9 @@ if nargin&lt;4 eps=1.e-10; end</code></pre>
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>13 Jan 2015</span> &raquo; <a href="/2015/01/13/using_matplotlib_image_comparison.html">Testing whether your code produces the correct plots -- in Python and on Travis</a></li>
-    
       <li><span>29 May 2015</span> &raquo; <a href="/2015/05/29/automate_tests.html">Step 7 - Automate the tests</a></li>
+    
+      <li><span>13 Jan 2015</span> &raquo; <a href="/2015/01/13/using_matplotlib_image_comparison.html">Testing whether your code produces the correct plots -- in Python and on Travis</a></li>
     
       <li><span>10 May 2015</span> &raquo; <a href="/2015/05/10/rock_solid_code.html">12 steps toward rock-solid scientific Python code</a></li>
     
