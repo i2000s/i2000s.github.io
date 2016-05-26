@@ -13,7 +13,7 @@
       <![endif]-->
     <meta name="subtitle" content="">
     <meta name="author" content="Xiaodong Qi | 戚晓东">
-    
+
     <!-- HTML5 metadata -->
 
   <meta name="keywords" content="Xiaodong Qi, 戚晓东, quantum optics, quantum information, quantum computing, quantum computation, 量子光学, 量子信息, 量子计算, 原子物理, atomic physics, blog, notebook, labnotebook, nanophotonics, 纳米光学" />
@@ -87,10 +87,10 @@
 
 </script>
 
-      
+
     <!-- Help the browser identify the RSS feed automatically -->
     <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
-    
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
@@ -158,15 +158,16 @@
       <!-- Search site using Google's index -->
         <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
           <div class="form-group">
-            <input type="hidden" name="q" value="site:i2000s.github.io" />
+            <input type="hidden" name="q" value="site:http://i2000s.github.io" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search this site"/>
           </div>
-          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button> 
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
        </form>
 
     </div><!--/.nav-collapse -->
   </div> <!-- /container -->
 </nav>
+
 
   <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
 
@@ -203,13 +204,22 @@
 sudo apt-get update
 sudo apt-get install pandoc
 sudo apt-get install gsl-bin libgsl0-dev</code></pre>
-<p>On Windows OS, <code>gsl</code> should be preinstalled in order to gem install rb-gsl. Otherwise, the <code>.travis.yml</code> configuration file should have some basic settings to follow.</p>
-<p>The <code>Gemfile</code> and the configuration file <code>_conf.yml</code> should include sufficient information on installing correct dependences. Then for a routinely rendering, you only need to run the following command lines:</p>
+<p>On Windows OS, you may be able to follow <a href="https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/">this instruction</a> to install Jekyll. If you find some error related to Ruby Development Kit when you run <code>bundle exec jekyll serve</code> or <code>gem install ***</code>, you may find <a href="http://flatshaded.com/2013/05/installing-jekyll-on-windows/">this experience</a> helpful. <code>gsl</code> should be preinstalled in order to gem install <code>rb-gsl</code>, where the step in the <code>.travis.yml</code> configuration file about installing <code>gsl-bin</code> step does not apply to Windows systems.</p>
+<p>The <code>Gemfile</code> and the configuration files <code>_conf.yml</code> and <code>.travis.yml</code> should include sufficient information on installing correct dependences. Then for a routinely rendering, you only need to run the following command lines:</p>
 <pre><code>bundle install
 bundle exec jekyll serve</code></pre>
 <p>Notice that, I have locked the Jekyll version to <code>~&gt;2.5.3</code>. If you want to use Jekyll version 3.0.0 or above, you may need to tweak the code a little bit.</p>
 <p>If you encounter the missing credentials error for the <code>twitter_feed</code> plugin, you may need to export environmental variables <code>TWIT_KEY</code>, <code>TWIT_SECRET</code>, <code>TWIT_TOK</code> and <code>TWIT_TOK_SECRET</code> before running the jekyll server. All the credentials of the Twitter plugin should be accessible from the TWitter account used for the site.</p>
 <p>By default, the local build should be accessible at <code>http://127.0.0.1:4000</code> on your internet browser.</p>
+<h1 id="how-to-adapt-this-source-code-to-generate-your-own-jekyll-website">How to adapt this source code to generate your own Jekyll website</h1>
+<p>Since Jekyll uses a very efficient way to control common information in fewer places, you can easily modify the source code of this website to generate your own website on GitHub and deploy to elsewhere. In fact, when the site was initially designed and modified especially to my end, it has always been a common goal to make it easy for the community to migrate this source code to other web hosts and adapt to various purposes. I encourage you to post an issue or make a pull request on this repo or the original <a href="http://carlboettiger.info">labnotebook repo</a> if you find a way to improve the general design. Only in this way, the network of people who have adapted this design to their sites can benefit most from the continuous improvement by the community who are following this body of code for open science and beyond. Below are the minimum changes you need to make to serve your own purpose of using the source code.</p>
+<ol type="1">
+<li><p>Fork this repo under your GitHub account.</p></li>
+<li><p>Change information defined in the <code>_config.yml</code> file for your case. There you will find definitions for your site, Github account and repo information, as well as your personal contact information.</p></li>
+<li><p>Add encrypted information in the <code>.travis.yml</code> file. There you will find the <code>env/global</code> section where global variables are defined to automatically generate twitter timeline, github comment history and <a href="http://awestruct.org/auto-deploy-to-github-pages/">deploy the site as gh-pages on the Travis-CI server</a>. You should remove all the original code starting with <code>secure</code> and replace with your own encrypted codes line by line in the <code>.travis.yml</code> file or on the Travis-CI setting page. The recommended minimum global variables to be encrypted are: <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Token</a> (variable name <code>GH_TOKEN</code>), git commit author name (<code>GIT_NAME</code>), git commit author email (<code>GIT_EMAIL</code>); if you want to generate a Twitter message line on your site using the <code>twitter_feed.rb</code> plugin, you will also need to encrypt Twitter key (<code>TWIT_KEY</code>), secret (<code>TWIT_SECRET</code>), token (<code>TWIT_TOK</code>), token secret (<code>TWIT_TOK_SECRET</code>). Before you commit this step, make sure you have <a href="https://travis-ci.org/getting_started">ativated the Travis-CI module for your Github repo</a>. You can then generate the encrypted variables by installing travis while on your local repo directory with command <code>gem install travis</code> and using the following command line format <code>travis encrypt GIT_NAME=&quot;Xiaodong Qi&quot;</code>. You should replace the variable name and value with the real cases as bash commands one after one. Notice that when the variable value has a space inside, you need to use a pair of quotation marks as the example I gave–otherwise no need to use quotation marks in most cases; if you have special characters that bash command doesn’t like, you need to <a href="http://wiki.bash-hackers.org/syntax/quoting">escape those characters</a>. The last command line should generate a long string of random characters which you should be able to add to the <code>env/global</code> section of the <code>.travis.yml</code> file in the format of <code>- secure Your_Encrypt_Random_bits</code>. You can certainly add more encrypt variables or define some non-sensitive variables as explicit/non-encrypted variables in a similar way, but the Github token has to be encrypted to pass the security check of Github.</p></li>
+<li><p>If you have different amount of social accounts or plugin items defined in the <code>_config.yml</code> file, you need to double modify the scripts appeared in the header and footer template under the <code>_include</code> directory.</p></li>
+</ol>
+<p>The publication and citation databases are defined in the <code>asset</code> directory as bibtex files with suffix <code>.bib</code>, which may want to replace with your own.<br />The rest is to delete or keep posts and pages to fit into your needs. I suggest to put this source code in a branch other than <code>master</code> or <code>gh-pages</code> in your Github repository, which you need to define in the <code>_config.yml</code> file as the “sourcebranch”. The Travis-CI server will commit the generate website onto the <code>master</code> or <code>gh-pages</code> github branch depending on your case. Once you have all the necessary configurations done, Travis-CI will be happily deploying your site on Github. If you want the site to be deployed on a host other than Github, you may want to modify and run the <code>publish.sh</code> bash script to synchronize your locally generated <code>_site</code> folder or the master/gh-pages branch updated by Travis-CI to your target site host.</p>
 <h1 id="authorships-of-posts-before-feb-10th-2016">Authorships of posts before Feb 10th, 2016</h1>
 <p>Since this site was basically built on top of <a href="http://davidketcheson.info">David Ketcheson</a> and <a href="http://carlboettiger.info">Carl Boettiger</a>’s Labnotebook sites following the permitted Creative Commons license, please be advised that blog posts time-stamped before Feb 10th of 2016 may be written by David Ketcheson or Carl Boettiger. I found most of them are good materials for open science, and hence didn’t remove all of them while adapting the source code for my current website. The authorships on those posts will be disclaimed more clearly by explicit statements and links to the origination on those posts–once I got a chance.</p>
 <h1 id="copyrights-and-licenses">Copyrights and Licenses</h1>
