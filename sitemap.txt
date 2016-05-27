@@ -33,6 +33,7 @@ http://i2000s.github.io/pubs/Li2008theoretical.html
 http://i2000s.github.io/pubs/Li2008Optical.html 
 
  
+http://i2000s.github.io/2016/05/26/2016-summer-study-on-quantum-optics-II.html  
 http://i2000s.github.io/2016/02/17/SQuInT-workshop-2016.html  
 http://i2000s.github.io/2015/05/29/automate_tests.html  
 http://i2000s.github.io/2015/05/16/track_issues.html  
