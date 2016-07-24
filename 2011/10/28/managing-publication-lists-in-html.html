@@ -11,7 +11,9 @@
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
     <meta name="subtitle" content="">
+    
     <meta name="author" content="Xiaodong Qi | 戚晓东">
+    
 
     <!-- HTML5 metadata -->
 
@@ -62,13 +64,13 @@
 <meta name="baidu-site-verification" content="cAv3dLIDps" />
 
     <!-- Le styles -->
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
-    <!-- <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
-    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light"> -->
+   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario"> -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/quattrocento-sans" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rosario" type="text/css"/>
+
     <!-- bootstrap style -->
-    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">
     <!-- Self-defined style -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
@@ -238,12 +240,17 @@ I have customized one version under my <a href="https://github.com/i2000s/bibtex
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
              <!-- | replace '_posts/', '' -->
-<aside prefix="og:http://ogp.me/ns/article#">
-  <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2011-10-28 00:00:00 +0000"
-    property="dc:created">28 Oct 2011</time></p>
-  
 
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="glyphicon glyphicon-calendar"></i><small>
+    <time datetime="2011-10-28 00:00:00 +0000"
+    property="dc:created">28 Oct 2011</time></small></p>
+  
+  <p><small> Updated: <time
+            datetime="2016-05-27 07:51:08 +0000"
+            property="dc:modified">27 May 2016</time></small></p>
+  
+<!-- page.modified datetime="" -->
  <br />
           
             <p><a class="btn btn-default" href='/2011/06/27/how-to-edit-all-files-containing.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
@@ -297,7 +304,7 @@ I have customized one version under my <a href="https://github.com/i2000s/bibtex
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/37e77f85303906b75958b85759dd8fec05e4b034/_posts/2011-10-28-managing-publication-lists-in-html.html"> 37e77f8</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/3788e5605a2989e731d18dba2ae6feb21a99037b/_posts/2011-10-28-managing-publication-lists-in-html.html"> 3788e56</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -399,8 +406,9 @@ I have customized one version under my <a href="https://github.com/i2000s/bibtex
     ================================================== -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- JQuery, used on a few pages -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <!-- JQuery, used on a few pages as well as Bootstrap's Javascript plugins -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>-->
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
     <script src="/assets/js/mixitup-mine.js"></script>
     <!-- Equations using MathJax -->
@@ -462,7 +470,7 @@ I have customized one version under my <a href="https://github.com/i2000s/bibtex
     <script src="http://i2000s.github.io/assets/js/application.js"></script>
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src = "https://code.jquery.com/jquery.js"></script>
+    <!--<script src = "https://code.jquery.com/jquery.js"></script>-->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>

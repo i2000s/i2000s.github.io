@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
     <meta name="subtitle" content="How science is done and for what.">
+    
     <meta name="author" content="Xiaodong Qi | 戚晓东">
+    
     <!-- HTML5 metadata -->
 
   <meta name="keywords" content="Xiaodong Qi, 戚晓东, quantum optics, quantum information, quantum computing, quantum computation, 量子光学, 量子信息, 量子计算, 原子物理, atomic physics, blog, notebook, labnotebook, nanophotonics, 纳米光学" />
@@ -57,13 +59,11 @@
 
 
     <!-- Le styles -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
-    <!-- <link href="/assets/css/light.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/css/grid.css"> -->
-    <!-- bootstrap style -->
-    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Le styles -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/quattrocento-sans" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rosario" type="text/css"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">
     <!-- Self-defined style -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
@@ -393,7 +393,7 @@
       <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> Coding </a></h4>
        <div class="excerpt" height="300px">
            <div class="scroll">
-                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Add content source. Update Gordon conference attending info -- I can go on time.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/fd4fcac2ee...be7159b929">05:09 2016/07/24</a></li><li>i2000s commented on pull request JuliaQuantum/Resources#4: <em>Don't forget to delete this paragraph as I have commented earlier. I think it's repeating and over-shooting. Thanks.</em> <a href="https://github.com/JuliaQuantum/Resources/pull/4#discussion_r71981925">05:04 2016/07/24</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to fd4fcac2ee83d43d598455fc82f61ae25c8dbb55.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/1c5513f65c...6f02704d94">04:23 2016/07/24</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Update July notes, part I only.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/a925b71469...fd4fcac2ee">04:18 2016/07/24</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to a925b7146953937874fb31c246eed324f325e728.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/863ad8d913...1c5513f65c">04:11 2016/07/24</a></li></ul>
+                <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Fix the modification date problem for Jekyll 3. See cboettig/labnoteb…</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/b5eeeea807...dcf562a40e">08:30 2016/07/24</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Fix the modification date problem for Jekyll 3. See cboettig/labnoteb… Reformate the tags page.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/be7159b929...b5eeeea807">08:28 2016/07/24</a></li><li>i2000s commented on issue cboettig/labnotebook#125: <em>Sorry, just found another related error and didn't bother to make a PR. In the sidebar code again, the section to show the modification time should…</em> <a href="https://github.com/cboettig/labnotebook/issues/125#issuecomment-234764483">08:19 2016/07/24</a></li><li>i2000s deleted branch Jekyll3 at i2000s/i2000s.github.io: <em></em> <a href="https://github.com/">05:25 2016/07/24</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to be7159b9297ac7426e69e2bab1f24e0fa1ecf699.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/6f02704d94...e712428b29">05:14 2016/07/24</a></li></ul>
            </div>
        </div>
     </div>
@@ -476,8 +476,9 @@
     ================================================== -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- JQuery, used on a few pages -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <!-- JQuery, used on a few pages as well as Bootstrap's Javascript plugins -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>-->
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
     <script src="/assets/js/mixitup-mine.js"></script>
     <!-- Equations using MathJax -->
@@ -539,7 +540,7 @@
     <script src="http://i2000s.github.io/assets/js/application.js"></script>
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src = "https://code.jquery.com/jquery.js"></script>
+    <!--<script src = "https://code.jquery.com/jquery.js"></script>-->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>

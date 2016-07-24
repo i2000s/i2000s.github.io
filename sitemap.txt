@@ -1,4 +1,12 @@
- 
+
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-7 col-sm-12">
+    <article>
+     
 http://i2000s.github.io/R.xml  
 http://i2000s.github.io/README  
 http://i2000s.github.io/archives  
@@ -56,3 +64,7 @@ http://i2000s.github.io/2012/03/17/can-region-of-absolute-stability-be.html
 http://i2000s.github.io/2011/10/28/managing-publication-lists-in-html.html  
 http://i2000s.github.io/2011/06/27/how-to-edit-all-files-containing.html  
 http://i2000s.github.io/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html 
+
+    </article>
+  </div>
+</div>
