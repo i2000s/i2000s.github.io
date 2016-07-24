@@ -330,32 +330,267 @@ dW = randn(step).*dt;</code></pre>
 <p>On the other hand, quantum simulation packages like the <em>Quantum Optics Toolbox in Matlab</em><a href="#Tan1999Computational"> [8]</a> and its Python version <em>QuTiP</em><a href="#Johansson2013Qutip"> [9]</a> becomes widely used while the input quantities can be classified into a few object classes is mainly due to the mathematical fact that the quantum dynamics equations and quantum systems those toolboxes can simulate all have nice mathematical structures. For example, a lot of quantum dynamics problems can be described by the Lindblad form of master equations, which in the end is completely positive maps (CP-maps) and can be fully characterized by the hierarchy of complete positive operators and superoperators as mathematical objects<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. To my perspective, the existing JuliaQuantum libraries can be improved by extending its representation types to the operator and superoperator system and build more general solvers to cover the stochastic equations, and we can make better program libraries with in-depth mathematical insights and high-performance programming language. I will also touch the base of some mathematical fundation in the next part.</p>
 <p>With the basic stochastic language introduced, we are ready to explore more complicated differential equations and start appreciating the nature of quantum measurements and how all of these can be connected to the quantum circuit model. Content is mainly based on my hand-written lecture notes taught by my supervisor <a href="http://cquic.unm.edu/deutsch-group/">Ivan Deutsch</a> and my daily journals on reading, meeting and playing. I hope the following notes can help understand those content intuitively.</p>
 <h2 id="references">References</h2>
-<ol class="bibliography"><li>
-<p><span id="Dum1992Monte">R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, Physical Review A <b>46</b>, 4382 (1992).</span> <br></p>
-</li>
+<ol class="bibliography"><li><!---->
+<span id="Dum1992Monte">R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, Physical Review A <b>46</b>, 4382 (1992).</span> <br/>
+<div id="Dum1992Monte-materials">
+<ul class="nav nav-pills">
+
 <li>
-<p><span id="Molmer1993Monte">K. Mølmer, Y. Castin, and J. Dalibard, JOSA B <b>10</b>, 524 (1993).</span> <br></p>
+<a data-toggle="collapse" href="#Dum1992Monte-bibtex">BibTeX</a>
 </li>
-<li>
-<p><span id="Molmer1996Monte">K. Mølmer and Y. Castin, Quantum and Semiclassical Optics: Journal of the European Optical Society Part B <b>8</b>, 49 (1996).</span> <br></p>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Dum1992Monte-bibtex" class="pre pre-scrollable collapse">@article{Dum1992Monte,
+  title = {Monte Carlo simulation of master equations in quantum optics for vacuum, thermal, and squeezed reservoirs},
+  author = {Dum, R and Parkins, AS and Zoller, P and Gardiner, CW},
+  journal = {Physical Review A},
+  volume = {46},
+  number = {7},
+  pages = {4382},
+  year = {1992},
+  publisher = {APS}
+}
+</pre>
+</div>
 </li>
+<li><!---->
+<span id="Molmer1993Monte">K. Mølmer, Y. Castin, and J. Dalibard, JOSA B <b>10</b>, 524 (1993).</span> <br/>
+<div id="Molmer1993Monte-materials">
+<ul class="nav nav-pills">
+
 <li>
-<p><span id="Plenio1998Quantum">M. B. Plenio and P. L. Knight, Reviews of Modern Physics <b>70</b>, 101 (1998).</span> <br></p>
+<a data-toggle="collapse" href="#Molmer1993Monte-bibtex">BibTeX</a>
 </li>
-<li>
-<p><span id="Gardiner1985Handbook">C. W. Gardiner, <i>Handbook of Stochastic Methods</i>, 2nd ed. (Springer Berlin, 1985).</span> <br></p>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Molmer1993Monte-bibtex" class="pre pre-scrollable collapse">@article{Molmer1993Monte,
+  title = {Monte Carlo wave-function method in quantum optics},
+  author = {M{\o}lmer, Klaus and Castin, Yvan and Dalibard, Jean},
+  journal = {JOSA B},
+  volume = {10},
+  number = {3},
+  pages = {524--538},
+  year = {1993},
+  publisher = {Optical Society of America}
+}
+</pre>
+</div>
 </li>
+<li><!---->
+<span id="Molmer1996Monte">K. Mølmer and Y. Castin, Quantum and Semiclassical Optics: Journal of the European Optical Society Part B <b>8</b>, 49 (1996).</span> <br/>
+<div id="Molmer1996Monte-materials">
+<ul class="nav nav-pills">
+
 <li>
-<p><span id="Wiseman1993Interpretation">H. M. Wiseman and G. J. Milburn, Phys. Rev. A <b>47</b>, 1652 (1993).</span> <br></p>
+<a data-toggle="collapse" href="#Molmer1996Monte-bibtex">BibTeX</a>
 </li>
-<li>
-<p><span id="Gardiner2004Quantum">C. Gardiner and P. Zoller, <i>Quantum Noise: a Handbook of Markovian and Non-Markovian Quantum Stochastic Methods with Applications to Quantum Optics</i> (Springer Science &amp; Business Media, 2004).</span> <br></p>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Molmer1996Monte-bibtex" class="pre pre-scrollable collapse">@article{Molmer1996Monte,
+  title = {Monte Carlo wavefunctions in quantum optics},
+  author = {M{\o}lmer, Klaus and Castin, Yvan},
+  journal = {Quantum and Semiclassical Optics: Journal of the European Optical Society Part B},
+  volume = {8},
+  number = {1},
+  pages = {49},
+  year = {1996},
+  publisher = {IOP Publishing}
+}
+</pre>
+</div>
 </li>
+<li><!---->
+<span id="Plenio1998Quantum">M. B. Plenio and P. L. Knight, Reviews of Modern Physics <b>70</b>, 101 (1998).</span> <br/>
+<div id="Plenio1998Quantum-materials">
+<ul class="nav nav-pills">
+
 <li>
-<p><span id="Tan1999Computational">S. M. Tan, Journal of Optics B: Quantum and Semiclassical Optics <b>1</b>, 424 (1999).</span> <br></p>
+<a data-toggle="collapse" href="#Plenio1998Quantum-bibtex">BibTeX</a>
 </li>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Plenio1998Quantum-bibtex" class="pre pre-scrollable collapse">@article{Plenio1998Quantum,
+  title = {The quantum-jump approach to dissipative dynamics in quantum optics},
+  author = {Plenio, MB and Knight, PL},
+  journal = {Reviews of Modern Physics},
+  volume = {70},
+  number = {1},
+  pages = {101},
+  year = {1998},
+  publisher = {APS}
+}
+</pre>
+</div>
+</li>
+<li><!---->
+<span id="Gardiner1985Handbook">C. W. Gardiner, <i>Handbook of Stochastic Methods</i>, 2nd ed. (Springer Berlin, 1985).</span> <br/>
+<div id="Gardiner1985Handbook-materials">
+<ul class="nav nav-pills">
+
 <li>
-<p><span id="Johansson2013Qutip">J. R. Johansson, P. D. Nation, and F. Nori, Computer Physics Communications <b>184</b>, 1234 (2013).</span> <br></p>
+<a data-toggle="collapse" href="#Gardiner1985Handbook-bibtex">BibTeX</a>
+</li>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Gardiner1985Handbook-bibtex" class="pre pre-scrollable collapse">@book{Gardiner1985Handbook,
+  title = {Handbook of stochastic methods},
+  author = {Gardiner, Crispin W},
+  edition = {2nd},
+  year = {1985},
+  publisher = {Springer Berlin}
+}
+</pre>
+</div>
+</li>
+<li><!---->
+<span id="Wiseman1993Interpretation">H. M. Wiseman and G. J. Milburn, Phys. Rev. A <b>47</b>, 1652 (1993).</span> <br/>
+<div id="Wiseman1993Interpretation-materials">
+<ul class="nav nav-pills">
+
+<li>
+<a data-toggle="collapse" href="#Wiseman1993Interpretation-bibtex">BibTeX</a>
+</li>
+
+<li>
+<a href="http://dx.doi.org/10.1103/PhysRevA.47.1652" target="_blank">Link</a>
+</li>
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Wiseman1993Interpretation-bibtex" class="pre pre-scrollable collapse">@article{Wiseman1993Interpretation,
+  title = {Interpretation of quantum jump and diffusion processes illustrated on the Bloch sphere},
+  author = {Wiseman, H. M. and Milburn, G. J.},
+  journal = {Phys. Rev. A},
+  volume = {47},
+  issue = {3},
+  pages = {1652--1666},
+  numpages = {0},
+  year = {1993},
+  month = mar,
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.47.1652},
+  url = {http://link.aps.org/doi/10.1103/PhysRevA.47.1652}
+}
+</pre>
+</div>
+</li>
+<li><!---->
+<span id="Gardiner2004Quantum">C. Gardiner and P. Zoller, <i>Quantum Noise: a Handbook of Markovian and Non-Markovian Quantum Stochastic Methods with Applications to Quantum Optics</i> (Springer Science &amp; Business Media, 2004).</span> <br/>
+<div id="Gardiner2004Quantum-materials">
+<ul class="nav nav-pills">
+
+<li>
+<a data-toggle="collapse" href="#Gardiner2004Quantum-bibtex">BibTeX</a>
+</li>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Gardiner2004Quantum-bibtex" class="pre pre-scrollable collapse">@book{Gardiner2004Quantum,
+  title = {Quantum noise: a handbook of Markovian and non-Markovian quantum stochastic methods with applications to quantum optics},
+  author = {Gardiner, Crispin and Zoller, Peter},
+  volume = {56},
+  year = {2004},
+  publisher = {Springer Science \& Business Media}
+}
+</pre>
+</div>
+</li>
+<li><!---->
+<span id="Tan1999Computational">S. M. Tan, Journal of Optics B: Quantum and Semiclassical Optics <b>1</b>, 424 (1999).</span> <br/>
+<div id="Tan1999Computational-materials">
+<ul class="nav nav-pills">
+
+<li>
+<a data-toggle="collapse" href="#Tan1999Computational-bibtex">BibTeX</a>
+</li>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Tan1999Computational-bibtex" class="pre pre-scrollable collapse">@article{Tan1999Computational,
+  title = {A computational toolbox for quantum and atomic optics},
+  author = {Tan, Sze M},
+  journal = {Journal of Optics B: Quantum and Semiclassical Optics},
+  volume = {1},
+  number = {4},
+  pages = {424},
+  year = {1999},
+  publisher = {IOP Publishing}
+}
+</pre>
+</div>
+</li>
+<li><!---->
+<span id="Johansson2013Qutip">J. R. Johansson, P. D. Nation, and F. Nori, Computer Physics Communications <b>184</b>, 1234 (2013).</span> <br/>
+<div id="Johansson2013Qutip-materials">
+<ul class="nav nav-pills">
+
+<li>
+<a data-toggle="collapse" href="#Johansson2013Qutip-bibtex">BibTeX</a>
+</li>
+
+
+
+
+<!---->
+
+</ul>
+
+<pre id="Johansson2013Qutip-bibtex" class="pre pre-scrollable collapse">@article{Johansson2013Qutip,
+  title = {QuTiP 2: A Python framework for the dynamics of open quantum systems},
+  author = {Johansson, JR and Nation, PD and Nori, Franco},
+  journal = {Computer Physics Communications},
+  volume = {184},
+  number = {4},
+  pages = {1234--1240},
+  year = {2013},
+  publisher = {Elsevier}
+}
+</pre>
+</div>
 </li></ol>
 
 <div class="references">
