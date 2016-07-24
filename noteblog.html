@@ -305,7 +305,7 @@ While optical fibers have been used for primary quantum communications, atom-fib
             <hr>
             <h4> <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" >
               <img src="http://i2000s.github.io/assets/img/icon-github.png" alt="github"> What I'm Coding </a></h4>
-            <ul><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to b5eeeea807b3d7bfcd56f7c28d2682bd7d934f49.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/e712428b29...c3875bca89">08:33 2016/07/24</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Fix the modification date problem for Jekyll 3. See cboettig/labnoteb…</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/b5eeeea807...dcf562a40e">08:30 2016/07/24</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Fix the modification date problem for Jekyll 3. See cboettig/labnoteb… Reformate the tags page.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/be7159b929...b5eeeea807">08:28 2016/07/24</a></li><li>i2000s commented on issue cboettig/labnotebook#125: <em>Sorry, just found another related error and didn't bother to make a PR. In the sidebar code again, the section to show the modification time should…</em> <a href="https://github.com/cboettig/labnotebook/issues/125#issuecomment-234764483">08:19 2016/07/24</a></li></ul>
+            <ul><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Replace javascript and other updates. Count cv downloads.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/dcf562a40e...1d578d2534">09:10 2016/07/24</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to dcf562a40eebe641419d1b539c6202bd7e394e64.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/c3875bca89...ca86814ccd">08:35 2016/07/24</a></li><li>i2000s pushed to master at i2000s/i2000s.github.io: <em>Updating to b5eeeea807b3d7bfcd56f7c28d2682bd7d934f49.</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/e712428b29...c3875bca89">08:33 2016/07/24</a></li><li>i2000s pushed to dev at i2000s/i2000s.github.io: <em>Fix the modification date problem for Jekyll 3. See cboettig/labnoteb…</em> <a href="https://github.com/i2000s/i2000s.github.io/compare/b5eeeea807...dcf562a40e">08:30 2016/07/24</a></li></ul>
           </div>
 
          </div>
@@ -873,7 +873,11 @@ git add project_file2
                <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user=i2000s&repo=i2000s.github.io&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150px" height="40px" style="vertical-align:middle; margin-top:9px;"></iframe>
               </div>
               <div class="row">
-                <br><span> &nbsp; </span> <span><a href="/CV-XiaodongQi.pdf"> CV of Xiaodong Qi</a></span>
+                <span> &nbsp; </span> <span><a href="/CV-XiaodongQi.pdf"
+                  onclick="var that=this;
+                  _gaq.push(['_trackEvent','Download','PDF',this.href]);
+                  setTimeout(function(){location.href=that.href;},200);
+                  return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i> CV of Xiaodong Qi</a></span>
                 <br><img alt="Creative Commons License" style="border-width:0" align="right" src="https://licensebuttons.net/l/by/3.0/88x31.png" />
                 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content</span> is licensed under the
                 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a> or otherwise specified.

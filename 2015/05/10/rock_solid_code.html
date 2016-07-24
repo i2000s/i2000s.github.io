@@ -302,8 +302,8 @@ $(document).ready(function() {
     property="dc:created">10 May 2015</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2016-03-10 10:30:49 +0000"
-            property="dc:modified">10 Mar 2016</time></small></p>
+            datetime="2016-05-24 23:00:40 +0000"
+            property="dc:modified">24 May 2016</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -351,7 +351,7 @@ $(document).ready(function() {
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/0b993552441cd549258128227f9e0abcfb396ec0/_posts/2015-05-10-rock_solid_code.md"> 0b99355</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/c3ad8667af3dc24250a565ab3cdaa7c74734f57d/_posts/2015-05-10-rock_solid_code.md"> c3ad866</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -412,7 +412,11 @@ $(document).ready(function() {
                <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user=i2000s&repo=i2000s.github.io&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150px" height="40px" style="vertical-align:middle; margin-top:9px;"></iframe>
               </div>
               <div class="row">
-                <br><span> &nbsp; </span> <span><a href="/CV-XiaodongQi.pdf"> CV of Xiaodong Qi</a></span>
+                <span> &nbsp; </span> <span><a href="/CV-XiaodongQi.pdf"
+                  onclick="var that=this;
+                  _gaq.push(['_trackEvent','Download','PDF',this.href]);
+                  setTimeout(function(){location.href=that.href;},200);
+                  return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i> CV of Xiaodong Qi</a></span>
                 <br><img alt="Creative Commons License" style="border-width:0" align="right" src="https://licensebuttons.net/l/by/3.0/88x31.png" />
                 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content</span> is licensed under the
                 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a> or otherwise specified.
