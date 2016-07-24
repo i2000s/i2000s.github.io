@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -219,7 +219,7 @@ $(document).ready(function() {
           <article>
           <p>Note: This post was originally published on the KAUST Mathwiki <a href="https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection">here</a> (login required) by <a href="http://www.davidketcheson.info/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html">David Ketcheson</a>.</p>
 <h2 id="the-cfl-condition">The CFL condition</h2>
-<p>The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free here](http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf)), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.</p>
+<p>The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free <a href="http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf">here</a>), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.</p>
 <p>The CFL condition is geometric and easily understood in the context of, say, a first-order upwind discretization of advection. Usually it says nothing interesting about implicit schemes, since they include all points in their domain of dependence. But sometimes understanding the CFL condition for a particular scheme can be subtle.</p>
 <h3 id="an-implicit-scheme">An implicit scheme</h3>
 <p>Consider the advection equation</p>
@@ -238,6 +238,13 @@ $(document).ready(function() {
 <li><p><span class="math">\(\nu&gt;0\)</span>: in this case, boundary values must be supplied along the left boundary at <span class="math">\(x=0\)</span>. Then, starting from the known value at the boundary, we work to the right by substitution: <span class="math">\[U^{n+1}_j = \frac{U^n_j+\nu U^{n+1}_{j-1}}{1+\nu}.\]</span> Hence the scheme is truly a way of computing <span class="math">\(U^{n+1}_j\)</span> based on <span class="math">\(U^n_j, U^{n+1}_{j-1}\)</span> and the resulting CFL condition is <span class="math">\(\nu\ge0\)</span>.</p></li>
 <li><p><span class="math">\(\nu&lt;0\)</span>: in this case, boundary values must be supplied along the right boundary at <span class="math">\(x=1\)</span>. Then, starting from the known value at the boundary, we work to the left by substitution: <span class="math">\[U^{n+1}_{j-1} = \frac{(1+\nu)U^{n+1}_j - U^n_j}{\nu}.\]</span> Hence the scheme is truly a way of computing <span class="math">\(U^{n+1}_{j-1}\)</span> based on <span class="math">\(U^n_j, U^{n+1}_{j}\)</span> and the resulting CFL condition is <span class="math">\(\nu\le-1\)</span>.</p></li>
 </ol>
+<h2 id="references">References:</h2>
+<p><a href="http://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition">CFL condition</a>.</p>
+<p><a href="http://http://dx.doi.org/10.1007%2FBF01448839">their seminal paper</a>.</p>
+<p><a href="http://www.stanford.edu/class/cme324/classics/courant-friedrichs-lewy.pdf">here</a>.</p>
+<div class="references">
+
+</div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -248,11 +255,12 @@ $(document).ready(function() {
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
+             <!-- | replace '_posts/', '' -->
+<aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2012-10-11 00:00:00 +0000" 
+    <time datetime="2012-10-11 00:00:00 +0000"
     property="dc:created">11 Oct 2012</time></p>
-   
+  
 
  <br />
           
@@ -263,50 +271,50 @@ $(document).ready(function() {
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/i2000s/i2000s.github.io/commits/dev/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#notebook">notebook</a>
     
     </p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <i class="glyphicon glyphicon-tag"></i> tags:
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#numerical-analysis">#numerical-analysis</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#CFL-condition">#CFL-condition</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#advection">#advection</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#hyperbolic-PDEs">#hyperbolic-PDEs</a>
     </p>
 
-  <!-- <br/>
+   <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> 7fa57b1005c14506e667873d08a00913ef18cf08</a></tiny></p> -->
+   <br/>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/b8b7f2debe9a12bfcce65bde087f85e468a2735c/_posts/2012-10-11-A_curious_upwind_implicit_scheme_for_advection.md"> b8b7f2d</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
  <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
  <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -319,9 +327,9 @@ $(document).ready(function() {
     
       <li><span>14 Oct 2013</span> &raquo; <a href="/2013/10/14/CFL-disk.html">A Tale of Two Theorems</a></li>
     
-      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
+      <li><span>23 Jul 2016</span> &raquo; <a href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html">Put everything on a quantum circuit--part I</a></li>
     
-      <li><span>28 May 2014</span> &raquo; <a href="/2014/05/28/dispersion_relations.html">Dispersion relations for linear systems of PDEs</a></li>
+      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
     
   </ul>
 </div>
@@ -408,7 +416,44 @@ $(document).ready(function() {
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -428,9 +473,10 @@ $(document).ready(function() {
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

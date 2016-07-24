@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -225,6 +225,9 @@ $(document).ready(function() {
 <p>This new page is my own effort to enable that revolution. In fact, I’ve been gradually putting my teaching materials online for the past couple of years, without giving it much thought. The teaching page collects all the resources I’ve made available in one place.</p>
 <p>Something even more exciting in this vein is coming in the fall. If you want to know a little about it, watch <a href="http://www.youtube.com/watch?v=TWxwKDT88GU&amp;t=56m2s">the last few minutes of Lorena Barba’s excellent Scipy keynote on computational thinking and teaching</a>.</p>
 <p>Stay tuned.</p>
+<div class="references">
+
+</div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -235,11 +238,12 @@ $(document).ready(function() {
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
+             <!-- | replace '_posts/', '' -->
+<aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2014-07-18 00:00:00 +0000" 
+    <time datetime="2014-07-18 00:00:00 +0000"
     property="dc:created">18 Jul 2014</time></p>
-   
+  
 
  <br />
           
@@ -250,42 +254,42 @@ $(document).ready(function() {
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/i2000s/i2000s.github.io/commits/dev/_posts/2014-07-18-teaching_in_the_open.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#blog-post">blog-post</a>
     
     </p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <i class="glyphicon glyphicon-tag"></i> tags:
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#teaching">#teaching</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#collaboration">#collaboration</a>
     </p>
 
-  <!-- <br/>
+   <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2014-07-18-teaching_in_the_open.md"> 7fa57b1005c14506e667873d08a00913ef18cf08</a></tiny></p> -->
+   <br/>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2014-07-18-teaching_in_the_open.md"> 7fa57b1</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
  <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
  <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -387,7 +391,44 @@ $(document).ready(function() {
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -407,9 +448,10 @@ $(document).ready(function() {
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

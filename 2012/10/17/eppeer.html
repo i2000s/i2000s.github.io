@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -220,7 +220,7 @@ $(document).ready(function() {
           <p>Note: this post was originally written by <a href="http://www.davidketcheson.info/2012/10/17/eppeer.html">David Ketcheson</a>.</p>
 <p>I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.</p>
 <p>I downloaded the code from</p>
-<p><a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip" title="Go to wiki page">http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip</a></p>
+<p><a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/eppeer.zip" title="Go to wiki page"><a href="http://www.mathematik.uni-marburg.de/">http://www.mathematik.uni-marburg.de/</a>~schmitt/peer/eppeer.zip</a></p>
 <p>unzipped, and ran</p>
 <pre><code>gfortran -c mbod4h.f90
 gfortran -c ivprkp.f90
@@ -258,6 +258,9 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
 <p>The numbers of function evaluations were identical, confirming that the computations being performed were the same. The speedup (about 3x) is very nice. We should be able to achieve something similar with extrapolation.</p>
 <p>These results are actually plotted in <a href="http://www.mathematik.uni-marburg.de/~schmitt/peer/man_epp.pdf">the user guide</a>, at the end of Section 4.</p>
 <p>This was originally posted on <a href="https://mathwiki.kaust.edu.sa/david/eppeer">mathwiki</a>.</p>
+<div class="references">
+
+</div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -268,49 +271,50 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
+             <!-- | replace '_posts/', '' -->
+<aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2012-10-17 00:00:00 +0000" 
+    <time datetime="2012-10-17 00:00:00 +0000"
     property="dc:created">17 Oct 2012</time></p>
-   
+  
 
  <br />
           
-            <p><a class="btn btn-default" href='/2012/10/11/blogging_ipython_notebooks_with_jekyll.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2012/10/11/blogging-with-notebooks-and-jekyll.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
             <a class="btn btn-default" href='/2012/12/06/reproducible-research-standard.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/i2000s/i2000s.github.io/commits/dev/_posts/2012-10-17-eppeer.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#notebook">notebook</a>
     
     </p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <i class="glyphicon glyphicon-tag"></i> tags:
     </p>
 
-  <!-- <br/>
+   <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2012-10-17-eppeer.md"> 7fa57b1005c14506e667873d08a00913ef18cf08</a></tiny></p> -->
+   <br/>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2012-10-17-eppeer.md"> 7fa57b1</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
  <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
  <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -325,7 +329,7 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
     
       <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/Internal_stability.html">Internal stability of Runge-Kutta methods</a></li>
     
-      <li><span>21 Sep 2013</span> &raquo; <a href="/2013/09/21/ipython_notebook_slides_talks.html">Giving a math talk using IPython notebook slides and Wakari</a></li>
+      <li><span>14 May 2015</span> &raquo; <a href="/2015/05/14/write_docstrings.html">Step 4 - write docstrings</a></li>
     
   </ul>
 </div>
@@ -412,7 +416,44 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -432,9 +473,10 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -234,13 +234,16 @@ $(document).ready(function() {
 </ul>
 <p>For the most part, this is easy enough to implement: the current academic research system frankly doesn’t care what you do with your code, data or miscellaneous media outputs. And I think that actually releasing those is the most important part of the RRS. But the text and figures of the paper itself must be published in a journal, and typically the journal will want the copyright – preventing you from releasing those media under CC-BY.</p>
 <p>Nevertheless, I’ve attempted to follow the full RRS with each of the two papers I’ve had accepted since then. <a href="http://arxiv.org/abs/1111.3499">The first</a> (still in press) was accepted to the SIAM Journal on Scientific Computing (SISC). The code is licensed under modified BSD as part of the <a href="https://github.com/clawpack/sharpclaw">SharpClaw</a> package (now rolled into <a href="https://github.com/clawpack/pyclaw">PyClaw</a>). After reading <a href="http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/">one author’s experience retaining copyright to an article published by SIAM</a>, I decided to try the same approach of modifying the copyright transfer agreement by <a href="http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/#jp-carousel-138">striking out the transfer of copyright</a>. I suspected that the instance just linked to went “below the radar”, and I wanted to be completely above-board, so I pointed out to SIAM that I had modified the agreement. What made this particularly interesting is that one of my co-authors on the paper is Randy LeVeque, chair of the SIAM journals committee.</p>
-<p>Eventually, SIAM objected “on the grounds that non-exclusive right to publish doesn’t prohibit others from publishing for profit, which may be to [the authors’] disadvantage as well.” They agreed instead to an addendum generated via http://scholars.sciencecommons.org/ that retains for the authors the right to post the final article on any public server, as long as publication in SISC is stated. Since this gave me what I wanted in practical terms, I agreed and signed the copyright transfer + addendum. I’ve been told that an ad hoc committee of SIAM leadership is now discussing how SIAM should handle these copyright questions like this.</p>
+<p>Eventually, SIAM objected “on the grounds that non-exclusive right to publish doesn’t prohibit others from publishing for profit, which may be to [the authors’] disadvantage as well.” They agreed instead to an addendum generated via <a href="http://scholars.sciencecommons.org/">http://scholars.sciencecommons.org/</a> that retains for the authors the right to post the final article on any public server, as long as publication in SISC is stated. Since this gave me what I wanted in practical terms, I agreed and signed the copyright transfer + addendum. I’ve been told that an ad hoc committee of SIAM leadership is now discussing how SIAM should handle these copyright questions like this.</p>
 <p>I came away from this feeling like we had made progress, but I still wanted to see if I could implement the full RRS with respect to the next paper. My <a href="http://arxiv.org/pdf/1201.3035v3.pdf">next accepted paper</a> (also still in press) was a submission to <a href="msp.org/camcos/">Communications in Applied Mathematics and Computational Science</a>, published by the extremely progressive not-for-profit <a href="http://msp.org/about/">Math­em­at­ic­al Sci­ences Pub­lish­ers</a>. This is a truly remarkable journal that will be the subject of another blog post in the near future, but what’s important in this context is that the journal doesn’t require authors to transfer copyright! They only require a <a href="http://msp.berkeley.edu/editorial/uploads/camcos/accepted/120712-Qi/copyright.pdf">license to publish</a> which includes this clause:</p>
 <blockquote>
 <p><em>The copyright holder retains the right to duplicate the Work by any means and to permit others to do the same with the exception of reproduction by services that collect fees for delivery of documents, which may be licensed only by the Publisher. In each case of authorized duplication of the Work in whole or in part, the Author(s) must still ensure that the original publication by the Publisher is properly credited.</em></p>
 </blockquote>
 <p>After discussion with my co-author Aron Ahmadia, we’re retaining copyright and licensing the paper under CC-BY-NC. The NC (non-commercial clause) seems necessary to comply with the paragraph above, and seems reasonable to me. The code for the paper is released as part of the <a href="https://github.com/ketch/RK-opt">RK-opt package</a>. So I’m calling this mission accomplished.</p>
 <p>I have mixed feelings about whether it makes sense for journals to let authors keep copyright – I can see some sense in SIAM’s objection, and I think that non-profit publishers need to protect enough of a revenue stream to support their activities. I think it is better that that revenue come from (low-cost) subscriptions than from author fees. It will be interesting to see where SIAM’s policy falls.</p>
+<div class="references">
+
+</div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -251,11 +254,12 @@ $(document).ready(function() {
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
+             <!-- | replace '_posts/', '' -->
+<aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2012-12-06 00:00:00 +0000" 
+    <time datetime="2012-12-06 00:00:00 +0000"
     property="dc:created">06 Dec 2012</time></p>
-   
+  
 
  <br />
           
@@ -266,50 +270,50 @@ $(document).ready(function() {
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/i2000s/i2000s.github.io/commits/dev/_posts/2012-12-06-reproducible-research-standard.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#blog-post">blog-post</a>
     
     </p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <i class="glyphicon glyphicon-tag"></i> tags:
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#reproducible-research">#reproducible-research</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#scientific-publishing">#scientific-publishing</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#open-access">#open-access</a>, 
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#publications">#publications</a>
     </p>
 
-  <!-- <br/>
+   <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2012-12-06-reproducible-research-standard.md"> 7fa57b1005c14506e667873d08a00913ef18cf08</a></tiny></p> -->
+   <br/>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/7fa57b1005c14506e667873d08a00913ef18cf08/_posts/2012-12-06-reproducible-research-standard.md"> 7fa57b1</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
  <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
  <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -320,11 +324,11 @@ $(document).ready(function() {
   <h2>Related Posts</h2>
   <ul class="posts">
     
+      <li><span>23 Jul 2016</span> &raquo; <a href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html">Put everything on a quantum circuit--part I</a></li>
+    
       <li><span>01 Aug 2012</span> &raquo; <a href="/2012/08/01/habits-of-open-scientist-1-open.html">7 Habits of the Open Scientist: #1 -- Open publishing</a></li>
     
       <li><span>03 Aug 2012</span> &raquo; <a href="/2012/08/03/habits-of-open-scientist-2.html">7 Habits of the Open Scientist: #2 -- Reproducible Research</a></li>
-    
-      <li><span>13 May 2015</span> &raquo; <a href="/2015/05/13/add_a_readme.html">Step 3 - Add a README and a License</a></li>
     
   </ul>
 </div>
@@ -411,7 +415,44 @@ $(document).ready(function() {
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -431,9 +472,10 @@ $(document).ready(function() {
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

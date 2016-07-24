@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -150,8 +150,6 @@ var _hmt = _hmt || [];
             <li class=""><a href="/">Home</a></li>
          
             
-            
-                
             
             
             <li class="active"><a href="/research/">Research</a></li>
@@ -219,6 +217,9 @@ Fig 1. Polarization spectroscopy on an optical nanofiber coupled atomic ensemble
 <li><a href="http://www.physics.umd.edu/rgroups/amo/orozco/">Dr. Luis A. Orozco’s Quantum Optics and Francium Spectroscopy group</a> (experimental)–mainly with group member <a href="http://jqi.umd.edu/people/pablo-solano">Pablo Solano</a> and his fellows, from the <a href="http://jqi.umd.edu/">Joint Quantum Institute</a>, University of Maryland.</li>
 <li>[Dr. Nan Li] from the <a href="http://english.amss.cas.cn/">Academy of Mathematics and Systems Science</a>, Chinese Academy of Sciences.</li>
 </ul>
+<div class="references">
+
+</div>
 
       </div>
 
@@ -286,7 +287,44 @@ Fig 1. Polarization spectroscopy on an optical nanofiber coupled atomic ensemble
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -306,9 +344,10 @@ Fig 1. Polarization spectroscopy on an optical nanofiber coupled atomic ensemble
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

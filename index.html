@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -146,8 +146,6 @@ var _hmt = _hmt || [];
          
             
             
-            
-                
             
             <li class="active"><a href="/">Home</a></li>
          
@@ -196,6 +194,28 @@ var _hmt = _hmt || [];
  <!-- <span> -->
  <div class="col-md-7 col-sm-12">
   <div class="row">
+      
+      <div id="postsum">
+<time> 23 Jul 2016</time>
+<h3><a href="http://i2000s.github.io/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html">Put everything on a quantum circuit--part I</a></h3>
+<h4><span>Quantum dynamics revisited</span></h4>
+      
+      
+      
+        
+      
+        
+            
+                
+<img  src="/assets/img/homodyneheterodyne_beamsplitter.svg" alt="Fig 1. Beam splitter for homodyne and heterodyne detections." / height="100" />
+                
+
+Preface
+This series of notes is initially written for Amit Jamadagni and Xiuzhe Luo who have been working on the JuliaQuantum organization’s Base.jl, QuDynamics.jl and QuCmp.jl projects individually. Amit has put intensive efforts on framing out the basic Julia libraries on basic quantum type sys... 
+<a href="http://i2000s.github.io/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"> <em>Read more</em></a>
+
+</div>
+
       
       <div id="postsum">
 <time> 23 Jun 2016</time>
@@ -250,26 +270,6 @@ Link to the PDF.
 Abstract:
 While optical fibers have been used for primary quantum communications, atom-fiber and atom-waveguide based quantum interfaces have been proposed as ... 
 <a href="http://i2000s.github.io/2016/02/17/SQuInT-workshop-2016.html"> <em>Read more</em></a>
-
-</div>
-
-      
-      <div id="postsum">
-<time> 29 May 2015</time>
-<h3><a href="http://i2000s.github.io/2015/05/29/automate_tests.html">Step 7 - Automate the tests</a></h3>
-<h4><span></span></h4>
-      
-      
-      
-        
-      
-
-Welcome to step 7 in your training as a scientific Python code ninja: test automation.
-Tests are extremely useful, as long as you run them. Unfortunately, a common pattern in many projects is this:
-
-Tests are written and run by the person who wrote them.
-Others, and even the test-writer at a futu... 
-<a href="http://i2000s.github.io/2015/05/29/automate_tests.html"> <em>Read more</em></a>
 
 </div>
 
@@ -376,7 +376,44 @@ Others, and even the test-writer at a futu...
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -396,8 +433,9 @@ Others, and even the test-writer at a futu...
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
     </body>
   </html>

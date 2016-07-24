@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -243,6 +243,9 @@ sudo apt install NVidia-367</code></pre>
                MaxFrameBufferSize: <span class="fl">16384</span></code></pre>
 <p>This was tested working on my Lenovo Thinkpad P50 mobile workstation with Quadro M1000M GPU and Linux kernels 4.5.2 and 4.4.22. Kernel 4.6.0 was not compatible with some latest nvidia drivers before this update, and I haven’t got a chance to try again.</p>
 <p>You may want to remove the graphics driver ppa after this update to prevent new updates of the driver which may screw up your software environment in the future.</p>
+<div class="references">
+
+</div>
 
           </article>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -253,53 +256,54 @@ sudo apt install NVidia-367</code></pre>
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
+             <!-- | replace '_posts/', '' -->
+<aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i>
-    <time datetime="2016-06-23 00:00:00 +0000" 
+    <time datetime="2016-06-23 00:00:00 +0000"
     property="dc:created">23 Jun 2016</time></p>
-   
+  
 
  <br />
           
             <p><a class="btn btn-default" href='/2016/05/26/2016-summer-study-on-quantum-optics-II.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            </p>
+            <a class="btn btn-default" href='/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/i2000s/i2000s.github.io/commits/dev/_posts/2016-06-23-nvidia-driver-update-for-matlab-2016a.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#computer">computer</a>
     
     </p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <i class="glyphicon glyphicon-tag"></i> tags:
     
     <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
+    <a rel="og:tag" class="tag"
        href="/tags.html#matlab">#matlab</a>
     </p>
 
-  <!-- <br/>
+   <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/a9734e7013f4243b488906be4b84e1cad3dd1b44/_posts/2016-06-23-nvidia-driver-update-for-matlab-2016a.md"> a9734e7013f4243b488906be4b84e1cad3dd1b44</a></tiny></p> -->
+   <br/>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/a9734e7013f4243b488906be4b84e1cad3dd1b44/_posts/2016-06-23-nvidia-driver-update-for-matlab-2016a.md"> a9734e7</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
  <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
  <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -312,9 +316,9 @@ sudo apt install NVidia-367</code></pre>
     
       <li><span>31 May 2014</span> &raquo; <a href="/2014/05/31/teaching_with_SMC.html">Teaching with SageMathCloud</a></li>
     
-      <li><span>06 Dec 2012</span> &raquo; <a href="/2012/12/06/reproducible-research-standard.html">Adopting the Reproducible Research Standard</a></li>
+      <li><span>11 Oct 2012</span> &raquo; <a href="/2012/10/11/blogging-with-notebooks-and-jekyll.html">Blogging with notebooks and Jekyll</a></li>
     
-      <li><span>15 May 2015</span> &raquo; <a href="/2015/05/15/write_tests.html">Step 5 - write tests</a></li>
+      <li><span>23 Jul 2016</span> &raquo; <a href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html">Put everything on a quantum circuit--part I</a></li>
     
   </ul>
 </div>
@@ -401,7 +405,44 @@ sudo apt install NVidia-367</code></pre>
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -421,9 +462,10 @@ sudo apt install NVidia-367</code></pre>
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 

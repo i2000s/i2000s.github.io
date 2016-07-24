@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-06-29T06:00:24+00:00</updated>
+ <updated>2016-07-24T03:43:57+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -25,6 +25,9 @@
 &lt;p&gt;This new page is my own effort to enable that revolution. In fact, I’ve been gradually putting my teaching materials online for the past couple of years, without giving it much thought. The teaching page collects all the resources I’ve made available in one place.&lt;/p&gt;
 &lt;p&gt;Something even more exciting in this vein is coming in the fall. If you want to know a little about it, watch &lt;a href=&quot;http://www.youtube.com/watch?v=TWxwKDT88GU&amp;amp;t=56m2s&quot;&gt;the last few minutes of Lorena Barba’s excellent Scipy keynote on computational thinking and teaching&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Stay tuned.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -61,6 +64,9 @@
 &lt;/ul&gt;
 &lt;p&gt;Just be warned that some are more polished than others, and they’re likely to all get a makeover soon.&lt;/p&gt;
 &lt;p&gt;Now that I keep a lot of my &lt;a href=&quot;https://github.com/ketch/shallow_water_periodic_bathymetry/blob/master/pyclaw/shallow_water_diffraction.ipynb&quot;&gt;research in IPython notebooks on Github&lt;/a&gt;, I’m also thinking that SMC is a way to be able to show that research to anyone, anywhere. Heck, I can create a project, clone a Github repo, and run PyClaw in a notebook &lt;strong&gt;on my phone!&lt;/strong&gt; Just amazing.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -83,6 +89,9 @@
 &lt;/ul&gt;
 &lt;p&gt;These won’t make you an expert, but if you’re looking for something short, practical, and fun, please give them a try. You may also find the last two notebooks useful if you’re looking for a good introduction to PyClaw.&lt;/p&gt;
 &lt;p&gt;These may be greatly expanded in the future into a full-fledged semester-length course.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -108,6 +117,9 @@
 &lt;p&gt;The most common answer (66%) was &lt;strong&gt;“Immediate access through a repository, such as PubMedCentral or Arxiv, or on an author’s web site”&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;This is quick and painless. &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/statistics.php?la=en&amp;amp;fIDnum=|&amp;amp;mode=simple&quot;&gt;It is allowed by an overwhelming majority of publishers&lt;/a&gt;. It requires no mandates from governments or universities. It requires no extra funding. Anyone can do it, and every scientist who cares a whit about open access already has done it.&lt;/p&gt;
 &lt;p&gt;If someone tells you that we need governments or publishers to intervene to make open access possible, you can be sure that his agenda is something other than open access. The only obstacle left is our own apathy.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -149,8 +161,11 @@
 &lt;h3 id=&quot;parabolic-problems&quot;&gt;Parabolic problems&lt;/h3&gt;
 &lt;p&gt;It’s well known that the largest interval of stability of a consistent &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage method on the negative real axis has length &lt;span class=&quot;math&quot;&gt;\(s^2\)&lt;/span&gt;; the corresponding polynomials are (shifted) Chebyshev polynomials. You might hope that this could also be deduced by considering a centered difference semi-discretization of the heat equation and applying the CFL theorem. That would be very neat, since it would provide a connection between PDE stability theory and the optimality of Chebyshev polynomials.&lt;/p&gt;
 &lt;p&gt;Indeed, explicit time discretizations generally lead to step size restrictions depending on the square of the spatial mesh width when paired with the usual centered spatial discretization. But the CFL theorem is not sharp for these discretizations; it only tells us that &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; must vanish vanish more quickly than the spatial mesh width. So no deduction along these lines seems possible.&lt;/p&gt;
-&lt;p&gt;#spnetwork #recommend doi:/10.1007/BF01389633&lt;/p&gt;
-&lt;p&gt;#discusses doi:10.1147/rd.112.0215 #discusses doi:10.1007/BF01932030&lt;/p&gt;
+&lt;p&gt;#spnetwork #recommend &lt;a href=&quot;doi:/10.1007/BF01389633&quot;&gt;doi:/10.1007/BF01389633&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#discusses &lt;a href=&quot;doi:10.1147/rd.112.0215&quot;&gt;doi:10.1147/rd.112.0215&lt;/a&gt; #discusses &lt;a href=&quot;doi:10.1007/BF01932030&quot;&gt;doi:10.1007/BF01932030&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -178,6 +193,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This is a reasonable solution in very small functions, but it breaks if you want to add new arguments that don’t come at the end, and if you want to specify the very last value then you have to specify them all. A better general solution is the &lt;a href=&quot;http://www.mathworks.com/help/matlab/ref/inputparserclass.html&quot;&gt;inputParser object&lt;/a&gt;. It’s much less natural than Python’s syntax, but the result for the user is the same: arbitrary subsets of the optional arguments can be specified; default values will be used for the rest. As a bonus, you can check the types of the inputs. &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/polyopt/opt_poly_bisect.m#L258&quot;&gt;Here’s an example of usage&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you know of better ways to do any of these things, please let me know in the comments!&lt;/p&gt;
 &lt;p&gt;Of course, it’s entirely possible to develop large, well-documented, well-tested, user-friendly packages in MATLAB – &lt;a href=&quot;http://www.chebfun.org/&quot;&gt;Chebfun&lt;/a&gt; is one example. It’s just that this is the exception and not the rule in the MATLAB community. Hopefully better integration with testing and documentation tools will improve this situation.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -198,6 +216,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For me, the worst condemnation of any talk is that no questions are asked afterward. I haven’t had that happen in a long time, but this was close: there was only one question, and that question demonstrated that I had completely failed to convey what was going on behind a lot of the code I had showed.&lt;/p&gt;
 &lt;p&gt;It feels too soon to give up on this approach to talks; I will try it again some time. Perhaps I just haven’t found the right use for this medium. If you have tried giving a similar talk, I’d love to hear your opinion or suggestions.&lt;/p&gt;
 &lt;p&gt;One note about the slides: parts of them will not make sense in the absence of my verbal explanations. I generally avoid including a lot of explanatory text in the slides. I actually added a lot more than usual in this case because I was planning to post them online.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -222,6 +243,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;a-word-of-caution&quot;&gt;A word of caution&lt;/h3&gt;
 &lt;p&gt;As useful as all the above are, I’ve found that they can also be a way of wasting time. You may find this to be the case if you’re merely trading opinions with strangers or consuming tidbits of information that aren’t really relevant to your research – for instance, I find that my time spent on the &lt;a href=&quot;http://academia.stackexchange.com&quot;&gt;Academia Stack Exchange&lt;/a&gt; is of dubious value. I stepped down from moderating the SciComp Stack Exchange because I felt it was too time-consuming. But if used in a focused way, open collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
 &lt;p&gt;What other tools or sites ought to be mentioned here? Let me know in the comments.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -247,59 +271,16 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;For the most part, this is easy enough to implement: the current academic research system frankly doesn’t care what you do with your code, data or miscellaneous media outputs. And I think that actually releasing those is the most important part of the RRS. But the text and figures of the paper itself must be published in a journal, and typically the journal will want the copyright – preventing you from releasing those media under CC-BY.&lt;/p&gt;
 &lt;p&gt;Nevertheless, I’ve attempted to follow the full RRS with each of the two papers I’ve had accepted since then. &lt;a href=&quot;http://arxiv.org/abs/1111.3499&quot;&gt;The first&lt;/a&gt; (still in press) was accepted to the SIAM Journal on Scientific Computing (SISC). The code is licensed under modified BSD as part of the &lt;a href=&quot;https://github.com/clawpack/sharpclaw&quot;&gt;SharpClaw&lt;/a&gt; package (now rolled into &lt;a href=&quot;https://github.com/clawpack/pyclaw&quot;&gt;PyClaw&lt;/a&gt;). After reading &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/&quot;&gt;one author’s experience retaining copyright to an article published by SIAM&lt;/a&gt;, I decided to try the same approach of modifying the copyright transfer agreement by &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/#jp-carousel-138&quot;&gt;striking out the transfer of copyright&lt;/a&gt;. I suspected that the instance just linked to went “below the radar”, and I wanted to be completely above-board, so I pointed out to SIAM that I had modified the agreement. What made this particularly interesting is that one of my co-authors on the paper is Randy LeVeque, chair of the SIAM journals committee.&lt;/p&gt;
-&lt;p&gt;Eventually, SIAM objected “on the grounds that non-exclusive right to publish doesn’t prohibit others from publishing for profit, which may be to [the authors’] disadvantage as well.” They agreed instead to an addendum generated via http://scholars.sciencecommons.org/ that retains for the authors the right to post the final article on any public server, as long as publication in SISC is stated. Since this gave me what I wanted in practical terms, I agreed and signed the copyright transfer + addendum. I’ve been told that an ad hoc committee of SIAM leadership is now discussing how SIAM should handle these copyright questions like this.&lt;/p&gt;
+&lt;p&gt;Eventually, SIAM objected “on the grounds that non-exclusive right to publish doesn’t prohibit others from publishing for profit, which may be to [the authors’] disadvantage as well.” They agreed instead to an addendum generated via &lt;a href=&quot;http://scholars.sciencecommons.org/&quot;&gt;http://scholars.sciencecommons.org/&lt;/a&gt; that retains for the authors the right to post the final article on any public server, as long as publication in SISC is stated. Since this gave me what I wanted in practical terms, I agreed and signed the copyright transfer + addendum. I’ve been told that an ad hoc committee of SIAM leadership is now discussing how SIAM should handle these copyright questions like this.&lt;/p&gt;
 &lt;p&gt;I came away from this feeling like we had made progress, but I still wanted to see if I could implement the full RRS with respect to the next paper. My &lt;a href=&quot;http://arxiv.org/pdf/1201.3035v3.pdf&quot;&gt;next accepted paper&lt;/a&gt; (also still in press) was a submission to &lt;a href=&quot;msp.org/camcos/&quot;&gt;Communications in Applied Mathematics and Computational Science&lt;/a&gt;, published by the extremely progressive not-for-profit &lt;a href=&quot;http://msp.org/about/&quot;&gt;Math­em­at­ic­al Sci­ences Pub­lish­ers&lt;/a&gt;. This is a truly remarkable journal that will be the subject of another blog post in the near future, but what’s important in this context is that the journal doesn’t require authors to transfer copyright! They only require a &lt;a href=&quot;http://msp.berkeley.edu/editorial/uploads/camcos/accepted/120712-Qi/copyright.pdf&quot;&gt;license to publish&lt;/a&gt; which includes this clause:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;The copyright holder retains the right to duplicate the Work by any means and to permit others to do the same with the exception of reproduction by services that collect fees for delivery of documents, which may be licensed only by the Publisher. In each case of authorized duplication of the Work in whole or in part, the Author(s) must still ensure that the original publication by the Publisher is properly credited.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;After discussion with my co-author Aron Ahmadia, we’re retaining copyright and licensing the paper under CC-BY-NC. The NC (non-commercial clause) seems necessary to comply with the paragraph above, and seems reasonable to me. The code for the paper is released as part of the &lt;a href=&quot;https://github.com/ketch/RK-opt&quot;&gt;RK-opt package&lt;/a&gt;. So I’m calling this mission accomplished.&lt;/p&gt;
 &lt;p&gt;I have mixed feelings about whether it makes sense for journals to let authors keep copyright – I can see some sense in SIAM’s objection, and I think that non-profit publishers need to protect enough of a revenue stream to support their activities. I think it is better that that revenue come from (low-cost) subscriptions than from author fees. It will be interesting to see where SIAM’s policy falls.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Blogging an iPython notebook with Jekyll</title>
-   <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
-   <updated>2012-10-11T00:00:00+00:00</updated>
-   <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
-   <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/blogging_ipython_notebooks_with_jekyll.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Update as of December 2014: Don’t bother using what’s below; go to &lt;a href=&quot;http://cscorley.github.io/2014/02/21/blogging-with-ipython-and-jekyll/&quot;&gt;Christop Corley’s blog&lt;/a&gt; for a much better setup!&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I’ve been playing around with &lt;a href=&quot;http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html&quot;&gt;iPython notebooks&lt;/a&gt; for a while and planning to use them instead of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SAGE&lt;/a&gt; worksheets for my numerical analysis course next spring. As a warmup, I wrote an iPython notebook explaining a bit about internal stability of Runge-Kutta methods and showing some new research results using &lt;a href=&quot;http://numerics.kaust.edu.sa/nodepy/&quot;&gt;NodePy&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I also wanted to post the notebook on my blog here; the ability to more easily include math and code in blog posts was one of my main motivations for moving away from Blogger to my own site. I first tried following &lt;a href=&quot;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&quot;&gt;the instructions given by Fernando Perez&lt;/a&gt;. That was quite painless and worked flawlessly, using &lt;code&gt;nbconvert.py&lt;/code&gt; to convert the .ipynb file directly to HTML, with graphics embedded. The only issue was that I didn’t love the look of the output quite as much as I love how Carl Boettiger’s Markdown + Jekyll posts with code and math look (see an example &lt;a href=&quot;http://www.carlboettiger.info/2012/09/14/analytic-solution-to-multiple-uncertainty.html&quot;&gt;here&lt;/a&gt;). Besides, Markdown is so much nicer than HTML, and &lt;code&gt;nbconvert.py&lt;/code&gt; has a Markdown output option.&lt;/p&gt;
-&lt;p&gt;So I tried the markdown option:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;nbconvert.py my_nb.ipynb -f markdown&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I copied the result to my &lt;code&gt;_posts/&lt;/code&gt; directory, added the &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML front-matter&lt;/a&gt; that Jekyll expects, and took a look. Everything was great except that all my plots were gone, of course. After considering a few options, I decided for now to put plots for such posts in a subfolder &lt;code&gt;jekyll_images/&lt;/code&gt; of my public Dropbox folder. Then it was a simple matter of search/replace all the paths to the images. At that point, it looked great; you can see the &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;source&lt;/a&gt; and the &lt;a href=&quot;http://davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;result&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in &lt;code&gt;nbconvert&lt;/code&gt; to handle it, but finally decided that it would be more convenient to just write a shell script that calls &lt;code&gt;nbconvert&lt;/code&gt; and then operates on the result.&lt;br /&gt;Here it is:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;div class=&quot;references&quot;&gt;
 
-fname=$1
-
-nbconvert.py ${fname}.ipynb -f markdown
-sed  -i &amp;#39;&amp;#39; &amp;quot;s#${fname}_files#https:\/\/dl.dropbox.com\/u\/656693\/jekyll_images\/${fname}_files#g&amp;quot;  ${fname}.md
-
-dt=$(date &amp;quot;+%Y-%m-%d&amp;quot;)
-
-echo &amp;quot;0a
----
-layout:    post
-time:      ${dt}
-title:     TITLE-ME
-subtitle:  SUBTITLE-ME
-tags:      TAG-ME
----
-.
-w&amp;quot; | ed ${fname}.md
-
-mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It’s also on Github &lt;a href=&quot;https://github.com/ketch/labnotebook/blob/master/nbconv.sh&quot;&gt;here&lt;/a&gt;. This was a nice educational exercise in constructing shell scripts, in which I learned or re-learned:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;how to use command-line arguments&lt;/li&gt;
-&lt;li&gt;how to use sed and ed&lt;/li&gt;
-&lt;li&gt;how to use data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can expect a lot more iPython-notebook based posts in the future.&lt;/p&gt;
+&lt;/div&gt;
 </content>
  </entry>
  

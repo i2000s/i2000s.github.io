@@ -31,7 +31,7 @@
 <meta property="dc:date" content="" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/README.html" />
+<meta property="dc:identifier" content="/README" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" />
@@ -44,7 +44,7 @@
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
 <meta property="http://ogp.me/ns/article#published_time" content="" />
 <meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://i2000s.github.io/README.html" />
+<meta property="og:url" content="http://i2000s.github.io/README" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 
 
     <!-- Help the browser identify the RSS feed automatically -->
-    <link rel="alternate" type="application/rss+xml" title="Xiaodong Qi's Website" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="The NoteBlog of Xiaodong Qi" href="/atom.xml" />
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -241,8 +241,11 @@ bundle exec jekyll serve</code></pre>
 <p>The publication and citation databases are defined in the <code>asset</code> directory as bibtex files with suffix <code>.bib</code>, which you may want to replace with your own.<br />The rest is to delete or keep posts and pages to fit into your needs. I suggest to put this source code in a branch other than <code>master</code> or <code>gh-pages</code> in your Github repository, which you need to define in the <code>_config.yml</code> file as the “sourcebranch”. The Travis-CI server will commit the generate website onto the <code>master</code> or <code>gh-pages</code> github branch depending on your case. Once you have all the necessary configurations done, Travis-CI will be happily deploying your site on Github. If you want the site to be deployed on a host other than Github, you may want to modify and run the <code>publish.sh</code> bash script to synchronize your locally generated <code>_site</code> folder or the master/gh-pages branch updated by Travis-CI to your target site host.</p>
 <h1 id="copyrights-and-licenses">Copyrights and Licenses</h1>
 <p><a href="http://opensource.org/licenses/MIT">MIT</a> license for the plugins (in the <code>_plugins</code> directory of this repo) shown initially written by Carl Boettiger or Xiaodong Qi. Creative Commons Attributions 3.0 Unported <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">CC-BY</a> license for the content originally created by David Ketcheson. Creative Commons Attributions 4.0 <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> license for content other than plugins originally written by Xiaodong Qi and all the other unspecified cases. If a license is clarified at a much specified scope, that specified license should apply to the scope it covers. You can find the full editing history of each file. Credits should be given appropriately to the origination and the initial author at less and all following contributors if situation permits. For instance, you can cite or attribute posts/works originally from this site/repository as:</p>
-<p>Xiaodong Qi (“Page publication date”), “Page Title”, Lab Notebook, <a href="http://i2000s.github.io">http://i2000s.github.io</a></p>
+<p>Xiaodong Qi (“Page publication date”), “Page Title”, Lab Notebook, <a href="http://i2000s.github.io"><a href="http://i2000s.github.io">http://i2000s.github.io</a></a></p>
 <p>with appropriate page title and publication date as indicated. <a href="http://greycite.knowledgeblog.org/">Greycite</a> is an excellent online tool that can generate the citation information for any particular page given it’s URL.</p>
+<div class="references">
+
+</div>
 
       </div>
 
@@ -293,7 +296,7 @@ bundle exec jekyll serve</code></pre>
       &amp;rft.date=
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://i2000s.github.io/README.html">
+      &amp;rft_id=http://i2000s.github.io/README">
   </span>
 
     </footer>
@@ -310,7 +313,44 @@ bundle exec jekyll serve</code></pre>
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], // normal derivetives.
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial derivetives.
+          tr: ["{\\mathrm{Tr}}"], // trace.
+        }
+      //extensions: ["autoload-all.js"]
+      }
+    });
+    //MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      //var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      //MACROS.color = "Color";
+      //delete MACROS.colorbox;
+      //delete MACROS.fcolorbox;
+    //});
+    </script>
     <!-- Twitter Bootstrap Javascript -->
     <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
     <!-- Unused Twitter Bootstrap Javascript
@@ -330,9 +370,10 @@ bundle exec jekyll serve</code></pre>
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src = "https://code.jquery.com/jquery.js"></script>
-      
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
 
