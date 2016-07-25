@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-24T17:32:34-06:00</updated>
+ <updated>2016-07-25T04:16:11+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Teaching in the open</title>
    <link href="/2014/07/18/teaching_in_the_open.html"/>
-   <updated>2014-07-18T00:00:00-06:00</updated>
+   <updated>2014-07-18T00:00:00+00:00</updated>
    <id>h/2014/07/18/teaching_in_the_open</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/07/18/teaching_in_the_open.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you examine the menu bar above, you’ll notice that my site has a new top-level page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;. This is a direct result of my attending &lt;a href=&quot;http://www.youtube.com/watch?v=1e26rp6qPbA&amp;amp;t=26m12s&quot;&gt;Greg Wilson’s inspiring keynote at Scipy 2014&lt;/a&gt;. That link will take you to the key (for me) part of the talk, but I recommend watching the whole thing. His message is: massive collaboration is the real revolution. Michael Nielsen made the same statement in &lt;em&gt;Reinventing Discovery&lt;/em&gt;; here Greg applies this statement to university education, and asks:&lt;/p&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;This new page is my own effort to enable that revolution. In fact, I’ve been gradually putting my teaching materials online for the past couple of years, without giving it much thought. The teaching page collects all the resources I’ve made available in one place.&lt;/p&gt;
 &lt;p&gt;Something even more exciting in this vein is coming in the fall. If you want to know a little about it, watch &lt;a href=&quot;http://www.youtube.com/watch?v=TWxwKDT88GU&amp;amp;t=56m2s&quot;&gt;the last few minutes of Lorena Barba’s excellent Scipy keynote on computational thinking and teaching&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Stay tuned.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -34,7 +34,7 @@
  <entry>
    <title>Teaching with SageMathCloud</title>
    <link href="/2014/05/31/teaching_with_SMC.html"/>
-   <updated>2014-05-31T00:00:00-06:00</updated>
+   <updated>2014-05-31T00:00:00+00:00</updated>
    <id>h/2014/05/31/teaching_with_SMC</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/31/teaching_with_SMC.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level course on numerical analysis for differential equations. I’ve been teaching the course using Python for 5 years now. This year, for the first time, &lt;em&gt;I didn’t spend any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;. In fact, I even had them use Clawpack – and they didn’t need to install it. Why? Because they all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
@@ -64,7 +64,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Just be warned that some are more polished than others, and they’re likely to all get a makeover soon.&lt;/p&gt;
 &lt;p&gt;Now that I keep a lot of my &lt;a href=&quot;https://github.com/ketch/shallow_water_periodic_bathymetry/blob/master/pyclaw/shallow_water_diffraction.ipynb&quot;&gt;research in IPython notebooks on Github&lt;/a&gt;, I’m also thinking that SMC is a way to be able to show that research to anyone, anywhere. Heck, I can create a project, clone a Github repo, and run PyClaw in a notebook &lt;strong&gt;on my phone!&lt;/strong&gt; Just amazing.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -73,7 +73,7 @@
  <entry>
    <title>HyperPython</title>
    <link href="/2014/05/28/hyperpython.html"/>
-   <updated>2014-05-28T00:00:00-06:00</updated>
+   <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/hyperpython</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/28/hyperpython.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ketch/HyperPython/master/figures/finite_volume.png&quot; alt=&quot;Finite volumes&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
@@ -89,7 +89,7 @@
 &lt;/ul&gt;
 &lt;p&gt;These won’t make you an expert, but if you’re looking for something short, practical, and fun, please give them a try. You may also find the last two notebooks useful if you’re looking for a good introduction to PyClaw.&lt;/p&gt;
 &lt;p&gt;These may be greatly expanded in the future into a full-fledged semester-length course.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -98,7 +98,7 @@
  <entry>
    <title>Open access is about open access, not journals</title>
    <link href="/2013/12/13/open_access_means_open_access.html"/>
-   <updated>2013-12-13T00:00:00-07:00</updated>
+   <updated>2013-12-13T00:00:00+00:00</updated>
    <id>h/2013/12/13/open_access_means_open_access</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/12/13/open_access_means_open_access.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open access&lt;/a&gt;. Among the questions:&lt;/p&gt;
@@ -115,9 +115,9 @@
 &lt;li&gt;&lt;em&gt;Which options for making papers freely available do you prefer?&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The most common answer (66%) was &lt;strong&gt;“Immediate access through a repository, such as PubMedCentral or Arxiv, or on an author’s web site”&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This is quick and painless. &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/statistics.php?la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;It is allowed by an overwhelming majority of publishers&lt;/a&gt;. It requires no mandates from governments or universities. It requires no extra funding. Anyone can do it, and every scientist who cares a whit about open access already has done it.&lt;/p&gt;
+&lt;p&gt;This is quick and painless. &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/statistics.php?la=en&amp;amp;fIDnum=|&amp;amp;mode=simple&quot;&gt;It is allowed by an overwhelming majority of publishers&lt;/a&gt;. It requires no mandates from governments or universities. It requires no extra funding. Anyone can do it, and every scientist who cares a whit about open access already has done it.&lt;/p&gt;
 &lt;p&gt;If someone tells you that we need governments or publishers to intervene to make open access possible, you can be sure that his agenda is something other than open access. The only obstacle left is our own apathy.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -126,44 +126,44 @@
  <entry>
    <title>A Tale of Two Theorems</title>
    <link href="/2013/10/14/CFL-disk.html"/>
-   <updated>2013-10-14T00:00:00-06:00</updated>
+   <updated>2013-10-14T00:00:00+00:00</updated>
    <id>h/2013/10/14/CFL-disk</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/10/14/CFL-disk.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent &lt;strong&gt;partial&lt;/strong&gt; differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.&lt;/p&gt;
-&lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with bounding the modulus of a polynomial &lt;span class=&quot;math inline&quot;&gt;\(\psi(z)\)&lt;/span&gt; over a disk of the form &lt;span class=&quot;math display&quot;&gt;\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]&lt;/span&gt; Their theorem says that if &lt;span class=&quot;math inline&quot;&gt;\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; for all &lt;span class=&quot;math inline&quot;&gt;\(z\)&lt;/span&gt; in such a disk &lt;span class=&quot;math inline&quot;&gt;\(D_r\)&lt;/span&gt;, then the disk radius &lt;span class=&quot;math inline&quot;&gt;\(r\)&lt;/span&gt; is at most &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;. The proof of this result is, of course, purely algebraic.&lt;/p&gt;
+&lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with bounding the modulus of a polynomial &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; over a disk of the form &lt;span class=&quot;math&quot;&gt;\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]&lt;/span&gt; Their theorem says that if &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt; in such a disk &lt;span class=&quot;math&quot;&gt;\(D_r\)&lt;/span&gt;, then the disk radius &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; is at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. The proof of this result is, of course, purely algebraic.&lt;/p&gt;
 &lt;p&gt;These results apparently have nothing to do with one another. And yet it turns out that &lt;strong&gt;they are equivalent statements!&lt;/strong&gt; That is, the CFL theorem can be proved using the JN disk theorem. And the JN disk theorem can be proved using the CFL condition (and no algebraic techniques). This was explained in &lt;a href=&quot;http://dx.doi.org/10.1007/BF01389633&quot;&gt;a beautiful paper of Sanz-Serna and Spijker&lt;/a&gt; [SS] in 1986, and the result deserves to be much more well known.&lt;/p&gt;
 &lt;h3 id=&quot;first-order-upwinding&quot;&gt;First order upwinding&lt;/h3&gt;
-&lt;p&gt;Consider the problem of approximating the value &lt;span class=&quot;math inline&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; for the advection equation &lt;span class=&quot;math display&quot;&gt;\[u_t + u_x = 0.\]&lt;/span&gt; The exact solution can be obtained by characteristics from the previous time level: &lt;span class=&quot;math display&quot;&gt;\[u(x_i,t_n) = u(x_i-k,t_{n-1}),\]&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; is the time step size. The CFL theorem says that the stencil used for approximating &lt;span class=&quot;math inline&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; must enclose the point &lt;span class=&quot;math inline&quot;&gt;\(x_i-k\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Let’s discretize the advection equation in space using upwind differences: &lt;span class=&quot;math display&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_i-U_{i-1}\right).\]&lt;/span&gt; Here for simplicity we’ve assumed a spatial mesh width of 1. Taking periodic boundary conditions, this semi-discretization is a system of ODEs of the form &lt;span class=&quot;math inline&quot;&gt;\(U&amp;#39;=LU\)&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;\(L\)&lt;/span&gt; is the circulant matrix &lt;span class=&quot;math display&quot;&gt;\[
+&lt;p&gt;Consider the problem of approximating the value &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; for the advection equation &lt;span class=&quot;math&quot;&gt;\[u_t + u_x = 0.\]&lt;/span&gt; The exact solution can be obtained by characteristics from the previous time level: &lt;span class=&quot;math&quot;&gt;\[u(x_i,t_n) = u(x_i-k,t_{n-1}),\]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; is the time step size. The CFL theorem says that the stencil used for approximating &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; must enclose the point &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s discretize the advection equation in space using upwind differences: &lt;span class=&quot;math&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_i-U_{i-1}\right).\]&lt;/span&gt; Here for simplicity we’ve assumed a spatial mesh width of 1. Taking periodic boundary conditions, this semi-discretization is a system of ODEs of the form &lt;span class=&quot;math&quot;&gt;\(U&amp;#39;=LU\)&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; is the circulant matrix &lt;span class=&quot;math&quot;&gt;\[
 \begin{pmatrix}
 -1 &amp;amp; &amp;amp; &amp;amp; 1 \\
 1  &amp;amp; -1 &amp;amp; &amp;amp; \\
 &amp;amp; \ddots &amp;amp; \ddots \\
 &amp;amp; &amp;amp; 1 &amp;amp; -1 \\
-\end{pmatrix}\]&lt;/span&gt; (as usual, all the omitted entries are zero). The eigenvalues of this matrix all lie on the boundary of the disk of radius one centered at &lt;span class=&quot;math inline&quot;&gt;\(z=-1\)&lt;/span&gt;, which we denote by &lt;span class=&quot;math inline&quot;&gt;\(D_1\)&lt;/span&gt;. Here are the eigenvalues of a 50-point discretization:&lt;/p&gt;
+\end{pmatrix}\]&lt;/span&gt; (as usual, all the omitted entries are zero). The eigenvalues of this matrix all lie on the boundary of the disk of radius one centered at &lt;span class=&quot;math&quot;&gt;\(z=-1\)&lt;/span&gt;, which we denote by &lt;span class=&quot;math&quot;&gt;\(D_1\)&lt;/span&gt;. Here are the eigenvalues of a 50-point discretization:&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;https://dl.dropboxusercontent.com/u/656693/wiki_images/disk_eigen.png&quot; /&gt;
 &lt;/figure&gt;
-&lt;p&gt;If we discretize in time with Euler’s method, we get the scheme &lt;span class=&quot;math display&quot;&gt;\[U^n_i = U^{n-1}_i - k\left(U_i-U_{i-1}\right).\]&lt;/span&gt; This scheme computes the solution at &lt;span class=&quot;math inline&quot;&gt;\((x_i,t_n)\)&lt;/span&gt; using values at &lt;span class=&quot;math inline&quot;&gt;\((x_{i-1},t_{n-1})\)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;\((x_i,t_{n-1})\)&lt;/span&gt;, so the CFL theorem says it can be convergent only if &lt;span class=&quot;math inline&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math inline&quot;&gt;\((x_{i-1},x_i)\)&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;\(x_{i-1} = x_i - 1\)&lt;/span&gt;, this holds iff the step size &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; is smaller than 1.&lt;/p&gt;
-&lt;p&gt;This result – that the first-order upwind method is stable and convergent only for CFL number at most one – is well known, and can also be derived using basic method of lines stability theory. The stability function for Euler’s method is &lt;span class=&quot;math inline&quot;&gt;\(\psi(z) = 1 + z\)&lt;/span&gt;, so it is stable only if &lt;span class=&quot;math inline&quot;&gt;\(z=k\lambda\)&lt;/span&gt; lies in the disk &lt;span class=&quot;math inline&quot;&gt;\(\{z : |1+z|\le 1\} = D_1\)&lt;/span&gt; for each eigenvalue &lt;span class=&quot;math inline&quot;&gt;\(\lambda\)&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;\(L\)&lt;/span&gt;. What we have seen in the foregoing is that this stability condition can be derived directly from the CFL condition, without considering the eigenvalues of &lt;span class=&quot;math inline&quot;&gt;\(L\)&lt;/span&gt; or the stability region of Euler’s method.&lt;/p&gt;
+&lt;p&gt;If we discretize in time with Euler’s method, we get the scheme &lt;span class=&quot;math&quot;&gt;\[U^n_i = U^{n-1}_i - k\left(U_i-U_{i-1}\right).\]&lt;/span&gt; This scheme computes the solution at &lt;span class=&quot;math&quot;&gt;\((x_i,t_n)\)&lt;/span&gt; using values at &lt;span class=&quot;math&quot;&gt;\((x_{i-1},t_{n-1})\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\((x_i,t_{n-1})\)&lt;/span&gt;, so the CFL theorem says it can be convergent only if &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math&quot;&gt;\((x_{i-1},x_i)\)&lt;/span&gt;. Since &lt;span class=&quot;math&quot;&gt;\(x_{i-1} = x_i - 1\)&lt;/span&gt;, this holds iff the step size &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; is smaller than 1.&lt;/p&gt;
+&lt;p&gt;This result – that the first-order upwind method is stable and convergent only for CFL number at most one – is well known, and can also be derived using basic method of lines stability theory. The stability function for Euler’s method is &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z\)&lt;/span&gt;, so it is stable only if &lt;span class=&quot;math&quot;&gt;\(z=k\lambda\)&lt;/span&gt; lies in the disk &lt;span class=&quot;math&quot;&gt;\(\{z : |1+z|\le 1\} = D_1\)&lt;/span&gt; for each eigenvalue &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt;. What we have seen in the foregoing is that this stability condition can be derived directly from the CFL condition, without considering the eigenvalues of &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; or the stability region of Euler’s method.&lt;/p&gt;
 &lt;h3 id=&quot;proving-the-jn-disk-theorem-via-the-cfl-theorem&quot;&gt;Proving the JN disk theorem via the CFL theorem&lt;/h3&gt;
-&lt;p&gt;For higher order discretizations, the CFL condition is necessary but not generally sufficient for stability. Nevertheless, we can use it to derive the JN disk theorem. I’ll restrict the explanation here to Runge-Kutta methods, but the extension to multistep methods is very simple. Suppose that we discretize in time using a Runge-Kutta method with &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt; stages. In each stage, one point further to the left is used, so typically the stencil for computing &lt;span class=&quot;math inline&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; includes the values from the previous step at &lt;span class=&quot;math inline&quot;&gt;\(x_{i-s}, x_{i-s+1}, \dots, x_i\)&lt;/span&gt;. Thus the CFL theorem says the method cannot be convergent unless &lt;span class=&quot;math inline&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math inline&quot;&gt;\((x_{i-s},x_i)\)&lt;/span&gt;; i.e., unless &lt;span class=&quot;math inline&quot;&gt;\(k\le s\)&lt;/span&gt;. Meanwhile, the stability function &lt;span class=&quot;math inline&quot;&gt;\(\psi(z)\)&lt;/span&gt; of the Runge-Kutta method is a polynomial of degree at most &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;. Method of lines analysis tells us that the full discretization is stable if &lt;span class=&quot;math inline&quot;&gt;\(kD_1\)&lt;/span&gt; lies inside the region &lt;span class=&quot;math inline&quot;&gt;\(\{z : |\psi(z)|\le 1\}.\)&lt;/span&gt; Since we know it is unstable for &lt;span class=&quot;math inline&quot;&gt;\(k&amp;gt;s\)&lt;/span&gt;, this implies that if &lt;span class=&quot;math inline&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; over the disk &lt;span class=&quot;math inline&quot;&gt;\(D_k\)&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;\(k \le s\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;For higher order discretizations, the CFL condition is necessary but not generally sufficient for stability. Nevertheless, we can use it to derive the JN disk theorem. I’ll restrict the explanation here to Runge-Kutta methods, but the extension to multistep methods is very simple. Suppose that we discretize in time using a Runge-Kutta method with &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt; stages. In each stage, one point further to the left is used, so typically the stencil for computing &lt;span class=&quot;math&quot;&gt;\(u(x_i,t_n)\)&lt;/span&gt; includes the values from the previous step at &lt;span class=&quot;math&quot;&gt;\(x_{i-s}, x_{i-s+1}, \dots, x_i\)&lt;/span&gt;. Thus the CFL theorem says the method cannot be convergent unless &lt;span class=&quot;math&quot;&gt;\(x_i-k\)&lt;/span&gt; lies in the interval &lt;span class=&quot;math&quot;&gt;\((x_{i-s},x_i)\)&lt;/span&gt;; i.e., unless &lt;span class=&quot;math&quot;&gt;\(k\le s\)&lt;/span&gt;. Meanwhile, the stability function &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; of the Runge-Kutta method is a polynomial of degree at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. Method of lines analysis tells us that the full discretization is stable if &lt;span class=&quot;math&quot;&gt;\(kD_1\)&lt;/span&gt; lies inside the region &lt;span class=&quot;math&quot;&gt;\(\{z : |\psi(z)|\le 1\}.\)&lt;/span&gt; Since we know it is unstable for &lt;span class=&quot;math&quot;&gt;\(k&amp;gt;s\)&lt;/span&gt;, this implies that if &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; over the disk &lt;span class=&quot;math&quot;&gt;\(D_k\)&lt;/span&gt;, then &lt;span class=&quot;math&quot;&gt;\(k \le s\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;recap&quot;&gt;Recap&lt;/h3&gt;
 &lt;ol type=&quot;1&quot;&gt;
-&lt;li&gt;An &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;-stage upwind discretization has stencil width &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;The spectrum of the semi-discretization is the boundary of the disk &lt;span class=&quot;math inline&quot;&gt;\(D_1\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum &lt;span class=&quot;math inline&quot;&gt;\(kD_1 = D_k\)&lt;/span&gt; lies inside the stability region of the time discretization.&lt;/li&gt;
-&lt;li&gt;Thus no &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;-stage time discretization can have a stability region including the disk larger than &lt;span class=&quot;math inline&quot;&gt;\(D_s\)&lt;/span&gt; (this is the content of the JN disk theorem).&lt;/li&gt;
+&lt;li&gt;An &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage upwind discretization has stencil width &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The CFL condition implies that this discretization cannot be convergent for Courant numbers larger than &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The spectrum of the semi-discretization is the boundary of the disk &lt;span class=&quot;math&quot;&gt;\(D_1\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Stability analysis implies that the full discretization is convergent if the scaled spectrum &lt;span class=&quot;math&quot;&gt;\(kD_1 = D_k\)&lt;/span&gt; lies inside the stability region of the time discretization.&lt;/li&gt;
+&lt;li&gt;Thus no &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage time discretization can have a stability region including the disk larger than &lt;span class=&quot;math&quot;&gt;\(D_s\)&lt;/span&gt; (this is the content of the JN disk theorem).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;ellipses&quot;&gt;Ellipses&lt;/h3&gt;
-&lt;p&gt;Of course, we didn’t have to choose first-order upwinding in space; we could have taken any spatial discretization. For instance, if we use centered differences: &lt;span class=&quot;math display&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_{i+1}-U_{i-1}\right)\]&lt;/span&gt; then the spectrum of the semi-discretization lies on the imaginary axis in the interval &lt;span class=&quot;math inline&quot;&gt;\([-i,i]\)&lt;/span&gt;. Then the same line of reasoning then tells us that the largest imaginary-axis interval of stability for an &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;-stage method is &lt;span class=&quot;math inline&quot;&gt;\([-is,is]\)&lt;/span&gt;. By considering convex combinations of upwind and centered differences, we get similar results for a family of ellipses; this is the content of Theorem 5 of [SS].&lt;/p&gt;
+&lt;p&gt;Of course, we didn’t have to choose first-order upwinding in space; we could have taken any spatial discretization. For instance, if we use centered differences: &lt;span class=&quot;math&quot;&gt;\[U_i&amp;#39;(t) = -\left(U_{i+1}-U_{i-1}\right)\]&lt;/span&gt; then the spectrum of the semi-discretization lies on the imaginary axis in the interval &lt;span class=&quot;math&quot;&gt;\([-i,i]\)&lt;/span&gt;. Then the same line of reasoning then tells us that the largest imaginary-axis interval of stability for an &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage method is &lt;span class=&quot;math&quot;&gt;\([-is,is]\)&lt;/span&gt;. By considering convex combinations of upwind and centered differences, we get similar results for a family of ellipses; this is the content of Theorem 5 of [SS].&lt;/p&gt;
 &lt;h3 id=&quot;parabolic-problems&quot;&gt;Parabolic problems&lt;/h3&gt;
-&lt;p&gt;It’s well known that the largest interval of stability of a consistent &lt;span class=&quot;math inline&quot;&gt;\(s\)&lt;/span&gt;-stage method on the negative real axis has length &lt;span class=&quot;math inline&quot;&gt;\(s^2\)&lt;/span&gt;; the corresponding polynomials are (shifted) Chebyshev polynomials. You might hope that this could also be deduced by considering a centered difference semi-discretization of the heat equation and applying the CFL theorem. That would be very neat, since it would provide a connection between PDE stability theory and the optimality of Chebyshev polynomials.&lt;/p&gt;
-&lt;p&gt;Indeed, explicit time discretizations generally lead to step size restrictions depending on the square of the spatial mesh width when paired with the usual centered spatial discretization. But the CFL theorem is not sharp for these discretizations; it only tells us that &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; must vanish vanish more quickly than the spatial mesh width. So no deduction along these lines seems possible.&lt;/p&gt;
+&lt;p&gt;It’s well known that the largest interval of stability of a consistent &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;-stage method on the negative real axis has length &lt;span class=&quot;math&quot;&gt;\(s^2\)&lt;/span&gt;; the corresponding polynomials are (shifted) Chebyshev polynomials. You might hope that this could also be deduced by considering a centered difference semi-discretization of the heat equation and applying the CFL theorem. That would be very neat, since it would provide a connection between PDE stability theory and the optimality of Chebyshev polynomials.&lt;/p&gt;
+&lt;p&gt;Indeed, explicit time discretizations generally lead to step size restrictions depending on the square of the spatial mesh width when paired with the usual centered spatial discretization. But the CFL theorem is not sharp for these discretizations; it only tells us that &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; must vanish vanish more quickly than the spatial mesh width. So no deduction along these lines seems possible.&lt;/p&gt;
 &lt;p&gt;#spnetwork #recommend doi:/10.1007/BF01389633&lt;/p&gt;
 &lt;p&gt;#discusses doi:10.1147/rd.112.0215 #discusses doi:10.1007/BF01932030&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -172,7 +172,7 @@
  <entry>
    <title>Documentation, testing, and default arguments for your MATLAB packages</title>
    <link href="/2013/10/12/MATLAB-docs-testing.html"/>
-   <updated>2013-10-12T00:00:00-06:00</updated>
+   <updated>2013-10-12T00:00:00+00:00</updated>
    <id>h/2013/10/12/MATLAB-docs-testing</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/10/12/MATLAB-docs-testing.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.&lt;/p&gt;
@@ -193,7 +193,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This is a reasonable solution in very small functions, but it breaks if you want to add new arguments that don’t come at the end, and if you want to specify the very last value then you have to specify them all. A better general solution is the &lt;a href=&quot;http://www.mathworks.com/help/matlab/ref/inputparserclass.html&quot;&gt;inputParser object&lt;/a&gt;. It’s much less natural than Python’s syntax, but the result for the user is the same: arbitrary subsets of the optional arguments can be specified; default values will be used for the rest. As a bonus, you can check the types of the inputs. &lt;a href=&quot;https://github.com/ketch/RK-opt/blob/master/polyopt/opt_poly_bisect.m#L258&quot;&gt;Here’s an example of usage&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you know of better ways to do any of these things, please let me know in the comments!&lt;/p&gt;
 &lt;p&gt;Of course, it’s entirely possible to develop large, well-documented, well-tested, user-friendly packages in MATLAB – &lt;a href=&quot;http://www.chebfun.org/&quot;&gt;Chebfun&lt;/a&gt; is one example. It’s just that this is the exception and not the rule in the MATLAB community. Hopefully better integration with testing and documentation tools will improve this situation.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -202,7 +202,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Giving a math talk using IPython notebook slides and Wakari</title>
    <link href="/2013/09/21/ipython_notebook_slides_talks.html"/>
-   <updated>2013-09-21T00:00:00-06:00</updated>
+   <updated>2013-09-21T00:00:00+00:00</updated>
    <id>h/2013/09/21/ipython_notebook_slides_talks</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/09/21/ipython_notebook_slides_talks.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&quot;giving-a-math-talk-using-ipython-notebook-slides-and-wakari&quot;&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
@@ -216,7 +216,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For me, the worst condemnation of any talk is that no questions are asked afterward. I haven’t had that happen in a long time, but this was close: there was only one question, and that question demonstrated that I had completely failed to convey what was going on behind a lot of the code I had showed.&lt;/p&gt;
 &lt;p&gt;It feels too soon to give up on this approach to talks; I will try it again some time. Perhaps I just haven’t found the right use for this medium. If you have tried giving a similar talk, I’d love to hear your opinion or suggestions.&lt;/p&gt;
 &lt;p&gt;One note about the slides: parts of them will not make sense in the absence of my verbal explanations. I generally avoid including a lot of explanatory text in the slides. I actually added a lot more than usual in this case because I was planning to post them online.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -225,7 +225,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Open scientific collaboration</title>
    <link href="/2012/12/22/habits-of-open-scientist-4-collab.html"/>
-   <updated>2012-12-22T00:00:00-07:00</updated>
+   <updated>2012-12-22T00:00:00+00:00</updated>
    <id>h/2012/12/22/habits-of-open-scientist-4-collab</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/12/22/habits-of-open-scientist-4-collab.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open scientist&lt;/a&gt;. Here I discuss the fourth habit, &lt;strong&gt;open collaboration&lt;/strong&gt;. The previous post was on &lt;a href=&quot;http://davidketcheson.info/2012/08/22/habits-of-open-scientist-3-pre.html&quot;&gt;Pre-publication dissemination of research&lt;/a&gt;.&lt;/p&gt;
@@ -243,7 +243,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;a-word-of-caution&quot;&gt;A word of caution&lt;/h3&gt;
 &lt;p&gt;As useful as all the above are, I’ve found that they can also be a way of wasting time. You may find this to be the case if you’re merely trading opinions with strangers or consuming tidbits of information that aren’t really relevant to your research – for instance, I find that my time spent on the &lt;a href=&quot;http://academia.stackexchange.com&quot;&gt;Academia Stack Exchange&lt;/a&gt; is of dubious value. I stepped down from moderating the SciComp Stack Exchange because I felt it was too time-consuming. But if used in a focused way, open collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
 &lt;p&gt;What other tools or sites ought to be mentioned here? Let me know in the comments.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -252,7 +252,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Adopting the Reproducible Research Standard</title>
    <link href="/2012/12/06/reproducible-research-standard.html"/>
-   <updated>2012-12-06T00:00:00-07:00</updated>
+   <updated>2012-12-06T00:00:00+00:00</updated>
    <id>h/2012/12/06/reproducible-research-standard</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/12/06/reproducible-research-standard.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Back in July, I read Victoria Stodden’s work on licensing reproducible research. Victoria has proposed the Reproducible Research Standard (RRS), which is an amalgamation of recommended licenses for what she calls the &lt;em&gt;research compendium&lt;/em&gt;. The research compendium is the full set of outputs of a research project, including:&lt;/p&gt;
@@ -278,7 +278,7 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;After discussion with my co-author Aron Ahmadia, we’re retaining copyright and licensing the paper under CC-BY-NC. The NC (non-commercial clause) seems necessary to comply with the paragraph above, and seems reasonable to me. The code for the paper is released as part of the &lt;a href=&quot;https://github.com/ketch/RK-opt&quot;&gt;RK-opt package&lt;/a&gt;. So I’m calling this mission accomplished.&lt;/p&gt;
 &lt;p&gt;I have mixed feelings about whether it makes sense for journals to let authors keep copyright – I can see some sense in SIAM’s objection, and I think that non-profit publishers need to protect enough of a revenue stream to support their activities. I think it is better that that revenue come from (low-cost) subscriptions than from author fees. It will be interesting to see where SIAM’s policy falls.&lt;/p&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>

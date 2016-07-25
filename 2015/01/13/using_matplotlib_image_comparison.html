@@ -30,7 +30,7 @@
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="Testing whether your code produces the correct plots -- in Python and on Travis" />
 <meta property="dc:creator" content="Xiaodong Qi" />
-<meta property="dc:date" content="2015-01-13 00:00:00 -0700" />
+<meta property="dc:date" content="2015-01-13 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2015/01/13/using_matplotlib_image_comparison.html" />
@@ -44,13 +44,13 @@
 <meta property="og:author" content="http://i2000s.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2015-01-13 00:00:00 -0700" />
+<meta property="http://ogp.me/ns/article#published_time" content="2015-01-13 00:00:00 +0000" />
 <meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2015/01/13/using_matplotlib_image_comparison.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
-<meta name="citation_date" content="2015-01-13 00:00:00 -0700"/>
+<meta name="citation_date" content="2015-01-13 00:00:00 +0000"/>
 <meta name="citation_title" content="Testing whether your code produces the correct plots -- in Python and on Travis"/>
 <meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
@@ -245,23 +245,23 @@ $(document).ready(function() {
 <li>Even if display is set, Travis may use a different backend than you do locally, which may lead to test failure (e.g., because the images produced have different numbers of pixels).</li>
 </ol>
 <p>Both of these are solved by ensuring that matplotlib uses the <em>agg</em> backend for the tests (both locally and on Travis). To set the backend to <em>agg</em>, just add the command</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">matplotlib.use(<span class="st">&#39;agg&#39;</span>)</code></pre></div>
+<pre class="sourceCode python"><code class="sourceCode python">matplotlib.use(<span class="st">&#39;agg&#39;</span>)</code></pre>
 <p>This line must be executed before you import <em>pylab</em> or <code>matplotlib.pyplot</code>. This is very tricky if you are using nose, because nose actually imports every file in your package during the test collection phase. What I had to do to get things to work (and the matplotlib package itself does the same!) is to put a <code>tests.py</code> script in the top directory of my package. This script has the following contents:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
 
-<span class="im">import</span> matplotlib
-<span class="im">import</span> nose
+<span class="ch">import</span> matplotlib
+<span class="ch">import</span> nose
 matplotlib.use(<span class="st">&#39;agg&#39;</span>)
 
-nose.main()</code></pre></div>
+nose.main()</code></pre>
 <p>Instead of calling nosetests directly on Travis, I use the following in my <code>.travis.yml</code> file:</p>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">script:</span>
+<pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">script:</span>
   <span class="kw">-</span> cd $HOME/build/my/package
-  <span class="kw">-</span> python tests.py</code></pre></div>
+  <span class="kw">-</span> python tests.py</code></pre>
 <p>That’s it! Since examples are the best documentation, you can check out my working setup <a href="https://github.com/ketch/griddle">here</a>.</p>
-<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-httpwww.davidketcheson.info20150113using_matplotlib_image_comparison.html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html" class="uri">http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html</a></h4>
+<h4 id="note-this-post-was-originally-written-by-david-ketcheson-and-posted-at-httpwww.davidketcheson.info20150113using_matplotlib_image_comparison.html">Note: this post was originally written by David Ketcheson and posted at <a href="http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html">http://www.davidketcheson.info/2015/01/13/using_matplotlib_image_comparison.html</a></h4>
 <p>under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
-<div id="refs" class="references">
+<div class="references">
 
 </div>
 
@@ -278,12 +278,12 @@ nose.main()</code></pre></div>
 
 <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i><small>
-    <time datetime="2015-01-13 00:00:00 -0700"
+    <time datetime="2015-01-13 00:00:00 +0000"
     property="dc:created">13 Jan 2015</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2016-02-15 03:04:02 -0700"
-            property="dc:modified">15 Feb 2016</time></small></p>
+            datetime="2016-06-03 03:29:37 +0000"
+            property="dc:modified">03 Jun 2016</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -323,7 +323,7 @@ nose.main()</code></pre></div>
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/84691897e1c23c8d1700fc116625d4e86a3f2037/_posts/2015-01-13-using_matplotlib_image_comparison.md"> 8469189</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/ef0c3cdca8e686ede4277c6d034ee5f91a792396/_posts/2015-01-13-using_matplotlib_image_comparison.md"> ef0c3cd</a></tiny></p>
 </aside>
 
 <br /><br />

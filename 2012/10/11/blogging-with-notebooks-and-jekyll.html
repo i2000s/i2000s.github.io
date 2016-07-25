@@ -30,7 +30,7 @@
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="Blogging with notebooks and Jekyll" />
 <meta property="dc:creator" content="Xiaodong Qi" />
-<meta property="dc:date" content="2012-10-11 00:00:00 -0600" />
+<meta property="dc:date" content="2012-10-11 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2012/10/11/blogging-with-notebooks-and-jekyll.html" />
@@ -44,13 +44,13 @@
 <meta property="og:author" content="http://i2000s.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Xiaodong"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Qi"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-10-11 00:00:00 -0600" />
+<meta property="http://ogp.me/ns/article#published_time" content="2012-10-11 00:00:00 +0000" />
 <meta property="og:site_name" content="The NoteBlog of Xiaodong Qi" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://i2000s.github.io/2012/10/11/blogging-with-notebooks-and-jekyll.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Xiaodong Qi"/>
-<meta name="citation_date" content="2012-10-11 00:00:00 -0600"/>
+<meta name="citation_date" content="2012-10-11 00:00:00 +0000"/>
 <meta name="citation_title" content="Blogging with notebooks and Jekyll"/>
 <meta name="citation_journal_title" content="The NoteBlog of Xiaodong Qi"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
@@ -231,8 +231,7 @@ $(document).ready(function() {
 <p>So I tried the markdown option:</p>
 <pre><code>nbconvert.py my_nb.ipynb -f markdown</code></pre>
 <p>I copied the result to my <code>_posts/</code> directory, added the <a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML front-matter</a> that Jekyll expects, and took a look. Everything was great except that all my plots were gone, of course. After considering a few options, I decided for now to put plots for such posts in a subfolder <code>jekyll_images/</code> of my public Dropbox folder. Then it was a simple matter of search/replace all the paths to the images. At that point, it looked great; you can see the <a href="https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb">source</a> and the <a href="http://davidketcheson.info/2012/10/11/Internal_stability.html">result</a>.</p>
-<p>The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in <code>nbconvert</code> to handle it, but finally decided that it would be more convenient to just write a shell script that calls <code>nbconvert</code> and then operates on the result.<br />
-Here it is:</p>
+<p>The only issue was that I didn’t want to manually do all that work every time. I considered creating a new Converter class in <code>nbconvert</code> to handle it, but finally decided that it would be more convenient to just write a shell script that calls <code>nbconvert</code> and then operates on the result.<br />Here it is:</p>
 <pre><code>#!/bin/bash
 
 fname=$1
@@ -261,7 +260,7 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md</code></pre>
 <li>how to use data</li>
 </ul>
 <p>You can expect a lot more iPython-notebook based posts in the future.</p>
-<div id="refs" class="references">
+<div class="references">
 
 </div>
 
@@ -278,11 +277,11 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md</code></pre>
 
 <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i><small>
-    <time datetime="2012-10-11 00:00:00 -0600"
+    <time datetime="2012-10-11 00:00:00 +0000"
     property="dc:created">11 Oct 2012</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2016-07-21 15:39:24 -0600"
+            datetime="2016-07-21 21:39:24 +0000"
             property="dc:modified">21 Jul 2016</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -327,7 +326,7 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md</code></pre>
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/a43cadb3765589724fb39e66e14c17d89a25c79d/_posts/2012-10-11-blogging-with-notebooks-and-jekyll.md"> a43cadb</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/8d6d6966b85f8fc38e9412c6af9f0330c28443fa/_posts/2012-10-11-blogging-with-notebooks-and-jekyll.md"> 8d6d696</a></tiny></p>
 </aside>
 
 <br /><br />
