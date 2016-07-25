@@ -1,38 +1,35 @@
- 
+
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-7 col-sm-12">
+    <article>
+     
 http://i2000s.github.io/R.xml  
-http://i2000s.github.io/README.html  
-http://i2000s.github.io/archives.html  
+http://i2000s.github.io/README  
+http://i2000s.github.io/archives  
 http://i2000s.github.io/atom.xml  
-http://i2000s.github.io/categories.html  
-http://i2000s.github.io/community.html  
+http://i2000s.github.io/categories  
+http://i2000s.github.io/community/  
 http://i2000s.github.io/exploringquantumworld.xml  
-http://i2000s.github.io/index.html  
-http://i2000s.github.io/noteblog.html  
+http://i2000s.github.io/  
+http://i2000s.github.io/noteblog  
 http://i2000s.github.io/noteblog.xml  
-http://i2000s.github.io/notebooks.html  
-http://i2000s.github.io/philosophy.html  
+http://i2000s.github.io/notebooks  
+http://i2000s.github.io/philosophy  
 http://i2000s.github.io/pubs/  
-http://i2000s.github.io/research.html  
-http://i2000s.github.io/search.html  
+http://i2000s.github.io/research/  
+http://i2000s.github.io/search  
 http://i2000s.github.io/sitemap.txt  
-http://i2000s.github.io/tags.html  
-http://i2000s.github.io/tools.html  
-http://i2000s.github.io/pubs/Qi2016Dispersive.html  
-http://i2000s.github.io/pubs/Qi2015Dispersive.html  
-http://i2000s.github.io/pubs/Qi2015Dispersivea.html  
-http://i2000s.github.io/pubs/Qi2015Dispersiveb.html  
-http://i2000s.github.io/pubs/Qi2012effects.html  
-http://i2000s.github.io/pubs/Qi2011Modeling.html  
-http://i2000s.github.io/pubs/Liu2011Study.html  
-http://i2000s.github.io/pubs/Qi2010Surface.html  
-http://i2000s.github.io/pubs/Ye2010Emission.html  
-http://i2000s.github.io/pubs/Ye2010Emissiona.html  
-http://i2000s.github.io/pubs/QI2010Surfacea.html  
-http://i2000s.github.io/pubs/Li2009Optical.html  
-http://i2000s.github.io/pubs/Li2008theoretical.html  
-http://i2000s.github.io/pubs/Li2008Optical.html 
+http://i2000s.github.io/tags  
+http://i2000s.github.io/tools 
 
  
+http://i2000s.github.io/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html  
+http://i2000s.github.io/2016/06/23/nvidia-driver-update-for-matlab-2016a.html  
+http://i2000s.github.io/2016/05/26/2016-summer-study-on-quantum-optics-II.html  
 http://i2000s.github.io/2016/02/17/SQuInT-workshop-2016.html  
 http://i2000s.github.io/2015/05/29/automate_tests.html  
 http://i2000s.github.io/2015/05/16/track_issues.html  
@@ -53,38 +50,21 @@ http://i2000s.github.io/2013/12/13/open_access_means_open_access.html
 http://i2000s.github.io/2013/10/14/CFL-disk.html  
 http://i2000s.github.io/2013/10/12/MATLAB-docs-testing.html  
 http://i2000s.github.io/2013/09/21/ipython_notebook_slides_talks.html  
-http://i2000s.github.io/2013/06/23/csgf-letter-to-congress.html  
-http://i2000s.github.io/2013/01/16/sage_to_ipython.html  
 http://i2000s.github.io/2012/12/22/habits-of-open-scientist-4-collab.html  
 http://i2000s.github.io/2012/12/06/reproducible-research-standard.html  
 http://i2000s.github.io/2012/10/17/eppeer.html  
-http://i2000s.github.io/2012/10/16/low_quality_journal.html  
-http://i2000s.github.io/2012/10/11/blogging_ipython_notebooks_with_jekyll.html  
+http://i2000s.github.io/2012/10/11/blogging-with-notebooks-and-jekyll.html  
 http://i2000s.github.io/2012/10/11/Internal_stability.html  
 http://i2000s.github.io/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html  
-http://i2000s.github.io/2012/08/28/released.html  
 http://i2000s.github.io/2012/08/22/habits-of-open-scientist-3-pre.html  
 http://i2000s.github.io/2012/08/03/habits-of-open-scientist-2.html  
 http://i2000s.github.io/2012/08/01/habits-of-open-scientist-1-open.html  
 http://i2000s.github.io/2012/07/31/habits-of-open-scientist.html  
-http://i2000s.github.io/2012/07/05/my-favorite-line-from-my-first-paper.html  
-http://i2000s.github.io/2012/04/26/harvard-suggests-that-its-faculty.html  
 http://i2000s.github.io/2012/03/17/can-region-of-absolute-stability-be.html  
-http://i2000s.github.io/2012/03/13/should-your-advisor-be-author-on-your.html  
-http://i2000s.github.io/2012/02/02/congratulations-you-reinvented-bibtex.html  
-http://i2000s.github.io/2012/01/20/what-is-this-thing-we-call-arxiv-really.html  
-http://i2000s.github.io/2012/01/07/endorse-science-code-manifesto.html  
-http://i2000s.github.io/2011/11/15/up-until-googles-recent-catastrophic.html  
-http://i2000s.github.io/2011/11/03/collaborative-scientific-reading.html  
-http://i2000s.github.io/2011/11/02/better-way-to-do-multiple-gmail.html  
 http://i2000s.github.io/2011/10/28/managing-publication-lists-in-html.html  
-http://i2000s.github.io/2011/10/27/searching-scientific-literature.html  
 http://i2000s.github.io/2011/06/27/how-to-edit-all-files-containing.html  
-http://i2000s.github.io/2011/06/23/kaust-beacon-is-fully-lit.html  
-http://i2000s.github.io/2011/06/04/mendeleys-pdf-import-has-improved.html  
-http://i2000s.github.io/2011/05/31/positivity-pipe-dream-fulfilled.html  
-http://i2000s.github.io/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html  
-http://i2000s.github.io/2011/05/24/my-favorite-new-tool-ack.html  
-http://i2000s.github.io/2011/05/23/why-i-wont-be-mendeley-university.html  
-http://i2000s.github.io/2011/05/19/what-is-science.html  
-http://i2000s.github.io/2011/02/07/python-code-for-making-histogram-of.html 
+http://i2000s.github.io/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html 
+
+    </article>
+  </div>
+</div>
