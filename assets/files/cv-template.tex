@@ -20,6 +20,11 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{CJKutf8,sourcesanspro,graphicx,listings,xcolor}
+%\setCJKmainfont{LiSu}
+\usepackage{ucs}
+\usepackage[encapsulated]{CJK}
+%\usepackage[UTF8]{ctex}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -37,7 +42,7 @@
 % personal data
 \name{Xiaodong}{Qi}
 %\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{Center for Quantum Information and Control, University of New Mexico, 1919 Lomas Blvd NE \#3114}{Albuquerque, NM 87131}{USA}
+\address{Center for Quantum Information and Control, University of New Mexico, 1919 Lomas Blvd NE}{Albuquerque, NM 87131}{USA}
 \email{qxd@unm.edu}                               % optional, remove / comment the line if not wanted
 \homepage{http://i2000s.github.io}                         % optional, remove / comment the line if not wanted
 \social[twitter]{i2000s}                             % optional, remove / comment the line if not wanted
@@ -71,12 +76,14 @@
 
 
 \begin{document}
+\begin{CJK*}{UTF8}{gbsn}
 \makecvtitle
 
 $body$
 
 \vfill
 Updated \today
+\end{CJK*}
 \end{document}
 
 
