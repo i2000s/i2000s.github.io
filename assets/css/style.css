@@ -15,7 +15,7 @@ body {
   padding: 35px 0 36px;
   margin-top: 45px;
   font-size: 14px;
-  border-top: 1px solid #eee8d5;
+  border-top: 1px solid #eee /* eee8d5; */
 }
 /* -- list/table -- */
 ul.unstyled {
@@ -501,8 +501,8 @@ img::-moz-selection {
 
 
 
-/* 
-Some self-defined styles. 
+/*
+Some self-defined styles.
 Some are from https://github.com/cboettig/labnotebook/blob/master/assets/css/bootstrap.min.css.
 */
 div.excerpt{height:200px;overflow:hidden}div.scroll{width:110%;height:110%;overflow:scroll}.excerpt h1,.excerpt h2,.excerpt h3,.excerpt h4,.excerpt h5,.excerpt h6{font-size:13px;font-weight:700;line-height:18px}
@@ -548,7 +548,7 @@ div.excerpt{height:200px;overflow:hidden}div.scroll{width:110%;height:110%;overf
   border-right-style: none;
   width: 210px;
 
-  -webkit-border-radius: .5em; 
+  -webkit-border-radius: .5em;
   -moz-border-radius: .5em;
   border-radius: .5em;
   -webkit-box-shadow: 0 5px 3px rgba(0,0,0,.5);
@@ -574,8 +574,8 @@ div.excerpt{height:200px;overflow:hidden}div.scroll{width:110%;height:110%;overf
 
 
 /* -- Self-defined new content -- */
-/* -- Define figure and caption to have the same width. 
-Ref:http://stackoverflow.com/questions/6534473/how-can-i-make-the-width-of-my-figcaption-match-the-width-of-the-img-inside -- */ 
+/* -- Define figure and caption to have the same width.
+Ref:http://stackoverflow.com/questions/6534473/how-can-i-make-the-width-of-my-figcaption-match-the-width-of-the-img-inside -- */
 figure {
    display: table;
    width: 10px;
@@ -585,4 +585,4 @@ figcaption {
     display: table-row;
     font-size: 14px;
     text-align: left;
-} 
+}

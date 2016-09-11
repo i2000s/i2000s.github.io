@@ -170,16 +170,19 @@
           </group>
         </else-if>
         <else>
-          <group delimiter=" ">
-            <text variable="container-title" form="short" text-case="title"/>
-            <group delimiter=", ">
-              <text variable="volume" font-weight="bold"/>
-              <group delimiter=" ">
-                <text variable="page-first" form="short"/>
-                <text macro="year-date" prefix="(" suffix=")"/>
+          <group suffix=", ">
+            <text variable="title" font-style="italic" prefix=" "/>
+          </group>
+            <group delimiter=" ">
+              <text variable="container-title" form="short" text-case="title"/>
+              <group delimiter=", ">
+                <text variable="volume" font-weight="bold"/>
+                <group delimiter=" ">
+                  <text variable="page-first" form="short"/>
+                  <text macro="year-date" prefix="(" suffix=")"/>
+                </group>
               </group>
             </group>
-          </group>
         </else>
       </choose>
     </layout>

@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-09-11T05:28:39+00:00</updated>
+ <updated>2016-09-11T09:44:14+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -129,7 +129,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;With the basic stochastic language introduced, we are ready to explore more complicated differential equations and start appreciating the nature of quantum measurements and how all of these can be connected to the quantum circuit model. Content is mainly based on my hand-written lecture notes taught by my supervisor &lt;a href=&quot;http://cquic.unm.edu/deutsch-group/&quot;&gt;Ivan Deutsch&lt;/a&gt; and my daily journals on reading, meeting and playing. I hope the following notes can help understand those content intuitively.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Dum1992Monte&quot;&gt;R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, Physical Review A &lt;b&gt;46&lt;/b&gt;, 4382 (1992).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Dum1992Monte&quot;&gt;R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, &lt;i&gt;Monte Carlo simulation of master equations in quantum optics for vacuum, thermal, and squeezed reservoirs&lt;/i&gt;, Physical Review A &lt;b&gt;46&lt;/b&gt;, 4382 (1992).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Dum1992Monte-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -158,7 +158,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Molmer1993Monte&quot;&gt;K. Mølmer, Y. Castin, and J. Dalibard, JOSA B &lt;b&gt;10&lt;/b&gt;, 524 (1993).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Molmer1993Monte&quot;&gt;K. Mølmer, Y. Castin, and J. Dalibard, &lt;i&gt;Monte Carlo wave-function method in quantum optics&lt;/i&gt;, JOSA B &lt;b&gt;10&lt;/b&gt;, 524 (1993).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Molmer1993Monte-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -187,7 +187,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Molmer1996Monte&quot;&gt;K. Mølmer and Y. Castin, Quantum and Semiclassical Optics: Journal of the European Optical Society Part B &lt;b&gt;8&lt;/b&gt;, 49 (1996).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Molmer1996Monte&quot;&gt;K. Mølmer and Y. Castin, &lt;i&gt;Monte Carlo wavefunctions in quantum optics&lt;/i&gt;, Quantum and Semiclassical Optics: Journal of the European Optical Society Part B &lt;b&gt;8&lt;/b&gt;, 49 (1996).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Molmer1996Monte-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -216,7 +216,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Plenio1998Quantum&quot;&gt;M. B. Plenio and P. L. Knight, Reviews of Modern Physics &lt;b&gt;70&lt;/b&gt;, 101 (1998).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Plenio1998Quantum&quot;&gt;M. B. Plenio and P. L. Knight, &lt;i&gt;The quantum-jump approach to dissipative dynamics in quantum optics&lt;/i&gt;, Reviews of Modern Physics &lt;b&gt;70&lt;/b&gt;, 101 (1998).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Plenio1998Quantum-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -271,7 +271,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Wiseman1993Interpretation&quot;&gt;H. M. Wiseman and G. J. Milburn, Phys. Rev. A &lt;b&gt;47&lt;/b&gt;, 1652 (1993).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Wiseman1993Interpretation&quot;&gt;H. M. Wiseman and G. J. Milburn, &lt;i&gt;Interpretation of quantum jump and diffusion processes illustrated on the Bloch sphere&lt;/i&gt;, Phys. Rev. A &lt;b&gt;47&lt;/b&gt;, 1652 (1993).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Wiseman1993Interpretation-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -333,7 +333,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Tan1999Computational&quot;&gt;S. M. Tan, Journal of Optics B: Quantum and Semiclassical Optics &lt;b&gt;1&lt;/b&gt;, 424 (1999).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Tan1999Computational&quot;&gt;S. M. Tan, &lt;i&gt;A computational toolbox for quantum and atomic optics&lt;/i&gt;, Journal of Optics B: Quantum and Semiclassical Optics &lt;b&gt;1&lt;/b&gt;, 424 (1999).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Tan1999Computational-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
@@ -362,7 +362,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;!----&gt;
-&lt;span id=&quot;Johansson2013Qutip&quot;&gt;J. R. Johansson, P. D. Nation, and F. Nori, Computer Physics Communications &lt;b&gt;184&lt;/b&gt;, 1234 (2013).&lt;/span&gt; &lt;br/&gt;
+&lt;span id=&quot;Johansson2013Qutip&quot;&gt;J. R. Johansson, P. D. Nation, and F. Nori, &lt;i&gt;QuTiP 2: A Python framework for the dynamics of open quantum systems&lt;/i&gt;, Computer Physics Communications &lt;b&gt;184&lt;/b&gt;, 1234 (2013).&lt;/span&gt; &lt;br/&gt;
 &lt;div id=&quot;Johansson2013Qutip-materials&quot;&gt;
 &lt;ul class=&quot;nav nav-pills&quot;&gt;
 
