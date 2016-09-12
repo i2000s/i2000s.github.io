@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-09-12T08:02:13+00:00</updated>
+ <updated>2016-09-12T09:46:16+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -128,7 +128,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;On the other hand, quantum simulation packages like the &lt;em&gt;Quantum Optics Toolbox in Matlab&lt;/em&gt;&lt;a href=&quot;#Tan1999Computational&quot;&gt; [8]&lt;/a&gt; and its Python version &lt;em&gt;QuTiP&lt;/em&gt;&lt;a href=&quot;#Johansson2013Qutip&quot;&gt; [9]&lt;/a&gt; becomes widely used while the input quantities can be classified into a few object classes is mainly due to the mathematical fact that the quantum dynamics equations and quantum systems those toolboxes can simulate all have nice mathematical structures. For example, a lot of quantum dynamics problems can be described by the Lindblad form of master equations, which in the end is completely positive maps (CP-maps) and can be fully characterized by the hierarchy of complete positive operators and superoperators as mathematical objects&lt;a href=&quot;#fn5&quot; class=&quot;footnoteRef&quot; id=&quot;fnref5&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. To my perspective, the existing JuliaQuantum libraries can be improved by extending its representation types to the operator and superoperator system and build more general solvers to cover the stochastic equations, and we can make better program libraries with in-depth mathematical insights and high-performance programming language. I will also touch the base of some mathematical fundation in the next part.&lt;/p&gt;
 &lt;p&gt;With the basic stochastic language introduced, we are ready to explore more complicated differential equations and start appreciating the nature of quantum measurements and how all of these can be connected to the quantum circuit model. Content is mainly based on my hand-written lecture notes taught by my supervisor &lt;a href=&quot;http://cquic.unm.edu/deutsch-group/&quot;&gt;Ivan Deutsch&lt;/a&gt; and my daily journals on reading, meeting and playing. I hope the following notes can help understand those content intuitively.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;!----&gt;
+&lt;ol class=&quot;bibliography&quot; reversed=&quot;reversed&quot;&gt;&lt;li&gt;&lt;!----&gt;
 &lt;p&gt;&lt;span id=&quot;Dum1992Monte&quot;&gt;R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, &lt;i&gt;Monte Carlo simulation of master equations in quantum optics for vacuum, thermal, and squeezed reservoirs&lt;/i&gt;, Physical Review A &lt;b&gt;46&lt;/b&gt;, 4382 (1992).&lt;/span&gt;&lt;/p&gt;
 &lt;br /&gt;
 &lt;div id=&quot;Dum1992Monte-materials&quot;&gt;
