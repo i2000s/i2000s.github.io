@@ -219,7 +219,7 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
-          Note: This post was originally written by <a href="//www.davidketcheson.info/2011/06/27/how-to-edit-all-files-containing.html" target="_blank">David Ketcheson</a>.
+          Note: This post was originally written by <a href="http://www.davidketcheson.info/2011/06/27/how-to-edit-all-files-containing.html" target="_blank">David Ketcheson</a>.
 
 It's often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:<br /><br />vim $(ack -l my_string)<br /><br />It can be accomplished in a similar way with grep instead of ack.<br /><br /><br /><b>Edit:</b> If you just want to search and replace a particular string in all files under some directory recursively, use <br /><br />grep -rl matchstring somedir/ | xargs sed -i "" 's/search string1/search string2/'   <br /><br />It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.<br /><br /><b>Edit 2:</b> Don't do this in the root directory of a git repository!  It will corrupt the repository.<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com' alt='' /></div>
 
@@ -240,7 +240,7 @@ It's often useful to be able to automatically open all files with a particular s
     property="dc:created">27 Jun 2011</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2016-11-07 07:27:50 +0000"
+            datetime="2016-11-07 08:16:05 +0000"
             property="dc:modified">07 Nov 2016</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -277,7 +277,7 @@ It's often useful to be able to automatically open all files with a particular s
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/0f32a396606fe3c2e4300b9383c1d6a0a491c982/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 0f32a39</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/8ddb64093e3d84e0a7512125d4840e6db0d10972/_posts/2011-06-27-how-to-edit-all-files-containing.html"> 8ddb640</a></tiny></p>
 </aside>
 
 <br /><br />
