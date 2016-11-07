@@ -222,7 +222,7 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12"> 
           <article>
           <h2 id="preface">Preface</h2>
-<p>This series of notes is initially written for <a href="https://github.com/amitjamadagni">Amit Jamadagni</a> and <a href="https://github.com/Roger-luo">Xiuzhe Luo</a> who have been working on the <a href="http://juliaquantum.github.io">JuliaQuantum organization</a>’s <a href="https://github.com/JuliaQuantum/QuBase.jl">Base.jl</a>, <a href="https://github.com/JuliaQuantum/QuDynamics.jl">QuDynamics.jl</a> and <a href="https://github.com/JuliaQuantum/QuCmp.jl">QuCmp.jl</a> projects individually. Amit has put intensive efforts on framing out the basic <a href="http://julialang.org">Julia</a> libraries on basic quantum type system, the time evolution of quantum systems and the idea of propagators. Xiuzhe as a junior undergraduate physics student just started the QuCmp.jl project to build some fundamental Julia libraries for quantum computing (adiabatic quantum computing, quantum circuit model and others). I try to outline in the notes some theoretical foundations on quantum dynamics (especially for open quantum systems) and its link to simulating quantum computing models (especially on the circuit model) with the hope to conclude the following points:</p>
+<p>This series of notes is initially written for <a href="https://github.com/amitjamadagni">Amit Jamadagni</a> and <a href="https://github.com/Roger-luo">Xiuzhe Luo</a> who have been working on the <a href="https://juliaquantum.github.io">JuliaQuantum organization</a>’s <a href="https://github.com/JuliaQuantum/QuBase.jl">Base.jl</a>, <a href="https://github.com/JuliaQuantum/QuDynamics.jl">QuDynamics.jl</a> and <a href="https://github.com/JuliaQuantum/QuCmp.jl">QuCmp.jl</a> projects individually. Amit has put intensive efforts on framing out the basic <a href="https://julialang.org">Julia</a> libraries on basic quantum type system, the time evolution of quantum systems and the idea of propagators. Xiuzhe as a junior undergraduate physics student just started the QuCmp.jl project to build some fundamental Julia libraries for quantum computing (adiabatic quantum computing, quantum circuit model and others). I try to outline in the notes some theoretical foundations on quantum dynamics (especially for open quantum systems) and its link to simulating quantum computing models (especially on the circuit model) with the hope to conclude the following points:</p>
 <ul>
 <li><p>To reach out the regime of more complicated scenarios to simulate general quantum systems beyond what Amit have done, it would be great to have the stochastic differential equations and their solvers established.</p></li>
 <li><p>To be widely useful and efficient, it may be better to reframe the type system on top of operator and superoperator language<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. It could be easier to start with the complete positive mapping case where the methods and theory have been well established.</p></li>
@@ -299,7 +299,7 @@ d\ket{\Psi} &amp;= \left( -\frac{i}{\hbar}\hat{H}_{eff} + \frac{1}{2}\sum_{\mu=1
 <center>
  
 <figure>
-<img src="/assets/img/homodyneheterodyne_beamsplitter.svg" alt="Fig 1. Beam splitter for homodyne and heterodyne detections." /><figcaption>Fig 1. Beam splitter for homodyne and heterodyne detections.</figcaption>
+<img src="https://www.qixiaodong.tk/assets/img/homodyneheterodyne_beamsplitter.svg" alt="Fig 1. Beam splitter for homodyne and heterodyne detections." /><figcaption>Fig 1. Beam splitter for homodyne and heterodyne detections.</figcaption>
 </figure>
 <br> <br>
 </center>
@@ -330,7 +330,7 @@ dW = randn(step).*dt;</code></pre>
 <h2 id="wrap-up-for-this-part">Wrap up for this part</h2>
 <p>In this part of notes, we have revisited the quantum dynamics problems that has been widely taught in undergraduate level quantum mechanics classes but in a stochastic process perspective in the end. In general, the stochastic process reflects one important nature of quantum systems and will lead to a rich church of differential equations that our JuliaQuantum libraries would want to include, and I will illustrate more on their forms in the next part. The leftover practical task for solving stochastic equations is to implementing various solvers or integrating algorithms. There are two well-known stochastic integrals–<a href="https://en.wikipedia.org/wiki/It%C3%B4_calculus">Itô integral</a> and <a href="https://en.wikipedia.org/wiki/Stratonovich_integral">Stratonovich integral</a>. More details of the general form of stochastic differential equations and integration methods can be found in <a href="#Gardiner2004Quantum"> [7]</a> and other modern books. I will not write too much on those details, but rather give you a big picture on the connected fields.</p>
 <p>On the other hand, quantum simulation packages like the <em>Quantum Optics Toolbox in Matlab</em><a href="#Tan1999Computational"> [8]</a> and its Python version <em>QuTiP</em><a href="#Johansson2013Qutip"> [9]</a> becomes widely used while the input quantities can be classified into a few object classes is mainly due to the mathematical fact that the quantum dynamics equations and quantum systems those toolboxes can simulate all have nice mathematical structures. For example, a lot of quantum dynamics problems can be described by the Lindblad form of master equations, which in the end is completely positive maps (CP-maps) and can be fully characterized by the hierarchy of complete positive operators and superoperators as mathematical objects<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. To my perspective, the existing JuliaQuantum libraries can be improved by extending its representation types to the operator and superoperator system and build more general solvers to cover the stochastic equations, and we can make better program libraries with in-depth mathematical insights and high-performance programming language. I will also touch the base of some mathematical fundation in the next part.</p>
-<p>With the basic stochastic language introduced, we are ready to explore more complicated differential equations and start appreciating the nature of quantum measurements and how all of these can be connected to the quantum circuit model. Content is mainly based on my hand-written lecture notes taught by my supervisor <a href="http://cquic.unm.edu/deutsch-group/">Ivan Deutsch</a> and my daily journals on reading, meeting and playing. I hope the following notes can help understand those content intuitively.</p>
+<p>With the basic stochastic language introduced, we are ready to explore more complicated differential equations and start appreciating the nature of quantum measurements and how all of these can be connected to the quantum circuit model. Content is mainly based on my hand-written lecture notes taught by my supervisor <a href="https://cquic.unm.edu/deutsch-group/">Ivan Deutsch</a> and my daily journals on reading, meeting and playing. I hope the following notes can help understand those content intuitively.</p>
 <h2 id="references">References</h2>
 <ol class="bibliography" reversed="reversed"><li><!---->
 <p><span id="Dum1992Monte">R. Dum, A. S. Parkins, P. Zoller, and C. W. Gardiner, <i>Monte Carlo simulation of master equations in quantum optics for vacuum, thermal, and squeezed reservoirs</i>, Physical Review A <b>46</b>, 4382 (1992).</span></p>
@@ -612,9 +612,9 @@ dW = randn(step).*dt;</code></pre>
 <ol>
 <li id="fn1"><p>If you only know quantum operators, superoperators are just another layer of operations on operators. Superoperator notations have been widely used to describe the evolution of open quantum systems where the concept of propagator can be fully characterized.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>For mixed states, the state of the system cannot be written as a signle pure state, <span class="math">\(\ket{\Psi}\)</span> any more, in general. Instead, a density operator <span class="math">\(\hat{\rho}=\sum_i p_i\ketbra{\Psi_i}{\Psi_i}\)</span> as an ensemble decomposition of pure states, <span class="math">\(\ket{\Psi_i}\)</span>, is used to characterize the system, where <span class="math">\(p_i\)</span> is the probability of being in the <span class="math">\(\ket{\Psi_i}\)</span> state.<a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>Also see the <a href="https://en.wikipedia.org/wiki/Quantum_stochastic_calculus">Quantum stochastic calculus</a> page for a quick review created by <a href="http://www.unm.edu/~jagross/">Jonathan Gross</a> for a <a href="http://iciq.github.io/entangle/WikipediaProject.html">Quantum Optics wikipedia project</a>.<a href="#fnref3">↩</a></p></li>
+<li id="fn3"><p>Also see the <a href="https://en.wikipedia.org/wiki/Quantum_stochastic_calculus">Quantum stochastic calculus</a> page for a quick review created by <a href="https://www.unm.edu/~jagross/">Jonathan Gross</a> for a <a href="https://iciq.github.io/entangle/WikipediaProject.html">Quantum Optics wikipedia project</a>.<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>We will use this fact in my future notes on deriving quantum dynamic equations symbolically for general scenarios.<a href="#fnref4">↩</a></p></li>
-<li id="fn5"><p>A brief summary on the relation between Lindblad equations and CP-map can be found in <a href="http://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/">Jess Riedel’s blog</a>.<a href="#fnref5">↩</a></p></li>
+<li id="fn5"><p>A brief summary on the relation between Lindblad equations and CP-map can be found in <a href="https://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/">Jess Riedel’s blog</a>.<a href="#fnref5">↩</a></p></li>
 </ol>
 </section>
 
@@ -635,8 +635,8 @@ dW = randn(step).*dt;</code></pre>
     property="dc:created">23 Jul 2016</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2016-07-24 05:09:20 +0000"
-            property="dc:modified">24 Jul 2016</time></small></p>
+            datetime="2016-11-07 07:27:50 +0000"
+            property="dc:modified">07 Nov 2016</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -676,7 +676,7 @@ dW = randn(step).*dt;</code></pre>
   
 
    <br/>
-   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/b0ea0bccceb53253d1a21237b6d3538fa793c0c1/_posts/2016-07-23-put-everything-on-a-quantum-circuit-part-i.md"> b0ea0bc</a></tiny></p>
+   <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/i2000s/i2000s.github.io/commit/0f32a396606fe3c2e4300b9383c1d6a0a491c982/_posts/2016-07-23-put-everything-on-a-quantum-circuit-part-i.md"> 0f32a39</a></tiny></p>
 </aside>
 
 <br /><br />
