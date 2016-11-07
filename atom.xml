@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-11-07T07:33:02+00:00</updated>
+ <updated>2016-11-07T08:00:35+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -286,7 +286,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;a href=&quot;http://dx.doi.org/10.1103/PhysRevA.47.1652&quot; target=&quot;_blank&quot;&gt;Link&lt;/a&gt;
+&lt;a href=&quot;https://dx.doi.org/10.1103/PhysRevA.47.1652&quot; target=&quot;_blank&quot;&gt;Link&lt;/a&gt;
 &lt;/li&gt;
 
 
