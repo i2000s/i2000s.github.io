@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-11-07T08:00:35+00:00</updated>
+ <updated>2016-11-07T08:18:42+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -410,7 +410,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;For mixed states, the state of the system cannot be written as a signle pure state, &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi}\)&lt;/span&gt; any more, in general. Instead, a density operator &lt;span class=&quot;math&quot;&gt;\(\hat{\rho}=\sum_i p_i\ketbra{\Psi_i}{\Psi_i}\)&lt;/span&gt; as an ensemble decomposition of pure states, &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi_i}\)&lt;/span&gt;, is used to characterize the system, where &lt;span class=&quot;math&quot;&gt;\(p_i\)&lt;/span&gt; is the probability of being in the &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi_i}\)&lt;/span&gt; state.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;Also see the &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_stochastic_calculus&quot;&gt;Quantum stochastic calculus&lt;/a&gt; page for a quick review created by &lt;a href=&quot;https://www.unm.edu/~jagross/&quot;&gt;Jonathan Gross&lt;/a&gt; for a &lt;a href=&quot;https://iciq.github.io/entangle/WikipediaProject.html&quot;&gt;Quantum Optics wikipedia project&lt;/a&gt;.&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;We will use this fact in my future notes on deriving quantum dynamic equations symbolically for general scenarios.&lt;a href=&quot;#fnref4&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;A brief summary on the relation between Lindblad equations and CP-map can be found in &lt;a href=&quot;https://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/&quot;&gt;Jess Riedel’s blog&lt;/a&gt;.&lt;a href=&quot;#fnref5&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;A brief summary on the relation between Lindblad equations and CP-map can be found in &lt;a href=&quot;http://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/&quot;&gt;Jess Riedel’s blog&lt;/a&gt;.&lt;a href=&quot;#fnref5&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

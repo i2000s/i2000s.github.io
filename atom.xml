@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-11-07T08:00:35+00:00</updated>
+ <updated>2016-11-07T08:18:42+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -410,7 +410,7 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
 &lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;For mixed states, the state of the system cannot be written as a signle pure state, &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi}\)&lt;/span&gt; any more, in general. Instead, a density operator &lt;span class=&quot;math&quot;&gt;\(\hat{\rho}=\sum_i p_i\ketbra{\Psi_i}{\Psi_i}\)&lt;/span&gt; as an ensemble decomposition of pure states, &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi_i}\)&lt;/span&gt;, is used to characterize the system, where &lt;span class=&quot;math&quot;&gt;\(p_i\)&lt;/span&gt; is the probability of being in the &lt;span class=&quot;math&quot;&gt;\(\ket{\Psi_i}\)&lt;/span&gt; state.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;Also see the &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_stochastic_calculus&quot;&gt;Quantum stochastic calculus&lt;/a&gt; page for a quick review created by &lt;a href=&quot;https://www.unm.edu/~jagross/&quot;&gt;Jonathan Gross&lt;/a&gt; for a &lt;a href=&quot;https://iciq.github.io/entangle/WikipediaProject.html&quot;&gt;Quantum Optics wikipedia project&lt;/a&gt;.&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;We will use this fact in my future notes on deriving quantum dynamic equations symbolically for general scenarios.&lt;a href=&quot;#fnref4&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;A brief summary on the relation between Lindblad equations and CP-map can be found in &lt;a href=&quot;https://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/&quot;&gt;Jess Riedel’s blog&lt;/a&gt;.&lt;a href=&quot;#fnref5&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;A brief summary on the relation between Lindblad equations and CP-map can be found in &lt;a href=&quot;http://blog.jessriedel.com/2014/07/26/lindblad-equation-is-differential-form-of-cp-map/&quot;&gt;Jess Riedel’s blog&lt;/a&gt;.&lt;a href=&quot;#fnref5&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>
@@ -458,7 +458,7 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
    <link href="/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
    <updated>2016-05-26T00:00:00+00:00</updated>
    <id>h/2016/05/26/2016-summer-study-on-quantum-optics-II</id>
-   <content type="html">&lt;p&gt;As usual, I will organize/participate a summer study this year. Since there are a lot of things going on this summer and &lt;a href=&quot;//cquic.unm.edu/deutsch-group/&quot;&gt;Prof. Ivan Deutsch&lt;/a&gt; here in UNM is actually hosting review sessions on Quantum Optics I this summer, I was thinking to have the following focus for my self-organized summer study:&lt;/p&gt;
+   <content type="html">&lt;p&gt;As usual, I will organize/participate a summer study this year. Since there are a lot of things going on this summer and &lt;a href=&quot;http://cquic.unm.edu/deutsch-group/&quot;&gt;Prof. Ivan Deutsch&lt;/a&gt; here in UNM is actually hosting review sessions on Quantum Optics I this summer, I was thinking to have the following focus for my self-organized summer study:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Title: Advanced Topics in Quantum Optics (II)&lt;/li&gt;
 &lt;/ul&gt;
@@ -482,9 +482,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;Time slot: From June 1st to July 29th. Detailed schedule to be updated.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Main references:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;//info.phys.unm.edu/~ideutsch/Classes/Phys566F15/index.htm&quot;&gt;Quantum Optics I by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;//info.phys.unm.edu/~ideutsch/Classes/Phys531F11/index.htm&quot;&gt;Atomic Physics course by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
-&lt;li&gt;A book, if you wish, as shown in the photo above by our friend &lt;a href=&quot;//cquic.unm.edu/member/yuan.yu.jau/&quot;&gt;Yuan-Yu Jau&lt;/a&gt; and others on Optical Pumping featured with simulation demo codes and detailed analysis.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys566F15/index.htm&quot;&gt;Quantum Optics I by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys531F11/index.htm&quot;&gt;Atomic Physics course by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
+&lt;li&gt;A book, if you wish, as shown in the photo above by our friend &lt;a href=&quot;http://cquic.unm.edu/member/yuan.yu.jau/&quot;&gt;Yuan-Yu Jau&lt;/a&gt; and others on Optical Pumping featured with simulation demo codes and detailed analysis.&lt;/li&gt;
 &lt;li&gt;A handful of classical papers to be updated here later.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Discussion forum: &lt;a href=&quot;https://disqus.com/home/channel/quantumoptics&quot;&gt;see this channel&lt;/a&gt; I created recently.&lt;/p&gt;&lt;/li&gt;
@@ -525,14 +525,14 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
    <updated>2016-02-17T00:00:00+00:00</updated>
    <id>h/2016/02/17/SQuInT-workshop-2016</id>
    <content type="html">&lt;p&gt;I am going to present our recent work in &lt;a href=&quot;http://physics.unm.edu/SQuInT/2016/index.php&quot;&gt;the 18th SQuInT Workshop&lt;/a&gt; at Albuquerque, NM, USA. Below you can find my poster.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/posters/SQuInT2016-Nanofiber.pdf&quot;&gt;Link to the PDF&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.qixiaodong.tk/assets/posters/SQuInT2016-Nanofiber.pdf&quot;&gt;Link to the PDF&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;abstract&quot;&gt;Abstract:&lt;/h2&gt;
 &lt;p&gt;While optical fibers have been used for primary quantum communications, atom-fiber and atom-waveguide based quantum interfaces have been proposed as effective elements to implement a broad range of quantum information processing applications. We study the strong coupling between photons and atoms that can be achieved in an optical nanofiber geometry when the interaction is dispersive. While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, one can obtain high cooperativity for ensembles of a few thousand atoms due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We studied the theory of the phase shift and polarization rotation induced on the guided light by the trapped atoms using the dyadic Green’s function method. The Green’s function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms. In this talk, I will illustrate how do we apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry. We study shot-noise-limited detection of atom number for atoms in a completely mixed spin state and the squeezing of projection noise for atoms in clock states. Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes. We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping. We find a peak metrological squeezing of ~5 dB is achievable with current technology for ~2500 atoms. The theory established can be used to guide the design of nanofiber- or waveguide-based quantum interfaces.&lt;/p&gt;
 &lt;h2 id=&quot;note&quot;&gt;Note:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;There are some researchers contacted me and my supervisor before the workshop for some chat, and hence the chat time over the poster session may be limited. But if you are interested in my poster, we can talk about it at any break time during the workshop.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Since I am also serving for a few other duties recently, this poster was made in a hurry and was not well organized in a normal order. You may want to talk to me or contact me if you find an error or anywhere confusing.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;More details can be found in our publication: &lt;a href=&quot;http://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.023817&quot;&gt;X. Qi, B. Q. Baragiola, P. S. Jessen, and I. H. Deutsch, Phys. Rev. A 93, 023817 (2016)&lt;/a&gt;. ArXiv online: &lt;a href=&quot;https://arxiv.org/abs/1509.02625&quot;&gt;https://arxiv.org/abs/1509.02625&lt;/a&gt;. The full title is &lt;strong&gt;&lt;em&gt;Dispersive response of atoms trapped near the surface of an optical nanofiber with applications to quantum nondemolition measurement and spin squeezing&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;More details can be found in our publication: &lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.023817&quot;&gt;X. Qi, B. Q. Baragiola, P. S. Jessen, and I. H. Deutsch, Phys. Rev. A 93, 023817 (2016)&lt;/a&gt;. ArXiv online: &lt;a href=&quot;https://arxiv.org/abs/1509.02625&quot;&gt;https://arxiv.org/abs/1509.02625&lt;/a&gt;. The full title is &lt;strong&gt;&lt;em&gt;Dispersive response of atoms trapped near the surface of an optical nanofiber with applications to quantum nondemolition measurement and spin squeezing&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thanks for your interest, and hopefully see you in SQuInT!&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
