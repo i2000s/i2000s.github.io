@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>The NoteBlog of Xiaodong Qi - R</title>
- <link href="/R.xml" rel="self"/>
- <link href=""/>
- <updated>2016-11-21T23:54:36+00:00</updated>
- <id></id>
+ <link href="https://www.qixiaodong.tk/R.xml" rel="self"/>
+ <link href="https://www.qixiaodong.tk"/>
+ <updated>2016-11-22T05:20:28+00:00</updated>
+ <id>https://www.qixiaodong.tk</id>
  <author>
    <name>Xiaodong Qi</name>
    <email>i2000s@hotmail.com</email>
  </author>
 
  
- 
+
 </feed>

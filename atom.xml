@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
+<feed xmlns="https://www.w3.org/2005/Atom">
+
  <title>The NoteBlog of Xiaodong Qi</title>
- <link href="/atom.xml" rel="self"/>
- <link href=""/>
- <updated>2016-11-21T23:54:36+00:00</updated>
- <id></id>
+ <link href="https://www.qixiaodong.tk/atom.xml" rel="self"/>
+ <link href="https://www.qixiaodong.tk"/>
+ <updated>2016-11-22T05:20:28+00:00</updated>
+ <id>https://www.qixiaodong.tk</id>
  <author>
    <name>Xiaodong Qi</name>
    <email>i2000s@hotmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Put everything on a quantum circuit--part I</title>
-   <link href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"/>
+   <link href="https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"/>
    <updated>2016-07-23T00:00:00+00:00</updated>
-   <id>h/2016/07/23/put-everything-on-a-quantum-circuit-part-i</id>
+   <id>/2016/07/23/put-everything-on-a-quantum-circuit-part-i</id>
    <content type="html">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This series of notes is initially written for &lt;a href=&quot;https://github.com/amitjamadagni&quot;&gt;Amit Jamadagni&lt;/a&gt; and &lt;a href=&quot;https://github.com/Roger-luo&quot;&gt;Xiuzhe Luo&lt;/a&gt; who have been working on the &lt;a href=&quot;https://juliaquantum.github.io&quot;&gt;JuliaQuantum organization&lt;/a&gt;’s &lt;a href=&quot;https://github.com/JuliaQuantum/QuBase.jl&quot;&gt;Base.jl&lt;/a&gt;, &lt;a href=&quot;https://github.com/JuliaQuantum/QuDynamics.jl&quot;&gt;QuDynamics.jl&lt;/a&gt; and &lt;a href=&quot;https://github.com/JuliaQuantum/QuCmp.jl&quot;&gt;QuCmp.jl&lt;/a&gt; projects individually. Amit has put intensive efforts on framing out the basic &lt;a href=&quot;https://julialang.org&quot;&gt;Julia&lt;/a&gt; libraries on basic quantum type system, the time evolution of quantum systems and the idea of propagators. Xiuzhe as a junior undergraduate physics student just started the QuCmp.jl project to build some fundamental Julia libraries for quantum computing (adiabatic quantum computing, quantum circuit model and others). I try to outline in the notes some theoretical foundations on quantum dynamics (especially for open quantum systems) and its link to simulating quantum computing models (especially on the circuit model) with the hope to conclude the following points:&lt;/p&gt;
 &lt;ul&gt;
@@ -418,9 +418,9 @@ dW = randn(step).*dt;&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>NVidia Linux driver update fixed the openGL problem of Matlab 2016a</title>
-   <link href="/2016/06/23/nvidia-driver-update-for-matlab-2016a.html"/>
+   <link href="https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html"/>
    <updated>2016-06-23T00:00:00+00:00</updated>
-   <id>h/2016/06/23/nvidia-driver-update-for-matlab-2016a</id>
+   <id>/2016/06/23/nvidia-driver-update-for-matlab-2016a</id>
    <content type="html">&lt;p&gt;When the Matlab 2016a was released initially, the &lt;a href=&quot;//askubuntu.com/questions/765455/how-to-run-matlab-2016a-with-nvidia-drivers-of-gtx-960-in-ubuntu-16-04&quot;&gt;openGL render was not compatible with some NVidia drivers in Linux&lt;/a&gt;. Recently, I have noticed that the last update of NVidia-367 driver has fixed this problem.&lt;/p&gt;
 &lt;p&gt;To install the nvidia-367 driver in Ubuntu 16.04, you need to uninstall the previous nvidia driver first:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo apt purge nvidia*&lt;/code&gt;&lt;/pre&gt;
@@ -455,9 +455,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>2016 summer study on selected topics in Quantum Optics</title>
-   <link href="/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
+   <link href="https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
    <updated>2016-05-26T00:00:00+00:00</updated>
-   <id>h/2016/05/26/2016-summer-study-on-quantum-optics-II</id>
+   <id>/2016/05/26/2016-summer-study-on-quantum-optics-II</id>
    <content type="html">&lt;p&gt;As usual, I will organize/participate a summer study this year. Since there are a lot of things going on this summer and &lt;a href=&quot;http://cquic.unm.edu/deutsch-group/&quot;&gt;Prof. Ivan Deutsch&lt;/a&gt; here in UNM is actually hosting review sessions on Quantum Optics I this summer, I was thinking to have the following focus for my self-organized summer study:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Title: Advanced Topics in Quantum Optics (II)&lt;/li&gt;
@@ -521,9 +521,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>SQuInT Workshop 2016</title>
-   <link href="/2016/02/17/SQuInT-workshop-2016.html"/>
+   <link href="https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html"/>
    <updated>2016-02-17T00:00:00+00:00</updated>
-   <id>h/2016/02/17/SQuInT-workshop-2016</id>
+   <id>/2016/02/17/SQuInT-workshop-2016</id>
    <content type="html">&lt;p&gt;I am going to present our recent work in &lt;a href=&quot;http://physics.unm.edu/SQuInT/2016/index.php&quot;&gt;the 18th SQuInT Workshop&lt;/a&gt; at Albuquerque, NM, USA. Below you can find my poster.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.qixiaodong.tk/assets/posters/SQuInT2016-Nanofiber.pdf&quot;&gt;Link to the PDF&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;abstract&quot;&gt;Abstract:&lt;/h2&gt;
@@ -543,9 +543,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 7 - Automate the tests</title>
-   <link href="/2015/05/29/automate_tests.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/29/automate_tests.html"/>
    <updated>2015-05-29T00:00:00+00:00</updated>
-   <id>h/2015/05/29/automate_tests</id>
+   <id>/2015/05/29/automate_tests</id>
    <content type="html">&lt;p&gt;Welcome to step 7 in &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;your training as a scientific Python code ninja&lt;/a&gt;: &lt;strong&gt;test automation&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Tests are extremely useful, as long as you run them. Unfortunately, a common pattern in many projects is this:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
@@ -577,9 +577,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 6 - Keep track of issues</title>
-   <link href="/2015/05/16/track_issues.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/16/track_issues.html"/>
    <updated>2015-05-16T00:00:00+00:00</updated>
-   <id>h/2015/05/16/track_issues</id>
+   <id>/2015/05/16/track_issues</id>
    <content type="html">&lt;p&gt;Welcome to step 6 in &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;your training as a scientific Python code ninja&lt;/a&gt;: &lt;strong&gt;issue tracking&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Look at you! You’ve got your nice code with some docstrings and tests, and you’re humming along analyzing data, simulating widgets, and whatnot. In the middle of it all, you realize that your regression analysis function breaks if you feed it more than 57 data points. And wouldn’t it be nice if it made a plot in addition to just printing out the correlation coefficient? And it would all be easier to use if your functions had default values for some of their arguments.&lt;/p&gt;
 &lt;p&gt;But you can’t stop to (fix that bug)/(add that feature)/(refactor that function) right now – you’re deep in all that beautiful data! Besides, maybe nobody will ever try to use this script with more than 57 data values. What should you do?&lt;/p&gt;
@@ -623,9 +623,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 5 - write tests</title>
-   <link href="/2015/05/15/write_tests.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/15/write_tests.html"/>
    <updated>2015-05-15T00:00:00+00:00</updated>
-   <id>h/2015/05/15/write_tests</id>
+   <id>/2015/05/15/write_tests</id>
    <content type="html">&lt;p&gt;This is step 5 in your journey toward &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;rock-solid scientific Python code&lt;/a&gt;: &lt;strong&gt;write tests&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Tests? Ugh.&lt;/p&gt;
 &lt;p&gt;I hear you. Writing tests is not an inherently fun process. However, the alternative is debugging, staring at code and thinking real hard about what could be wrong, and more debugging. I’ll take writing tests any day of the week.&lt;/p&gt;
@@ -659,9 +659,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 4 - write docstrings</title>
-   <link href="/2015/05/14/write_docstrings.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/14/write_docstrings.html"/>
    <updated>2015-05-14T00:00:00+00:00</updated>
-   <id>h/2015/05/14/write_docstrings</id>
+   <id>/2015/05/14/write_docstrings</id>
    <content type="html">&lt;p&gt;This is step 4 in your journey toward &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;rock-solid scientific Python code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Steps 1-3 were language-agnostic, but now I’m going to assume you’re using Python. The Python language has a built-in feature for documenting functions, classes, and modules; it is the &lt;strong&gt;docstring&lt;/strong&gt;. A docstring for a very simple function looks like this:&lt;/p&gt;
 &lt;pre class=&quot;sourceCode python&quot;&gt;&lt;code class=&quot;sourceCode python&quot;&gt;&lt;span class=&quot;kw&quot;&gt;def&lt;/span&gt; square(x):
@@ -704,9 +704,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 3 - Add a README and a License</title>
-   <link href="/2015/05/13/add_a_readme.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/13/add_a_readme.html"/>
    <updated>2015-05-13T00:00:00+00:00</updated>
-   <id>h/2015/05/13/add_a_readme</id>
+   <id>/2015/05/13/add_a_readme</id>
    <content type="html">&lt;p&gt;This is step 3 in your journey toward &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;rock-solid scientific Python code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;So your code is &lt;a href=&quot;/2015/05/11/use_version_control.html&quot;&gt;under version control&lt;/a&gt; and it’s &lt;a href=&quot;/2015/05/12/code_in_the_open.html&quot;&gt;floating up there in the cloud&lt;/a&gt;. In principle, someone else could use it. But how will they know it’s there? How will they know what it does, and how to install and use it?&lt;/p&gt;
 &lt;h1 id=&quot;you-need-a-readme-file.&quot;&gt;You need a README file.&lt;/h1&gt;
@@ -764,9 +764,9 @@ sudo apt install NVidia-367&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 2 - Code in the open</title>
-   <link href="/2015/05/12/code_in_the_open.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/12/code_in_the_open.html"/>
    <updated>2015-05-12T00:00:00+00:00</updated>
-   <id>h/2015/05/12/code_in_the_open</id>
+   <id>/2015/05/12/code_in_the_open</id>
    <content type="html">&lt;p&gt;This is step 2 in your journey toward &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;rock-solid scientific Python code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;So you have your code under version control. Nice. But it’s sitting there on your computer. How do you share it with somebody else? And if they improve it, how do you incorporate their changes?&lt;/p&gt;
 &lt;p&gt;Version control is your first tool in this regard, too. Your second tool is Github (or Bitbucket, Google Code, etc.). Github is a website that will keep a backup copy of your code for free, and will allow others to download it, change it, and send you their changes. If that sounds great, read on. If you’re scared to put your code in the open because somebody might read it, ponder on &lt;a href=&quot;http://www.siam.org/news/news.php?id=2064&quot;&gt;this&lt;/a&gt; and then read on.&lt;/p&gt;
@@ -795,9 +795,9 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Step 1 - Use version control</title>
-   <link href="/2015/05/11/use_version_control.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/11/use_version_control.html"/>
    <updated>2015-05-11T00:00:00+00:00</updated>
-   <id>h/2015/05/11/use_version_control</id>
+   <id>/2015/05/11/use_version_control</id>
    <content type="html">&lt;p&gt;Welcome to step 1 in &lt;a href=&quot;/2015/05/10/rock_solid_code.html&quot;&gt;your training as a scientific Python code ninja&lt;/a&gt;: version control. This is not going to be an in-depth course, so if you’re already using distributed version control (like Git or Mercurial), feel free to skip ahead to &lt;a href=&quot;/2015/05/12/code_in_the_open.html&quot;&gt;step 2&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;life-before-version-control&quot;&gt;&lt;a href=&quot;http://phdcomics.com/comics.php?f=1531&quot;&gt;Life before version control&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Programs change. That script I wrote last week to process my data needs to be adapted to a new file format or to produce a different kind of analysis. So I copy it to a new file and make some changes. I add a few lines and comment out others. The next week, I copy everything to a new directory so I can apply the code to a new project. A couple of months later, I realize that I have a mess of seven different directories, each with a dozen almost-identically-named files, and I am no longer sure which is the latest or what file does what. I spend a lot of time searching through and comparing the various files and directories to find what I need.&lt;/p&gt;
@@ -846,9 +846,9 @@ git add project_file2
  
  <entry>
    <title>12 steps toward rock-solid scientific Python code</title>
-   <link href="/2015/05/10/rock_solid_code.html"/>
+   <link href="https://www.qixiaodong.tk/2015/05/10/rock_solid_code.html"/>
    <updated>2015-05-10T00:00:00+00:00</updated>
-   <id>h/2015/05/10/rock_solid_code</id>
+   <id>/2015/05/10/rock_solid_code</id>
    <content type="html">&lt;p&gt;Much of my research is based on computer code. My code has bugs.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Does that mean that my research has errors?&lt;/em&gt; Quite possibly.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Are you, my fellow scientist, in the same boat?&lt;/em&gt; Probably.&lt;/p&gt;
@@ -919,9 +919,9 @@ git add project_file2
  
  <entry>
    <title>Testing whether your code produces the correct plots -- in Python and on Travis</title>
-   <link href="/2015/01/13/using_matplotlib_image_comparison.html"/>
+   <link href="https://www.qixiaodong.tk/2015/01/13/using_matplotlib_image_comparison.html"/>
    <updated>2015-01-13T00:00:00+00:00</updated>
-   <id>h/2015/01/13/using_matplotlib_image_comparison</id>
+   <id>/2015/01/13/using_matplotlib_image_comparison</id>
    <content type="html">&lt;p&gt;A few years ago I was introduced to the idea of testing the scientific code I write, and now I am a huge fan of this approach. It saves huge amounts of time and vastly improves the quality of my research by helping me catch bugs early and often. I use &lt;a href=&quot;https://nose.readthedocs.org/en/latest/&quot;&gt;nose&lt;/a&gt; for automatically finding and running all the tests. I use &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt; to automatically run the tests every time I update the code – or issue a pull request – on Github.&lt;/p&gt;
 &lt;h1 id=&quot;image-regression-tests&quot;&gt;Image regression tests&lt;/h1&gt;
 &lt;p&gt;Usually, I can test the output of a routine by comparing numbers (generally, by taking norms of large arrays of numbers). However, I also develop routines that are used to visualize numerical output, using matplotlib and other Python plotting tools. Sometimes the numerical output is fine but the visualization code breaks. It’s easy to write tests that just make sure the visualization code still runs, and that perhaps check some assertions about the properties of the resulting matplotlib objects in memory. But that doesn’t ensure that the image still looks right. How does one automatically check whether an image is correct?&lt;/p&gt;
@@ -972,9 +972,9 @@ nose.main()&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Teaching in the open</title>
-   <link href="/2014/07/18/teaching_in_the_open.html"/>
+   <link href="https://www.qixiaodong.tk/2014/07/18/teaching_in_the_open.html"/>
    <updated>2014-07-18T00:00:00+00:00</updated>
-   <id>h/2014/07/18/teaching_in_the_open</id>
+   <id>/2014/07/18/teaching_in_the_open</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/07/18/teaching_in_the_open.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you examine the menu bar above, you’ll notice that my site has a new top-level page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;. This is a direct result of my attending &lt;a href=&quot;http://www.youtube.com/watch?v=1e26rp6qPbA&amp;amp;t=26m12s&quot;&gt;Greg Wilson’s inspiring keynote at Scipy 2014&lt;/a&gt;. That link will take you to the key (for me) part of the talk, but I recommend watching the whole thing. His message is: massive collaboration is the real revolution. Michael Nielsen made the same statement in &lt;em&gt;Reinventing Discovery&lt;/em&gt;; here Greg applies this statement to university education, and asks:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -991,9 +991,9 @@ nose.main()&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Teaching with SageMathCloud</title>
-   <link href="/2014/05/31/teaching_with_SMC.html"/>
+   <link href="https://www.qixiaodong.tk/2014/05/31/teaching_with_SMC.html"/>
    <updated>2014-05-31T00:00:00+00:00</updated>
-   <id>h/2014/05/31/teaching_with_SMC</id>
+   <id>/2014/05/31/teaching_with_SMC</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/31/teaching_with_SMC.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level course on numerical analysis for differential equations. I’ve been teaching the course using Python for 5 years now. This year, for the first time, &lt;em&gt;I didn’t spend any time helping students install Python, numpy, matplotlib, or scipy&lt;/em&gt;. In fact, I even had them use Clawpack – and they didn’t need to install it. Why? Because they all used &lt;a href=&quot;http://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; for the course.&lt;/p&gt;
 &lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
@@ -1030,9 +1030,9 @@ nose.main()&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>HyperPython</title>
-   <link href="/2014/05/28/hyperpython.html"/>
+   <link href="https://www.qixiaodong.tk/2014/05/28/hyperpython.html"/>
    <updated>2014-05-28T00:00:00+00:00</updated>
-   <id>h/2014/05/28/hyperpython</id>
+   <id>/2014/05/28/hyperpython</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/28/hyperpython.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ketch/HyperPython/master/figures/finite_volume.png&quot; alt=&quot;Finite volumes&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Last week, I ran a 1-day tutorial at the &lt;a href=&quot;http://jkk.sze.hu/en_GB/program&quot;&gt;Workshop on Design, Simulation, Optimization and Control of Green Vehicles and Transportation&lt;/a&gt;. The idea was to teach attendees about Python programming, basic theory of hyperbolic conservation laws, finite volume methods, and how to use &lt;a href=&quot;http://clawpack.github.io/doc/pyclaw/&quot;&gt;PyClaw&lt;/a&gt;, all in the space of a few hours.&lt;/p&gt;
@@ -1055,9 +1055,9 @@ nose.main()&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Dispersion relations for linear systems of PDEs</title>
-   <link href="/2014/05/28/dispersion_relations.html"/>
+   <link href="https://www.qixiaodong.tk/2014/05/28/dispersion_relations.html"/>
    <updated>2014-05-28T00:00:00+00:00</updated>
-   <id>h/2014/05/28/dispersion_relations</id>
+   <id>/2014/05/28/dispersion_relations</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/05/28/dispersion_relations.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Fourier analysis is an essential tool for understanding the behavior of solutions to linear equations. Often, this analysis is introduced to students in the context of scalar equations with real coefficients. If nothing more is said, students may mistakenly apply assumptions based on the scalar case to systems, leading to erroneous conclusions. I’m surprised at how often I’ve seen this, and I’ve even made the mistake myself.&lt;/p&gt;
 &lt;h2 id=&quot;scalar-equations&quot;&gt;Scalar equations&lt;/h2&gt;
@@ -1160,9 +1160,9 @@ A_2 &amp;amp; = \begin{pmatrix}
  
  <entry>
    <title>The PETSc DMDA is not lightweight</title>
-   <link href="/2014/03/11/DMDA_memory.html"/>
+   <link href="https://www.qixiaodong.tk/2014/03/11/DMDA_memory.html"/>
    <updated>2014-03-11T00:00:00+00:00</updated>
-   <id>h/2014/03/11/DMDA_memory</id>
+   <id>/2014/03/11/DMDA_memory</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/03/11/DMDA_memory.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In &lt;a href=&quot;http://lists.mcs.anl.gov/pipermail/petsc-users/2014-January/020018.html&quot;&gt;this PETSc-users thread&lt;/a&gt;, my good friend Matt Knepley claims that the DMDA object is lightweight, and suggests that it is okay to make them willy- nilly. Unfortunately, my experience indicates otherwise. But words are cheap; let’s investigate.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%load_ext memory_profiler&lt;/code&gt;&lt;/pre&gt;
@@ -1261,9 +1261,9 @@ Line #    Mem usage    Increment   Line Contents
  
  <entry>
    <title>The Schrodinger equation is not a reaction-diffusion equation</title>
-   <link href="/2014/02/22/schrodinger-is-not-diffusion.html"/>
+   <link href="https://www.qixiaodong.tk/2014/02/22/schrodinger-is-not-diffusion.html"/>
    <updated>2014-02-22T00:00:00+00:00</updated>
-   <id>h/2014/02/22/schrodinger-is-not-diffusion</id>
+   <id>/2014/02/22/schrodinger-is-not-diffusion</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2014/02/22/schrodinger-is-not-diffusion.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently, a stackexchange answer claimed that &lt;a href=&quot;http://scicomp.stackexchange.com/a/10878/123&quot;&gt;the Schrodinger equation is effectively a reaction-diffusion equation&lt;/a&gt;. I’ll set aside semantic arguments about the meaning of “effectively”, and give a more obvious example to explain why I think this statement is misleading.&lt;/p&gt;
 &lt;p&gt;Consider the wave equation&lt;/p&gt;
@@ -1287,9 +1287,9 @@ u_t &amp;amp; = v.
  
  <entry>
    <title>Open access is about open access, not journals</title>
-   <link href="/2013/12/13/open_access_means_open_access.html"/>
+   <link href="https://www.qixiaodong.tk/2013/12/13/open_access_means_open_access.html"/>
    <updated>2013-12-13T00:00:00+00:00</updated>
-   <id>h/2013/12/13/open_access_means_open_access</id>
+   <id>/2013/12/13/open_access_means_open_access</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/12/13/open_access_means_open_access.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open access&lt;/a&gt;. Among the questions:&lt;/p&gt;
 &lt;ul&gt;
@@ -1315,9 +1315,9 @@ u_t &amp;amp; = v.
  
  <entry>
    <title>A Tale of Two Theorems</title>
-   <link href="/2013/10/14/CFL-disk.html"/>
+   <link href="https://www.qixiaodong.tk/2013/10/14/CFL-disk.html"/>
    <updated>2013-10-14T00:00:00+00:00</updated>
-   <id>h/2013/10/14/CFL-disk</id>
+   <id>/2013/10/14/CFL-disk</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/10/14/CFL-disk.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;, Courant, Friedrichs, and Lewy proved a geometric condition that must be satisfied by a convergent &lt;strong&gt;partial&lt;/strong&gt; differential equation discretization – the famous CFL condition. Briefly, the CFL theorem says that the numerical method must transport information at least as quickly as information travels in the true PDE solution. The proof is geometric and is conveyed through numerous diagrams.&lt;/p&gt;
 &lt;p&gt;Exactly fifty years later, in 1978, Rolf Jeltsch and Olavi Nevanlinna &lt;a href=&quot;http://dx.doi.org/10.1007/BF01932030&quot;&gt;published a theorem&lt;/a&gt; [JN] that deals with bounding the modulus of a polynomial &lt;span class=&quot;math&quot;&gt;\(\psi(z)\)&lt;/span&gt; over a disk of the form &lt;span class=&quot;math&quot;&gt;\[D_r = {z \in \{\mathbb C} : |z-r|\le r\}.\]&lt;/span&gt; Their theorem says that if &lt;span class=&quot;math&quot;&gt;\(\psi(z) = 1 + z + a_2 z^2 + \cdots + a_s z^s\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(|\psi(z)|\le 1\)&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt; in such a disk &lt;span class=&quot;math&quot;&gt;\(D_r\)&lt;/span&gt;, then the disk radius &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; is at most &lt;span class=&quot;math&quot;&gt;\(s\)&lt;/span&gt;. The proof of this result is, of course, purely algebraic.&lt;/p&gt;
@@ -1361,9 +1361,9 @@ u_t &amp;amp; = v.
  
  <entry>
    <title>Documentation, testing, and default arguments for your MATLAB packages</title>
-   <link href="/2013/10/12/MATLAB-docs-testing.html"/>
+   <link href="https://www.qixiaodong.tk/2013/10/12/MATLAB-docs-testing.html"/>
    <updated>2013-10-12T00:00:00+00:00</updated>
-   <id>h/2013/10/12/MATLAB-docs-testing</id>
+   <id>/2013/10/12/MATLAB-docs-testing</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/10/12/MATLAB-docs-testing.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for certain things. For instance, I haven’t found a Python-friendly nonlinear optimization package that measures up to the capabilities of MATLAB’s optimization toolbox (fmincon). So my RK-opt package for optimising Runge-Kutta methods is written all in MATLAB.&lt;/p&gt;
 &lt;p&gt;The trouble is that working in Python has spoiled me for other languages. Python has the excellent &lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; package for writing &lt;strong&gt;beautiful documentation&lt;/strong&gt;. Python has the &lt;a href=&quot;http://nose.readthedocs.org/&quot;&gt;nosetests&lt;/a&gt; harness for easily writing and running &lt;strong&gt;tests&lt;/strong&gt;. And Python has &lt;a href=&quot;http://www.diveintopython.net/power_of_introspection/optional_arguments.html&quot;&gt;a simple syntax for including &lt;strong&gt;optional function arguments&lt;/strong&gt; with default values&lt;/a&gt;.&lt;/p&gt;
@@ -1391,9 +1391,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Giving a math talk using IPython notebook slides and Wakari</title>
-   <link href="/2013/09/21/ipython_notebook_slides_talks.html"/>
+   <link href="https://www.qixiaodong.tk/2013/09/21/ipython_notebook_slides_talks.html"/>
    <updated>2013-09-21T00:00:00+00:00</updated>
-   <id>h/2013/09/21/ipython_notebook_slides_talks</id>
+   <id>/2013/09/21/ipython_notebook_slides_talks</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2013/09/21/ipython_notebook_slides_talks.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&quot;giving-a-math-talk-using-ipython-notebook-slides-and-wakari&quot;&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
 &lt;p&gt;Last week I gave my first full-length &lt;em&gt;executable talk&lt;/em&gt;: one in which I showed the code that produced (almost) all the results I presented. You can &lt;a href=&quot;http://www.davidketcheson.info/talks/SciCADE-talk.slides.html#/&quot;&gt;see the talk&lt;/a&gt; and &lt;a href=&quot;https://www.wakari.io/sharing/bundle/ketch/SciCADE-talk&quot;&gt;run the talk on Wakari&lt;/a&gt; (or download it and run it locally). All you need is Python with its scientific packages (numpy, scipy, sympy – I recommend just installing &lt;a href=&quot;http://www.continuum.io/downloads&quot;&gt;Anaconda Python&lt;/a&gt; if you haven’t already). I took things a step further and actually ran a bunch of demo code live on Wakari. I was excited beforehand, and judging by the number of people that came into the room right immediately before my talk (and left immediately afterward), so was the audience. But I was disappointed with how it went. Here’s why.&lt;/p&gt;
@@ -1414,9 +1414,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Open scientific collaboration</title>
-   <link href="/2012/12/22/habits-of-open-scientist-4-collab.html"/>
+   <link href="https://www.qixiaodong.tk/2012/12/22/habits-of-open-scientist-4-collab.html"/>
    <updated>2012-12-22T00:00:00+00:00</updated>
-   <id>h/2012/12/22/habits-of-open-scientist-4-collab</id>
+   <id>/2012/12/22/habits-of-open-scientist-4-collab</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/12/22/habits-of-open-scientist-4-collab.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open scientist&lt;/a&gt;. Here I discuss the fourth habit, &lt;strong&gt;open collaboration&lt;/strong&gt;. The previous post was on &lt;a href=&quot;http://davidketcheson.info/2012/08/22/habits-of-open-scientist-3-pre.html&quot;&gt;Pre-publication dissemination of research&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As mentioned in the introduction to this series, the first three habits are truly essential for any conscientious scientist. With the fourth habit, we’re moving into things that are valuable but less essential – &lt;em&gt;advanced open science&lt;/em&gt;, if you will.&lt;/p&gt;
@@ -1441,9 +1441,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Adopting the Reproducible Research Standard</title>
-   <link href="/2012/12/06/reproducible-research-standard.html"/>
+   <link href="https://www.qixiaodong.tk/2012/12/06/reproducible-research-standard.html"/>
    <updated>2012-12-06T00:00:00+00:00</updated>
-   <id>h/2012/12/06/reproducible-research-standard</id>
+   <id>/2012/12/06/reproducible-research-standard</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/12/06/reproducible-research-standard.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Back in July, I read Victoria Stodden’s work on licensing reproducible research. Victoria has proposed the Reproducible Research Standard (RRS), which is an amalgamation of recommended licenses for what she calls the &lt;em&gt;research compendium&lt;/em&gt;. The research compendium is the full set of outputs of a research project, including:&lt;/p&gt;
 &lt;ul&gt;
@@ -1476,9 +1476,9 @@ if nargin&amp;lt;4 eps=1.e-10; end&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>The parallel EPPEER code</title>
-   <link href="/2012/10/17/eppeer.html"/>
+   <link href="https://www.qixiaodong.tk/2012/10/17/eppeer.html"/>
    <updated>2012-10-17T00:00:00+00:00</updated>
-   <id>h/2012/10/17/eppeer</id>
+   <id>/2012/10/17/eppeer</id>
    <content type="html">&lt;p&gt;Note: this post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/17/eppeer.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I tried out the EPPEER code, which uses two-step Runge-Kutta methods and OpenMP, because I’m thinking of writing a shared-memory parallel ODE solver code myself.&lt;/p&gt;
 &lt;p&gt;I downloaded the code from&lt;/p&gt;
@@ -1528,9 +1528,9 @@ gfortran -fopenmp ivprkp.o ivpepp.o mbod4h.o ivp_pmain.f90
  
  <entry>
    <title>Blogging with notebooks and Jekyll</title>
-   <link href="/2012/10/11/blogging-with-notebooks-and-jekyll.html"/>
+   <link href="https://www.qixiaodong.tk/2012/10/11/blogging-with-notebooks-and-jekyll.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
-   <id>h/2012/10/11/blogging-with-notebooks-and-jekyll</id>
+   <id>/2012/10/11/blogging-with-notebooks-and-jekyll</id>
    <content type="html">&lt;p&gt;First off, if you know &lt;a href=&quot;https://github.com/yihui/knitr-jekyll&quot;&gt;KnitR&lt;/a&gt;, you can write code in R markdown directly and then compile in R/RStudio to generate the blog post easily. My blog repo has the knitr plugin installed and you can use &lt;code&gt;Python&lt;/code&gt;, &lt;code&gt;Mathlab&lt;/code&gt; and even &lt;code&gt;Julia&lt;/code&gt; engines to compile code lines. More information can be found in &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;Yihui Xie’s site&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Below, I will mention some methods that I use to blog with Jupyter notebooks with &lt;code&gt;Julia&lt;/code&gt;, &lt;code&gt;Python&lt;/code&gt; and &lt;code&gt;R&lt;/code&gt; based on the built in functionality of this &lt;a href=&quot;https://github.com/i2000s/i2000s.github.io&quot;&gt;Jekyll repo&lt;/a&gt; firstly introduced by Yihui Xie and &lt;a href=&quot;http://www.carlboettiger.info/&quot;&gt;Carl Boettiger&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In short, you can write ideas in Jupyter (iPython) notebooks and then output in Jykell markdown blog posts in various ways while keep tracking the edit history using version control.&lt;/p&gt;
@@ -1580,9 +1580,9 @@ mv ${fname}.md ~/labnotebook/_posts/${dt}-${fname}.md&lt;/code&gt;&lt;/pre&gt;
  
  <entry>
    <title>Internal stability of Runge-Kutta methods</title>
-   <link href="/2012/10/11/Internal_stability.html"/>
+   <link href="https://www.qixiaodong.tk/2012/10/11/Internal_stability.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
-   <id>h/2012/10/11/Internal_stability</id>
+   <id>/2012/10/11/Internal_stability</id>
    <content type="html">&lt;p&gt;Note: this post was generated from an iPython notebook. You can &lt;a href=&quot;https://github.com/ketch/nodepy/blob/master/examples/Internal_stability.ipynb&quot;&gt;download the notebook from github&lt;/a&gt; and execute all the code yourself. This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/Internal_stability.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Internal stability deals with the growth of errors (such as roundoff) introduced at the Runge-Kutta stages during a single Runge-Kutta step. It is usually important only for methods with a large number of stages, since that is when the internal amplification factors can be large. An excellent explanation of internal stability is given in &lt;a href=&quot;http://oai.cwi.nl/oai/asset/1652/1652A.pdf&quot;&gt;this paper&lt;/a&gt;. Here we demonstrate some tools for studying internal stability in NodePy.&lt;/p&gt;
 &lt;p&gt;First, let’s load a couple of RK methods:&lt;/p&gt;
@@ -1958,9 +1958,9 @@ ______|________________________
  
  <entry>
    <title>A curious upwind implicit scheme for advection</title>
-   <link href="/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
+   <link href="https://www.qixiaodong.tk/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html"/>
    <updated>2012-10-11T00:00:00+00:00</updated>
-   <id>h/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
+   <id>/2012/10/11/A_curious_upwind_implicit_scheme_for_advection</id>
    <content type="html">&lt;p&gt;Note: This post was originally published on the KAUST Mathwiki &lt;a href=&quot;https://mathwiki.kaust.edu.sa/david/A%20curious%20upwind%20implicit%20scheme%20for%20advection&quot;&gt;here&lt;/a&gt; (login required) by &lt;a href=&quot;http://www.davidketcheson.info/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html&quot;&gt;David Ketcheson&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;the-cfl-condition&quot;&gt;The CFL condition&lt;/h2&gt;
 &lt;p&gt;The CFL condition is one of the most basic and intuitive principles in the numerical solution of hyperbolic PDEs. First formulated by Courant, Friedrichs and Lewy in their seminal paper (in English for free &lt;a href=&quot;http://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf&quot;&gt;here&lt;/a&gt;), it states that the domain of dependence of a numerical method for solving a PDE must contain the true domain of dependence. Otherwise, the numerical method cannot be convergent.&lt;/p&gt;
@@ -1994,9 +1994,9 @@ ______|________________________
  
  <entry>
    <title>7 Habits of the Open Scientist #3: Pre-publication dissemination of research</title>
-   <link href="/2012/08/22/habits-of-open-scientist-3-pre.html"/>
+   <link href="https://www.qixiaodong.tk/2012/08/22/habits-of-open-scientist-3-pre.html"/>
    <updated>2012-08-22T00:00:00+00:00</updated>
-   <id>h/2012/08/22/habits-of-open-scientist-3-pre</id>
+   <id>/2012/08/22/habits-of-open-scientist-3-pre</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/08/03/habits-of-open-scientist-3.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 &lt;p&gt;&lt;span style=&quot;font-family: Palatino;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Note: this post is part of &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/07/7-habits-of-open-scientist.html&quot;&gt;a series on habits of the open scientist&lt;/a&gt;.  Here I discuss the third habit, &lt;strong&gt;pre-publication dissemination of research&lt;/strong&gt;.  The previous post was on &lt;strong&gt;&lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-2.html&quot;&gt;reproducible research&lt;/a&gt;.&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;A personal story&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In 2003-2004, as a senior undergraduate, I got involved in research on strong stability preserving (SSP) Runge--Kutta (RK) methods.  I noticed a number of &quot;numerical coincidences&quot; -- certain numbers characterizing ostensibly different properties of RK methods always happened to be exactly the same.  I didn&#39;t yet have the necessary background to fully prove the conjectured connection, but after months of work, I finally succeeded in completing a partial solution to the problem, which I wrote up as my undergraduate thesis.  Before I could submit a manuscript for publication, I discovered that two other researchers had just published the full result.  Hence my manuscript was, of course, unpublishable.&lt;/p&gt;&lt;p&gt;Occasionally, situations like this are inevitable.  But those researchers had worked out and written up the result at least a year ahead of me -- before I even began the work in earnest.  If their work had been available to me at the outset, I could have devoted my time to unanswered questions.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;Refereeing is slow; distribution is fast&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In my field (applied math), it often takes more than 1 year for a submitted paper to be published.  This is because a thorough referee process of a manuscript takes time, and I think that time is worthwhile.  In contrast, I can &quot;publish&quot; a new paper on the arXiv in just 48 hours, or on my professional website instantaneously.&lt;/p&gt;&lt;p&gt;Many readers may not wish to see my work until it has been refereed.  But for those working on similar problems, reading my work 1 year earlier can be very useful by pointing out promising new avenues or avoiding duplication of effort.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The open scientist distributes his publishable research openly before the formal refereeing and publishing process, by placing completed manuscripts on a preprint server like the arXiv.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;If you&#39;re brave, you can also &lt;a href=&quot;http://jabberwocky.weecology.org/2012/08/10/a-list-of-publicly-available-grant-proposals-in-the-biological-sciences/&quot;&gt;share your grant proposals&lt;/a&gt; openly.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Palatino; font-size: 24px;&quot;&gt;&lt;strong&gt;Concerns&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The first time you do this, you may feel worried that someone else will &#39;steal&#39; your preprint and publish it before you.  But posting it on the arXiv makes it public and stamps it with a date, so such theft would be obvious to everyone.  You may be worried that others will steal your ideas and immediately begin working on your next planned research question.  But if you&#39;re like me, the number of related research questions to pursue is essentially endless and you&#39;d be fortunate if your efforts attract others to work on closely related topics (for the truly self-interested, note that it will increase your citation count).  Finally, in some fields or subfields, there is cultural resistance to making preprints public; you can see my take on the issue in &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/01/what-is-this-thing-we-call-arxiv-really.html&quot;&gt;this prior blog post&lt;/a&gt;.  But there are &lt;a href=&quot;http://www.nature.com/news/geneticists-eye-the-potential-of-arxiv-1.11091&quot;&gt;signs that it is gaining wider acceptance&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If everyone began to practice this, it would effectively transform the role of journals.  They would no longer be the primary distribution apparatus; their role would be that of &lt;a href=&quot;http://blogs.lse.ac.uk/impactofsocialsciences/2012/07/10/publish-then-filter-research/&quot;&gt;filtering the already-published literature&lt;/a&gt;.  This would make a lot more science available a lot sooner, without sacrificing the usefulness of peer review. &lt;/p&gt;&lt;div&gt;Next up: Habit #4 -- &lt;strong&gt;Open notebook science&lt;/strong&gt;.&lt;/div&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-7777148585610164309?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2005,9 +2005,9 @@ ______|________________________
  
  <entry>
    <title>7 Habits of the Open Scientist: #2 -- Reproducible Research</title>
-   <link href="/2012/08/03/habits-of-open-scientist-2.html"/>
+   <link href="https://www.qixiaodong.tk/2012/08/03/habits-of-open-scientist-2.html"/>
    <updated>2012-08-03T00:00:00+00:00</updated>
-   <id>h/2012/08/03/habits-of-open-scientist-2</id>
+   <id>/2012/08/03/habits-of-open-scientist-2</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/08/03/habits-of-open-scientist-2.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 &lt;p&gt;&lt;span style=&quot;font-family: Palatino;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Note: this post is part of &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/07/7-habits-of-open-scientist.html&quot;&gt;a series on habits of the open scientist&lt;/a&gt;.  Here I discuss the second habit, &lt;strong&gt;reproducible research&lt;/strong&gt;.  The previous post was on &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-1-open.html&quot;&gt;&lt;strong&gt;open scientific publishing&lt;/strong&gt;&lt;/a&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: Helvetica;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-family: Palatino;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Reproducible research&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Reproducibility is part of the definition of science: if the results of your experiment cannot be replicated by different people in a different location, then you&#39;re not doing science.  Far from being a mere philosophic concern, reproducible research has been a key issue in prominent controversies like &lt;a href=&quot;http://en.wikipedia.org/wiki/Climatic_Research_Unit_email_controversy&quot;&gt;climategate&lt;/a&gt; and &lt;a href=&quot;http://magazine.amstat.org/blog/2011/01/01/scipolicyjan11/&quot;&gt;cancer research clinical trials&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Especially disconcerting is the typical irreproducibility of scientific work involving computer code:&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span&gt;“Computational science is facing a credibility crisis: it’s impossible to verify most of the computational results presented at conferences and in papers today.” (LeVeque, Mitchell, Stodden, &lt;em&gt;CiSE &lt;/em&gt;2012)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;Frankly, I used to find that I was often unable to reproduce &lt;em&gt;my own&lt;/em&gt; computational results after a few months, because I had not maintained sufficiently detailed notes about my code and my computing environment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The open scientist ensures that the entire &lt;em&gt;research compendium&lt;/em&gt; -- including not only the paper but the data, source code, parameters, post-processing, and computing environment -- is made freely available, preferably in a way that facilitates its reuse by others.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;I won&#39;t spend more time motivating reproducible research, since &lt;a href=&quot;http://www.bloomberg.com/news/2012-01-10/scientists-share-secrets-or-lose-funding-stodden-and-arbesman.html&quot;&gt;others have done that&lt;/a&gt; &lt;a href=&quot;http://biostatistics.oxfordjournals.org/content/11/3/385.full&quot;&gt;much better than I could&lt;/a&gt;.  Instead, let me focus on the relatively easy first steps you can take to make your research more reproducible.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;The bare minimum: publish your code and data&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;If you wish to set an example of good reproducible computational research practices, I have good news for you: the bar is very low at the moment.  The reason why &quot;it&#39;s impossible to verify most of the computational results&quot; is that &lt;/span&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;em&gt;most researchers don&#39;t release their code and data.&lt;/em&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;  The first step toward working reproducibly is simply to put the code and data that is used in your published research out in the open.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;If you don&#39;t want to release your code to the public, please read about &lt;a href=&quot;http://jarrodmillman.com/talks/siam2011/ms148/leveque.pdf&quot;&gt;why you should&lt;/a&gt; and &lt;a href=&quot;http://www.nature.com/news/2010/101013/full/467753a.html&quot;&gt;why you can&lt;/a&gt;.  Once you&#39;re convinced, go endorse the &lt;a href=&quot;http://sciencecodemanifesto.org/&quot;&gt;Science Code Manifesto&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Releasing your code and data can be as simple as posting a tarball on your website with a reference to the paper it pertains to.  Or you may wish to start putting all your code out in the open on &lt;a href=&quot;http://bitbucket.org&quot;&gt;Bitbucket&lt;/a&gt; or &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;, &lt;a href=&quot;http://github.com/ketch/&quot;&gt;like I do&lt;/a&gt;.  I don&#39;t claim that these are the &lt;em&gt;best&lt;/em&gt; solutions possible, but they are a big step forward from keeping everything on your own hard drive.&lt;/p&gt;&lt;p&gt;When you release your code and data, it is important to use an appropriate license.  &lt;a href=&quot;http://stodden.net&quot;&gt;Victoria Stodden&lt;/a&gt;, a leader in the reproducible research movement, recommends the use of a permissive license like &lt;a href=&quot;http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29&quot;&gt;modified BSD&lt;/a&gt; for code and &lt;a href=&quot;http://sciencecommons.org/resources/faq/database-protocol/&quot;&gt;Science Commons Database Protocol&lt;/a&gt; for data.  Together with the &lt;a href=&quot;http://creativecommons.org/licenses/by/2.0/&quot;&gt;Creative Commons BY&lt;/a&gt; license for media (that I mentioned in &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-1-open.html&quot;&gt;my last post&lt;/a&gt;), these comprise the &lt;a href=&quot;http://www.ijclp.net/files/ijclp_web-doc_1-13-2009.pdf&quot;&gt;&lt;em&gt;Reproducible Research Standard&lt;/em&gt;&lt;/a&gt;, a convenient amalgamation of licenses for open science.&lt;/p&gt;&lt;p&gt;Be sure to include a mention of reproducibility in your paper, along with links to the code and data.  If you release your work under the RRS, I suggest using &lt;a href=&quot;http://dx.doi.org/10.1109/MCSE.2009.19&quot;&gt;this citation&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;Real benefits&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;The open scientist may adopt reproducible research practices for philosophical reasons, but he soon finds that they bring more direct benefits.  Because he writes code and prepares data with the expectation that it will be seen by others, the open scientist finds it much easier for himself, students, and colleagues to build on past work.  New collaborations are formed when others discover his work through openly released code and data.  And (as in the case of &lt;a href=&quot;http://numerics.kaust.edu.sa/papers/pyclaw-sisc/pyclaw-sisc.html&quot;&gt;this paper&lt;/a&gt;, for example) the code itself may be the main subject of publications in &lt;a href=&quot;http://scicomp.stackexchange.com/questions/660/venues-for-publishing-papers-that-emphasize-software&quot;&gt;journals that have come to recognize the importance&lt;/a&gt; of scientific software.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;strong&gt;Taking it further&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;div&gt;Like free and open scientific publishing, reproducible research has become a very large movement, and only a book could hope to cover it all.  Here I&#39;ve merely distilled some basic practical suggestions.&lt;/div&gt;&lt;p&gt;Openly releasing code and data is only the first step.  Open scientists may wish to adopt tools that track code provenance and ensure a fully reproducible workflow, such as&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.reproducibility.org/wiki/Main_Page&quot;&gt;Madagascar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.vistrails.org&quot;&gt;VisTrails&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://neuralensemble.org/trac/sumatra&quot;&gt;Sumatra&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://vcr.stanford.edu/&quot;&gt;VCR&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;Next up: Habit #3 -- &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-3-pre.html&quot;&gt;&lt;strong&gt;Pre-publication dissemination of research&lt;/strong&gt;&lt;/a&gt;.&lt;/div&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-9151334296275912840?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2016,9 +2016,9 @@ ______|________________________
  
  <entry>
    <title>7 Habits of the Open Scientist: #1 -- Open publishing</title>
-   <link href="/2012/08/01/habits-of-open-scientist-1-open.html"/>
+   <link href="https://www.qixiaodong.tk/2012/08/01/habits-of-open-scientist-1-open.html"/>
    <updated>2012-08-01T00:00:00+00:00</updated>
-   <id>h/2012/08/01/habits-of-open-scientist-1-open</id>
+   <id>/2012/08/01/habits-of-open-scientist-1-open</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/08/01/habits-of-open-scientist-1-open.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 &lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Note: this post is part of &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/07/7-habits-of-open-scientist.html&quot;&gt;a series on habits of the open scientist&lt;/a&gt;.  Here I discuss the first habit, &lt;strong&gt;open scientific publishing&lt;/strong&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Why you should publish openly&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 24px;&quot;&gt;&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;A hallmark of important scientific work is that it is reused, modified, and built upon by other scientists.  As a scientist, I spend a great deal of time and effort advertising my work to others so that they will read it and use it.  &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;By default, scientific works fall subject to copyright law, which is intended to prevent reuse and modification.  To make matters worse, the copyrights are typically held by publishers who charge a fee just for access.   Copyright makes sense for musicians and popular authors, because they make a living by charging for access to their works.  But as a scientist, I don&#39;t get paid by those who read and use my work, nor do I seek to.  So &lt;strong&gt;copyright does not serve me, even from a purely self-interested perspective&lt;/strong&gt;.  &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;Stepping back from personal interest, I believe that academic scientists have a &lt;strong&gt;moral imperative&lt;/strong&gt; to freely distribute their work, for two reasons.  First, in academia science is primarily funded by taxes.  Therefore, it has been &#39;purchased&#39; by the public and cannot rightly be withheld from them.  Second, and more importantly, science is intended to benefit humanity.  If it is to do so, it must be shared and communicated.  That is why it has been said that &lt;a href=&quot;http://www.nature.com/nature/debates/e-access/Articles/stallman.html&quot;&gt;&quot;science must push copyright aside.&quot;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;strong&gt;The  open scientist proactively ensures that published research is freely and conveniently available to all.  Ideally, the open scientist releases research under a license like Creative Commons BY that explicitly allows use in derivative works as long as attribution is given.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt; &lt;/p&gt;&lt;p style=&quot;font: normal normal normal 14px/normal Skia; min-height: 17px; margin: 0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;How you can provide free, open access to your work&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p style=&quot;font-size: x-large; font: normal normal normal 14px/normal Skia; margin: 0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;strong&gt;Green open access&lt;/strong&gt; (self archiving): independently of publication in a journal, the author uploads a pre-print, post-print, or final published version of the article to an institutional server, preprint server, or personal webpage.  Anyone can download this version of the article for free.  The author pays nothing and the reader pays nothing.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: x-large; font: normal normal normal 14px/normal Skia; margin: 0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;span style=&quot;font-family: Palatino;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Gold open access&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;: The author pays the publishing journal a fee in order to have the article available for free on the publisher&#39;s website.  Author charges typically are in the range of hundreds to thousands of dollars. &lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;I have &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2011/12/in-defense-of-submission-in-scientific.html&quot;&gt;written elsewhere about the dangers of the gold open access model&lt;/a&gt;.  Suffice it to say that the gold open access approach severely limits which journals I can submit to and consumes my research funds, whereas the green model does not.  &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Qi_D/0/1/0/all/0/1&quot;&gt;I post all my preprints on the arXiv&lt;/a&gt; and &lt;a href=&quot;http://numerics.kaust.edu.sa/publications.html&quot;&gt;on my professional website&lt;/a&gt; before submission.  Where allowed, I post final versions as well.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;Many journals still have restrictive policies that prevent green open access.  If you believe this to be the case for journals that you publish in, it&#39;s worth checking to be sure.  You can easily find this information in the &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/&quot;&gt;Sherpa/Romeo database&lt;/a&gt;.  The number of publishers who still don&#39;t allow any kind of green open access are surprisingly few.  For instance, even the evil &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/search.php?id=30&amp;amp;fIDnum=|&amp;amp;mode=simple&amp;amp;la=en&amp;amp;format=full&quot;&gt;Elsevier typically allows archiving of pre- and post-prints&lt;/a&gt;.  &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt; &lt;/p&gt;&lt;p style=&quot;font: normal normal normal 14px/normal Skia; min-height: 17px; margin: 0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 24px;&quot;&gt;&lt;strong&gt;Best practices: pushing copyright aside&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;span style=&quot;font-family: Palatino; font-size: 24px;&quot;&gt;&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/div&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;If you are brave, you can even &lt;a href=&quot;http://scholars.sciencecommons.org/&quot;&gt;modify the journal&#39;s copyright transfer agreement&lt;/a&gt;, to allow you to retain copyright and release your work under &lt;a href=&quot;http://creativecommons.org/licenses/by/2.0/&quot;&gt;Creative Commons BY&lt;/a&gt;.  This is also (surprisingly) often &lt;a href=&quot;http://adamdsmith.wordpress.com/2009/07/07/copyright-copywrong/&quot;&gt;accepted by publishers&lt;/a&gt;.  I haven&#39;t done this yet, but I plan to do so with all of my future papers, including those currently under referee.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;This first habit of the open scientist is essential but no longer revolutionary.  The open access movement has really picked up speed in the past year, with many &lt;a href=&quot;http://access2research.org/Petition&quot;&gt;petitions&lt;/a&gt; and initiatives by &lt;a href=&quot;http://www.guardian.co.uk/science/2012/jul/25/uk-government-open-access-development-research&quot;&gt;governments&lt;/a&gt; and &lt;a href=&quot;http://www.wellcome.ac.uk/About-us/Policy/Policy-and-position-statements/WTD002766.htm&quot;&gt;funding agencies&lt;/a&gt; moving forward.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-family: Palatino; font-size: 18px;&quot;&gt;Next up: Habit #2 -- &lt;strong&gt;&lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-2.html&quot;&gt;Reproducible research: open code, open data&lt;/a&gt;.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-7172755368704394594?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2027,9 +2027,9 @@ ______|________________________
  
  <entry>
    <title>7 Habits of the Open Scientist</title>
-   <link href="/2012/07/31/habits-of-open-scientist.html"/>
+   <link href="https://www.qixiaodong.tk/2012/07/31/habits-of-open-scientist.html"/>
    <updated>2012-07-31T00:00:00+00:00</updated>
-   <id>h/2012/07/31/habits-of-open-scientist</id>
+   <id>/2012/07/31/habits-of-open-scientist</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 &lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;Science has always been based on a fundamental culture of openness.  The scientific community rewards individuals for sharing their discoveries through perpetual attribution, and the community benefits by through the ability to build on discoveries made by individuals.  Furthermore, scientific discoveries are not generally accepted until they have been verified or reproduced independently, which requires open communication.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;Historically, openness simply meant publishing one&#39;s methods and results in the scientific literature.  This enabled scientists all over the world to learn about essential advances made by their colleagues, modulo a few barriers.  One needed to have access to expensive library collections, to spend substantial time and effort searching the literature, and to wait while research conducted by other groups was refereed, published, and distributed.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;Nowadays it is possible to practice a fundamentally more open kind of research -- one in which we have immediate, free, indexed, universal access to scientific discoveries.  The new vision of open science is painted in lucid tones in Michael Nielsen&#39;s &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2011/11/book-review-reinventing-discovery.html&quot;&gt;Reinventing Discovery&lt;/a&gt;.  After reading Nielsen&#39;s book, I was hungry to begin practicing open science, but not exactly sure where to start.  Here are seven ways I&#39;m aware of.  Each will be the subject of a longer forthcoming post.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;I believe that every scientist has a moral imperative to adopt the first two:&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;1. &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-1-open.html&quot;&gt;&lt;strong&gt;Freely accessible publications&lt;/strong&gt;&lt;/a&gt;.  At a minimum, make sure that everyone is allowed to read your research.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;2. &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-2.html&quot;&gt;&lt;strong&gt;Reproducible research&lt;/strong&gt;&lt;/a&gt;.  Release your code and data so  that anyone who wants to can verify or build directly on your work.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;The remaining five are marks of a truly open scientist:&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia; min-height: 17.0px;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;3. &lt;a href=&quot;http://scienceinthesands.blogspot.co.uk/2012/08/7-habits-of-open-scientist-3-pre.html&quot;&gt;&lt;strong&gt;Pre-publication dissemination of research&lt;/strong&gt;&lt;/a&gt;.  Just because peer-review and journals take time, that doesn&#39;t mean you need to embargo your audience.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;4. &lt;strong&gt;Open collaboration through social media&lt;/strong&gt;.  Find the person who knows that one thing you need, through new scientific networking tools -- and share your own expertise where it&#39;s needed most.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;5. &lt;strong&gt;Live open science&lt;/strong&gt;.  Tell people about your marvelous discoveries -- as you make them.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;6. &lt;strong&gt;Open expository writing&lt;/strong&gt;.  Teach others about the field you work in through a blog or online book.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Skia;&quot;&gt;&lt;span style=&quot;font-size: 18px; font-family: Palatino;&quot;&gt;7.  &lt;strong&gt;Open bibliographies and reviews&lt;/strong&gt;.  Let your colleagues know what you&#39;re reading, and what you&#39;ve learned from it.&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-5195607085851158662?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2038,9 +2038,9 @@ ______|________________________
  
  <entry>
    <title>Can a region of absolute stability be rectangular?</title>
-   <link href="/2012/03/17/can-region-of-absolute-stability-be.html"/>
+   <link href="https://www.qixiaodong.tk/2012/03/17/can-region-of-absolute-stability-be.html"/>
    <updated>2012-03-17T00:00:00+00:00</updated>
-   <id>h/2012/03/17/can-region-of-absolute-stability-be</id>
+   <id>/2012/03/17/can-region-of-absolute-stability-be</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2012/03/17/can-region-of-absolute-stability-be.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 &lt;script type=&quot;text/x-mathjax-config&quot;&gt;// &lt;![CDATA[    MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}}); // ]]&amp;gt; // ]]&amp;gt; // ]]&amp;gt; // ]]&amp;gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt; &lt;/script&gt;&lt;p&gt;When a one-step integrator is applied to the solution of the linear scalar ODE&lt;/p&gt;&lt;p&gt;$$u&#39;(t) = \lambda u(t)$$&lt;/p&gt;&lt;p&gt;the resulting iteration takes the simple form&lt;/p&gt;&lt;p&gt;$$U^{n} = R(h\lambda) U^{n-1}$$&lt;/p&gt;&lt;p&gt;where $U^n$ is a numerical approximation to the solution $u(t_n)$ and $R(h\lambda)$ is called the &lt;em&gt;stability function&lt;/em&gt;.  The details of the stability function depend on the choice of numerical method, but for any explicit Runge-Kutta method, $R(z)$ is a polynomial whose degree is at most the number of stages of the method.&lt;/p&gt;&lt;p&gt;The stability function completely characterizes the accuracy and stability of the method when applied to linear problems.  Consider the first order linear, autonomous ODE&lt;/p&gt;&lt;p&gt;$$u&#39;(t) = L u(t)$$&lt;/p&gt;&lt;p&gt;where now $u$ is a vector and $L$ is a square matrix.  The numerical solution will be&lt;/p&gt;&lt;p&gt;$$U^{n} = R(hL) U^{n-1}.$$&lt;/p&gt;&lt;p&gt;The global error satisfies a similar recurrence; in particular, it gets multiplied by a factor $R(hL)$ at each step.  Let $\lambda$ denote any eigenvalue of $L$; then If $L$ is a normal matrix, the solution will be absolutely stable in the Euclidean norm if all values $h\lambda$ lie within the stability region $S$, defined as&lt;/p&gt;&lt;p&gt;$$S = \{ z\in\mathbb{C} : |R(z)|\le 1\}.$$&lt;/p&gt;&lt;p&gt;Thus the region of absolute stability defines the portion of the complex plane in which a given numerical integration method may appropriately be applied.&lt;/p&gt;&lt;p&gt;In our &lt;a href=&quot;http://arxiv.org/abs/1201.3035&quot;&gt;preprint on Runge-Kutta stability regions&lt;/a&gt;, Aron Ahmadia and I claim that we have an algorithm to generate a stability region appropriate for &lt;strong&gt;any&lt;/strong&gt; spectrum.  By considering high-degree polynomials, we find that the resulting stability regions are tightly adapted to the shape of the imposed spectrum.&lt;/p&gt;&lt;p&gt;While this promises to be very useful for some problems, it also has an aspect that&#39;s just fun: we can generate stability regions with unusual shapes.  I haven&#39;t explored this much yet, but a first question that we ask in the preprint is how to generate a stability region for a spectrum of eigenvalues forming a rectangle in the left half of the complex plane.&lt;/p&gt;&lt;p&gt;Here is an example of a resulting stability region:&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; title=&quot;rectangle.png&quot; src=&quot;http://lh5.ggpht.com/-hFUCwYmztZc/T2Tih_6hjqI/AAAAAAAAAqE/-bCijXPC9fU/rectangle.png?imgmax=800&quot; border=&quot;0&quot; alt=&quot;Rectangle&quot; width=&quot;300&quot; height=&quot;170&quot; /&gt;&lt;/p&gt;&lt;p&gt;The gray region is the set $S$ for a certain degree-20 stability polynomial corresponding to a consistent twenty-stage Runge-Kutta method.  As one colleague told me when I showed it to him, &quot;this seems too good to be true; is that rectangle really the stability region?&quot;&lt;/p&gt;&lt;p&gt;Indeed it is.  Zooming in on the top edge we see the detailed structure of the boundary:&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; title=&quot;topzoom.png&quot; src=&quot;http://lh5.ggpht.com/-Kw9OH_BbvFo/T2Tkf-wpSwI/AAAAAAAAAqU/nh-AvaTLjME/topzoom.png?imgmax=800&quot; border=&quot;0&quot; alt=&quot;Topzoom&quot; width=&quot;400&quot; height=&quot;227&quot; /&gt;&lt;/p&gt;&lt;p&gt;Zooming in even closer:&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; title=&quot;topzoomzoom.png&quot; src=&quot;http://lh6.ggpht.com/-Yl76vF8t5tE/T2TkhS5suMI/AAAAAAAAAqc/aAk3EZPO6Po/topzoomzoom.png?imgmax=800&quot; border=&quot;0&quot; alt=&quot;Topzoomzoom&quot; width=&quot;500&quot; height=&quot;283&quot; /&gt;&lt;/p&gt;&lt;p&gt;As is typical with optimal stability polynomials, we se that the boundary is tangent or nearly tangent to the desired region at a large number of points (about 20 in this case).&lt;/p&gt;&lt;p&gt;What other shapes can be approximated?  More on that later...&lt;/p&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-2593423780459904784?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2049,9 +2049,9 @@ ______|________________________
  
  <entry>
    <title>Managing publication lists in HTML</title>
-   <link href="/2011/10/28/managing-publication-lists-in-html.html"/>
+   <link href="https://www.qixiaodong.tk/2011/10/28/managing-publication-lists-in-html.html"/>
    <updated>2011-10-28T00:00:00+00:00</updated>
-   <id>h/2011/10/28/managing-publication-lists-in-html</id>
+   <id>/2011/10/28/managing-publication-lists-in-html</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2011/10/28/managing-publication-lists-in-html.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt; and updated to my case.
 
 &lt;p&gt;As an academic, it&#39;s a good idea to maintain a &lt;a href=&quot;http://web.kaust.edu.sa/faculty/davidketcheson/&quot;&gt;professional website&lt;/a&gt; with a &lt;a href=&quot;http://web.kaust.edu.sa/faculty/davidketcheson/publications.html&quot;&gt;list of your publications&lt;/a&gt;.  Ideally, this list should include links to where visitors can download the papers (PDFs) &lt;a href=&quot;http://sciencecodemanifesto.org&quot;&gt;and any related code&lt;/a&gt;.  In my case, I also maintain a &lt;a href=&quot;http://numerics.kaust.edu.sa&quot;&gt;website for my research group&lt;/a&gt; that has another &lt;a href=&quot;http://numerics.kaust.edu.sa/publications.html&quot;&gt;publication list.&lt;/a&gt; Of course, you need to maintain local reference files with the citation info for your publications (for inclusion in later publications), as well as your CV.&lt;/p&gt;&lt;p&gt;Maintaining all these separate lists can become very tedious, which is probably why most academics&#39; sites are usually out-of-date.  Here&#39;s how I automate much of it:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;I use &lt;a href=&quot;http://www.bibtex.org/&quot;&gt;Bibtex&lt;/a&gt;. &lt;/strong&gt;This allows automatic generation of bibliographies for papers and for my CV.  And it&#39;s the basis for generating HTML bibliographies, as outlined below.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;I use &lt;a href=&quot;http://www.mendeley.com&quot;&gt;Mendeley&lt;/a&gt;.&lt;/strong&gt; Mendeley allows me to create separate bibliographic lists (e.g., for my own publications and for those of my research group) and &lt;a href=&quot;http://www.mendeley.com/blog/tipstricks/howto-use-mendeley-to-create-citations-using-latex-and-bibtex/&quot;&gt;export them as bibtex files&lt;/a&gt;, using the desktop app.  It&#39;s also possible to &lt;a href=&quot;http://bibbase.org/cgi-bin/mendeley/Mendeley-oapi/requestToken.py&quot;&gt;get a bibtex file of your Mendeley publications directly on-line&lt;/a&gt; through &lt;a href=&quot;http://www.bibbase.org&quot;&gt;BibBase&lt;/a&gt;.  You can even &lt;a href=&quot;http://www.mendeley.com/blog/academic-features/if-you-publish-a-paper-but-nobody-reads-it-does-it-make-a-difference/#more-26402&quot;&gt;display a list of your publications on-line automatically using Mendeley,&lt;/a&gt; but it&#39;s not very customizable; for instance, they appear in alphabetical, rather than chronological order.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;I would use &lt;a href=&quot;http://www.bibbase.org/&quot;&gt;BibBase&lt;/a&gt;&lt;/strong&gt; to &lt;a href=&quot;http://www.bibbase.org/help/&quot;&gt;automatically display an updated bibliography&lt;/a&gt; if my institutional server ran PHP or CGI scripts, but no luck there.&lt;/li&gt;&lt;li&gt;My less-automatic solution is &lt;strong&gt;&lt;a href=&quot;https://github.com/ketch/tex2_rst_html&quot;&gt;simple Python scripts&lt;/a&gt;&lt;/strong&gt; that generate CSS-friendly HTML.  The scripts use the Python module bibliograph to parse bibtex entries.  I could instead use &lt;a href=&quot;https://encrypted.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=bibtex2html&amp;amp;source=web&amp;amp;cd=1&amp;amp;sqi=2&amp;amp;ved=0CBgQFjAA&amp;amp;url=http%3A%2F%2Fwww.lri.fr%2F~filliatr%2Fbibtex2html%2F&amp;amp;ei=EqqqTubIK4zC8QPF7sySCw&amp;amp;usg=AFQjCNFE8lFV7TxfgvapcrTjFvSDcEqyng&quot;&gt;bibtex2html&lt;/a&gt;.  I like my solution better because the customization is all done using CSS rather than Python, so I can change the look without re-generating the HTML.  Of course, bibtex2html is a more polished and flexible tool than my 30-line script.&lt;/li&gt;&lt;li&gt;Here&#39;s a CSS snippet that&#39;s used for &lt;a href=&quot;http://numerics.kaust.edu.sa/publications.html&quot;&gt;this publication list&lt;/a&gt;:&lt;/li&gt;&lt;/ul&gt;&lt;pre class=&#39;brush:css;&#39;&gt;&lt;br /&gt;#pub {padding: 5px; border-width: 2px; border-style: none; background-color: #eee4b5; font-size: 1.2em; margin-top: 20px; margin-bottom: 20px;}&lt;br /&gt;#pub a{font-weight: bold; color: #09434e;}&lt;br /&gt;#pub name{font-weight: bold; color: #09434e;}&lt;br /&gt;#pub journal{font-style: italic;}&lt;br /&gt;&lt;/pre&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;The workflow for adding a new paper to an html bibliography is:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Add the paper in Mendeley.&lt;/li&gt;&lt;li&gt;Export bibtex from Mendeley.&lt;/li&gt;&lt;li&gt;Run Python scripts.&lt;/li&gt;&lt;li&gt;Paste resulting HTML into the appropriate file.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Again, it would be simpler if I could use Bibbase (cutting out steps 2-4).  It&#39;s still fairly painless, and it&#39;s easy to generate new bibilographic lists or customize the look of existing ones.&lt;/p&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-6191171778887335934?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2067,9 +2067,9 @@ I have customized one version under my &lt;a href=&quot;https://github.com/i2000
  
  <entry>
    <title>How to edit all files containing a particular string</title>
-   <link href="/2011/06/27/how-to-edit-all-files-containing.html"/>
+   <link href="https://www.qixiaodong.tk/2011/06/27/how-to-edit-all-files-containing.html"/>
    <updated>2011-06-27T00:00:00+00:00</updated>
-   <id>h/2011/06/27/how-to-edit-all-files-containing</id>
+   <id>/2011/06/27/how-to-edit-all-files-containing</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2011/06/27/how-to-edit-all-files-containing.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 It&#39;s often useful to be able to automatically open all files with a particular string (say, to rename a variable throughout your code).  To do this with ack, and open all files containing my_string in vim, just type:&lt;br /&gt;&lt;br /&gt;vim $(ack -l my_string)&lt;br /&gt;&lt;br /&gt;It can be accomplished in a similar way with grep instead of ack.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Edit:&lt;/b&gt; If you just want to search and replace a particular string in all files under some directory recursively, use &lt;br /&gt;&lt;br /&gt;grep -rl matchstring somedir/ | xargs sed -i &quot;&quot; &#39;s/search string1/search string2/&#39;   &lt;br /&gt;&lt;br /&gt;It took me a while to find that the double quotes after -i are necessary on Mac OS X.  And be aware that the single quotes above usually get mangled to be backticks when copying and pasting.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Edit 2:&lt;/b&gt; Don&#39;t do this in the root directory of a git repository!  It will corrupt the repository.&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-2002733795720160146?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
@@ -2078,14 +2078,14 @@ It&#39;s often useful to be able to automatically open all files with a particul
  
  <entry>
    <title>How do shock waves behave in inhomogeneous materials?</title>
-   <link href="/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html"/>
+   <link href="https://www.qixiaodong.tk/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html"/>
    <updated>2011-05-29T00:00:00+00:00</updated>
-   <id>h/2011/05/29/how-do-shocks-behave-in-inhomogeneous</id>
+   <id>/2011/05/29/how-do-shocks-behave-in-inhomogeneous</id>
    <content type="html">Note: This post was originally written by &lt;a href=&quot;http://www.davidketcheson.info/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html&quot; target=&quot;_blank&quot;&gt;David Ketcheson&lt;/a&gt;.
 
 It&#39;s well known that solutions of genuinely nonlinear hyperbolic PDEs lead to shock singularities in finite time, under very weak assumptions on the initial data.  However, proofs of this statement invariably assume uniformity of the PDE coefficients in space and time.  What if the coefficients are allowed to vary, as would be the case for waves in many real materials, whose properties may be random or periodic?&lt;br /&gt;&lt;br /&gt;Surprisingly little is known about the answer to this question, but a first attempt to answer it in part is made in my recently submitted manuscript &lt;a href=&quot;http://arxiv.org/abs/1105.2892&quot;&gt;&quot;Shock dynamics in layered periodic media&quot;&lt;/a&gt;.  Among the &quot;shocking&quot; findings:&lt;br /&gt;&lt;br /&gt;-For certain media and relatively general initial conditions, shock formation seems not to occur even after extremely long times.&lt;br /&gt;-Shocks that would be stable in a homogeneous medium are frequently not stable in a heterogeneous medium&lt;br /&gt;-The asymptotic behavior of solutions in heterogeneous media is generally different; rather than consisting of N-waves, the solutions may be composed of solitary waves, for instance.&lt;br /&gt;&lt;br /&gt;To get an idea of what&#39;s going on, &lt;a href=&quot;https://bitbucket.org/ketch/layeredmediashocks/src/beaea8503a45/movies/&quot;&gt;take a look at some movies&lt;/a&gt; showing animations of the remarkable behavior of the solution.&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-972610786729015674?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
 </content>
  </entry>
  
- 
+
 </feed>

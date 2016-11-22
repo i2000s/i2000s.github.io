@@ -1,4 +1,4 @@
-# This is used to generate Jekyll blog posts from Jupyter notebooks for Julia codes. 
+# This is used to generate Jekyll blog posts from Jupyter notebooks for Julia codes.
 # Following the instruction at http://christop.club/2014/02/21/blogging-with-ipython-and-jekyll/
 # modification of config created here: https://gist.github.com/tgarc/7d6901858ef708030c19
 # Usage example: jupyter nbconvert --to markdown <notebook>.ipynb --config jekyll.py
@@ -27,7 +27,7 @@ c.MarkdownExporter.template_file = 'jekyll'
 def path2support(path):
     """Turn a file path into a URL"""
     parts = path.split(os.path.sep)
-    return '{{ site.url}}/notebooks/' + '/'.join(quote(part) for part in parts)    
+    return '{{ site.url}}{{ site.baseurl }}/notebooks/' + '/'.join(quote(part) for part in parts)    
 #return '../assets/img/notebook_images/' + os.path.basename(path)
 
 c.MarkdownExporter.filters = {'path2support': path2support}
