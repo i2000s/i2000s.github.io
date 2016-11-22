@@ -49,7 +49,7 @@ show_drafts: false
 gitstamps: yes
 username: i2000s
 orgname: i2000s # This is used to identify the category of GitHub repository. Use username for personal repository.
-repo: en # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
+repo: i2000s.github.io # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
 sourcebranch: dev # used in linking commit history.
 
 source: .
