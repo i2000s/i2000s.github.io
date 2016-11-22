@@ -19,7 +19,7 @@ author :
     - name: ICIQ
     - name: JuliaCN
 url: https://www.qixiaodong.tk
-baseurl: /en
+baseurl: ''
 disqus:
   sitename: qxd # This is the shortname of the disqus site id to display disqus comments below posts.
 addthis:  # Get an account at www.addthis.com. You may need to at least enable the Sharing Sidebar and Sharing Buttons functions to fully use our design.

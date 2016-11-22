@@ -1,6 +1,6 @@
 ---
 layout: vita
-permalink: /en/pubs/
+permalink: /pubs/
 title: Vita
 tags: publications
 image:
