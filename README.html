@@ -33,7 +33,7 @@
 <meta property="dc:date" content="" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/README" />
+<meta property="dc:identifier" content="https://www.qixiaodong.tk/README" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="The NoteBlog of Xiaodong Qi" />
 <meta property="dc:subject" content="Physics" />
@@ -58,8 +58,8 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@i2000s" />
 <meta name="twitter:title" content="About this site" />
-<meta name="twitter:description" content="About this site" />
-<meta name="twitter:image" content="/assets/img/qi2016.jpg" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="https://www.qixiaodong.tk/assets/img/qi2016.jpg" />
 <!-- Baidu website verification code -->
 <meta name="baidu-site-verification" content="cAv3dLIDps" />
 
@@ -227,7 +227,7 @@ sudo apt-get install gsl-bin libgsl0-dev</code></pre>
 <p>On Windows OS, you may be able to follow <a href="https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/">this instruction</a> to install Jekyll. If you find some error related to Ruby Development Kit when you run <code>bundle exec jekyll serve --baseurl ''</code> or <code>gem install ***</code>, you may find <a href="http://flatshaded.com/2013/05/installing-jekyll-on-windows/">this experience</a> helpful. <code>gsl</code> should be preinstalled in order to gem install <code>rb-gsl</code>, where the step in the <code>.travis.yml</code> configuration file about installing <code>gsl-bin</code> step does not apply to Windows systems.</p>
 <p>The <code>Gemfile</code> and the configuration files <code>_conf.yml</code> and <code>.travis.yml</code> should include sufficient information on installing correct dependences. Then for a routinely rendering, you only need to run the following command lines:</p>
 <pre><code>bundle install
-bundle exec jekyll serve</code></pre>
+bundle exec jekyll serve --baseurl &#39;&#39;</code></pre>
 <p>Notice that, I have locked the Jekyll version to <code>~&gt;3.1.6</code>. If you want to use Jekyll version 2.5 or earlier, you may need to tweak the code a little bit.</p>
 <p>If you encounter the missing credentials error for the <code>twitter_feed</code> plugin, you may need to export environmental variables <code>TWIT_KEY</code>, <code>TWIT_SECRET</code>, <code>TWIT_TOK</code> and <code>TWIT_TOK_SECRET</code> before running the jekyll server. All the credentials of the Twitter plugin should be accessible from the TWitter account used for the site.</p>
 <p>By default, the local build should be accessible at <code>http://127.0.0.1:4000</code> on your internet browser.</p>
