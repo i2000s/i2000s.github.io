@@ -23,7 +23,7 @@ if REPO == "#{USERNAME}.github.io" || REPO == "#{ORGNAME}.github.io"
   SOURCE_BRANCH = CONFIG['sourcebranch'] || "dev"
   DESTINATION_BRANCH = "master"
 else
-  SOURCE_BRANCH = "master"
+  SOURCE_BRANCH = CONFIG['sourcebranch'] || "dev"
   DESTINATION_BRANCH = "gh-pages"
 end
 
