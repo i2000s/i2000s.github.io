@@ -92,7 +92,7 @@ The `Gemfile` and the configuration files `_conf.yml` and `.travis.yml` should i
 Then for a routinely rendering, you only need to run the following command lines:
 ```
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl ''
 ```
 Notice that, I have locked the Jekyll version to `~>3.1.6`.
 If you want to use Jekyll version 2.5 or earlier, you may need to tweak the code a little bit.
