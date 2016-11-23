@@ -13,10 +13,7 @@ https://www.qixiaodong.tk/archives
 https://www.qixiaodong.tk/atom.xml 
 https://www.qixiaodong.tk/categories 
 https://www.qixiaodong.tk/community/ 
-https://www.qixiaodong.tk/exploringquantumworld.xml 
 https://www.qixiaodong.tk/ 
-https://www.qixiaodong.tk/noteblog 
-https://www.qixiaodong.tk/noteblog.xml 
 https://www.qixiaodong.tk/notebooks 
 https://www.qixiaodong.tk/philosophy 
 https://www.qixiaodong.tk/research/ 
@@ -27,42 +24,6 @@ https://www.qixiaodong.tk/tools
 https://www.qixiaodong.tk/pubs/ 
 
 
-https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html 
-https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html 
-https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html 
-https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html 
-https://www.qixiaodong.tk/2015/05/29/automate_tests.html 
-https://www.qixiaodong.tk/2015/05/16/track_issues.html 
-https://www.qixiaodong.tk/2015/05/15/write_tests.html 
-https://www.qixiaodong.tk/2015/05/14/write_docstrings.html 
-https://www.qixiaodong.tk/2015/05/13/add_a_readme.html 
-https://www.qixiaodong.tk/2015/05/12/code_in_the_open.html 
-https://www.qixiaodong.tk/2015/05/11/use_version_control.html 
-https://www.qixiaodong.tk/2015/05/10/rock_solid_code.html 
-https://www.qixiaodong.tk/2015/01/13/using_matplotlib_image_comparison.html 
-https://www.qixiaodong.tk/2014/07/18/teaching_in_the_open.html 
-https://www.qixiaodong.tk/2014/05/31/teaching_with_SMC.html 
-https://www.qixiaodong.tk/2014/05/28/hyperpython.html 
-https://www.qixiaodong.tk/2014/05/28/dispersion_relations.html 
-https://www.qixiaodong.tk/2014/03/11/DMDA_memory.html 
-https://www.qixiaodong.tk/2014/02/22/schrodinger-is-not-diffusion.html 
-https://www.qixiaodong.tk/2013/12/13/open_access_means_open_access.html 
-https://www.qixiaodong.tk/2013/10/14/CFL-disk.html 
-https://www.qixiaodong.tk/2013/10/12/MATLAB-docs-testing.html 
-https://www.qixiaodong.tk/2013/09/21/ipython_notebook_slides_talks.html 
-https://www.qixiaodong.tk/2012/12/22/habits-of-open-scientist-4-collab.html 
-https://www.qixiaodong.tk/2012/12/06/reproducible-research-standard.html 
-https://www.qixiaodong.tk/2012/10/11/blogging-with-notebooks-and-jekyll.html 
-https://www.qixiaodong.tk/2012/10/11/Internal_stability.html 
-https://www.qixiaodong.tk/2012/10/11/A_curious_upwind_implicit_scheme_for_advection.html 
-https://www.qixiaodong.tk/2012/08/22/habits-of-open-scientist-3-pre.html 
-https://www.qixiaodong.tk/2012/08/03/habits-of-open-scientist-2.html 
-https://www.qixiaodong.tk/2012/08/01/habits-of-open-scientist-1-open.html 
-https://www.qixiaodong.tk/2012/07/31/habits-of-open-scientist.html 
-https://www.qixiaodong.tk/2012/03/17/can-region-of-absolute-stability-be.html 
-https://www.qixiaodong.tk/2011/10/28/managing-publication-lists-in-html.html 
-https://www.qixiaodong.tk/2011/06/27/how-to-edit-all-files-containing.html 
-https://www.qixiaodong.tk/2011/05/29/how-do-shocks-behave-in-inhomogeneous.html 
 
     </article>
   </div>
