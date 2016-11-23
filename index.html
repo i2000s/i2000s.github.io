@@ -2,38 +2,39 @@
 layout: barefooter
 permalink: /
 title: Xiaodong Qi's NoteBlog
-subtitle: Exploring the Open Quantum World
+subtitle: 戚晓东的研习笔记
 description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done at the Center for Quantum Information and Control (CQuIC), University of New Mexico.
 ---
 
 <div class="row">
  <!-- <span> -->
- <div class="col-md-7 col-sm-12">
-  <div class="row">
-      {% for post in site.posts limit:4 %}
-      {% include postsummary.html %}
-      {% endfor %}
+ <div class="col-md-6 col-sm-12" style="text-align:center;" >
+  <div class="col-md-10 col-sm-8 col-md-offset-1">
+      <a class="btn btn-primary btn-lg btn-block" style="font-weight:bold;" href="/en/" role="button">English Site</a>
   </div>
-  <div class="row">
+  <br />
+  <br />
+  <br />
+  <div class="col-md-10 col-sm-10 col-md-offset-1" style="text-align:center; align:center;">
     <div style="font-weight:bold; text-align:center;font-size:1.2em;">
-     <i class="glyphicon glyphicon-chevron-left"></i> <a href="{{ site.baseurl }}/archives.html">Archives by date, </a>
-     <i class="glyphicon glyphicon-list"></i> <a href="{{ site.baseurl }}/categories.html">by category, </a>
-     <i class="glyphicon glyphicon-tag"></i> <a href="{{ site.baseurl }}/tags.html">by tag</a>
+     <i class="glyphicon glyphicon-chevron-left"></i> <a href="/en/archives.html">Archives by date, </a>
+     <i class="glyphicon glyphicon-list"></i> <a href="/en/categories.html">by category, </a>
+     <i class="glyphicon glyphicon-tag"></i> <a href="/en/tags.html">by tag</a>
     </div>
   </div>
      <br>
   <div class="row">
-    <div class="col-md-4 col-sm-3">
+    <!--<div class="col-md-4 col-sm-3">
       <div class="row">
         <ul class="unstyled">
           <li style="margin:-10px"> <img alt="QR Code" src="{{ site.baseurl }}/assets/img/qrcode.33561508.png" align="left"></li>
         </ul>
       </div>
       <div class="row">Scan to load on your mobile device.</div>
-    </div>
-    <div class="col-md-8 col-sm-9">
+    </div>-->
+    <div class="col-md-11 col-sm-11" style="text-align:center;">
         <br>
-       <p style="text-align:left; align:center;font-size:1.2em"><a href="{{ site.baseurl }}/CV-XiaodongQi.pdf" onclick="var that=this;
+       <p style="text-align:center; align:center;font-size:1.2em"><a href="{{ site.baseurl }}/CV-XiaodongQi.pdf" onclick="var that=this;
        _gaq.push(['_trackEvent','Download','PDF',this.href]);
        setTimeout(function(){location.href=that.href;},200);
        return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i>My CV in PDF.</a></p>
@@ -46,7 +47,7 @@ description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done
         </ul>
        </div>
         <br>
-       <div class="row" style="margin-left:-5px">
+       <div class="col-md-12 col-sm-11" style="margin-left:-5px">
            <a href="mailto:{{site.author.email}}" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-email.png" height="48px" alt="email"> </a>
            <a href="https://github.com/{{site.author.github}}" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-github.png" height="40px" alt="github"> </a>
            <a href="https://plus.google.com/{{site.author.gplus}}"><img src="{{ site.baseurl }}/assets/img/icon-gplus.png" height="40px" alt="G+"></a>
@@ -56,7 +57,6 @@ description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done
            <a href="https://www.linkedin.com/in/{{site.author.linkedin}}"><img src="{{ site.baseurl }}/assets/img/icon-linkedin.png" height="40px" alt="LinkedIn"></a>
            <a href="{{ site.baseurl }}/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-rss.png" height="40px" alt="feed"></a>
            <!--<a href="https://physics.stackexchange.com/users/{{site.author.stackexchangephy}}"><img src="{{ site.baseurl }}/assets/img/icon-stackoverflow.png" height="40px" alt="Physics Stackexchange"></a>-->
-           <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user={{site.orgname}}&repo={{site.repo}}&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="40px" style="vertical-align:middle; margin-top:17px;"></iframe>
       </div>
      <!-- <br><br><br> -->
     </div>
@@ -67,39 +67,44 @@ description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done
  <!-- </span> -->
 
 
- <div class="col-md-5 col-sm-12">
-
-  <b>Xiaodong Qi</b> (<span font="sans-serif">戚晓东</span>)<br>
-
-  <div class="team-member">
-  <img class="img-responsive img-circle" alt="" src="{{ site.baseurl }}/assets/img/qi2016.jpg" align="right" width=200px>
+ <div class="col-md-6 col-sm-12" style="text-align:center;">
+  <div class="row">
+    <div class="col-md-11 col-sm-11">
+      <div class="col-md-10 col-sm-8">
+        <a class="btn btn-success btn-lg btn-block" style="font-weight:bold;" href="/cn/" role="button">中文站点</a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="col-md-10 col-sm-10">
+        <div style="font-weight:bold; text-align:center;font-size:1.2em;">
+         <i class="glyphicon glyphicon-chevron-left"></i> <a href="/cn/archives.html">文档, </a>
+         <i class="glyphicon glyphicon-list"></i> <a href="/cn/categories.html">目录, </a>
+         <i class="glyphicon glyphicon-tag"></i> <a href="/cn/tags.html">标签</a>
+        </div>
+      </div>
+    </div>
+    <br />
+   <div class="team-member col-md-7 col-sm-8" style="text-align:center;">
+    <img class="img-responsive img-circle" alt="" src="{{ site.baseurl }}/assets/img/qi2016.jpg" align="right" width=200px>
+   </div>
   </div>
 
-  I am a PhD candidate of
-  <a href="http://cquic.org">the Center for Quantum Information and Control (CQuIC)</a> at University of New Mexico (<a href="http://www.unm.edu">UNM</a>), where
-  I am doing theoretical study with <a href="http://cquic.unm.edu/deutsch-group/">Prof. Ivan Deutsch</a>.
-  <br>
-  Most of my time, I concentrate on <a href="{{ site.baseurl }}/research.html">research</a>.
-  I decode the mathematical rhythms of the dance of photons with matter (atoms, nano-scale objects and macro-scale photonic structures)--they are sometimes powerful, sometimes silky, in general harmonic, vivid, colorful, romantic and marvelous yet with a bit of mystery.
-  My earliest study began with the energetic nature of light, and was discovering novel approaches to generate bright and coherent light in a given pace (frequency) based on the resonant play of light with well structured crystals and semiconductor structures.
-  Later, I appreciate the other aspect of the light more than ever before, that is to employ weak light as the carry of information, and again via the dance with atoms on some nano-scale structures.
-  I feel this study on few-photon and micro-scale platforms could open a door to a new era of information processing--namely, quantum information processing and communications.
-  It will be precise, energe-efficient, intelligent and revolutionary in easing the lives of people and accelerating the evolution of human society.
-  <br>
-  After years of serious studies on nature and rigorous trainings on critical thinking, I appreciate and enjoy my life more than ever before.
-  Trains of thoughts on general philosophy and methodology are constantly examined in real life and are poured out on the internet and elsewhere with folks around me. Keep in touch!
+     <br>
 
-     <a class="twitter-timeline" href="https://twitter.com/{{site.author.twitter}}" data-widget-id="704862944484421633" data-chrome="transparent noborders noscrollbar" height="350px">Tweets by @{{site.author.twitter}}</a>
+     <!-- <a class="twitter-timeline" href="https://twitter.com/{{site.author.twitter}}" data-widget-id="704862944484421633" data-chrome="transparent noborders noscrollbar" height="350px">Tweets by @{{site.author.twitter}}</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    -->
  </div>
 </div>
 <!-- Add the extra clearfix for only the required viewport -->
 <div class="clearfix visible-md-block"></div>
 <hr>
-<div class="row" style="margin:-10px 0 10px; align:center; vertical-align:middle; clear:both;">
+<div class="row" style="margin:-10px 0 10px; text-align:center; align:center; vertical-align:middle; clear:both;">
   <!-- <div class="span12" align="center" vertical-align="middle"> -->
   <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <span align="center" margin-top="-10px">Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }} under the Creative Commons Attribution License or otherwise specified. </span></a>
+  <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user={{site.orgname}}&repo={{site.repo}}&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="40px" style="vertical-align:middle; margin-top:17px;"></iframe>
   <!-- </div> -->
   <br>
 </div>
