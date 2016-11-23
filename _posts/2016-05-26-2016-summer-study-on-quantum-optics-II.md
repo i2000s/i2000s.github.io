@@ -8,8 +8,8 @@ categories: community
 ---
 
 <script language="javascript">
-    window.location = "/en/2016/05/26/2016-summer-study-on-quantum-optics-ii.html"
+    window.location = "/en/2016/05/26/2016-summer-study-on-quantum-optics-II.html"
 </script>
 <head>
-<link rel="canonical" href="/en/2016/05/26/2016-summer-study-on-quantum-optics-ii.html"/>
+<link rel="canonical" href="/en/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
 </head>
