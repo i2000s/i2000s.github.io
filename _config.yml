@@ -25,14 +25,12 @@ disqus:
 addthis:  # Get an account at www.addthis.com. You may need to at least enable the Sharing Sidebar and Sharing Buttons functions to fully use our design.
   pubid: ra-54f225a84524edd3 # This is the AddThis button pubid to display social sharing buttons on the website. Used in the header template.
 navigation: # For the navigation menu. Don't use index.html. urls should end with a directory.
-  - text: Home
+  - text: Language:
     url: /
-  - text: Research
-    url: /research/
-  - text: Vita
-    url: /pubs/
-  - text: Community
-    url: /community/
+  - text: English
+    url: /en/
+  - text: 中文
+    url: /cn/
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes
