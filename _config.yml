@@ -1,4 +1,4 @@
-title : The NoteBlog of Xiaodong Qi
+title : A Notebook of Xiaodong Qi's
 tagline: Exploring Quantum World
 author :
   name : Xiaodong Qi
@@ -19,13 +19,14 @@ author :
     - name: ICIQ
     - name: JuliaCN
 url: https://www.qixiaodong.tk
+purl: https://purl.org/qxd # This is the PURL domain registered on PURL.org for this site. If a PURL is not registered, please put the url value here or edite the /_includes/metadate.html and coins.html with site.purl replaced with site.url.
 baseurl: ''
 disqus:
   sitename: qxd # This is the shortname of the disqus site id to display disqus comments below posts.
 addthis:  # Get an account at www.addthis.com. You may need to at least enable the Sharing Sidebar and Sharing Buttons functions to fully use our design.
   pubid: ra-54f225a84524edd3 # This is the AddThis button pubid to display social sharing buttons on the website. Used in the header template.
 navigation: # For the navigation menu. Don't use index.html. urls should end with a directory.
-  - text: Choose Language/语言 - 
+  - text: Choose Language/语言 -
     url: /
   - text: English
     url: /en/

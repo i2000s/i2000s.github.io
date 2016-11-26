@@ -20,7 +20,7 @@ replacing the \_posts directory, and making a few CSS customizations.
 I have customized the source code a little bit more to make it much easier for anyone to adapt this source code to other repos and sites (see detailed instructions in a later section).
 
 To run the site on a local computer, you need to install Jekyll and
-dependencies, run `bundle install` then `bundle exec jekyll serve --baseurl ''` (see detailed instruction below and the [issue](https://github.com/jekyll/jekyll/issues/332#issuecomment-18952908) of using baseurl for gh-pages subrepos).
+dependencies, run `bundle install` then `bundle exec jekyll serve` (see detailed instruction below and the [issue](https://github.com/jekyll/jekyll/issues/332#issuecomment-18952908) of using baseurl for gh-pages subrepos).
 
 You can generate the [Publications page](publications.html) from a bibtex file
 using some [code David Ketcheson wrote to generate HTML divs from Bibtex](https://github.com/ketch/tex2_rst_html).
@@ -85,14 +85,14 @@ sudo apt-get install pandoc
 sudo apt-get install gsl-bin libgsl0-dev
 ```
 On Windows OS, you may be able to follow [this instruction](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) to install Jekyll.
-If you find some error related to Ruby Development Kit when you run `bundle exec jekyll serve --baseurl ''` or `gem install ***`, you may find [this experience](http://flatshaded.com/2013/05/installing-jekyll-on-windows/) helpful.
+If you find some error related to Ruby Development Kit when you run `bundle exec jekyll serve` or `gem install ***`, you may find [this experience](http://flatshaded.com/2013/05/installing-jekyll-on-windows/) helpful.
 `gsl` should be preinstalled in order to gem install `rb-gsl`, where the step in the `.travis.yml` configuration file about installing `gsl-bin` step does not apply to Windows systems.
 
 The `Gemfile` and the configuration files `_conf.yml` and `.travis.yml` should include sufficient information on installing correct dependences.
 Then for a routinely rendering, you only need to run the following command lines:
 ```
 bundle install
-bundle exec jekyll serve --baseurl ''
+bundle exec jekyll serve
 ```
 Notice that, I have locked the Jekyll version to `~>3.1.6`.
 If you want to use Jekyll version 2.5 or earlier, you may need to tweak the code a little bit.

@@ -48,16 +48,8 @@ description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done
        </div>
         <br>
        <div class="col-md-12 col-sm-12" style="margin-left:-5px">
-           <a href="mailto:{{site.author.email}}" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-email.png" height="48px" alt="email"> </a>
-           <a href="https://github.com/{{site.author.github}}" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-github.png" height="40px" alt="github"> </a>
-           <a href="https://plus.google.com/{{site.author.gplus}}"><img src="{{ site.baseurl }}/assets/img/icon-gplus.png" height="40px" alt="G+"></a>
-           <a href="https://www.facebook.com/{{site.author.facebook}}"><img src="{{ site.baseurl }}/assets/img/icon-facebook.png" height="42px" alt="facebook"></a>
-           <a href="https://scholar.google.com/citations?user={{site.author.gscholar}}=en"><img src="{{ site.baseurl }}/assets/img/icon-scholar.png" height="40px" alt="GoogleScholar"></a>
-           <a href="https://twitter.com/{{site.author.twitter}}"><img src="{{ site.baseurl }}/assets/img/icon-twitter.png" height="45px" alt="Twitter"></a>
-           <a href="https://www.linkedin.com/in/{{site.author.linkedin}}"><img src="{{ site.baseurl }}/assets/img/icon-linkedin.png" height="40px" alt="LinkedIn"></a>
-           <a href="{{ site.baseurl }}/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="{{ site.baseurl }}/assets/img/icon-rss.png" height="40px" alt="feed"></a>
-           <!--<a href="https://physics.stackexchange.com/users/{{site.author.stackexchangephy}}"><img src="{{ site.baseurl }}/assets/img/icon-stackoverflow.png" height="40px" alt="Physics Stackexchange"></a>-->
-      </div>
+           {% include socialbuttons_nostackexchangephy_nostarcount.html %}
+       </div>
      <!-- <br><br><br> -->
     </div>
     <!-- Add the extra clearfix for only the required viewport -->
@@ -104,7 +96,8 @@ description: Xiaodong Qi's NoteBlogs and CV. Mostly relates to his research done
   <!-- <div class="span12" align="center" vertical-align="middle"> -->
   <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <span align="center" margin-top="-10px">Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }} under the Creative Commons Attribution License or otherwise specified. </span></a>
-  <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user={{site.orgname}}&repo={{site.repo}}&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="40px" style="vertical-align:middle; margin-top:17px;"></iframe>
+  {% if site.repo %}<iframe class="github-btn" src="//ghbtns.com/github-btn.html?user={{site.orgname}}&repo={{site.repo}}&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="40px" style="vertical-align:middle; margin-top:17px;"></iframe>{% endif %}
+  {% include coins.html %}
   <!-- </div> -->
   <br>
 </div>
