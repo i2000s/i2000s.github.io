@@ -12,16 +12,11 @@ https://www.qixiaodong.tk/README
 https://www.qixiaodong.tk/archives 
 https://www.qixiaodong.tk/atom.xml 
 https://www.qixiaodong.tk/categories 
-https://www.qixiaodong.tk/community/ 
 https://www.qixiaodong.tk/ 
 https://www.qixiaodong.tk/notebooks 
-https://www.qixiaodong.tk/philosophy 
-https://www.qixiaodong.tk/research/ 
 https://www.qixiaodong.tk/search 
 https://www.qixiaodong.tk/sitemap.txt 
 https://www.qixiaodong.tk/tags 
-https://www.qixiaodong.tk/tools 
-https://www.qixiaodong.tk/pubs/ 
 
 
 https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html 
