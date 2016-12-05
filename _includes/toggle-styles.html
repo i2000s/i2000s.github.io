@@ -14,7 +14,7 @@ $(document).ready(function() {
   // when click on the element with id="togglestyle"
   $('#togglestyle').click(function(){
     plusmin *= -1;        // change the polarity of "plusmin" var
-    var stl = plusmin>0 ? '{{site.url}}{{ site.baseurl }}/assets/css/light.css' : '{{site.url}}{{ site.baseurl }}/assets/css/dark.css';     // sets the css file, according to plusmin
+    var stl = plusmin>0 ? '{{ site.baseurl }}/assets/css/light.css' : '{{ site.baseurl }}/assets/css/dark.css';     // sets the css file, according to plusmin
 
     // change the css file of the tag with id="stl" and rel="stylesheet"
     $('#stl[rel=stylesheet]').attr('href', stl);

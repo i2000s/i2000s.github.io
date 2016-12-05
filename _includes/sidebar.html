@@ -21,7 +21,7 @@
   <p><i class="glyphicon glyphicon-list"></i> Posted in
     {% for category in page.categories %}
       <a rel="dc:subject" class="category"
-         href="{{site.url}}{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}">{{ category }}</a>
+         href="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}">{{ category }}</a>
     {% unless page.categories.last == category %}, {% endunless %}
     {% endfor %}</p>
 
@@ -29,7 +29,7 @@
     {% for tag in page.tags %}
     <!-- http://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag"
-       href="{{site.url}}{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
+       href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
     {% endfor %}</p>
 
    <br/>
@@ -42,7 +42,7 @@
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
- <i class="glyphicon glyphicon-chevron-left"></i> <a href="{{site.url}}{{ site.baseurl }}/archives.html">Archieves by date,</a>
- <i class="glyphicon glyphicon-list"></i> <a href="{{site.url}}{{ site.baseurl }}/categories.html">by category,</a>
- <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="{{site.url}}{{ site.baseurl }}/tags.html">by tag.</a>
+ <i class="glyphicon glyphicon-chevron-left"></i> <a href="{{ site.baseurl }}/archives.html">Archieves by date,</a>
+ <i class="glyphicon glyphicon-list"></i> <a href="{{ site.baseurl }}/categories.html">by category,</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="{{ site.baseurl }}/tags.html">by tag.</a>
 </div>

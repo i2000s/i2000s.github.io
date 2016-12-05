@@ -1,6 +1,6 @@
 <div id="postsum">
 <time> {{ post.date | date_to_string }}</time>
-<h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 <h4><span>{{ post.subtitle }}</span></h4>
       {% assign foundImage = 0 %}
       {% assign images = post.content | split:"<img" %}
@@ -15,6 +15,6 @@
       {% endfor %}
 
 {{ post.content | strip_html | truncate:300 }}
-<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"> <em>Read more</em></a>
+<a href="{{ site.baseurl }}{{ post.url }}"> <em>Read more</em></a>
 
 </div>
