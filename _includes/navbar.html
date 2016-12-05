@@ -23,7 +23,11 @@
             {% if page.url == '/' and item.url == '/' %}
                 {% assign class = 'active' %}
             {% endif %}
-            <li class="{{ class }}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.text }}</a></li>
+            {% if item.url contains 'http://' or item.url contains 'https://' %}
+              <li class="{{ class }}"><a href="{{ item.url }}">{{ item.text }}</a></li>
+            {% else %}
+              <li class="{{ class }}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.text }}</a></li>
+            {% endif %}
          {% endfor %}
         </ul>
         <!-- Search site using DuckDuckGo's index -->
