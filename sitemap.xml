@@ -1,27 +1,94 @@
-
----
-layout: default
----
-
-<div class="row">
-  <div class="col-md-7 col-sm-12">
-    <article>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  
+    <url>
+      <loc>https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html</loc>
+      <lastmod>2016-11-23T05:54:36+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+  
+  
+    <url>
+      <loc>https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html</loc>
+      <lastmod>2016-11-23T05:54:36+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+  
+  
+    <url>
+      <loc>https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html</loc>
+      <lastmod>2016-11-23T06:17:29+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+  
+  
+    <url>
+      <loc>https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html</loc>
+      <lastmod>2016-11-23T05:54:36+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+  
+  
+  
     
-https://www.qixiaodong.tk/README 
-https://www.qixiaodong.tk/archives 
-https://www.qixiaodong.tk/atom.xml 
-https://www.qixiaodong.tk/categories 
-https://www.qixiaodong.tk/ 
-https://www.qixiaodong.tk/search 
-https://www.qixiaodong.tk/sitemap.txt 
-https://www.qixiaodong.tk/tags 
-
-
-https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html 
-https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html 
-https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html 
-https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html 
-
-    </article>
-  </div>
-</div>
+      <url>
+        <loc>https://www.qixiaodong.tk/README</loc>
+        <lastmod>2016-11-26T07:14:15+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+       </url>
+    
+  
+  
+  
+    
+      <url>
+        <loc>https://www.qixiaodong.tk/archives</loc>
+        <lastmod>2016-11-22T04:36:52+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+       </url>
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+    
+      <url>
+        <loc>https://www.qixiaodong.tk/</loc>
+        <lastmod>2016-12-03T09:16:39+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+       </url>
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+</urlset>
