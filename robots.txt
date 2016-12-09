@@ -1,1 +1,7 @@
-Sitemap: https://www.qixiaodong.tk/sitemap.txt
+User-agent: *
+Allow: /en/
+Allow: /cn/
+
+Sitemap: https://www.qixiaodong.tk/sitemap.xml
+Sitemap: https://www.qixiaodong.tk/en/sitemap.xml
+Sitemap: https://www.qixiaodong.tk/cn/sitemap.xml
