@@ -8,7 +8,7 @@
         {% if image contains 'src' %}
             {% if foundImage == 0 %}
                 {% assign html = image | split:">" | first %}
-<img {{ html }} height="100" />
+<img {{ html }} style="max-height:100px; max-width:200px" />
                 {% break %}
             {% endif %}
         {% endif %}
