@@ -1,5 +1,5 @@
 ---
-title: Older posts
+title: All posts
 ---
 
 
@@ -12,7 +12,7 @@ title: Older posts
     <div class="postpreview">
       {% for post in site.posts %}
       <div class="span6">
-        <p> <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+        <p> <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         <span style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</span></p>
       </div>
       {% endfor %}
