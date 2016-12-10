@@ -22,7 +22,7 @@ I have customized the source code a little bit more to make it much easier for a
 To run the site on a local computer, you need to install Jekyll and
 dependencies, run `bundle install` then `bundle exec jekyll serve` (see detailed instruction below and the [issue](https://github.com/jekyll/jekyll/issues/332#issuecomment-18952908) of using baseurl for gh-pages subrepos).
 
-You can generate the [Publications page](publications.html) from a bibtex file
+You can generate the [Publications page](//www.qixiaodong.tk/en/pubs/) from a bibtex file
 using some [code David Ketcheson wrote to generate HTML divs from Bibtex](https://github.com/ketch/tex2_rst_html).
 It also makes use of [jQuery](https://github.com/ketch/tex2_rst_html) and
 [MixItUp](https://mixitup.kunkalabs.com/) for filtering and searching.
