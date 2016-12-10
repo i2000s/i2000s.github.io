@@ -40,7 +40,7 @@ pageviews: no    ## toggle on sidebar pageviews
 twitter_api: yes
 analytics: UA-74657818-1 ## Google Analytics key UA-46730871-1(in _includes/analytics.html and search.html)
 baiduid: 5FQ1dXMyow # Baidu site verification ID. Used in metadata.html. Previous one- cAv3dLIDps
-baidutongji: a9ed76232076b69dc6afb79ece4d351d # This is for collecting statistical data of visiting from Baidu. Used in analytics.html.
+baidutongji: b155717a8e4421a6f085a26ba4e9f836 # This is for collecting statistical data of visiting from Baidu. Used in analytics.html. Previous one- a9ed76232076b69dc6afb79ece4d351d
 lsi: True # Possibly for generating related posts with gsl and classifier packages.
 show_drafts: false
 
