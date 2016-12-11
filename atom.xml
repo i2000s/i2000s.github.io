@@ -2,9 +2,9 @@
 <feed xmlns="https://www.w3.org/2005/Atom">
 
  <title>A Notebook of Xiaodong Qi's</title>
- <link href="https://www.qixiaodong.tk/atom.xml" rel="self"/>
- <link href="https://www.qixiaodong.tk"/>
- <updated>2016-12-10T08:47:10+00:00</updated>
+ <link href="/atom.xml" rel="self"/>
+ <link href=""/>
+ <updated>2016-12-11T11:15:44+00:00</updated>
  <id>https://www.qixiaodong.tk</id>
  <author>
    <name>Xiaodong Qi</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Put everything on a quantum circuit--part I</title>
-   <link href="https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"/>
+   <link href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"/>
    <updated>2016-07-23T00:00:00+00:00</updated>
    <id>/2016/07/23/put-everything-on-a-quantum-circuit-part-i</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
@@ -33,7 +33,7 @@
  
  <entry>
    <title>NVidia Linux driver update fixed the openGL problem of Matlab 2016a</title>
-   <link href="https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html"/>
+   <link href="/2016/06/23/nvidia-driver-update-for-matlab-2016a.html"/>
    <updated>2016-06-23T00:00:00+00:00</updated>
    <id>/2016/06/23/nvidia-driver-update-for-matlab-2016a</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
@@ -52,7 +52,7 @@
  
  <entry>
    <title>2016 summer study on selected topics in Quantum Optics</title>
-   <link href="https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
+   <link href="/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
    <updated>2016-05-26T00:00:00+00:00</updated>
    <id>/2016/05/26/2016-summer-study-on-quantum-optics-II</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
@@ -71,7 +71,7 @@
  
  <entry>
    <title>SQuInT Workshop 2016</title>
-   <link href="https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html"/>
+   <link href="/2016/02/17/SQuInT-workshop-2016.html"/>
    <updated>2016-02-17T00:00:00+00:00</updated>
    <id>/2016/02/17/SQuInT-workshop-2016</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
