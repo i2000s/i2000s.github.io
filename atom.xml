@@ -4,7 +4,7 @@
  <title>A Notebook of Xiaodong Qi's</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-12-12T02:57:07-07:00</updated>
+ <updated>2016-12-12T10:05:51+00:00</updated>
  <id>https://www.qixiaodong.tk</id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Put everything on a quantum circuit--part I</title>
    <link href="/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html"/>
-   <updated>2016-07-23T00:00:00-06:00</updated>
+   <updated>2016-07-23T00:00:00+00:00</updated>
    <id>/2016/07/23/put-everything-on-a-quantum-circuit-part-i</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
     window.location = &quot;/en/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html&quot;
@@ -23,7 +23,9 @@
 &lt;head&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;/en/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html&quot;/&gt;
 &lt;/head&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+
+
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -32,7 +34,7 @@
  <entry>
    <title>NVidia Linux driver update fixed the openGL problem of Matlab 2016a</title>
    <link href="/2016/06/23/nvidia-driver-update-for-matlab-2016a.html"/>
-   <updated>2016-06-23T00:00:00-06:00</updated>
+   <updated>2016-06-23T00:00:00+00:00</updated>
    <id>/2016/06/23/nvidia-driver-update-for-matlab-2016a</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
     window.location = &quot;/en/2016/06/23/nvidia-driver-update-for-matlab-2016a.html&quot;
@@ -40,7 +42,9 @@
 &lt;head&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;/en/2016/06/23/nvidia-driver-update-for-matlab-2016a.html&quot;/&gt;
 &lt;/head&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+
+
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -49,7 +53,7 @@
  <entry>
    <title>2016 summer study on selected topics in Quantum Optics</title>
    <link href="/2016/05/26/2016-summer-study-on-quantum-optics-II.html"/>
-   <updated>2016-05-26T00:00:00-06:00</updated>
+   <updated>2016-05-26T00:00:00+00:00</updated>
    <id>/2016/05/26/2016-summer-study-on-quantum-optics-II</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
     window.location = &quot;/en/2016/05/26/2016-summer-study-on-quantum-optics-II.html&quot;
@@ -57,7 +61,9 @@
 &lt;head&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;/en/2016/05/26/2016-summer-study-on-quantum-optics-II.html&quot;/&gt;
 &lt;/head&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+
+
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
@@ -66,7 +72,7 @@
  <entry>
    <title>SQuInT Workshop 2016</title>
    <link href="/2016/02/17/SQuInT-workshop-2016.html"/>
-   <updated>2016-02-17T00:00:00-07:00</updated>
+   <updated>2016-02-17T00:00:00+00:00</updated>
    <id>/2016/02/17/SQuInT-workshop-2016</id>
    <content type="html">&lt;script language=&quot;javascript&quot;&gt;
     window.location = &quot;/en/2016/02/17/SQuInT-workshop-2016.html&quot;
@@ -74,7 +80,9 @@
 &lt;head&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;/en/2016/02/17/SQuInT-workshop-2016.html&quot;/&gt;
 &lt;/head&gt;
-&lt;div id=&quot;refs&quot; class=&quot;references&quot;&gt;
+
+
+&lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </content>
