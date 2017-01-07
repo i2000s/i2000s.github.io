@@ -81,7 +81,7 @@ On Ubuntu, I use the following lines
 ```
 sudo add-apt-repository -y ppa:marutter/c2d4u
 sudo apt-get update
-sudo apt-get install pandoc
+sudo apt-get install pandoc pandoc-citeproc
 sudo apt-get install gsl-bin libgsl0-dev
 ```
 On Windows OS, you may be able to follow [this instruction](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) to install Jekyll.
