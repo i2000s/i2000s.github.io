@@ -18,6 +18,7 @@ module Jekyll
       end
     end
     def render(context)
+      Feedjira.logger.level = Logger::FATAL # Hide log of warning. See https://github.com/feedjira/feedjira/issues/380 also the earlier warning message: https://travis-ci.org/i2000s/en/builds/207516706
       puts "Generating Github repo feed from rss using feedzirra with github_repo_feed.rb"
       feed = Feedjira::Feed.fetch_and_parse("https://github.com/" + @user + "/" + @repo + "/commits.atom") # This will call the rss from the repo's default branch.
       # consider formatting properly

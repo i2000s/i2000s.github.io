@@ -16,6 +16,7 @@ module Jekyll
       end
     end
     def render(context)
+      Feedjira.logger.level = Logger::FATAL # Hide log of warning. See https://github.com/feedjira/feedjira/issues/380 also the earlier warning message: https://travis-ci.org/i2000s/en/builds/207516706
       puts "Generating Github feed from rss using feedzirra with github_feed.rb"
       feed = Feedjira::Feed.fetch_and_parse("https://github.com/" + @user + ".atom")
       # consider formatting properly
@@ -42,8 +43,3 @@ module Jekyll
 end ## end module Jekyll
 
 Liquid::Template.register_tag('github_feed', Jekyll::GithubFeed)
-
-
-
-
-
