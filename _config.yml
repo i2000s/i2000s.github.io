@@ -12,7 +12,8 @@ author :
   gscholar: 6FdqHlIAAAAJ&hl
   facebook: i2000s
   linkedin: xiaodongqi
-  stackexchangephy: 37682/xiaodong-qi
+  #stackexchangephy: 37682/xiaodong-qi
+  reddit: r/quantuminformation
   ghorgs: # Used in the Javascript of Community page to pull out github repos.
     - name: CQuIC
     - name: JuliaQuantum
