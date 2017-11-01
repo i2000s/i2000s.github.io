@@ -219,7 +219,7 @@ namespace :site do
 
     sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(EXTERNAL) do
-      if (define? SUBMODULEDIR)
+      if (defined? SUBMODULEDIR)
         sh "rm -rf #{SUBMODULEDIR}" # This is to delete the git file in the submodule folder so that git won't complain when switching to the destination branch where the folder is not a submodule.
       end
       sh "git checkout #{DESTINATION_BRANCH}"
