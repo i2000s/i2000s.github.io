@@ -14,7 +14,7 @@ gem "json"            #, '~>1.8'
 
 gem "octokit"#, "~> 2.0"   # Github API (octokit plugin)
 gem "twitter"#, "~> 5.8.0" # Twitter API
-gem "nokogiri", "~>1.6.8.rc3"            # HTML / XML parser
+gem "nokogiri", ">=1.6.8"            # HTML / XML parser
 gem "feedjira"            # Atom/RSS parser
 gem "chronic"             # Natural language time parser
 gem 'jekyll-twitter-plugin' # For twitter API.
@@ -30,7 +30,8 @@ gem 'redis'
 gem 'classifier-reborn', '>=2.0.4' #, :git => "https://github.com/jekyll/classifier-reborn" # To fix the equal sign warning.
 gem 'narray' #, :git => "https://github.com/tonyarnold/narray"
 #gem 'nmatrix'
-gem 'rb-gsl', '~> 1.16', '>= 1.16.0.6'
+gem 'rb-gsl', '>= 1.16.0.6'
 #gem 'gsl', :git => "https://github.com/tonyarnold/rb-gsl"
 #gem 'gsl', :git => 'git://github.com/siefca/rb-gsl'
-gem 'latex-decode', '0.2.2' # There seems to be a problem with 0.3.0.
+gem 'latex-decode', '>=0.3.1' #'0.2.2' # There seems to be a problem with 0.3.0.
+gem 'citeproc', '>=1.0.6' # This is intended to work with the change on latex-decode v0.3.1. See https://github.com/inukshuk/citeproc-ruby/issues/16#issuecomment-342436167
