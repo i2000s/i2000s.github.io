@@ -125,7 +125,7 @@ var _hmt = _hmt || [];
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f225a84524edd3" async="async"></script>
 
-  <body>
+  <body onload="load()"> <!-- load() is to offset the navbar for anchor links. -->
 
   
 <!-- Navbar  ================================================== -->
@@ -451,16 +451,16 @@ var _hmt = _hmt || [];
         -->
           <div class='cloud'>
             <h1> Tag Cloud</h1>
-            <a style='font-size: NaN%' href='/tags.html#conference'>conference</a>
+            <a style='font-size: NaN%' href='/tags.html#presentation'>presentation</a>
+<a style='font-size: NaN%' href='/tags.html#matlab'>matlab</a>
+<a style='font-size: NaN%' href='/tags.html#GPU'>GPU</a>
+<a style='font-size: NaN%' href='/tags.html#summer study'>summer study</a>
+<a style='font-size: NaN%' href='/tags.html#nanofiber'>nanofiber</a>
 <a style='font-size: NaN%' href='/tags.html#quantum dynamics'>quantum dynamics</a>
 <a style='font-size: NaN%' href='/tags.html#quantum optics'>quantum optics</a>
-<a style='font-size: NaN%' href='/tags.html#nanofiber'>nanofiber</a>
-<a style='font-size: NaN%' href='/tags.html#summer study'>summer study</a>
-<a style='font-size: NaN%' href='/tags.html#Julia'>Julia</a>
-<a style='font-size: NaN%' href='/tags.html#matlab'>matlab</a>
-<a style='font-size: NaN%' href='/tags.html#presentation'>presentation</a>
+<a style='font-size: NaN%' href='/tags.html#conference'>conference</a>
 <a style='font-size: NaN%' href='/tags.html#poster'>poster</a>
-<a style='font-size: NaN%' href='/tags.html#GPU'>GPU</a>
+<a style='font-size: NaN%' href='/tags.html#Julia'>Julia</a>
 
           </div>
 
@@ -600,7 +600,13 @@ var _hmt = _hmt || [];
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--<script src = "https://code.jquery.com/jquery.js"></script>-->
-
+    
+    <!-- Offset the navbar for anchor tab links. Ref: https://github.com/twbs/bootstrap/issues/1768 -->
+    <script>
+      var shiftWindow = function() { scrollBy(0, -50) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
 
