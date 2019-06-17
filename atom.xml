@@ -3,8 +3,8 @@
   <channel>
     <title>A Notebook of Xiaodong Qi&#39;s</title>
     <description>Exploring Quantum World</description>
-    <link>https://www.qixiaodong.tk</link>
-    <atom:link href="https://www.qixiaodong.tk/atom.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.qixiaodong.com</link>
+    <atom:link href="https://www.qixiaodong.com/atom.xml" rel="self" type="application/rss+xml" />
 
    
         <item>
@@ -21,7 +21,7 @@
 
 &lt;/div&gt;
 </description>
-          <link>https://www.qixiaodong.tk/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html</link>
+          <link>https://www.qixiaodong.com/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html</link>
           <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
           <guid isPermaLink="true">https://purl.org/qxd/2016/07/23/put-everything-on-a-quantum-circuit-part-i.html</guid>
         </item>
@@ -40,7 +40,7 @@
 
 &lt;/div&gt;
 </description>
-          <link>https://www.qixiaodong.tk/2016/06/23/nvidia-driver-update-for-matlab-2016a.html</link>
+          <link>https://www.qixiaodong.com/2016/06/23/nvidia-driver-update-for-matlab-2016a.html</link>
           <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
           <guid isPermaLink="true">https://purl.org/qxd/2016/06/23/nvidia-driver-update-for-matlab-2016a.html</guid>
         </item>
@@ -59,7 +59,7 @@
 
 &lt;/div&gt;
 </description>
-          <link>https://www.qixiaodong.tk/2016/05/26/2016-summer-study-on-quantum-optics-II.html</link>
+          <link>https://www.qixiaodong.com/2016/05/26/2016-summer-study-on-quantum-optics-II.html</link>
           <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
           <guid isPermaLink="true">https://purl.org/qxd/2016/05/26/2016-summer-study-on-quantum-optics-II.html</guid>
         </item>
@@ -78,7 +78,7 @@
 
 &lt;/div&gt;
 </description>
-          <link>https://www.qixiaodong.tk/2016/02/17/SQuInT-workshop-2016.html</link>
+          <link>https://www.qixiaodong.com/2016/02/17/SQuInT-workshop-2016.html</link>
           <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
           <guid isPermaLink="true">https://purl.org/qxd/2016/02/17/SQuInT-workshop-2016.html</guid>
         </item>
