@@ -19,7 +19,7 @@ author :
     - name: JuliaQuantum
     - name: ICIQ
     - name: JuliaCN
-url: https://www.qixiaodong.tk
+url: https://www.qixiaodong.com
 purl: https://purl.org/qxd # This is the PURL domain registered on PURL.org for this site. If a PURL is not registered, please put the url value here or edite the /_includes/metadate.html and coins.html with site.purl replaced with site.url.
 baseurl: ''
 disqus:
